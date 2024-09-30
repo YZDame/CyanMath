@@ -1,0 +1,827 @@
+\documentclass[aspectratio=169]{ctexbeamer}
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsfonts} 
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usefonttheme[onlymath]{serif} % 衬线数学字体
+\title[平面几何选讲]{平面几何选讲}
+\subtitle{Topics in Plane Geometry}
+%\titlegraphic{\includegraphics[width=2cm]{ZH1Z.PNG}}
+\author[]{\kaishu{}}
+\date[\today]{\today}
+%在每个section 前边单独插入当前章节高亮的目录页（当然最原始的目录页你还是需要手动录入的, 不要想偷懒）
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\newenvironment{righttikzpicture}
+  {\begin{flushright}\begin{tikzpicture}}
+  {\end{tikzpicture}\end{flushright}}
+\newenvironment{lefttikzpicture}
+  {\begin{flushleft}\begin{tikzpicture}}
+  {\end{tikzpicture}\end{flushleft}}
+\newenvironment{centertikzpicture}
+  {\begin{tikzpicture}}
+  {\end{tikzpicture}}
+
+\newcommand{\pll}{\kern 0.56em/\kern -0.8em /\kern 0.56em}
+
+\begin{document}
+\frame{\titlepage}
+%\kaishu
+\frame{\frametitle{目录}\tableofcontents}
+\section{面积公式及其应用}
+\begin{frame}{面积公式及其应用}
+	\begin{itemize}
+		\item 利用图形的面积公式, 可以解决许多与面积相关的问题.
+		\item 对于常见的特殊图形面积的计算, 一般直接使用公式或等积变换, 对于非常规图形面积的计算, 可通过图形的割补, 以及图形的运动(平移, 旋转, 翻折)来转换成特殊图形面积问题.
+		\item 有时题目中并没有直接涉及面积, 但可以通过对同一图形面积的不同算法, 推出需要的代数或几何关系, 从而使问题获解.
+	\end{itemize}
+	\pause
+	\begin{alertblock}{海伦公式}
+		若已知三角形三边长$a, b, c$, 则三角形面积
+		$$
+			S=\sqrt{p(p-a)(p-b)(p-c)},
+		$$其中$p=\frac{a+b+c}{2}$.
+	\end{alertblock}
+\end{frame}
+\subsection*{例题}
+\begin{frame}{例题}
+	1. 如图,  长方形 $A B C D$ 的面积是 2012 平方厘米, 梯形 $A E G F$ 的顶点 $F$ 在 $B C$上, $D$ 是腰 $E G$ 的中点, 试求梯形 $A E G F$的面积.
+
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Rectangle [id:dp555795369835903] 
+		\draw   (256.24,151.98) -- (415.65,151.98) -- (415.65,214.5) -- (256.24,214.5) -- cycle ;
+		%Straight Lines [id:da8497557282410093] 
+		\draw    (256.24,151.98) -- (365.91,127.34) ;
+		%Straight Lines [id:da975966892252139] 
+		\draw    (334.96,214.27) -- (474.23,178.81) ;
+		%Straight Lines [id:da45109299717958984] 
+		\draw    (365.91,127.34) -- (474.23,178.81) ;
+		%Straight Lines [id:da6456969007522482] 
+		\draw    (256.24,151.98) -- (334.96,214.27) ;
+
+		% Text Node
+		\draw (242.5,135.63) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (244.06,214.18) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (415.15,214.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (414.49,133.65) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (328.35,216.63) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (364.06,109.32) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (473.15,176.82) node [anchor=north west][inner sep=0.75pt]    {$G$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	2. 如图,  在梯形 $A B C D$ 中, $A D / / B C, A D: B C=1 : 2, F$ 为线段 $A B$ 上的点, $E$ 为线段 $F C$ 上的点, 且 $S_{\triangle A O F}: S_{\triangle D O E}=1 : 3, S_{\triangle B E F}=24$,求 $\triangle A O F$ 的面积.
+
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Trapezoid [id:dp7581601526669886] 
+		\draw   (265.43,215.64) -- (289.43,134.64) -- (399.4,134.64) -- (493.64,215.64) -- cycle ;
+		%Straight Lines [id:da06654590240440239] 
+		\draw    (282.29,160.86) -- (493.64,215.64) ;
+		%Straight Lines [id:da08516216273632549] 
+		\draw    (399.4,134.64) -- (352.29,178.86) ;
+		%Straight Lines [id:da5968764151812478] 
+		\draw    (289.43,134.64) -- (352.29,178.86) ;
+		%Straight Lines [id:da3050793013431803] 
+		\draw    (282.29,160.86) -- (399.4,134.64) ;
+		%Straight Lines [id:da6366873373294237] 
+		\draw    (352.29,178.86) -- (265.43,215.64) ;
+
+		% Text Node
+		\draw (286.67,115.26) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (250.67,217.26) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (495.64,219.04) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (400.67,116.59) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (312.67,135.26) node [anchor=north west][inner sep=0.75pt]    {$O$};
+		% Text Node
+		\draw (346.29,182.26) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (264.67,151.92) node [anchor=north west][inner sep=0.75pt]    {$F$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	3. 如图,  $P$ 是 $\triangle A B C$ 内的一点, 连结 $AP, BP, CP$ 并延长, 分别与 $BC, AC, AB$ 交于点 $D, E, F$. 已知 $AP=6, BP=9, DP=6, EP=3, CF=20$.求 $\triangle ABC$ 的面积.
+
+	提示: 海伦公式$S=\sqrt{p(p-a)(p-b)(p-c)},$ 其中$p=\frac{a+b+c}{2}$.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp5793965072731759] 
+		\draw   (350.39,76.04) -- (384.07,233.57) -- (293,233.57) -- cycle ;
+		%Straight Lines [id:da6002888595411584] 
+		\draw    (350.39,76.04) -- (329,233.54) ;
+		%Straight Lines [id:da022731049041765816] 
+		\draw    (312.5,181.04) -- (384.07,233.57) ;
+		%Straight Lines [id:da14173178559276556] 
+		\draw    (369.5,165.04) -- (293,233.57) ;
+
+		% Text Node
+		\draw (275.43,230.83) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (384.93,230.28) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (342.93,57.28) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (371.93,148.28) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (295.43,165.28) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (321.93,235.28) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (330.25,202.7) node [anchor=north west][inner sep=0.75pt]    {$P$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	4. 如图,  设凸四边形 $A B C D$ 内接于以 $O$ 为中心的圆, 且两条对角线相互垂直. 求证:折线 $A O C$ 分该四边形面积相等的两部分.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Ellipse [id:dp37604538191852277] 
+		\draw   (273.22,178.2) .. controls (273.09,136.33) and (306.93,102.28) .. (348.8,102.15) .. controls (390.67,102.01) and (424.73,135.85) .. (424.86,177.72) .. controls (424.99,219.6) and (391.15,253.65) .. (349.28,253.78) .. controls (307.41,253.91) and (273.36,220.07) .. (273.22,178.2) -- cycle ;
+		%Straight Lines [id:da5750849334361499] 
+		\draw    (286.65,134.79) -- (410.86,134.79) ;
+		%Straight Lines [id:da8015473179076149] 
+		\draw    (320.29,108.14) -- (320.29,248.4) ;
+		%Straight Lines [id:da7244779949500968] 
+		\draw    (320.29,108.14) -- (349.04,177.96) ;
+		%Straight Lines [id:da7342277540359712] 
+		\draw    (349.04,177.96) -- (320.29,248.4) ;
+		%Straight Lines [id:da7314181000675453] 
+		\draw    (286.65,134.79) -- (320.29,248.4) ;
+		%Straight Lines [id:da8054004678976356] 
+		\draw    (286.65,134.79) -- (320.29,108.14) ;
+		%Straight Lines [id:da8200100236510444] 
+		\draw    (320.29,108.14) -- (410.86,134.79) ;
+		%Straight Lines [id:da4698153024206404] 
+		\draw    (410.86,134.79) -- (320.29,248.4) ;
+
+		% Text Node
+		\draw (309.92,249.3) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (349.03,174.23) node [anchor=north west][inner sep=0.75pt]    {$O$};
+		% Text Node
+		\draw (414.4,121.04) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (309.08,90.28) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (272.07,122) node [anchor=north west][inner sep=0.75pt]    {$D$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	5. 设 $P$ 是 $\triangle A B C$ 内一点, 延长 $AP, BP, C P$ 与对边相交于点 $D, E, F$. 设 $A P=a, B P=b, C P=c$, 且 $a+b+c=43$, $P D=P E=P F=d=3$, 求 $a b c$ 的值.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp5363504387490252] 
+		\draw   (334.99,99.82) -- (445.01,206.8) -- (275.31,206.8) -- cycle ;
+		%Straight Lines [id:da2874789810342133] 
+		\draw    (335.01,99.82) -- (342.36,206.78) ;
+		%Straight Lines [id:da18274628283403493] 
+		\draw    (295.86,171.13) -- (445.01,206.8) ;
+		%Straight Lines [id:da10060626201660083] 
+		\draw    (397.3,160.26) -- (275.27,206.8) ;
+
+		% Text Node
+		\draw (258.5,203.83) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (446.89,203.46) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (329.85,82.65) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (400.94,145.11) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (280.59,157.99) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (334.3,206.86) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (342.02,160.7) node [anchor=north west][inner sep=0.75pt]    {$P$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	6. 如图,  设 $\triangle A B C$ 的三条中线 $A D, B E, C F$ 交于点 $G$, 且 $\triangle A G F, \triangle C G D$ 和 $\triangle B G D$ 的内切圆半径都相同. 证明: $\triangle A B C$ 是正三角形.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp47034667075097025] 
+		\draw   (349.48,96.34) -- (426.95,232.4) -- (272,232.4) -- cycle ;
+		%Straight Lines [id:da7570166699481862] 
+		\draw    (349.48,96.34) -- (350.79,232.11) ;
+		%Straight Lines [id:da12462221947186469] 
+		\draw    (272,232.4) -- (387.29,163.61) ;
+		%Straight Lines [id:da8938121913300356] 
+		\draw    (311.79,162.61) -- (426.95,232.4) ;
+
+		% Text Node
+		\draw (342.71,79.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (258.71,229.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (426.71,228.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (343.71,233.9) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (388.21,149.4) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (302.21,148.9) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (352.21,160.4) node [anchor=north west][inner sep=0.75pt]    {$G$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	7. 如图,  $\triangle A B C$ 的三边上 $B C=a, C A=b, A B=c, a, b$, $c$ 都是整数, 且 $a, b$ 的最大公约数为 2 . 点 $G$ 和点 $I$ 分别为 $\triangle A B C$ 的重心和内心, 且 $\angle G I C=90^{\circ}$. 求 $\triangle A B C$ 的周长.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp6067991823078811] 
+		\draw   (366.19,130.38) -- (434.07,241.82) -- (257.92,241.82) -- cycle ;
+		%Straight Lines [id:da31023092987383727] 
+		\draw    (363.17,199.64) -- (434.07,241.82) ;
+		%Straight Lines [id:da2190692332387303] 
+		\draw    (363.17,199.64) -- (356.27,211.67) ;
+
+		% Text Node
+		\draw (358.15,114.63) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (244.94,236) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (435.24,237.48) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (355.47,184.16) node [anchor=north west][inner sep=0.75pt]    {$I$};
+		% Text Node
+		\draw (340.98,199.99) node [anchor=north west][inner sep=0.75pt]    {$G$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\subsection*{练习题}
+\begin{frame}{练习题}
+	1. 如图,  已知正方形 $A B C D$ 的面积为 35 平方厘米, $E, F$ 分别为边 $A B, B C$上的点, $A F$ 与 $C E$ 相交于点 $G$, 并且 $\triangle A B F$ 的面积为 5 平方厘米, $\triangle B C E$ 的面积为 14 平方厘米. 求四边形 $B E G F$ 的面积.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Square [id:dp8170208926679419] 
+		\draw   (285.93,107) -- (407,107) -- (407,228.07) -- (285.93,228.07) -- cycle ;
+		%Straight Lines [id:da8823531898627133] 
+		\draw    (407,107) -- (316.57,227.61) ;
+		%Straight Lines [id:da8679275246403186] 
+		\draw    (407.07,190.11) -- (285.93,228.07) ;
+
+		% Text Node
+		\draw (272,225.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (406.5,227.43) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (311,229.43) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (271,93.43) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (406.5,90.93) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (312,198.43) node [anchor=north west][inner sep=0.75pt]    {$G$};
+		% Text Node
+		\draw (409,178.4) node [anchor=north west][inner sep=0.75pt]    {$F$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	2. 如图,  点 $M$ 和 $N$ 三等分 $A C$, 点 $X$ 和 $Y$ 三等分 $B C, A Y$ 与 $B M ,  B N$ 分别交于点 $S ,  R$. 求四边形 $S R N M$ 的面积与 $\triangle A B C$ 的面积之比.
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp6830656203714423] 
+		\draw   (364.12,89.5) -- (413.1,222.4) -- (260,222.4) -- cycle ;
+		%Straight Lines [id:da46389229387602593] 
+		\draw    (364.12,89.5) -- (308.29,221.82) ;
+		%Straight Lines [id:da8404558057185993] 
+		\draw    (364.12,89.5) -- (358.79,221.82) ;
+		%Straight Lines [id:da9445802612457177] 
+		\draw    (379.79,130.82) -- (260,222.4) ;
+		%Straight Lines [id:da9931991026526179] 
+		\draw    (260,222.4) -- (395.79,174.82) ;
+
+		% Text Node
+		\draw (356.71,73.11) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (245.71,217.61) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (414.71,216.11) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (380.71,117.61) node [anchor=north west][inner sep=0.75pt]    {$M$};
+		% Text Node
+		\draw (398.21,164.11) node [anchor=north west][inner sep=0.75pt]    {$N$};
+		% Text Node
+		\draw (299.21,223.61) node [anchor=north west][inner sep=0.75pt]    {$X$};
+		% Text Node
+		\draw (352.21,224.61) node [anchor=north west][inner sep=0.75pt]    {$Y$};
+		% Text Node
+		\draw (346.69,172.46) node [anchor=north west][inner sep=0.75pt]    {$R$};
+		% Text Node
+		\draw (350.69,131.06) node [anchor=north west][inner sep=0.75pt]    {$S$};
+
+
+	\end{righttikzpicture}
+
+
+\end{frame}
+
+\begin{frame}
+	3. 设 $\triangle A B C$ 三边上的三个内接正方形(有两个顶点在三角形的一边上, 另两个顶点分别在三角形另两边上) 的面积都相等. 证明: $\triangle A B C$ 为正三角形.
+\end{frame}
+
+\section{平移、旋转与翻折}
+\begin{frame}{平移、旋转与翻折}
+	与代数变换的重要性一样, 几何变换同样在几何问题的解决中也起着非常重要的作用. 通过几何变换, 可以把分散的线段、角相对集中起来, 从而使已知条件集中在一个我们所熟知的基本图形之中, 然后利用新的图形的性质对原图形进行研究, 从而使问题得以转化.
+
+\end{frame}
+\subsection*{例题}
+\begin{frame}{例题}
+	1. 如图, 设 $I$ 是 $\triangle A B C$ 的垂心. 求证: $A I^2+B C^2=B I^2+A C^2=C I^2+A B^2$.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp965134050283331] 
+		\draw   (292.18,88.14) -- (418.93,206.14) -- (238.43,206.14) -- cycle ;
+		%Straight Lines [id:da10632431868047854] 
+		\draw    (292.18,88.14) -- (293,206.39) ;
+		%Straight Lines [id:da9245616532823671] 
+		\draw    (238.43,206.14) -- (322,116.39) ;
+		%Straight Lines [id:da28870816990987525] 
+		\draw    (270,136.89) -- (418.93,206.14) ;
+
+		% Text Node
+		\draw (283.43,70.19) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (224.43,204.47) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (419.43,203.47) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (284.43,208.61) node [anchor=north west][inner sep=0.75pt]    {$M$};
+		% Text Node
+		\draw (322.93,100.61) node [anchor=north west][inner sep=0.75pt]    {$L$};
+		% Text Node
+		\draw (253.43,122.61) node [anchor=north west][inner sep=0.75pt]    {$N$};
+		% Text Node
+		\draw (294.09,123.67) node [anchor=north west][inner sep=0.75pt]    {$I$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	2. 已知 $\triangle A B C$ 的三条中线的长为 $3 ,  4 ,  5$. 求 $\triangle A B C$ 的面积.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp11486446469283806] 
+		\draw   (284.64,90.55) -- (431.11,208.02) -- (240.57,208.02) -- cycle ;
+		%Straight Lines [id:da08764497625308065] 
+		\draw    (284.63,90.55) -- (337.35,207.76) ;
+		%Straight Lines [id:da3654952452511284] 
+		\draw    (240.6,208.02) -- (356.44,148.62) ;
+		%Straight Lines [id:da5369841766242902] 
+		\draw    (263.24,147.76) -- (431.11,208.02) ;
+
+		% Text Node
+		\draw (223.27,204.89) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (275.23,73.38) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (435.71,201.95) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (357.66,129.27) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (329.33,211.32) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (246.41,134.89) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (315.32,142.82) node [anchor=north west][inner sep=0.75pt]    {$G$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	3. 如图, 在 $\triangle A B C$ 外作等腰 Rt $\triangle A B D$ 和等腰 Rt $\triangle A C E$, 且 $\angle B A D=\angle C A E=90^{\circ}, A M$ 为 $\triangle A B C$ 中 $B C$ 边上的中线, 连结 $D E$. 求证: $D E=2 A M$.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Right Triangle [id:dp1498948318987876] 
+		\draw   (282.19,190.42) -- (322.24,66.21) -- (364.32,148.34) -- cycle ;
+		%Shape: Right Triangle [id:dp4973273175953059] 
+		\draw   (406.6,97.77) -- (414.89,190.62) -- (364.32,148.34) -- cycle ;
+		%Straight Lines [id:da47439954537309914] 
+		\draw    (414.89,190.62) -- (282.19,190.42) ;
+		%Straight Lines [id:da14263887682479703] 
+		\draw    (322.24,66.21) -- (406.6,97.77) ;
+		%Straight Lines [id:da7282590777299278] 
+		\draw    (364.32,148.34) -- (348.54,190.52) ;
+
+		% Text Node
+		\draw (369.29,136.04) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (269.29,189.04) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (415.79,188.04) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (307.29,53.04) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (410.79,84.04) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (336.79,193.04) node [anchor=north west][inner sep=0.75pt]    {$M$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	4. 如图, 正方形 $A B C D$ 内一点 $E, E$ 到 $A,  B,  C$ 三点的距离之和的最小值为 $\sqrt{2}+\sqrt{6}$, 求此正方形的边长.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Square [id:dp9978137376670462] 
+		\draw   (268,92) -- (378.43,92) -- (378.43,202.43) -- (268,202.43) -- cycle ;
+		%Straight Lines [id:da30319941544272133] 
+		\draw    (268,92) -- (299.43,161.86) ;
+		%Straight Lines [id:da2229572263406452] 
+		\draw    (299.43,161.86) -- (378.43,202.43) ;
+		%Straight Lines [id:da03618190876208338] 
+		\draw    (268,202.43) -- (299.43,161.86) ;
+
+		% Text Node
+		\draw (252.93,78.26) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (256.93,202.76) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (378.43,199.76) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (378.93,78.26) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (299.43,145.54) node [anchor=north west][inner sep=0.75pt]    {$E$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	5. 如图, 在正 $\triangle A B C$ 内有一点 $P, P$ 到三个顶点 $A,  B,  C$ 的距离分别为 $a,  b,  c$, 求 $\triangle A B C$ 的面积.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp9383543874437772] 
+		\draw   (349.48,96.34) -- (426.95,232.4) -- (272,232.4) -- cycle ;
+		%Straight Lines [id:da05751437608273635] 
+		\draw    (357.43,170.64) -- (272,232.4) ;
+		%Straight Lines [id:da5548462089665349] 
+		\draw    (349.48,96.34) -- (357.43,170.64) ;
+		%Straight Lines [id:da3973572948994557] 
+		\draw    (426.95,232.4) -- (357.43,170.64) ;
+
+		% Text Node
+		\draw (342.71,79.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (258.71,229.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (426.71,228.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (351.43,179.04) node [anchor=north west][inner sep=0.75pt]    {$P$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	6. 如图, 在 $\triangle A B C$ 中, $A D$ 是角平分线, $B E=C F$, 点 $M,  N$分别是 $B C$ 和 $E F$ 的中点. 求证: $M N \pll A D$.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Triangle [id:dp9755673279993666] 
+		\draw   (299.3,88.1) -- (422.92,223.45) -- (268.94,223.45) -- cycle ;
+		%Straight Lines [id:da08876761533695965] 
+		\draw    (299.3,88.1) -- (332.61,223.28) ;
+		%Straight Lines [id:da47111979754735467] 
+		\draw    (281.68,168.47) -- (386.86,183.42) ;
+		%Straight Lines [id:da25266754246056355] 
+		\draw    (334.27,175.95) -- (346.45,223.28) ;
+
+		% Text Node
+		\draw (291.88,71.47) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (256.62,217.61) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (424.27,218.72) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (323.75,224.81) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (342.67,225.48) node [anchor=north west][inner sep=0.75pt]    {$M$};
+		% Text Node
+		\draw (339.17,179.69) node [anchor=north west][inner sep=0.75pt]    {$N$};
+		% Text Node
+		\draw (267.47,157.99) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		% Text Node
+		\draw (392.15,173.05) node [anchor=north west][inner sep=0.75pt]    {$F$};
+
+
+	\end{righttikzpicture}
+\end{frame}
+
+\begin{frame}
+	7. 如图, 在矩形 $A B C D$ 中, $A B=20, B C=10$, 若在 $A B$,  $A C$ 上各取一点 $N,  M$, 使得 $B M+M N$ 的值最小, 求这个最小值.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Rectangle [id:dp6131445314932089] 
+		\draw   (255,113.14) -- (403.43,113.14) -- (403.43,214) -- (255,214) -- cycle ;
+		%Straight Lines [id:da3439469140463751] 
+		\draw    (403.43,113.14) -- (255,214) ;
+		%Straight Lines [id:da6030236593719192] 
+		\draw    (305.71,179.14) -- (403.43,214) ;
+		%Straight Lines [id:da05143138056341101] 
+		\draw    (305.71,179.14) -- (293.31,213.54) ;
+
+		% Text Node
+		\draw (239.14,210.11) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (403.81,209.11) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (405.81,101.78) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (238.48,101.11) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (285.81,164.78) node [anchor=north west][inner sep=0.75pt]    {$M$};
+		% Text Node
+		\draw (283.14,215.45) node [anchor=north west][inner sep=0.75pt]    {$N$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	8. 如图, 在 $\triangle A B C$ 中, $\angle A B C=90^{\circ}, A B=B C, P$ 为三角形内一点, 分别作 $P$ 关于 $B C,  C A,  A B$ 的对称点 $A^{\prime},  B^{\prime},  C^{\prime}$. 若所得 $\triangle A^{\prime} B^{\prime} C^{\prime}$ 中, $\angle B^{\prime} A^{\prime} C^{\prime}=90^{\circ}, A^{\prime} B^{\prime}=A^{\prime} C^{\prime}$. 求: $S_{\triangle A^{\prime} B^{\prime} C^{\prime}}: S_{\triangle A B C}$ 的值.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Right Triangle [id:dp516723719057484] 
+		\draw   (269,108) -- (392.43,221) -- (269,221) -- cycle ;
+		%Shape: Right Triangle [id:dp8912449963684967] 
+		\draw   (221,198.46) -- (356.29,135.65) -- (307.74,239.15) -- cycle ;
+		%Straight Lines [id:da45189573896432655] 
+		\draw    (221,198.46) -- (307.36,198.66) ;
+		%Straight Lines [id:da8084731051747136] 
+		\draw    (307.36,198.66) -- (307.74,239.15) ;
+		%Straight Lines [id:da05247831177520701] 
+		\draw    (307.36,198.66) -- (356.29,135.65) ;
+
+		% Text Node
+		\draw (261.9,91.92) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (257.9,220.59) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (394.57,218.59) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (297.24,239.59) node [anchor=north west][inner sep=0.75pt]    {$A'$};
+		% Text Node
+		\draw (358.57,120.26) node [anchor=north west][inner sep=0.75pt]    {$B'$};
+		% Text Node
+		\draw (206.57,186.59) node [anchor=north west][inner sep=0.75pt]    {$C'$};
+		% Text Node
+		\draw (296.57,179.59) node [anchor=north west][inner sep=0.75pt]    {$P$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\subsection*{练习题}
+\begin{frame}{练习题}
+	1. 证明: 如果七条直线两两相交,那么所得的角中至少有一个角小于 $26^{\circ}$.
+\end{frame}
+
+\begin{frame}
+	2. 如图, 在 “风车三角形” 中, $A A^{\prime}=B B^{\prime}=C C^{\prime}=2, \angle A O B^{\prime}=\angle B O C^{\prime}=$ $\angle C O A^{\prime}=60^{\circ}$. 求证: $S_{\triangle A O B^{\prime}}+S_{\triangle B O C^{\prime}}+S_{\triangle C O A^{\prime}}<\sqrt{3}$.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Straight Lines [id:da12467582263921573] 
+		\draw    (256,177) -- (333.43,46.64) ;
+		%Straight Lines [id:da9915168084381896] 
+		\draw    (246,77) -- (324.43,205.64) ;
+		%Straight Lines [id:da631099447911291] 
+		\draw    (240.43,134.64) -- (402.43,135.86) ;
+		%Straight Lines [id:da5501587979334464] 
+		\draw    (246,77) -- (240.43,134.64) ;
+		%Straight Lines [id:da590332993841753] 
+		\draw    (333.43,46.64) -- (402.43,135.86) ;
+		%Straight Lines [id:da8456949784719177] 
+		\draw    (256,177) -- (324.43,205.64) ;
+
+		% Text Node
+		\draw (320.48,200.59) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (227.14,126.59) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (326.48,29.92) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (237.14,167.92) node [anchor=north west][inner sep=0.75pt]    {$A'$};
+		% Text Node
+		\draw (400.48,128.92) node [anchor=north west][inner sep=0.75pt]    {$B'$};
+		% Text Node
+		\draw (236.48,58.92) node [anchor=north west][inner sep=0.75pt]    {$C'$};
+		% Text Node
+		\draw (274.48,108.26) node [anchor=north west][inner sep=0.75pt]    {$O$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\begin{frame}
+	3. 如图, 在平行四边形 $A B C D$ 中, 由 $A$ 向另两边作垂线 $A P,  A Q$, 已知 $P Q=a, A C=b, H$ 为 $\triangle A P Q$ 的垂心. 求 $A H$ 的值.
+
+
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+	\begin{righttikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+		%Shape: Rectangle [id:dp5475311702784396] 
+		\draw   (311.72,116.37) -- (450.71,116.37) -- (392.5,212.64) -- (253.51,212.64) -- cycle ;
+		%Straight Lines [id:da38793245695055245] 
+		\draw    (311.72,116.37) -- (312.19,211.98) ;
+		%Straight Lines [id:da05366381726480629] 
+		\draw    (311.72,116.37) -- (414.43,176.27) ;
+		%Straight Lines [id:da39992472305633453] 
+		\draw    (311.72,116.37) -- (392.5,212.64) ;
+		%Straight Lines [id:da3076917283183087] 
+		\draw    (312.19,211.98) -- (414.43,176.27) ;
+		%Straight Lines [id:da9764842280121784] 
+		\draw    (311.72,116.37) -- (337.38,202.93) ;
+		%Straight Lines [id:da9808378369598041] 
+		\draw    (351.27,140.02) -- (312.19,211.98) ;
+		%Shape: Right Angle [id:dp8872898467261414] 
+		\draw   (335.57,197.86) -- (340.49,196.35) -- (342,201.28) ;
+		%Shape: Right Angle [id:dp24699786814757219] 
+		\draw   (355.52,142.53) -- (353.09,147.07) -- (348.54,144.65) ;
+
+		% Text Node
+		\draw (294.19,105.5) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (239.19,207.83) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (393.52,208.83) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (450.86,106.83) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (306.19,212.83) node [anchor=north west][inner sep=0.75pt]    {$P$};
+		% Text Node
+		\draw (413.86,172.5) node [anchor=north west][inner sep=0.75pt]    {$Q$};
+		% Text Node
+		\draw (333.36,169.83) node [anchor=north west][inner sep=0.75pt]    {$H$};
+
+
+	\end{righttikzpicture}
+
+\end{frame}
+
+\section*{未完待续}
+\begin{frame}
+	\Huge
+	$$
+		\mathcal{TO}	\quad
+		\mathcal{BE}  	\quad
+		\mathcal{CONTINUED}
+		\ldots
+	$$
+\end{frame}
+\end{document}
