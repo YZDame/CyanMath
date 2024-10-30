@@ -46,7 +46,7 @@
 \newtheorem*{analysis}{分析}
 
 
-\renewcommand{\qedsymbol}{$\blacksquare$}
+%\renewcommand{\qedsymbol}{$\blacksquare$}
 \renewcommand{\proofname}{\bf 证明}
 \newcommand{\pll}{\kern 0.56em/\kern -0.8em /\kern 0.56em}
 

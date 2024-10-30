@@ -4,7 +4,7 @@
 
 \subsection{整除的概念与基本性质}
 \begin{definition}
-qwq对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ . 
+对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ . 
 
 如果 $a \mid b$, 那么称 $a$ 为 $b$ 的因数, $b$ 为 $a$ 的倍数.
 \end{definition}
@@ -25,17 +25,18 @@ qwq对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $
 若 $a|b, a| c$, 则对任意整数 $x ,  y$, 都有 $a \mid b x+c y$ . (即 $a$ 能整除 $b ,  c$ 的任意一个“线性组合”)
 \end{property}
 
+% 例 1
 \begin{example}
 若 $a|n, b| n$, 且存在整数 $x ,  y$, 使得 $a x+b y=1$, 证明: $a b \mid n$.
 \end{example}
 \begin{proof}
 由条件, 可设 $n=a u, n=b v, u ,  v$ 为整数. 于是\\
-\begin{align}
+\begin{align*}
 n & =n(a x+b y) \\
 & =n a x+n b y \\
 & =a b v x+a b u y \\
 & =a b(v x+u y)
-\end{align}
+\end{align*}
 
 因此
 \begin{equation*}
@@ -46,6 +47,7 @@ a b \mid n
 一般地, 由 $a|n, b| n$, 并不能推出 $a b \mid n$, 例如 $2|6,6| 6$, 但 $12 \nmid 6$. 题中给出的条件实质上表明 $a ,  b$ 的最大公因数 (见 1.3 节) 为 1 , 即 $a$与 $b$ 互素，在此条件下可推出 $a b \mid n$ . 
 \end{note}
 
+% 例 2
 \begin{example}
 证明：无论在数 12008 的两个 0 之间添加多少个 3 ，所得的数都是 19 的倍数. 
 \end{example}
@@ -78,56 +80,58 @@ a_{n+1}-10 a_{n}=228=19 \times 12
 此题的处理过程中运用了递推的思想，其基本思路是将 $a_{n+1}$ 表示为 $a_{n}$ 与 19 的一个线性组合. 
 \end{note}
 
+% 例 3
 \begin{example}
 已知一个 1000 位正整数的任意连续 10 个数码形成的 10 位数是 $2^{10}$ 的倍数. 证明：该正整数为 $2^{1000}$ 的倍数. 
 \end{example}
 \begin{proof}
 设该正整数 $x=\overline{a_{1} a_{2} \cdots a_{1000}}$, 其中 $a_{i}$ 是十进位数码. 由条件, 可知
-
-因此
 \begin{align}
-2^{10} \mid & \overline{a_{991} \cdots a_{1000}}, 2^{10} \mid \overline{a_{990} \cdots a_{999}} \\
-2^{10} \mid \overline{a_{990} \cdots a_{999}} & \times 10
+2^{10} \mid & \overline{a_{991} \cdots a_{1000}}, 2^{10} \mid \overline{a_{990} \cdots a_{999}},
+\end{align}
+因此
+\begin{align}\label{eq:2024_10_09_1}
+2^{10} \mid \overline{a_{990} \cdots a_{999}} & \times 10.
 \end{align}
 
-记 $y=\overline{a_{991} \cdots a_{999}}$ ，则有
+记 $y=\overline{a_{991} \cdots a_{999}}$ ，则\autoref{eq:2024_10_09_1}又可写作
 \begin{align*}
-2^{10} \mid a_{990} \times 10^{10}+10 y
+2^{10} \mid a_{990} \times 10^{10}+10 y,
 \end{align*}
 
 故
 \begin{align*}
-2^{10} \mid 10 y
+2^{10} \mid 10 y.
 \end{align*}
 
 结合 $2^{10} \mid \overline{a_{991} \cdots a_{1000}}$ ，可知
 \begin{align*}
-2^{10} \mid 10 y+a_{1000}
+2^{10} \mid 10 y+a_{1000},
 \end{align*}
 
 于是
 \begin{align*}
-2^{10} \mid a_{1000}
+2^{10} \mid a_{1000},
 \end{align*}
 
 这要求
 \begin{align*}
-a_{1000}=0
+a_{1000}=0.
 \end{align*}
 
 类似地，朝前倒推，可得
 \begin{align*}
-a_{11}=\cdots=a_{1000}=0
+a_{11}=\cdots=a_{1000}=0,
 \end{align*}
 
 即
 \begin{align*}
-x=\overline{a_{1} \cdots a_{10}} \times 10^{990}
+x=\overline{a_{1} \cdots a_{10}} \times 10^{990}.
 \end{align*}
 
 再结合条件 $2^{10} \mid \overline{a_{1} \cdots a_{10}}$ ，即可得
 \begin{align*}
-2^{1000} \mid x
+2^{1000} \mid x.
 \end{align*}
 \end{proof}
 \begin{note}

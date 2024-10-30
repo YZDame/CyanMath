@@ -2,6 +2,7 @@
 %\usetheme{Madrid}
 %\usetheme{Boadilla}
 %\usecolortheme{beaver}
+
 \usepackage{amsmath} 
 \usepackage{amssymb} 
 \usepackage{amsfonts} 
@@ -48,34 +49,33 @@
 		如果 $a \mid b$, 那么 $a \mid(-b)$ ，反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ ，反过来也成立.
 	\end{property}
 	\begin{property}
-		如果 $a|b, b| c$, 那么 $a \mid c$ . 这表明整除具有传递性.
+		如果 $a|b, b| c$, 那么 $a \mid c$ . (传递性)
 	\end{property}
-
 	\begin{property}
 		若 $a|b, a| c$, 则对任意整数 $x ,  y$, 都有 $a \mid b x+c y$ . (即 $a$ 能整除 $b ,  c$ 的任意一个“线性组合”)
 	\end{property}
 \end{frame}
 
-\begin{frame}
+% 例 1
+\begin{frame}[t]
 	\begin{example}
 		若 $a|n, b| n$, 且存在整数 $x ,  y$, 使得 $a x+b y=1$, 证明: $a b \mid n$.
 	\end{example}
+
 \end{frame}
 
-\begin{frame}
-	\begin{proof}
-		由条件, 可设 $n=a u, n=b v, u ,  v$ 为整数. 于是\\
-		\begin{align}
-			n & =n(a x+b y)      \\
-			  & =n a x+n b y     \\
-			  & =a b v x+a b u y \\
-			  & =a b(v x+u y)
-		\end{align}
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		证明：无论在数 12008 的两个 0 之间添加多少个 3 ，所得的数都是 19 的倍数. 
+		\end{example}
+	\end{frame}
 
-		因此
-		\begin{align*}
-			a b \mid n
-		\end{align*}
-	\end{proof}
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		已知一个 1000 位正整数的任意连续 10 个数码形成的 10 位数是 $2^{10}$ 的倍数. 证明：该正整数为 $2^{1000}$ 的倍数.
+	\end{example}
+
 \end{frame}
 \end{document}
