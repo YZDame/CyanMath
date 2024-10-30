@@ -1,0 +1,81 @@
+\documentclass[aspectratio=169]{ctexbeamer}
+%\usetheme{Madrid}
+%\usetheme{Boadilla}
+%\usecolortheme{beaver}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsfonts} 
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usefonttheme[onlymath]{serif} % 衬线数学字体
+
+\theoremstyle{definition}
+\newtheorem{question}{问题}[section]
+\newtheorem{exercise}{练习}[section]
+\newtheorem{formula}{公式}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{property}{性质}[section]
+
+\theoremstyle{plain}
+\newtheorem*{analysis}{分析}
+
+\title[初等数论]{初等数论}
+\subtitle{整除, 同余和不定方程}
+\author{LeyuDame}
+\date[\today]{\today}
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{目录}
+%		\tableofcontents[currentsection]
+%	\end{frame}
+%}
+\begin{document}
+\frame{\titlepage}
+%\frame{\frametitle{目录}\tableofcontents}
+\section{同余}
+\begin{frame}
+	\begin{definition}
+		对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
+
+		如果 $a \mid b$, 那么称 $a$ 为 $b$ 的因数, $b$ 为 $a$ 的倍数.
+	\end{definition}
+\end{frame}
+
+\begin{frame}
+	\begin{property}
+		如果 $a \mid b$, 那么 $a \mid(-b)$ ，反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ ，反过来也成立.
+	\end{property}
+	\begin{property}
+		如果 $a|b, b| c$, 那么 $a \mid c$ . 这表明整除具有传递性.
+	\end{property}
+
+	\begin{property}
+		若 $a|b, a| c$, 则对任意整数 $x ,  y$, 都有 $a \mid b x+c y$ . (即 $a$ 能整除 $b ,  c$ 的任意一个“线性组合”)
+	\end{property}
+\end{frame}
+
+\begin{frame}
+	\begin{example}
+		若 $a|n, b| n$, 且存在整数 $x ,  y$, 使得 $a x+b y=1$, 证明: $a b \mid n$.
+	\end{example}
+\end{frame}
+
+\begin{frame}
+	\begin{proof}
+		由条件, 可设 $n=a u, n=b v, u ,  v$ 为整数. 于是\\
+		\begin{align}
+			n & =n(a x+b y)      \\
+			  & =n a x+n b y     \\
+			  & =a b v x+a b u y \\
+			  & =a b(v x+u y)
+		\end{align}
+
+		因此
+		\begin{align*}
+			a b \mid n
+		\end{align*}
+	\end{proof}
+\end{frame}
+\end{document}

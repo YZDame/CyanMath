@@ -1,0 +1,33 @@
+\documentclass{CyberMath}
+\graphicspath{ {./images/} }
+%\excludecomment{analysis}
+%\excludecomment{proof}
+%\excludecomment{solution}
+%\excludecomment{note}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section*{符号说明}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{cc}
+    \hline
+  符号 & 说明 \\  \hline
+  $a \mid b$ & $a$ 整除 $b$ \\ 
+  $a \nmid b$ & $a$ 不整除 $b$ \\ 
+  $(a, b)$ & $a$ 与 $b$ 的最大公因数 \\ 
+  $[a, b]$ & $a$ 与 $b$ 的最小公倍数 \\ 
+  $p^{\alpha} \| a$ & $p^{\alpha} \mid a$ 但 $p^{\alpha+1} \nmid a$ \\ 
+  $a \equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 同余 \\ 
+  $a \not\equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 不同余 \\ 
+  $a^{-1}(\bmod m)$ & $a$ 对模 $m$ 的数论倒数 \\ 
+  $[x]$ & 不超过 $x$ 的最大整数 \\ 
+  $\max \{a, b\}$ & 实数 $a 、 b$ 中较大的数 \\ 
+  $\min \{a, b\}$ & 实数 $a 、 b$ 中较小的数 \\ \hline
+  \end{tabular}
+  \caption{符号说明}
+  \end{table}
+
+\input{data/6_整除、同余与不定方程/整除、同余与不定方程.tex}
+\end{document}
