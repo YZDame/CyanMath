@@ -1,8 +1,7 @@
 \documentclass[aspectratio=169]{ctexbeamer}
 %\usetheme{Madrid}
-%\usetheme{Boadilla}
+\usetheme{Boadilla}
 %\usecolortheme{beaver}
-
 \usepackage{amsmath} 
 \usepackage{amssymb} 
 \usepackage{amsfonts} 
@@ -17,10 +16,7 @@
 \newtheorem{formula}{公式}[section]
 \newtheorem{proposition}{命题}[section]
 \newtheorem{property}{性质}[section]
-
-\theoremstyle{plain}
-\newtheorem*{analysis}{分析}
-
+	
 \title[初等数论]{初等数论}
 \subtitle{整除, 同余和不定方程}
 \author{LeyuDame}
@@ -35,8 +31,9 @@
 \begin{document}
 \frame{\titlepage}
 %\frame{\frametitle{目录}\tableofcontents}
-\section{同余}
-\begin{frame}
+\section{整除}
+\subsection{整除的概念与基本性质}
+\begin{frame}{整除的概念与基本性质}
 	\begin{definition}
 		对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
 
@@ -44,7 +41,7 @@
 	\end{definition}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{整除的概念与基本性质}
 	\begin{property}
 		如果 $a \mid b$, 那么 $a \mid(-b)$ ，反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ ，反过来也成立.
 	\end{property}
@@ -61,21 +58,114 @@
 	\begin{example}
 		若 $a|n, b| n$, 且存在整数 $x ,  y$, 使得 $a x+b y=1$, 证明: $a b \mid n$.
 	\end{example}
-
 \end{frame}
 
 % 例 2
 \begin{frame}[t]
 	\begin{example}
-		证明：无论在数 12008 的两个 0 之间添加多少个 3 ，所得的数都是 19 的倍数. 
-		\end{example}
-	\end{frame}
+		证明：无论在数 12008 的两个 0 之间添加多少个 3 ，所得的数都是 19 的倍数.
+	\end{example}
+\end{frame}
 
 % 例 3
 \begin{frame}[t]
 	\begin{example}
 		已知一个 1000 位正整数的任意连续 10 个数码形成的 10 位数是 $2^{10}$ 的倍数. 证明：该正整数为 $2^{1000}$ 的倍数.
 	\end{example}
-
 \end{frame}
+
+%例 4 
+\begin{frame}[t]
+	\begin{example}
+		设 $m$ 是一个大于 2 的正整数，证明：对任意正整数 $n$ ，都有 $2^{m}-1 \nmid$ $2^{n}+1$.
+	\end{example}
+\end{frame}
+
+\subsection{素数与合数}
+\begin{frame}{素数与合数}
+	\begin{property}
+		设 $n$ 为大于 1 的正整数, $p$ 是 $n$ 的大于 1 的因数中最小的正整数, 则 $p$ 为素数.
+	\end{property}
+	\begin{property}
+		如果对任意 $1$ 到 $\sqrt{n}$ 之间的素数 $p$, 都有 $p \nmid n$, 那么 $n$ 为素数. 这里 $n(>1)$ 为正整数.
+	\end{property}
+	\begin{proof}
+		事实上, 若 $n$ 为合数, 则可写 $n=p q, 2 \leqslant p \leqslant q$. 因此 $p^{2} \leqslant n$, 即 $p \leqslant \sqrt{n}$ .
+
+		这表明 $p$ 的素因子 $\leqslant \sqrt{n}$ , 且它是 $n$ 的因数, 与条件矛盾. 因此 $n$ 为素数.
+	\end{proof}
+\end{frame}
+
+\begin{frame}{素数与合数}
+	\begin{property}
+		素数有无穷多个.
+	\end{property}
+	\begin{proof}
+		若只有有限个素数, 设它们是 $p_{1}<p_{2}<\cdots<p_{n}$. 考虑数
+		\begin{align*}
+			x=p_{1} p_{2} \cdots p_{n}+1
+		\end{align*}
+		其最小的大于 1 的因数 $p$, 它是一个素数, 因此, $p$ 应为 $p_{1}, p_{2}, \cdots, p_{n}$ 中的某个数. 设 $p=p_{i}, 1 \leqslant i \leqslant n$, 并且 $x=p_{i} y$, 则 $p_{1} p_{2} \cdots p_{n}+1=p_{i} y$, 即
+		\begin{align*}
+			p_{i}(y-\left.p_{1} p_{2} \cdots p_{i-1} p_{i+1} \cdots p_{n}\right)=1.
+		\end{align*}
+		这导致 $p_{i} \mid 1$. 矛盾.
+
+		所以, 素数有无穷多个.
+	\end{proof}
+\end{frame}
+
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		设 $n$ 为大于 1 的正整数. 证明: 数 $n^{5}+n^{4}+1$ 不是素数.
+	\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		考察下面的数列:
+		\begin{align*}
+			101,10101,1010101, \cdots
+		\end{align*}
+		问:该数列中有多少个素数?
+	\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		求所有的正整数 $n$, 使得 $\frac{n(n+1)}{2}-1$ 是一个素数.
+	\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		对任意正整数 $n$ , 证明: 存在连续 $n$ 个正整数, 它们都是合数.
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		设 $n$ 为大于 2 的正整数. 证明: 存在一个素数 $p$ , 满足 $n<p<n!$ .
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}
+		设 $a ,  b ,  c ,  d ,  e ,  f$ 都是正整数,  $S=a+b+c+d+e+f$ 是 $a b c+$ $d e f$ 和 $a b+b c+c a-d e-e f-e d$ 的因数. 证明: $S$ 为合数.
+	\end{example}
+\end{frame}
+\subsection{最大公因数与最小公倍数}
+
+\subsection{算术基本定理}
+
+\subsection{习题 1}
+
+\section{同余}
+\subsection{同余的概念与基本性质}
 \end{document}

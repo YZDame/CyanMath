@@ -26,7 +26,7 @@
 %\setlength{\abovedisplayskip}{0.5em}
 %\setlength{\belowdisplayskip}{0.5em}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 
 \theoremstyle{definition}
 \newtheorem{question}{问题}[section]
