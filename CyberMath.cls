@@ -68,6 +68,8 @@
 \def\exerciseautorefname{练习}
 \def\formulaautorefname{公式}
 \def\definitionautorefname{定义}
+\def\lemmaautorefname{引理}
+\def\propertyautorefname{性质}
 % 对于没有编号的环境，如 solution，通常不需要定义 \autoref 名称
 
 \def\pgfsysdriver{pgfsys-dvipdfm.def}

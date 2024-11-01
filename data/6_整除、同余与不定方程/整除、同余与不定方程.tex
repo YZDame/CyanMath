@@ -12,27 +12,26 @@
 利用整除的定义, 可以非常容易地推导出下面一些经常被用到的性质.
 
 \begin{property}
-	如果 $a \mid b$, 那么 $a \mid(-b)$ , 反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ , 反过来也成立.
+	如果 $a \mid b$, 那么 $a \mid(-b)$ , 反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ , 反过来也成立.因此,我们经常只讨论正整数之间的整除关系.
 \end{property}
 
-因此,我们经常只讨论正整数之间的整除关系.
 
 \begin{property}
 	如果 $a|b, b| c$, 那么 $a \mid c$ . 这表明整除具有传递性.
 \end{property}
 
-\begin{property}
+\begin{property}\label{prop:整除的性质——“线性组合”}
 	若 $a|b, a| c$, 则对任意整数 $x ,  y$, 都有 $a \mid b x+c y$ . (即 $a$ 能整除 $b ,  c$ 的任意一个“线性组合”)
 \end{property}
 
 % 例 1
-\begin{example}
+\begin{example}\label{ex:整除的概念与基本性质-例1}
 	若 $a|n, b| n$, 且存在整数 $x ,  y$, 使得 $a x+b y=1$, 证明: $a b \mid n$.
 \end{example}
 \begin{proof}
 	由条件, 可设 $n=a u, n=b v, u ,  v$ 为整数. 于是
-	
-\begin{align*}
+
+	\begin{align*}
 		n & =n(a x+b y)      \\
 		  & =n a x+n b y     \\
 		  & =a b v x+a b u y \\
@@ -55,19 +54,19 @@
 	记 $a_{0}=12008, a_{n}=120 \underbrace{3 \cdots 308}_{n \uparrow 3}, n=1,2, \cdots$.
 
 	首先, 因为
-\begin{align*}
+	\begin{align*}
 		a_{0}=19 \times 632,
 	\end{align*}
 	故
-\begin{align*}
+	\begin{align*}
 		19 \mid a_{0}.
 	\end{align*}
 	其次, 设 $19 \mid a_{n}$ , 则由
-\begin{align*}
+	\begin{align*}
 		a_{n+1}-10 a_{n}=228=19 \times 12,
 	\end{align*}
 	可知
-\begin{align*}
+	\begin{align*}
 		19 \mid a_{n+1} \cdot
 	\end{align*}
 	所以, 对一切整数 $n$ , 数 $a_{n}$ 都是 19 的倍数.
@@ -86,43 +85,40 @@
 		2^{10} \mid & \overline{a_{991} \cdots a_{1000}}, 2^{10} \mid \overline{a_{990} \cdots a_{999}},
 	\end{align}
 	因此
-	\begin{align}\label{eq:1-1-1}
+	\begin{align}\label{eq:整除的概念与基本性质-例3-1}
 		2^{10} \mid \overline{a_{990} \cdots a_{999}} & \times 10.
 	\end{align}
-	记 $y=\overline{a_{991} \cdots a_{999}}$ , 则\autoref{eq:1-1-1}又可写作
-\begin{align*}
+	记 $y=\overline{a_{991} \cdots a_{999}}$ , 则\autoref{eq:整除的概念与基本性质-例3-1}又可写作
+	\begin{align*}
 		2^{10} \mid a_{990} \times 10^{10}+10 y,
 	\end{align*}
 	故
-\begin{align*}
+	\begin{align*}
 		2^{10} \mid 10 y.
 	\end{align*}
 	结合 $2^{10} \mid \overline{a_{991} \cdots a_{1000}}$ , 可知
-\begin{align*}
+	\begin{align*}
 		2^{10} \mid 10 y+a_{1000},
 	\end{align*}
 	于是
-\begin{align*}
+	\begin{align*}
 		2^{10} \mid a_{1000},
 	\end{align*}
 
 	这要求
-	
-\begin{align*}
+	\begin{align*}
 		a_{1000}=0.
 	\end{align*}
-
 	类似地, 朝前倒推, 可得
-	
-\begin{align*}
+	\begin{align*}
 		a_{11}=\cdots=a_{1000}=0,
 	\end{align*}
 	即
-\begin{align*}
+	\begin{align*}
 		x=\overline{a_{1} \cdots a_{10}} \times 10^{990}.
 	\end{align*}
 	再结合条件 $2^{10} \mid \overline{a_{1} \cdots a_{10}}$ , 即可得
-\begin{align*}
+	\begin{align*}
 		2^{1000} \mid x.
 	\end{align*}
 \end{proof}
@@ -144,8 +140,8 @@
 		2^{n}+2^{m}=\left(2^{n}+1\right)+\left(2^{m}-1\right)=\left(2^{m}-1\right)(q+1).
 	\end{align*}
 	即
-	
-\begin{align*}
+
+	\begin{align*}
 		2^{m}\left(2^{n \sqcap m}+1\right)=\left(2^{m}-1\right)(q+1)
 	\end{align*}
 	于是,
@@ -175,14 +171,14 @@
 	事实上, 若 $n$ 为合数, 则可写 $n=p q, 2 \leqslant p \leqslant q$. 因此 $p^{2} \leqslant n$, 即 $p \leqslant \sqrt{n}$ .
 
 
-这表明 $p$ 的素因子 $\leqslant \sqrt{n}$ , 且它是 $n$ 的因数, 与条件矛盾. 因此 $n$ 为素数.
+	这表明 $p$ 的素因子 $\leqslant \sqrt{n}$ , 且它是 $n$ 的因数, 与条件矛盾. 因此 $n$ 为素数.
 \end{proof}
 
 \begin{note}
 	这里素因子是指正整数的因数中为素数的那些数, 此性质是我们检验一个数是否为素数的最常用的方法.
 \end{note}
 
-\begin{property}
+\begin{property}\label{prop:素数有无穷多个}
 	素数有无穷多个.
 \end{property}
 \begin{proof}
@@ -191,10 +187,10 @@
 		x=p_{1} p_{2} \cdots p_{n}+1
 	\end{align*}
 	其最小的大于 1 的因数 $p$, 它是一个素数, 因此, $p$ 应为 $p_{1}, p_{2}, \cdots, p_{n}$ 中的某个数. 设 $p=p_{i}, 1 \leqslant i \leqslant n$, 并且 $x=p_{i} y$, 则 $p_{1} p_{2} \cdots p_{n}+1=p_{i} y$, 即
-  \begin{align*}
-    p_{i}(y-\left.p_{1} p_{2} \cdots p_{i-1} p_{i+1} \cdots p_{n}\right)=1.
-  \end{align*}
-   这导致 $p_{i} \mid 1$. 矛盾.
+	\begin{align*}
+		p_{i}(y-\left.p_{1} p_{2} \cdots p_{i-1} p_{i+1} \cdots p_{n}\right)=1.
+	\end{align*}
+	这导致 $p_{i} \mid 1$. 矛盾.
 
 	所以, 素数有无穷多个.
 \end{proof}
@@ -230,7 +226,7 @@
 \end{note}
 
 % 例 2
-\begin{example}
+\begin{example}\label{素数与合数的性质-例2}
 	考察下面的数列:
 	\begin{align*}
 		101,10101,1010101, \cdots
@@ -276,7 +272,7 @@
 	这是一个合数.
 
 	当 $n=4 k+3$ 时, 可得
-  \begin{align}
+	\begin{align}
 		a_{n} & =2(k+1)(4 k+3)-1 \\
 		      & =8 k^{2}+14 k+5  \\
 		      & =(4 k+5)(2 k+1),
@@ -310,10 +306,10 @@
 \end{example}
 \begin{proof}
 	设 $p_{1}<p_{2}<\cdots<p_{k} , $ 且 $p_{1}, p_{2}, \cdots, p_{k}$ 是所有不超过 $n$ 的素数, 考虑数
-\begin{align*}
+	\begin{align*}
 		q=p_{1} p_{2} \cdots p_{k}-1
 	\end{align*}
-	在 $n>2$ 时,  2,3 都在 $p_{1}, \cdots, p_{k}$ 中出现, 故 $5 \leqslant q \leqslant n!-1<n!$ , 利用性质 3 证明中的方法, 可知 $q$ 的素因子 $p$ 不等于 $p_{1}, p_{2}, \cdots, p_{k}$ 中的任何一个. 而 $p_{1}, p_{2}, \cdots, p_{k}$ 是所有不超过 $n$ 的素数, 因此 $p>n$ , 所以 $n<p \leqslant q<n$ !.
+	在 $n>2$ 时,  2,3 都在 $p_{1}, \cdots, p_{k}$ 中出现, 故 $5 \leqslant q \leqslant n!-1<n!$ , 利用\autoref{prop:素数有无穷多个}证明中的方法, 可知 $q$ 的素因子 $p$ 不等于 $p_{1}, p_{2}, \cdots, p_{k}$ 中的任何一个. 而 $p_{1}, p_{2}, \cdots, p_{k}$ 是所有不超过 $n$ 的素数, 因此 $p>n$ , 所以 $n<p \leqslant q<n!$.
 
 	从而, 命题成立.
 \end{proof}
@@ -327,19 +323,17 @@
 \end{example}
 \begin{proof}
 	考虑多项式
-\begin{align*}
+	\begin{align*}
 		f(x)=(x+a)(x+b)(x+c)-(x-d)(x-e)(x-f)
 	\end{align*}
-
 	展开后, 可知
-\begin{align*}
+	\begin{align*}
 		f(x)=S x^{2}+(a b+b c+c a-d e-e f-f d) x+(a b c+d e f)
 	\end{align*}
-
-	由条件可知, 对任意 $x \in \mathbf{Z}$ , 都有 $S \mid f(x)$ . 特别地, 取 $x=d$ , 就有 $S \mid f(d)$ , 即 $S \mid(d+a)(d+b)(d+c)$ . 由于 $a ,  b ,  c ,  d ,  e ,  f$ 都为正整数, 故 $d+a ,  d+b$ ,  $d+c$ 都小于 $S$, 所以, $S$ 为合数.
+	由条件可知, 对任意 $x \in \mathbb{Z}$ , 都有 $S \mid f(x)$ . 特别地, 取 $x=d$ , 就有 $S \mid f(d)$ , 即 $S \mid(d+a)(d+b)(d+c)$ . 由于 $a ,  b ,  c ,  d ,  e ,  f$ 都为正整数, 故 $d+a ,  d+b$ ,  $d+c$ 都小于 $S$, 所以, $S$ 为合数.
 \end{proof}
 \begin{note}
-	对比\ref{例2}, 两个例子中分别用到下面的结论: 若 $x ,  y ,  z$ 为正整数, 且 $\frac{x y}{z}$ 亦为整数,则如果 $x ,  y>z$, 那么 $\frac{x y}{z}$ 为合数;如果 $x ,  y<z$, 那么 $z$ 为合数.
+	对比\autoref{素数与合数的性质-例2}, 两个例子中分别用到下面的结论: 若 $x ,  y ,  z$ 为正整数, 且 $\frac{x y}{z}$ 亦为整数,则如果 $x ,  y>z$, 那么 $\frac{x y}{z}$ 为合数;如果 $x ,  y<z$, 那么 $z$ 为合数.
 \end{note}
 
 \subsection{最大公因数与最小公倍数}
@@ -347,136 +341,161 @@
 
 注意到, 当 $d \mid a$ 且 $d \mid b$ 时, 则 $d \leqslant|a|$ 或 $d \leqslant|b|$ 中必有一个成立(对 $a ,  b$ 中不为零的数成立). 因此, $a ,  b$ 的公因数中有一个最大的, 这个数称为 $a ,  b$ 的最大公因数, 记为 $(a, b)$ . 如果 $(a, b)=1$ , 那么我们称 $a ,  b$ 互素.
 
-在讨论最大公因数的性质之前, 我们不加证明地引入一个在小学就接触到的, 数论中最基本, 最常用的结论.
-
-带余数除法 设 $a ,  b$ 是两个整数, $a \neq 0$, 则存在唯一的一对整数 $q$ 和 $r$,满足
+在讨论最大公因数的性质之前, 我们不加证明地引入一个在小学就接触到的、数论中最基本、最常用的结论.
+\begin{theorem}[带余数除法]
+	设 $a ,  b$ 是两个整数, $a \neq 0$, 则存在唯一的一对整数 $q$ 和 $r$,满足
 \begin{align*}
 	b=a q+r, 0 \leqslant r<|b|
 \end{align*}
-
 其中 $q$ 称为 $b$ 除以 $a$ 所得的商, $r$ 称为 $b$ 除以 $a$ 所得的余数.\\
-性质1 设 $d=(a, b)$ , 则存在整数 $x ,  y$ , 使得
+\end{theorem}
 
+\begin{property}[贝祖(Bezout)定理]
+	设 $d=(a, b)$ , 则存在整数 $x ,  y$ , 使得
 \begin{align*}
 	a x+b y=d
 \end{align*}
-
-这个结论就是著名的贝祖(Bezout)定理. \\
-证明 我们利用带余除法来处理, 此结论的证明过程又是求 $a ,  b$ 的最大公因数的过程, 它被称为"辗转相除".
+\end{property}
+\begin{proof}
+我们利用带余除法来处理, 此结论的证明过程又是求 $a ,  b$ 的最大公因数的过程, 它被称为“辗转相除”.
 
 不妨设 $a ,  b$ 都不为零(当 $a ,  b$ 中有一个为零时, 结论是显然的), 且 $|a| \leqslant|b|$.
 
 设 $b=a q_{1}+r_{1}$, 其中 $0 \leqslant r_{1}<|a|, q_{1} ,  r_{1}$ 为整数. 若 $r_{1}=0$ , 则辗转相
 
-除到此为止; 否则用 $a$ 去除以 $r_{1}$, 得等式 $a=r_{1} q_{2}+r_{2}, 0 \leqslant r_{2}<r_{1}$; 依此讨论, 由于 $r_{1}>r_{2}>r_{3}>\cdots$, 因此辗转相除到某一步后, 所得的 $r_{k+1}=0$, 于是,我们得到了如下的一系列式子:\begin{align}
+除到此为止; 否则用 $a$ 去除以 $r_{1}$, 得等式 $a=r_{1} q_{2}+r_{2}, 0 \leqslant r_{2}<r_{1}$; 依此讨论, 由于 $r_{1}>r_{2}>r_{3}>\cdots$, 因此辗转相除到某一步后, 所得的 $r_{k+1}=0$, 于是,我们得到了如下的一系列式子:
+\begin{align*}
 	b       & =a q_{1}+r_{1}, 0<r_{1}<|a|                                    \\
 	a       & =r_{1} q_{2}+r_{2}, 0<r_{2}<r_{1}                              \\
 	r_{1}   & =r_{2} q_{3}+r_{3}, 0<r_{3}<r_{2}                              \\
 	\cdots  & \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \\
 	r_{k-2} & =r_{k-1} q_{k}+r_{k}, 0<r_{k}<r_{k-1}                          \\
 	r_{k-1} & =r_{k} q_{k+1}
-\end{align}
-
+\end{align*}
 注意到, 从第一个式子到第 $k$ 个式子,我们依次有
 \begin{align*}
 	d\left|r_{1}, d\right| r_{2}, \cdots, d \mid r_{k},
 \end{align*}
-
 而从第 $k+1$ 个式子倒推, 又依次有
 \begin{align*}
 	r_{k}\left|r_{k-1}, r_{k}\right| r_{k-2}, \cdots, r_{k}\left|r_{1}, r_{k}\right| a, r_{k} \mid b,
 \end{align*}
-
 所以, $r_{k}$ 又是 $a ,  b$ 的公因数, 结合 $d$ 为 $a ,  b$ 的最大公因数知 $r_{k} \leqslant d$, 又 $d \mid r_{k}$,故 $d \leqslant r_{k}$, 因此, $d=r_{k}$ . 也就是说, 我们求出了 $a ,  b$ 的最大公因数.
 
 现在, 利用 $d=r_{k}$ 及第 $k$ 个式子, 可知
 \begin{align*}
 	d=r_{k-2}-r_{k-1} q_{k}
 \end{align*}
-
 再由
 \begin{align*}
 	r_{k-1}=r_{k-3}-r_{k-2} q_{k-1}(\text { 第 } k-1 \text { 个式子变形得 }),
 \end{align*}
-
-代入上式, 可知 $d$ 可以表示为 $r_{k-2}$ 与 $r_{k-3}$ 的"线性组合" (见 1.1 节性质2), 依此倒推, 可知 $d$ 可以表示为 $a, b$ 的"线性组合", 即存在整数 $x, y$ 使得
+代入上式, 可知 $d$ 可以表示为 $r_{k-2}$ 与 $r_{k-3}$ 的“线性组合” (见\autoref{prop:整除的性质——“线性组合”}), 依此倒推, 可知 $d$ 可以表示为 $a, b$ 的“线性组合”, 即存在整数 $x, y$ 使得
 \begin{align*}
 	d=a x+b y .
 \end{align*}
+\end{proof}
+\begin{note}
+	反过来, 设 $x ,  y$ 为整数, $d^{\prime}=a x+b y$, 并不能推出 $d^{\prime}$ 为 $a ,  b$ 的最大公因数. 事实上, 可以证明: $a ,  b$ 的最大公因数是形如 $a x+b y$ ( $x, y$ 为任意整数) 的正整数中最小的那个.
+\end{note}
 
-说明反过来, 设 $x ,  y$ 为整数, $d^{\prime}=a x+b y$, 并不能推出 $d^{\prime}$ 为 $a ,  b$ 的最大公因数. 事实上, 可以证明: $a ,  b$ 的最大公因数是形如 $a x+b y$ ( $x, y$ 为任意整数) 的正整数中最小的那个.
+\begin{property}\label{prop:如果d是a,b公因数则d|(a,b)}
+	设 $d$ 为 $a ,  b$ 的公因数, 则 $d \mid(a, b)$ . 
+\end{property}
 
-性质2 设 $d$ 为 $a ,  b$ 的公因数, 则 $d \mid(a, b)$ . \\
 这个性质可由前面的贝祖定理证出. 事实上, 贝祖定理也是初等数论中的一个基本定理, 应用非常广泛, 下面的性质是它的一个直接推论.
 
-性质3 设 $a ,  b$ 是不全为零的整数, 则 $a$ 与 $b$ 互素的充要条件是存在整数 $x ,  y$ 满足
+\begin{property}\label{prop:a,b互素的充要条件}
+设 $a ,  b$ 是不全为零的整数, 则 $a$ 与 $b$ 互素的充要条件是存在整数 $x ,  y$ 满足
 \begin{align*}
 	a x+b y=1
 \end{align*}
+\end{property}
 
-性质4 设 $a|c, b| c$ , 且 $(a, b)=1$ , 则 $a b \mid c$ . \\
-这个性质的证明见 1.1 节的例 1.\\
-性质5 设 $a \mid b c$ , 且 $(a, b)=1$ , 则 $a \mid c$ . \\
-证明 由性质3, 知存在整数 $x, y$ 使得
+\begin{property}
+设 $a|c, b| c$ , 且 $(a, b)=1$ , 则 $a b \mid c$ . 
+\end{property}
+这个性质的证明见\autoref{ex:整除的概念与基本性质-例1}.
+
+\begin{property}
+	设 $a \mid b c$ , 且 $(a, b)=1$ , 则 $a \mid c$ . 
+\end{property}
+\begin{proof}
+由\autoref{prop:a,b互素的充要条件}, 知存在整数 $x, y$ 使得
 \begin{align*}
 	a x+b y=1
 \end{align*}
+故 $a c x+b c y=c$ , 由 $a \mid b c$ 及 $a \mid a c x$ , 可知 $a \mid c$ . 
+\end{proof}
 
-故 $a c x+b c y=c$ , 由 $a \mid b c$ 及 $a \mid a c x$ , 可知 $a \mid c$ . \\
-性质6 设 $p$ 为素数,  $p \mid a b$ , 则 $p \mid a$ 或 $p \mid b$ . \\
-证明 由于 $p$ 只有两个正约数, 故 $(p, a)=1$ 或者 $(p, a)=p$ . 若 $(p, a)=$ 1 , 则由性质 5 知 $p \mid b$ ; 若 $(p, a)=p$ , 则 $p \mid a$ .
+\begin{property}\label{prop:如果p是ab的公因数则p是a或b的公因数}
+	设 $p$ 为素数,  $p \mid a b$ , 则 $p \mid a$ 或 $p \mid b$ . 
+\end{property}
+\begin{proof}
+	由于 $p$ 只有两个正约数, 故 $(p, a)=1$ 或者 $(p, a)=p$ . 若 $(p, a)=$ 1 , 则由性质 5 知 $p \mid b$ ; 若 $(p, a)=p$ , 则 $p \mid a$ .
+\end{proof}
 
-下面引入公倍数的一些概念和性质. \\
+下面引入公倍数的一些概念和性质. 
+
 设 $a ,  b$ 都是不等于零的整数, 如果整数 $c$ 满足 $a \mid c$ 且 $b \mid c$ , 那么称 $c$ 为 $a ,  b$ 的公倍数. 在 $a ,  b$ 的所有正的公倍数中, 最小的那个称为 $a ,  b$ 的最小公倍数, 记作 $[a, b]$ .
 
-性质7 设 $a ,  b$ 为非零整数, $d ,  c$ 分别是 $a ,  b$ 的一个公因数与公倍数,则 $d|(a, b),[a, b]| c$ .
+\begin{property}
+	设 $a ,  b$ 为非零整数, $d ,  c$ 分别是 $a ,  b$ 的一个公因数与公倍数,则 $d|(a, b),[a, b]| c$ .
+\end{property}
+\begin{proof}	
+这个性质在本质上反映了最大公因数与最小公倍数的属性. 前者是\autoref{prop:如果d是a,b公因数则d|(a,b)}的结论, 这里再次列出是为了对比.
 
-证明 这个性质在本质上反映了最大公因数与最小公倍数的属性. 前者是性质2的结论, 这里再次列出是为了对比.
+对于后者, 采用反证法予以证明. 
 
-对于后者, 采用反证法予以证明. \\
 若 $[a, b] \nmid c$ , 设 $c=[a, b] \cdot q+r, 0<r<[a, b]$ , 则由 $a \mid c$ 及 $a \mid[a, b]$ , 可知 $a \mid r$ , 同理 $b \mid r$ , 即 $r$ 为 $a ,  b$ 的公倍数, 但 $r<[a, b]$ , 这与 $[a, b]$ 是 $a ,  b$ 的最小公倍数矛盾. 所以 $[a, b] \mid c$ .
+\end{proof}
 
-性质8 设 $a ,  b$ 都是正整数,则 $[a, b]=\frac{a b}{(a, b)}$.\\
-证明 记 $c=\frac{a b}{(a, b)}$, 则由 $(a, b) \mid a$ 及 $(a, b) \mid b$ 知 $b|c, a| c$ . 即 $c$ 为 $a ,  b$ 的公倍数, 故 $[a, b] \mid c$ .
+\begin{property}\label{prop:最大公因数与最小公倍数的关系}
+	设 $a ,  b$ 都是正整数,则 $[a, b]=\frac{a b}{(a, b)}$.
+\end{property}
+\begin{proof}
+	记 $c=\frac{a b}{(a, b)}$, 则由 $(a, b) \mid a$ 及 $(a, b) \mid b$ 知 $b|c, a| c$ . 即 $c$ 为 $a ,  b$ 的公倍数, 故 $[a, b] \mid c$ .
 
 反过来, 由贝祖定理, 知存在整数 $x ,  y$ , 使得
-
+\begin{align*}
+	a x+b y=(a, b),
+\end{align*}
 即
 \begin{align*}
-	a x+b y=(a, b)
+	\frac{a}{(a, b)} x+\frac{b}{(a, b)} y=1,
 \end{align*}
-\begin{align*}
-	\frac{a}{(a, b)} x+\frac{b}{(a, b)} y=1
-\end{align*}
-
 于是
 \begin{align*}
-	\frac{a[a, b]}{(a, b)} x+\frac{b[a, b]}{(a, b)} y=[a, b]
+	\frac{a[a, b]}{(a, b)} x+\frac{b[a, b]}{(a, b)} y=[a, b],
 \end{align*}
-
 由 $b \mid[a, b]$ 及 $a \mid[a, b]$, 可知
 \begin{align*}
-	c\left|\frac{a[a, b]}{(a, b)}, c\right| \frac{b[a, b]}{(a, b)}
+	c\left|\frac{a[a, b]}{(a, b)}, c\right| \frac{b[a, b]}{(a, b)},
 \end{align*}
-
 所以
 \begin{align*}
-	c \mid[a, b]
+	c \mid[a, b],
 \end{align*}
-
 综上, 可知
 \begin{align*}
-	[a, b]=\frac{a b}{(a, b)}
+	[a, b]=\frac{a b}{(a, b)}.
 \end{align*}
+\end{proof}
 
 一般地, 对 $n$ 个整数(非零) $a_{1}, a_{2}, \cdots, a_{n}$ , 可以类似地引入最大公因数与最小公倍数的概念, 分别记为 $\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ 和 $\left[a_{1}, a_{2}, \cdots, a_{n}\right]$ . 容易得到下面的一些结论:
 
-性质9 $\left(a_{1}, a_{2}, a_{3}, \cdots, a_{n}\right)=\left(\left(a_{1}, a_{2}\right), a_{3}, \cdots, a_{n}\right)$ ; 而 $\left[a_{1}, a_{2}\right.$, $\left.a_{3}, \cdots, a_{n}\right]=\left[\left[a_{1}, a_{2}\right], a_{3}, \cdots, a_{n}\right]$.
+\begin{property}
+$\left(a_{1}, a_{2}, a_{3}, \cdots, a_{n}\right)=\left(\left(a_{1}, a_{2}\right), a_{3}, \cdots, a_{n}\right)$ ; 
 
-性质10 存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 使得
+而 $\left[a_{1}, a_{2}\right.$, $\left.a_{3}, \cdots, a_{n}\right]=\left[\left[a_{1}, a_{2}\right], a_{3}, \cdots, a_{n}\right]$.
+\end{property}
+
+\begin{property}
+	存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 使得
 \begin{align*}
 	a_{1} x_{1}+a_{2} x_{2}+\cdots+a_{n} x_{n}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)
 \end{align*}
+\end{property}
 
 特别地,  $\left(a_{1}, a_{2}, \cdots, a_{n}\right)=1$ , 即 $a_{1}, a_{2}, \cdots, a_{n}$ 互素的充要条件是: 存在整数 $x_{1}, x_{2}, \cdots, x_{n}$, 使得
 \begin{align*}
@@ -485,88 +504,114 @@
 
 注意,  $n$ 个数互素, 并不能保证它们两两互素, 例如( $2 \times 3,2 \times 5,3 \times$ $5 )=1$ , 但 6,  $10 ,  15$ 两两不互素. 反过来, 若 $n$ 个数中有两个数互素, 则这 $n$个数互素. 因此, 在 $n$ 个数中, "两两互素"的条件比"它们互素"的条件要强得多.
 
-性质11 设 $m$ 为正整数, 则\begin{align}
-	 & \left(m a_{1}, m a_{2}, \cdots, m a_{n}\right)=m\left(a_{1}, a_{2}, \cdots, a_{n}\right)   \\
-	 & {\left[m a_{1}, m a_{2}, \cdots, m a_{n}\right]=m\left[a_{1}, a_{2}, \cdots, a_{n}\right]}
+\begin{property}\label{prop:最大公因数与最小公倍数的可乘性}
+	设 $m$ 为正整数, 则
+	\begin{align}
+	 & \left(m a_{1}, m a_{2}, \cdots, m a_{n}\right)=m\left(a_{1}, a_{2}, \cdots, a_{n}\right),   \\
+	 & {\left[m a_{1}, m a_{2}, \cdots, m a_{n}\right]=m\left[a_{1}, a_{2}, \cdots, a_{n}\right]}.
 \end{align}
+\end{property}
 
-例1 设 $a ,  b$ 为正整数, 且 $\frac{a b}{a+b}$ 也是正整数. 证明:  $(a, b)>1$ . \\
-证明 若 $(a, b)=1$ , 则 $(a, a+b)=1$ (这由性质 3 可推得), 从而, 由 $a+b \mid a b$ 及 $(a, a+b)=1$ , 得 $a+b \mid b$ , 但是 $a+b>b$ , 故 $a+b \mid b$ 不可能成立. 所以,  $(a, b)>1$.
+% 例 1
+\begin{example}
+	设 $a ,  b$ 为正整数, 且 $\frac{a b}{a+b}$ 也是正整数. 证明:  $(a, b)>1$ .
+\end{example}
+\begin{proof}
+若 $(a, b)=1$ , 则 $(a, a+b)=1$ (这由\autoref{prop:如果p是ab的公因数则p是a或b的公因数}可推得), 从而, 由 $a+b \mid a b$ 及 $(a, a+b)=1$ , 得 $a+b \mid b$ , 但是 $a+b>b$ , 故 $a+b \mid b$ 不可能成立. 所以,  $(a, b)>1$.
+\end{proof}
+\begin{note}
+	在辗转相除求 $a ,  b$ 的公因数的讨论中, 可知对任意整数 $x$ , 都有 $(a, b)=(a, b+a x)$, 这一点在利用最大公因数处理数论问题时经常被用到.
+\end{note}
 
-说明 在辗转相除求 $a ,  b$ 的公因数的讨论中, 可知对任意整数 $x$ , 都有 $(a, b)=(a, b+a x)$, 这一点在利用最大公因数处理数论问题时经常被用到.
-
-例 2 设正整数 $a ,  b ,  c$ 满足 $b^{2}=a c$ . 证明: $(a, b)^{2}=a(a, c)$.\\
-证明 如果我们能够证明:  $(a, b)^{2}=\left(a^{2}, b^{2}\right)$ , 那么结合性质11, 可知
+% 例 2
+\begin{example}
+	设正整数 $a ,  b ,  c$ 满足 $b^{2}=a c$ . 证明: $(a, b)^{2}=a(a, c)$.
+\end{example}
+\begin{proof}
+	如果我们能够证明:  $(a, b)^{2}=\left(a^{2}, b^{2}\right)$ , 那么结合\autoref{prop:最大公因数与最小公倍数的可乘性}, 可知
 \begin{align*}
-	(a, b)^{2}=\left(a^{2}, b^{2}\right)=\left(a^{2}, a c\right)=a(a, c)
+	(a, b)^{2}=\left(a^{2}, b^{2}\right)=\left(a^{2}, a c\right)=a(a, c),
 \end{align*}
+命题获证.
 
-命题获证.\\
-为此, 记 $d=(a, b)$ , 设 $a=d u, b=d v$ , 则由性质11可知 $u ,  v$ 是两个互素的正整数, 为证 $\left(a^{2}, b^{2}\right)=d^{2}$ , 只需证明:  $\left(u^{2}, v^{2}\right)=1$ .
+为此, 记 $d=(a, b)$ , 设 $a=d u, b=d v$ , 则由\autoref{prop:最大公因数与最小公倍数的可乘性}可知 $u ,  v$ 是两个互素的正整数, 为证 $\left(a^{2}, b^{2}\right)=d^{2}$ , 只需证明:  $\left(u^{2}, v^{2}\right)=1$ .
 
 利用贝祖定理, 知存在整数 $x ,  y$ , 使得 $u x+v y=1$ , 故 $u^{2} x^{2}=(1-v y)^{2}=$ $1+v\left(v y^{2}-2 y\right)$ , 结合性质 3 可知 $\left(u^{2}, v\right)=1$ , 交换 $u^{2}$ 与 $v$ 的位置, 同上再做一次, 即有 $\left(v^{2}, u^{2}\right)=1$ .
 
-所以, 命题成立. \\
-说明 利用下一节的算术基本定理可以非常方便地证出:  $\left(a^{2}, b^{2}\right)=$ $(a, b)^{2}$ , 但遗憾的是我们还没给出该定理的证明, 通常都是先建立最大公因数理论再去证算术基本定理, 这里不用该定理是不希望掉入"循环论证"的旋涡, 读者在学习中应认真掌握其中的逻辑结构.
+所以, 命题成立. 
+\end{proof}
+\begin{note}
+利用下一节的算术基本定理可以非常方便地证出:  $\left(a^{2}, b^{2}\right)=$ $(a, b)^{2}$ , 但遗憾的是我们还没给出该定理的证明, 通常都是先建立最大公因数理论再去证算术基本定理, 这里不用该定理是不希望掉入"循环论证"的旋涡, 读者在学习中应认真掌握其中的逻辑结构.
+\end{note}
 
-例 3 求所有的正整数 $a ,  b(a \leqslant b)$ , 使得
+% 例 3
+\begin{example}
+	求所有的正整数 $a ,  b(a \leqslant b)$ , 使得
+\begin{align}\label{最大公因数与最小公倍数-例3}
+	a b=300+7[a, b]+5(a, b).
+\end{align}
+\end{example}
+\begin{solution}
+设 $[a, b]=x,(a, b)=y$ , 由\autoref{prop:最大公因数与最小公倍数的关系}可知 $a b=x y$ , 于是, \autoref{最大公因数与最小公倍数-例3}变为
 \begin{align*}
-	a b=300+7[a, b]+5(a, b)
+	x y=300+7 x+5 y,
 \end{align*}
+即 $(x-5)(y-7)=5 \times 67$. 
 
-解 设 $[a, b]=x,(a, b)=y$ , 由性质 8 可知 $a b=x y$ , 于是, (1)变为
-\begin{align*}
-	x y=300+7 x+5 y
-\end{align*}
-
-即 $(x-5)(y-7)=5 \times 67$ . \\
 由于 $[a, b] \geqslant(a, b)$, 故 $x \geqslant y$, 进而 $x-5>y-7$, 只有如下的两种情形.
 
-情形一 $x-5=67$ 且 $y-7=5$ ; 此时,  $x=72, y=12$ , 于是, 可设 $a=12 n ,  b=12 m , (m, n)=1$ , 并有 $(12 n)(12 m)=a b=x y=12 \times 72$ , 结合 $a \leqslant b$ , 只能是 $(m, n)=(1,6)$ 或 $(2,3)$ , 对应的 $(a, b)=(12,72)$ 或 $(24$ ,  36).
+\textbf{情形一} $x-5=67$ 且 $y-7=5$ ; 此时,  $x=72, y=12$ , 于是, 可设 $a=12 n ,  b=12 m , (m, n)=1$ , 并有 $(12 n)(12 m)=a b=x y=12 \times 72$ , 结合 $a \leqslant b$ , 只能是 $(m, n)=(1,6)$ 或 $(2,3)$ , 对应的 $(a, b)=(12,72)$ 或 $(24$ ,  36).
 
-情形二 $\quad x-5=335$ 且 $y-7=1$ ; 对应地,  $x=340, y=8$ , 但 $y=(a , $ $b )$ 是 $x=[a, b]$ 的因数, 而 8 ł 340 , 所以, 此时无解.
+\textbf{情形二} $\quad x-5=335$ 且 $y-7=1$ ; 对应地,  $x=340, y=8$ , 但 $y=(a , $ $b )$ 是 $x=[a, b]$ 的因数, 而 8 ł 340 , 所以, 此时无解.
 
-综上, 符合条件的 $(a, b)=(12,72)$ 或 $(24,36)$ . \\
-例 4 求所有的正整数 $a ,  b$, 使得
+综上, 符合条件的 $(a, b)=(12,72)$ 或 $(24,36)$ . 
+\end{solution}
+
+% 例 4
+\begin{example}
+	求所有的正整数 $a ,  b$, 使得
+\begin{align}\label{eq:最大公因数与最小公倍数-例4-1}
+	(a, b)+9[a, b]+9(a+b)=7 a b.
+\end{align}
+\end{example}
+\begin{solution}
+	记 $(a, b)=d$ , 设 $a=d x, b=d y$ , 则 $(x, y)=1$ (由\autoref{prop:最大公因数与最小公倍数的可乘性}知),  $[a, b]=d x y$ (由\autoref{prop:最大公因数与最小公倍数的关系}知), 于是代入\autoref{eq:最大公因数与最小公倍数-例4-1}可得
+\begin{align}\label{eq:最大公因数与最小公倍数-例4-2}
+	1+9 x y+9(x+y)=7 d x y,
+\end{align}
 \begin{align*}
-	(a, b)+9[a, b]+9(a+b)=7 a b
+	7 d=9+9\left(\frac{1}{x}+\frac{1}{y}\right)+\frac{1}{x y},
 \end{align*}
-
-解 记 $(a, b)=d$ , 设 $a=d x, b=d y$ , 则 $(x, y)=1$ (由性质11知),  $[a, b]=d x y$ (由性质 8 知), 于是代入(1)可得
-\begin{align*}
-	1+9 x y+9(x+y)=7 d x y
-\end{align*}
-\begin{align*}
-	7 d=9+9\left(\frac{1}{x}+\frac{1}{y}\right)+\frac{1}{x y}
-\end{align*}
-
 所以
 \begin{align*}
-	9<7 d \leqslant 9+9\left(\frac{1}{1}+\frac{1}{1}\right)+\frac{1}{1 \times 1}=28
+	9<7 d \leqslant 9+9\left(\frac{1}{1}+\frac{1}{1}\right)+\frac{1}{1 \times 1}=28,
 \end{align*}
-
 故
 \begin{align*}
-	2 \leqslant d \leqslant 4
+	2 \leqslant d \leqslant 4,
 \end{align*}
-
-当 $d=2$ 时, 由(2)得
+当 $d=2$ 时, 由\autoref{eq:最大公因数与最小公倍数-例4-2}得
 \begin{align*}
-	5 x y-9(x+y)=1
+	5 x y-9(x+y)=1,
 \end{align*}
-
 两边乘以 5 , 并将左边因式分解, 得
 \begin{align*}
-	(5 x-9)(5 y-9)=86=2 \times 43
+	(5 x-9)(5 y-9)=86=2 \times 43,
 \end{align*}
+故 $(5 x-9,5 y-9)=(1,86) , (86,1),(2,43) , (43,2)$. 分别求解可知只能是 $(x, y)=(2,19),(19,2)$ , 对应的 $(a, b)=(4,38),(38,4)$.
 
-故 $(5 x-9,5 y-9)=(1,86) , (86,1),(2,43) , (43,2)$. 分别求解可知只能是 $(x, y)=(2,19),(19,2)$ , 对应的 $(a, b)=(4,38),(38,4)$ .
+分别就 $d=3,4$ 同上讨论, 得 $(a, b)=(4,4)$. 
 
-分别就 $d=3,4$ 同上讨论, 得 $(a, b)=(4,4)$ . \\
-所以, 满足条件的 $(a, b)=(4,38),(38,4),(4,4)$ . \\
-例 5 Fibonacci 数列定义如下:  $F_{1}=F_{2}=1, F_{n+2}=F_{n+1}+F_{n}, n=1$ ,  $2, \cdots$ . 证明: 对任意正整数 $m ,  n$ , 都有 $\left(F_{m}, F_{n}\right)=F_{(m, n)}$ .
+所以, 满足条件的 $(a, b)=(4,38),(38,4),(4,4)$. 
+\end{solution}
 
-证明 当 $m=n$ 时, 命题显然成立. 现在不妨设 $m<n$ , 注意到\begin{align}
+% 例 5
+\begin{example}
+	Fibonacci 数列定义如下:  $F_{1}=F_{2}=1, F_{n+2}=F_{n+1}+F_{n}, n=1$ ,  $2, \cdots$ . 证明: 对任意正整数 $m ,  n$ , 都有 $\left(F_{m}, F_{n}\right)=F_{(m, n)}$.
+\end{example}
+\begin{proof}
+	当 $m=n$ 时, 命题显然成立. 现在不妨设 $m<n$ , 注意到
+	\begin{align*}
 	F_{n} & =F_{2} F_{n-1}+F_{1} F_{n-2}                     \\
 	      & =F_{2}\left(F_{n-2}+F_{n-3}\right)+F_{1} F_{n-2} \\
 	      & =\left(F_{2}+F_{1}\right) F_{n-2}+F_{2} F_{n-3}  \\
@@ -575,47 +620,50 @@
 	      & =F_{4} F_{n-3}+F_{3} F_{n-4}                     \\
 	      & =\cdots                                          \\
 	      & =F_{m} F_{n-m+1}+F_{m-1} F_{n-m},
-\end{align}
-
+\end{align*}
 因此, 设 $d \mid F_{m}$ 且 $d \mid F_{n}$, 则由上式可知 $d \mid F_{m-1} F_{n \rightarrow m}$. 又对任意正整数 $m$ , 有 $\left(F_{m}, F_{m-1}\right)=\left(F_{m-1}+F_{m-2}, F_{m-1}\right)=\left(F_{m-1}, F_{m-2}\right)=\cdots=\left(F_{2}, F_{1}\right)=1$,所以, $\left(d, F_{m-1}\right)=1$, 故 $d \mid F_{n-m}$; 反过来, 若 $d^{\prime} \mid F_{n-m}$ 且 $d^{\prime} \mid F_{m}$, 则由上式又可知 $d^{\prime} \mid F_{n}$ . 依此可知 $\left(F_{n}, F_{m}\right)=\left(F_{n-m}, F_{m}\right)$ .
 
 利用上述结论, 对下标进行辗转相除, 就可证得 $\left(F_{n}, F_{m}\right)=F_{(m, n)}$.\\
 说明 由本题的结论还可以推出一个有趣的性质: 若 $F_{n}$ 为素数, 则 $n=4$或者 $n$ 为素数.
 
-事实上, 设 $F_{n}$ 为素数, 而 $n$ 为合数, 可设 $n=p \cdot q, 2 \leqslant p \leqslant q, p ,  q$ 为正
+事实上, 设 $F_{n}$ 为素数, 而 $n$ 为合数, 可设 $n=p \cdot q, 2 \leqslant p \leqslant q, p ,  q$ 为正整数, 则由前面的结论, 可知 $\left(F_{n}, F_{p}\right)=F_{(n, p)}=F_{p},\left(F_{n}, F_{q}\right)=F_{(n, q)}=$ $F_{q}$ . 结合 Fibonacci 数列的定义, 可知 $F_{n}>F_{p}, F_{n}>F_{q}$ , 而 $F_{n}$ 为素数, 故 $\left(F_{n}, F_{p}\right)=\left(F_{n}, F_{q}\right)=1$ , 所以,  $F_{p}=F_{q}=1$ , 再由 $2 \leqslant p \leqslant q$ , 可知只能是 $p=q=2$ , 即 $n=4$ . 所以, 性质成立.
+\end{proof}
 
-整数, 则由前面的结论, 可知 $\left(F_{n}, F_{p}\right)=F_{(n, p)}=F_{p},\left(F_{n}, F_{q}\right)=F_{(n, q)}=$ $F_{q}$ . 结合 Fibonacci 数列的定义, 可知 $F_{n}>F_{p}, F_{n}>F_{q}$ , 而 $F_{n}$ 为素数, 故 $\left(F_{n}, F_{p}\right)=\left(F_{n}, F_{q}\right)=1$ , 所以,  $F_{p}=F_{q}=1$ , 再由 $2 \leqslant p \leqslant q$ , 可知只能是 $p=q=2$ , 即 $n=4$ . 所以, 性质成立.
-
-例 6 设 $n$ 为大于 1 的正整数. 证明: 存在从小到大排列后成等差数列 (即从第二项起, 每一项与它前面那项的差为常数的数列) 的 $n$ 个正整数, 它们中任意两项互素.
-
-证明 考虑下面的 $n$ 个数: 
+% 例 6
+\begin{example}
+	设 $n$ 为大于 1 的正整数. 证明: 存在从小到大排列后成等差数列 (即从第二项起, 每一项与它前面那项的差为常数的数列) 的 $n$ 个正整数, 它们中任意两项互素.
+\end{example}
+\begin{proof}
+	考虑下面的 $n$ 个数:
 \begin{align*}
 	n!+1,2 \times(n!)+1, \cdots, n \times(n!)+1
 \end{align*}
+这 $n$ 个正整数组成一个公差为 $n!$ 的等差数列.
 
-这 $n$ 个正整数组成一个公差为 $n!$ 的等差数列.\\
-我们证明其中任意两项是互素的. \\
+我们证明其中任意两项是互素的. 
+
 事实上, 若存在 $1 \leqslant i<j \leqslant n$ , 使得数 $i \times(n!)+1$ 与数 $j \times(n!)+1$ 不互素, 设 $d=(i \times(n!)+1, j \times(n!)+1)>1$ . 考虑 $d$ 的素因子 $p$ , 可知
 \begin{align*}
 	p \mid(j \times(n!)+1)-(i \times(n!)+1)
 \end{align*}
-
-即 $p \mid(j-i) \times n$ !. 由性质 6 知 $p \mid j-i$ 或 $p \mid n!$ , 结合 $1 \leqslant j-i<n$ , 可知 $(j-i) \mid n!$ , 所以, 总有 $p \mid n!$ . 但是,  $p|d, d| i \times(n!)+1$ , 故 $p \mid i \times(n!)+1$ , 结合 $p \mid n!$ , 导致 $p \mid 1$ , 矛盾.
+即 $p \mid(j-i) \times n!$. 由性质 6 知 $p \mid j-i$ 或 $p \mid n!$ , 结合 $1 \leqslant j-i<n$ , 可知 $(j-i) \mid n!$ , 所以, 总有 $p \mid n!$ . 但是,  $p|d, d| i \times(n!)+1$ , 故 $p \mid i \times(n!)+1$ , 结合 $p \mid n!$ , 导致 $p \mid 1$ , 矛盾.
 
 所以, 命题成立.
+\end{proof}
 \begin{note}
-此题为导出与反设矛盾的结论, 采用了素因子分析的方法. 该方法在数论中有广泛的应用.
+	此题为导出与反设矛盾的结论, 采用了素因子分析的方法. 该方法在数论中有广泛的应用.
 \end{note}
 
 \subsection{算术基本定理}
-在 1.2 节中我们引入了素数与合数的概念, 对每个大于 1 的正整数 $n$ , 如果 $n$ 为合数, 那么可写 $n=n_{1} n_{2}$ , 其中 $2 \leqslant n_{1} \leqslant n_{2}$ . 再分别对 $n_{1} ,  n_{2}$ 重复这样的讨论, 即可将 $n$ 表示为一些素数的乘积. 对这个过程认真思考, 就能得到下面的重要定理, 在解数论的问题时经常会直接或间接地用到它.
-
-算术基本定理 设 $n$ 是大于 1 的正整数, 则 $n$ 可以分解成若干个素数的乘积的形式, 并且在不考虑这些素数相乘时的前后次序时, 这种分解是唯一的. 即对任意大于 1 的正整数 $n$,都存在唯一的一种素因数分解形式:
+在上节中我们引入了素数与合数的概念, 对每个大于 1 的正整数 $n$ , 如果 $n$ 为合数, 那么可写 $n=n_{1} n_{2}$ , 其中 $2 \leqslant n_{1} \leqslant n_{2}$ . 再分别对 $n_{1} ,  n_{2}$ 重复这样的讨论, 即可将 $n$ 表示为一些素数的乘积. 对这个过程认真思考, 就能得到下面的重要定理, 在解数论的问题时经常会直接或间接地用到它.
+\begin{theorem}[算术基本定理]
+	 设 $n$ 是大于 1 的正整数, 则 $n$ 可以分解成若干个素数的乘积的形式, 并且在不考虑这些素数相乘时的前后次序时, 这种分解是唯一的. 即对任意大于 1 的正整数 $n$,都存在唯一的一种素因数分解形式:
 \begin{align*}
 	n=p_{1}^{\alpha_{1}} p_{2}^{\alpha_{2}} \cdots p_{k}^{\alpha_{k}}
 \end{align*}
 
 这里 $p_{1}<p_{2}<\cdots<p_{k}$ 为素数,  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{k}$ 为正整数.
+\end{theorem}
 
 证明 利用前面的分析, 可证得存在性, 下面证明唯一性. \\
 若 $n$ 有两种素因数分解形式:
@@ -749,72 +797,68 @@ $3^{\circ}$ 设 $n ,  m$ 的素因数分解分别为
 此时,  $d_{1} d_{2} \cdots d_{n}=n^{n-2}(n-1)$ , 结合 $(n, n-1)=1$ , 可知满足 $n^{n-2}(n-$ 1) $\mid(n(n-1))^{m}$ 的最小正整数 $m=n-2$.
 
 \subsection{习题 1}
-1 设 $n$ 为大于 1 的正整数. 证明:  $n^{4}+4^{n}$ 是一个合数. \\
-2 求使得 $\left|4 x^{2}-12 x-27\right|$ 为素数的所有整数 $x$ . \\
-3 设 $m$ 为大于 1 的正整数, 且 $m \mid(m-1)!+1$ . 证明:  $m$ 是一个素数. \\
-4 是否存在 3 个不同的素数 $p ,  q ,  r$ , 使得下面的整除关系都成立？
-\begin{align*}
-	q r\left|p^{2}+d, r p\right| q^{2}+d, p q \mid r^{2}+d
-\end{align*}
-
-其中(1) $d=10 ;  ( 2 ) d=11$ . \\
-5 设 $p$ 为正整数, 且 $2^{p}-1$ 是素数. 求证:  $p$ 为素数. \\
-6 设 $n$ 为正整数, 且 $2^{n}+1$ 是素数. 证明: 存在非负整数 $k$ , 使得 $n=2^{k}$ . \\
-7 求所有形如 $n^{n}+1$ 且不超过 $10^{19}$ 的素数, 这里 $n$ 为正整数. \\
-8 设 $a ,  b ,  c ,  d$ 都是整数, 且 $a \neq c, a-c \mid a b+c d$ . 证明:  $a-c \mid a d+b c$ . \\
-9 设 $a ,  b ,  c ,  d$ 为整数, 且 $a c ,  b c+a d ,  b d$ 都是某个整数 $u$ 的倍数. 证明: 数 $b c$ 和 $a d$ 也是 $u$ 的倍数. \\
-10 设 $a ,  b ,  n$ 为给定的正整数, 且对任意正整数 $k(\neq b)$ , 都有 $b-k \mid a-k^{n}$ . 证明: $a=b^{n}$ . \\
-11 已知正整数 $n$ 的正因数中, 末尾数字为 $0,1,2, \cdots, 9$ 的正整数都至少有一个. 求满足条件的最小的 $n$ . \\
-12 求一个 9 位数 $M$ , 使得 $M$ 的数码两两不同且都不为零, 并对 $m=2,3, \cdots$ ,  9 , 数 $M$ 的左边 $m$ 位数都是 $m$ 的倍数. \\
-13 对于一个正整数 $n$ , 若存在正整数 $a ,  b$ , 使得 $n=a b+a+b$ , 则称 $n$ 是一个"好数", 例如 $3=1 \times 1+1+1$ , 故 3 为一个"好数". 问: 在 $1,2, \cdots, 100$中, 有多少个"好数"？\\
-14 设素数从小到大依次为 $p_{1}, p_{2}, p_{3}, \cdots$ . 证明: 当 $n \geqslant 2$ 时, 数 $p_{n}+p_{n+1}$ 可以表示为 3 个大于 1 的正整数(可以相同)的乘积的形式. \\
-15 设 $n$ 为大于 1 的正整数. 证明:  $n$ 为合数的充要条件是存在正整数 $a ,  b$ ,  $x ,  y$ , 使得 $n=a+b, \frac{x}{a}+\frac{y}{b}=1$ . \\
-16 证明: 数列 $10001,100010001,1000100010001, \cdots$ 中, 每一个数都是合数.
-
-17 设 $a ,  b ,  c ,  d$ 都是素数, 且 $a>3 b>6 c>12 d, a^{2}-b^{2}+c^{2}-d^{2}=1749$.求 $a^{2}+b^{2}+c^{2}+d^{2}$ 的所有可能值. \\
-18 数列 $\left\{a_{n}\right\}$ 的每一项都是正整数,  $a_{1} \leqslant a_{2} \leqslant a_{3} \leqslant \cdots$ , 且对任意正整数 $k$ , 该数列中恰有 $k$ 项等于 $k$ . 求所有的正整数 $n$ , 使得 $a_{1}+a_{2}+\cdots+a_{n}$ 是素数. \\
-19 由正整数组成的数列 $\left\{a_{n}\right\}$ 满足: 对任意正整数 $m$ ,  $n$ , 若 $m \mid n ,  m<n$ , 则 $a_{m} \mid a_{n}$ , 且 $a_{m}<a_{n}$ . 求 $a_{2000}$ 的最小可能值. \\
-20 设 $p$ 为奇素数, 正整数 $m ,  n$ 满足 $\frac{m}{n}=1+\frac{1}{2}+\cdots+\frac{1}{p-1}$ . 证明:  $p \mid m$ . \\
-21 设 $a ,  m ,  n$ 为正整数,  $a>1$ , 且 $a^{m}+1 \mid a^{n}+1$ . 证明:  $m \mid n$ . \\
-22 证明: 对任意正整数 $n$ 及正奇数 $m$ , 都有 $\left(2^{m}-1,2^{n}+1\right)=1$ . \\
-23 费马数 $F_{n}$ 定义为 $F_{n}=2^{2^{n}}+1$. 证明: 对任意两个不同的正整数 $m ,  n$ , 都有 $\left(F_{n}, F_{m}\right)=1$\\
-24 已知正整数 $a ,  b ,  c ,  d$ 的最小公倍数为 $a+b+c+d$. 证明: $a b c d$ 是 3 或 5 的倍数. \\
-25 记 $M_{n}$ 为正整数 $1,2, \cdots, n$ 的最小公倍数. 求所有的正整数 $n(>1)$, 使得 $M_{n}=M_{n-1}$ . \\
-26 设 $a ,  m ,  n$ 为正整数,  $a>1$ . 证明:  $\left(a^{m}-1, a^{n}-1\right)=a^{(m, n)}-1$ . \\
-27 设 $a ,  n$ 为正整数,  $a>1$ , 且 $a^{n}+1$ 是素数. 证明:  $d\left(a^{n}-1\right) \geqslant n$ . \\
-28 对怎样的正整数 $n(>2)$ , 存在 $n$ 个连续正整数, 使得其中最大的数是其余 $n-1$ 个数的最小公倍数的因数?\\
-29 设正整数 $a ,  b ,  m ,  n$ 满足:  $(a, b)=1, a>1$ , 且 $a^{m}+b^{m} \mid a^{n}+b^{n}$ . 证明:  $m \mid n$\\
-30 证明: 存在 2012 个不同的正整数, 使得其中任意两个不同的数 $a ,  b$ 都满足 $(a-b)^{2} \mid a b$.\\
-31 设 $a ,  b$ 为正整数, 且 $(a, b)=1$ . 证明: 对任意正整数 $m$ , 数列
-\begin{align*}
-	a, a+b, a+2 b, \cdots, a+n b, \cdots
-\end{align*}
-
-中, 有无穷多个数与 $m$ 互素.\\
-32 已知正整数数对 $(a, b)$ 满足: 数 $a^{a} \cdot b^{b}$ 在十进制表示下, 末尾恰有 98 个零. 求 $a b$ 的最小值. \\
-33 求所有的正整数 $m$,使得 $m=d(m)^{4}$ . \\
-34 证明: 每一个正整数都可以表示为两个正整数之差, 且这两个正整数的素因子个数相同. \\
-35 求所有的正整数 $a ,  b ,  c$, 使得 $a^{2}+1$ 和 $b^{2}+1$ 都是素数, 且满足
-\begin{align*}
-	\left(a^{2}+1\right)\left(b^{2}+1\right)=c^{2}+1
-\end{align*}
-
-36 用 $p(k)$ 表示正整数 $k$ 的最大奇因数. 证明: 对任意正整数 $n$ , 都有 $\frac{2}{3} n<$ $\sum_{k=1}^{n} \frac{p(k)}{k}<\frac{2}{3}(n+1)$\\
-37 设 $a ,  b ,  c$ 都是大于 1 的正整数. 求代数式 $\frac{a+b+c}{2}-\frac{[a, b]+[b, c]+[c, a]}{a+b+c}$的最小可能值. \\
-38 对任意给定的素数 $p$ , 有多少个整数组 $(a, b, c)$ , 使得\\
-(1) $1 \leqslant a, b, c \leqslant 2 p^{2}$;\\
-(2) $\frac{[a, c]+[b, c]}{a+b}=\frac{p^{2}+1}{p^{2}+2} \cdot c$ .
-
-39 黑板上写着数 $1,2, \cdots, 33$ . 每次允许进行下面的操作: 从黑板上任取两个满足 $x \mid y$ 的数 $x ,  y$ , 将它们从黑板上去掉, 写上数 $\frac{y}{x}$ . 直至黑板上不存在这样的两个数. 问: 黑板上至少剩下多少个数？\\
-40 设 $n$ 是一个正整数. 证明: 数 $1+5^{n}+5^{2 n}+5^{3 n}+5^{4 n}$ 是一个合数.
+\begin{enumerate}
+    \item 设 $n$ 为大于 1 的正整数. 证明:  $n^{4}+4^{n}$ 是一个合数. 
+    \item 求使得 $\left|4 x^{2}-12 x-27\right|$ 为素数的所有整数 $x$ . 
+    \item 设 $m$ 为大于 1 的正整数, 且 $m \mid(m-1)!+1$ . 证明:  $m$ 是一个素数. 
+    \item 是否存在 3 个不同的素数 $p ,  q ,  r$ , 使得下面的整除关系都成立？
+    \begin{align*}
+        q r\left|p^{2}+d, r p\right| q^{2}+d, p q \mid r^{2}+d
+    \end{align*}
+    其中(1) $d=10 ;  ( 2 ) d=11$ . 
+    \item 设 $p$ 为正整数, 且 $2^{p}-1$ 是素数. 求证:  $p$ 为素数. 
+    \item 设 $n$ 为正整数, 且 $2^{n}+1$ 是素数. 证明: 存在非负整数 $k$ , 使得 $n=2^{k}$ . 
+    \item 求所有形如 $n^{n}+1$ 且不超过 $10^{19}$ 的素数, 这里 $n$ 为正整数. 
+    \item 设 $a ,  b ,  c ,  d$ 都是整数, 且 $a \neq c, a-c \mid a b+c d$ . 证明:  $a-c \mid a d+b c$ . 
+    \item 设 $a ,  b ,  c ,  d$ 为整数, 且 $a c ,  b c+a d ,  b d$ 都是某个整数 $u$ 的倍数. 证明: 数 $b c$ 和 $a d$ 也是 $u$ 的倍数. 
+    \item 设 $a ,  b ,  n$ 为给定的正整数, 且对任意正整数 $k(\neq b)$ , 都有 $b-k \mid a-k^{n}$ . 证明: $a=b^{n}$ . 
+    \item 已知正整数 $n$ 的正因数中, 末尾数字为 $0,1,2, \cdots, 9$ 的正整数都至少有一个. 求满足条件的最小的 $n$ . 
+    \item 求一个 9 位数 $M$ , 使得 $M$ 的数码两两不同且都不为零, 并对 $m=2,3, \cdots$ ,  9 , 数 $M$ 的左边 $m$ 位数都是 $m$ 的倍数. 
+    \item 对于一个正整数 $n$ , 若存在正整数 $a ,  b$ , 使得 $n=a b+a+b$ , 则称 $n$ 是一个"好数", 例如 $3=1 \times 1+1+1$ , 故 3 为一个"好数". 问: 在 $1,2, \cdots, 100$中, 有多少个"好数"？
+    \item 设素数从小到大依次为 $p_{1}, p_{2}, p_{3}, \cdots$ . 证明: 当 $n \geqslant 2$ 时, 数 $p_{n}+p_{n+1}$ 可以表示为 3 个大于 1 的正整数(可以相同)的乘积的形式. 
+    \item 设 $n$ 为大于 1 的正整数. 证明:  $n$ 为合数的充要条件是存在正整数 $a ,  b$ ,  $x ,  y$ , 使得 $n=a+b, \frac{x}{a}+\frac{y}{b}=1$ . 
+    \item 证明: 数列 $10001,100010001,1000100010001, \cdots$ 中, 每一个数都是合数.
+    \item 设 $a ,  b ,  c ,  d$ 都是素数, 且 $a>3 b>6 c>12 d, a^{2}-b^{2}+c^{2}-d^{2}=1749$.求 $a^{2}+b^{2}+c^{2}+d^{2}$ 的所有可能值. 
+    \item 数列 $\left\{a_{n}\right\}$ 的每一项都是正整数,  $a_{1} \leqslant a_{2} \leqslant a_{3} \leqslant \cdots$ , 且对任意正整数 $k$ , 该数列中恰有 $k$ 项等于 $k$ . 求所有的正整数 $n$ , 使得 $a_{1}+a_{2}+\cdots+a_{n}$ 是素数. 
+    \item 由正整数组成的数列 $\left\{a_{n}\right\}$ 满足: 对任意正整数 $m$ ,  $n$ , 若 $m \mid n ,  m<n$ , 则 $a_{m} \mid a_{n}$ , 且 $a_{m}<a_{n}$ . 求 $a_{2000}$ 的最小可能值. 
+    \item 设 $p$ 为奇素数, 正整数 $m ,  n$ 满足 $\frac{m}{n}=1+\frac{1}{2}+\cdots+\frac{1}{p-1}$ . 证明:  $p \mid m$ . 
+    \item 设 $a ,  m ,  n$ 为正整数,  $a>1$ , 且 $a^{m}+1 \mid a^{n}+1$ . 证明:  $m \mid n$ . 
+    \item 证明: 对任意正整数 $n$ 及正奇数 $m$ , 都有 $\left(2^{m}-1,2^{n}+1\right)=1$ . 
+    \item 费马数 $F_{n}$ 定义为 $F_{n}=2^{2^{n}}+1$. 证明: 对任意两个不同的正整数 $m ,  n$ , 都有 $\left(F_{n}, F_{m}\right)=1$
+    \item 已知正整数 $a ,  b ,  c ,  d$ 的最小公倍数为 $a+b+c+d$. 证明: $a b c d$ 是 3 或 5 的倍数. 
+    \item 记 $M_{n}$ 为正整数 $1,2, \cdots, n$ 的最小公倍数. 求所有的正整数 $n(>1)$, 使得 $M_{n}=M_{n-1}$ . 
+    \item 设 $a ,  m ,  n$ 为正整数,  $a>1$ . 证明:  $\left(a^{m}-1, a^{n}-1\right)=a^{(m, n)}-1$ . 
+    \item 设 $a ,  n$ 为正整数,  $a>1$ , 且 $a^{n}+1$ 是素数. 证明:  $d\left(a^{n}-1\right) \geqslant n$ . 
+    \item 对怎样的正整数 $n(>2)$ , 存在 $n$ 个连续正整数, 使得其中最大的数是其余 $n-1$ 个数的最小公倍数的因数?
+    \item 设正整数 $a ,  b ,  m ,  n$ 满足:  $(a, b)=1, a>1$ , 且 $a^{m}+b^{m} \mid a^{n}+b^{n}$ . 证明:  $m \mid n$
+    \item 证明: 存在 2012 个不同的正整数, 使得其中任意两个不同的数 $a ,  b$ 都满足 $(a-b)^{2} \mid a b$.
+    \item 设 $a ,  b$ 为正整数, 且 $(a, b)=1$ . 证明: 对任意正整数 $m$ , 数列
+    \begin{align*}
+        a, a+b, a+2 b, \cdots, a+n b, \cdots
+    \end{align*}
+    中, 有无穷多个数与 $m$ 互素.
+    \item 已知正整数数对 $(a, b)$ 满足: 数 $a^{a} \cdot b^{b}$ 在十进制表示下, 末尾恰有 98 个零. 求 $a b$ 的最小值. 
+    \item 求所有的正整数 $m$,使得 $m=d(m)^{4}$ . 
+    \item 证明: 每一个正整数都可以表示为两个正整数之差, 且这两个正整数的素因子个数相同. 
+    \item 求所有的正整数 $a ,  b ,  c$, 使得 $a^{2}+1$ 和 $b^{2}+1$ 都是素数, 且满足
+    \begin{align*}
+        \left(a^{2}+1\right)\left(b^{2}+1\right)=c^{2}+1
+    \end{align*}
+    \item 用 $p(k)$ 表示正整数 $k$ 的最大奇因数. 证明: 对任意正整数 $n$ , 都有 $\frac{2}{3} n<$ $\sum_{k=1}^{n} \frac{p(k)}{k}<\frac{2}{3}(n+1)$
+    \item 设 $a ,  b ,  c$ 都是大于 1 的正整数. 求代数式 $\frac{a+b+c}{2}-\frac{[a, b]+[b, c]+[c, a]}{a+b+c}$的最小可能值. 
+    \item 对任意给定的素数 $p$ , 有多少个整数组 $(a, b, c)$ , 使得
+    (1) $1 \leqslant a, b, c \leqslant 2 p^{2}$;
+    (2) $\frac{[a, c]+[b, c]}{a+b}=\frac{p^{2}+1}{p^{2}+2} \cdot c$ .
+    \item 黑板上写着数 $1,2, \cdots, 33$ . 每次允许进行下面的操作: 从黑板上任取两个满足 $x \mid y$ 的数 $x ,  y$ , 将它们从黑板上去掉, 写上数 $\frac{y}{x}$ . 直至黑板上不存在这样的两个数. 问: 黑板上至少剩下多少个数？
+    \item 设 $n$ 是一个正整数. 证明: 数 $1+5^{n}+5^{2 n}+5^{3 n}+5^{4 n}$ 是一个合数.
+\end{enumerate}
 
 同余是由大数学家高斯引入的一个概念. 我们可以将它理解为"余同", 即余数相同. 正如奇数与偶数是依能否被 2 整除而得到的关于整数的分类一样, 考虑除以 $m(\geqslant 2)$ 所得余数的不同, 可以将整数分为 $m$ 类. 两个属于同一类中的数相对于"参照物" $m$ 而言, 具有"余数相同"这个性质. 这种为对比两个整数的性质, 引入一个参照物的思想是同余理论的一个基本出发点.
 
 同余是初等数论中的一门语言, 是一件艺术品. 它为许多数论问题的表述赋予了统一的, 方便的和本质的形式.
 
-
 \begin{comment}
-\section{同余}
+	\section{同余}
 \subsection{同余的概念与基本性质}
 定义 如果 $a ,  b$ 除以 $m(\geqslant 1)$ 所得的余数相同, 那么称 $a ,  b$ 对模 $m$ 同余, 记作 $a \equiv b(\bmod m)$ . 否则, 称 $a ,  b$ 对模 $m$ 不同余, 记作 $a \neq b(\bmod m)$ .
 
@@ -5638,5 +5682,7 @@ $k^{2} m n\left(n^{2}-m^{2}\right)$ 的形式, 其中 $k ,  m ,  n$ 为正整数
 综上可知, 所求的最小正整数 $n=3$.
 
 
-
 \end{comment}
+
+
+

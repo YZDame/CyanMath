@@ -1,6 +1,6 @@
 \documentclass[aspectratio=169]{ctexbeamer}
 %\usetheme{Madrid}
-\usetheme{Boadilla}
+%\usetheme{Boadilla}
 %\usecolortheme{beaver}
 \usepackage{amsmath} 
 \usepackage{amssymb} 
@@ -9,6 +9,9 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usefonttheme[onlymath]{serif} % 衬线数学字体
+
+%\setbeamertemplate{theorem}[ams style]
+\setbeamertemplate{theorems}[numbered]
 
 \theoremstyle{definition}
 \newtheorem{question}{问题}[section]
@@ -34,11 +37,9 @@
 \section{整除}
 \subsection{整除的概念与基本性质}
 \begin{frame}{整除的概念与基本性质}
-	\begin{definition}
-		对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
+			对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
 
 		如果 $a \mid b$, 那么称 $a$ 为 $b$ 的因数, $b$ 为 $a$ 的倍数.
-	\end{definition}
 \end{frame}
 
 \begin{frame}{整除的概念与基本性质}
@@ -161,6 +162,128 @@
 	\end{example}
 \end{frame}
 \subsection{最大公因数与最小公倍数}
+\begin{frame}{最大公因数与最小公倍数}
+	\begin{block}{带余数除法}
+		设 $a ,  b$ 是两个整数, $a \neq 0$, 则存在唯一的一对整数 $q$ 和 $r$,满足
+		\begin{align*}
+			b=a q+r, 0 \leqslant r<|b|
+		\end{align*}
+		其中 $q$ 称为 $b$ 除以 $a$ 所得的商, $r$ 称为 $b$ 除以 $a$ 所得的余数.\\
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\begin{property}[贝祖(Bezout)定理]
+		设 $d=(a, b)$ , 则存在整数 $x ,  y$ , 使得
+		\begin{align*}
+			a x+b y=d
+		\end{align*}
+	\end{property}
+	\begin{property}\label{prop:如果d是a,b公因数则d|(a,b)}
+		设 $d$ 为 $a ,  b$ 的公因数, 则 $d \mid(a, b)$ .
+	\end{property}\begin{property}\label{prop:a,b互素的充要条件}
+		设 $a ,  b$ 是不全为零的整数, 则 $a$ 与 $b$ 互素的充要条件是存在整数 $x ,  y$ 满足
+		\begin{align*}
+			a x+b y=1
+		\end{align*}
+	\end{property}
+\end{frame}
+
+\begin{frame}
+	\begin{property}
+		设 $a|c, b| c$ , 且 $(a, b)=1$ , 则 $a b \mid c$ .
+	\end{property}
+	\begin{property}
+		设 $a \mid b c$ , 且 $(a, b)=1$ , 则 $a \mid c$ .
+	\end{property}
+	\begin{property}\label{prop:如果p是ab的公因数则p是a或b的公因数}
+		设 $p$ 为素数,  $p \mid a b$ , 则 $p \mid a$ 或 $p \mid b$ .
+	\end{property}
+\end{frame}
+
+\begin{frame}{公倍数}
+	设 $a ,  b$ 都是不等于零的整数, 如果整数 $c$ 满足 $a \mid c$ 且 $b \mid c$ , 那么称 $c$ 为 $a ,  b$ 的公倍数. 
+	
+	在 $a ,  b$ 的所有正的公倍数中, 最小的那个称为 $a ,  b$ 的最小公倍数, 记作 $[a, b]$ .
+\end{frame}
+
+\begin{frame}
+	\begin{property}
+		设 $a ,  b$ 为非零整数, $d ,  c$ 分别是 $a ,  b$ 的一个公因数与公倍数,则 $d|(a, b),[a, b]| c$ .
+	\end{property}
+	\begin{property}\label{prop:最大公因数与最小公倍数的关系}
+		设 $a ,  b$ 都是正整数,则 $[a, b]=\frac{a b}{(a, b)}$.
+	\end{property}
+	\begin{property}
+		$\left(a_{1}, a_{2}, a_{3}, \cdots, a_{n}\right)=\left(\left(a_{1}, a_{2}\right), a_{3}, \cdots, a_{n}\right)$ ;
+
+		而 $\left[a_{1}, a_{2}\right.$, $\left.a_{3}, \cdots, a_{n}\right]=\left[\left[a_{1}, a_{2}\right], a_{3}, \cdots, a_{n}\right]$.
+	\end{property}
+\end{frame}
+
+\begin{frame}
+	\begin{property}
+		存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 使得
+		\begin{align*}
+			a_{1} x_{1}+a_{2} x_{2}+\cdots+a_{n} x_{n}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)
+		\end{align*}
+	\end{property}
+	\begin{property}\label{prop:最大公因数与最小公倍数的可乘性}
+		设 $m$ 为正整数, 则
+		\begin{align}
+			 & \left(m a_{1}, m a_{2}, \cdots, m a_{n}\right)=m\left(a_{1}, a_{2}, \cdots, a_{n}\right),   \\
+			 & {\left[m a_{1}, m a_{2}, \cdots, m a_{n}\right]=m\left[a_{1}, a_{2}, \cdots, a_{n}\right]}.
+		\end{align}
+	\end{property}
+\end{frame}
+
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		设 $a ,  b$ 为正整数, 且 $\frac{a b}{a+b}$ 也是正整数. 证明:  $(a, b)>1$ .
+	\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		设正整数 $a ,  b ,  c$ 满足 $b^{2}=a c$ . 证明: $(a, b)^{2}=a(a, c)$.
+	\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		求所有的正整数 $a ,  b(a \leqslant b)$ , 使得
+		\begin{align}\label{最大公因数与最小公倍数-例3}
+			a b=300+7[a, b]+5(a, b).
+		\end{align}
+	\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		求所有的正整数 $a ,  b$, 使得
+		\begin{align}\label{eq:最大公因数与最小公倍数-例4-1}
+			(a, b)+9[a, b]+9(a+b)=7 a b.
+		\end{align}
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		Fibonacci 数列定义如下:  $F_{1}=F_{2}=1, F_{n+2}=F_{n+1}+F_{n}, n=1$ ,  $2, \cdots$ . 证明: 对任意正整数 $m ,  n$ , 都有 $\left(F_{m}, F_{n}\right)=F_{(m, n)}$.
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}
+		设 $n$ 为大于 1 的正整数. 证明: 存在从小到大排列后成等差数列 (即从第二项起, 每一项与它前面那项的差为常数的数列) 的 $n$ 个正整数, 它们中任意两项互素.
+	\end{example}
+\end{frame}
 
 \subsection{算术基本定理}
 
