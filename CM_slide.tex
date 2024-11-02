@@ -1,6 +1,6 @@
 \documentclass[aspectratio=169]{ctexbeamer}
 %\usetheme{Madrid}
-%\usetheme{Boadilla}
+\usetheme{Boadilla}
 %\usecolortheme{beaver}
 \usepackage{amsmath} 
 \usepackage{amssymb} 
@@ -20,9 +20,9 @@
 \newtheorem{proposition}{命题}[section]
 \newtheorem{property}{性质}[section]
 	
-\title[初等数论]{初等数论}
+\title[整除, 同余和不定方程]{初等数论}
 \subtitle{整除, 同余和不定方程}
-\author{LeyuDame}
+\author[创美营]{LeyuDame}
 \date[\today]{\today}
 %\AtBeginSection[]
 %{
@@ -37,9 +37,9 @@
 \section{整除}
 \subsection{整除的概念与基本性质}
 \begin{frame}{整除的概念与基本性质}
-			对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
+	对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
 
-		如果 $a \mid b$, 那么称 $a$ 为 $b$ 的因数, $b$ 为 $a$ 的倍数.
+	如果 $a \mid b$, 那么称 $a$ 为 $b$ 的因数, $b$ 为 $a$ 的倍数.
 \end{frame}
 
 \begin{frame}{整除的概念与基本性质}
@@ -202,8 +202,8 @@
 \end{frame}
 
 \begin{frame}{公倍数}
-	设 $a ,  b$ 都是不等于零的整数, 如果整数 $c$ 满足 $a \mid c$ 且 $b \mid c$ , 那么称 $c$ 为 $a ,  b$ 的公倍数. 
-	
+	设 $a ,  b$ 都是不等于零的整数, 如果整数 $c$ 满足 $a \mid c$ 且 $b \mid c$ , 那么称 $c$ 为 $a ,  b$ 的公倍数.
+
 	在 $a ,  b$ 的所有正的公倍数中, 最小的那个称为 $a ,  b$ 的最小公倍数, 记作 $[a, b]$ .
 \end{frame}
 
@@ -286,9 +286,93 @@
 \end{frame}
 
 \subsection{算术基本定理}
+\setcounter{theorem}{0}
+\begin{frame}{算术基本定理}
+	\begin{theorem}[算术基本定理]
+		设 $n$ 是大于 1 的正整数, 则 $n$ 可以分解成若干个素数的乘积的形式, 并且在不考虑这些素数相乘时的前后次序时, 这种分解是唯一的. 即对任意大于 1 的正整数 $n$,都存在唯一的一种素因数分解形式:
+		\begin{align*}
+			n=p_{1}^{\alpha_{1}} p_{2}^{\alpha_{2}} \cdots p_{k}^{\alpha_{k}}
+		\end{align*}
 
-\subsection{习题 1}
+		这里 $p_{1}<p_{2}<\cdots<p_{k}$ 为素数,  $\alpha_{1}, \alpha_{2}, \cdots, \alpha_{k}$ 为正整数.
+	\end{theorem}
+\end{frame}
 
+% 3 个推论
+\begin{frame}
+	\begin{corollary}
+		设 $n$ 的所有正因数(包括 1 和 $n$ )的个数为 $d(n)$ , 那么
+		\begin{align*}
+			d(n)=\left(\alpha_{1}+1\right)\left(\alpha_{2}+1\right) \cdots\left(\alpha_{k}+1\right)
+		\end{align*}
+	\end{corollary}
+	\begin{corollary}
+		设 $n$ 的所有正因数之和为 $\sigma(n)$ , 那么
+		\begin{align*}
+			\sigma(n)=\left(1+p_{1}+\cdots+p_{1}^{\alpha_{1}}\right)\left(1+p_{2}+\cdots+p_{2}^{\alpha_{2}}\right) \cdots\left(1+p_{k}+\cdots+p_{k}^{\alpha_{k}}\right)
+		\end{align*}
+	\end{corollary}
+\end{frame}
+\begin{frame}
+	\begin{corollary}
+		设 $n ,  m$ 的素因数分解分别为
+		\begin{align*}
+			n=p_{1}^{\alpha_{1}} p_{2}^{\alpha_{2}} \cdots p_{k}^{\alpha_{k}}, m=p_{1}^{\beta_{1}} p_{2}^{\beta_{2}} \cdots p_{k}^{\beta_{k}},
+		\end{align*}
+		这里 $p_{1}<p_{2}<\cdots<p_{k}$ , 都为素数,  $\alpha_{i} ,  \beta_{i}$ 都是非负整数, 并且对每个 $1 \leqslant i \leqslant$ $k, \alpha_{i}$ 与 $\beta_{i}$ 不全为零, 那么, 我们有 $(m, n)=p_{1}^{\gamma_{1}} p_{2}^{\gamma_{2}} \cdots p_{k}^{\gamma_{k}}$ ;  $[m, n]=$ $p_{1}^{\delta_{1}} p_{2}^{\delta_{2}} \cdots p_{k}^{\delta_{k}}$ , 其中 $\gamma_{i}=\min \left\{\alpha_{i}, \beta_{i}\right\}, \delta_{i}=\max \left\{\alpha_{i}, \beta_{i}\right\}, 1 \leqslant i \leqslant k$ .
+	\end{corollary}
+\end{frame}
+
+\setcounter{theorem}{16}
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		在一个走廊上依次排列着编号为 $1,2, \cdots, 2012$ 的灯共 2012 盏, 最初每盏灯的状态都是开着的. 一个好动的学生做了下面的 2012 次操作: 对 $1 \leqslant k \leqslant 2012$ , 该学生第 $k$ 次操作时, 将所有编号是 $k$ 的倍数的灯的开关都拉了一下. 问:最后还有多少盏灯是开着的?(提示: $44^2=1936, 45^2=2025$)
+	\end{example}
+\end{frame}
+
+% 例 2 
+\begin{frame}[t]
+	\begin{example}
+		求所有的正整数 $n$, 使得 $n=d(n)^{2}$ .
+	\end{example}
+\end{frame}
+
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		设 $n$ 为正整数. 证明:数 $2^{2^{n}}+2^{2^{n-1}}+1$ 至少有 $n$ 个不同的素因子.
+	\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		设 $m ,  n$ 是正整数, 且 $m$ 的所有正因数之积等于 $n$ 的所有正因数之积. 问: $m$ 与 $n$ 是否必须相等?
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		求所有的正整数 $x, y$, 使得
+		\begin{align*}
+			y^{x}=x^{50}
+		\end{align*}
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}
+		给定正整数 $n>1$ , 设 $d_{1}, d_{2}, \cdots, d_{n}$ 都是正整数, 满足:  $\left(d_{1}, d_{2}, \cdots\right.$ ,  $\left.d_{n}\right)=1$ , 且对 $j=1,2, \cdots, n$ 都有 $d_{j} \mid \sum_{i=1}^{n} d_{i}\left(\right.$ 这里 $\sum_{i=1}^{n} d_{i}=d_{1}+d_{2}+\cdots+$ $\left.d_{n}\right)$.
+
+		(1)证明: $d_{1} d_{2} \cdots d_{n} \mid\left(\sum_{i=1}^{n} d_{i}\right)^{n-2}$ ;
+
+		(2)举例说明:  $n>2$ 时, 上式右边的幂次不能减小.
+	\end{example}
+\end{frame}
 \section{同余}
 \subsection{同余的概念与基本性质}
 \end{document}
