@@ -503,3 +503,64 @@ $1-x^{2}$ 还可以继续分解为 $(1+x)(1-x)$. 于是
 	\item $4 a^{2} b^{2}-\left(a^{2}+b^{2}\right)^{2}$.
 	\item $(a+x)^{4}-(a-x)^{4}$.
 \end{enumerate}
+
+
+\section{分组分解与十字相乘}
+% 例 1
+\begin{example}[分组分解三部曲]
+	分解因式： $a x-b y-b x+a y .$
+\end{example}
+\begin{solution}
+	\begin{align*}
+		  & a x-b y-b x+a y     \\
+		= & (a x-b x)+(a y-b y) \\
+		= & x(a-b)+y(a-b)       \\
+		= & (x+y)(a-b) .
+	\end{align*}
+	分组的方法并不是唯一的，对于上面的整式 $a x-b y-b x+a y$ ，也可以采用下面的做法：
+	\begin{align*}
+		 & a x-b y-b x+a y      \\
+		 & =(a x+a y)-(b x+b y) \\
+		 & =a(x+y)-b(x+y)       \\
+		 & =(x+y)(a-b)
+	\end{align*}
+	两种做法的效果是一样的，殊途同归！可以说，一种是按照 $x$ 与 $y$ 来分组（含 $x$ 的项在一组，含 $y$ 的项在另一组）；另一种是按 $a$ 与 $b$ 来分组。
+\end{solution}
+一般地，分组分解大致分为三步：
+\begin{enumerate}
+	\item 将原式的项适当分组；
+	\item 对每一组进行处理（“提”或“代”）；
+	\item 将经过处理后的每一组当作一项，再采用“提”或“代”进行分解。
+\end{enumerate}
+一位高明的棋手，在下棋时，决不会只看一步。同样，在进行分组时，不仅要看到第二步，而且要看到第三步
+一个整式的项有许多种分组的方法，初学者往往需要经过尝试才能找到适当的分组方法，但是只要努力实践，多加练习，就会成为有经验的“行家”.
+
+% 例 2
+\begin{example}[殊途同归]
+	分解因式： $x^{2}+a x^{2}+x+a x-1-a$.
+\end{example}
+\begin{solution}
+	\textbf{解法一}：按字母 $x$ 的幂来分组。
+	\begin{align*}
+		\begin{aligned}
+			  & x^{2}+a x^{2}+x+a x-1-a                  \\
+			= & \left(x^{2}+a x^{2}\right)+(x+a x)-(1+a) \\
+			= & x^{2}(1+a)+x(1+a)-(1+a)                  \\
+			= & (1+a)\left(x^{2}+x-1\right) .
+		\end{aligned}
+	\end{align*}
+
+	\textbf{解法二}：按字母 $a$ 的幂来分组.
+	\begin{align*}
+		\begin{aligned}
+			  & x^{2}+a x^{2}+x+a x-1-a                           \\
+			= & \left(a x^{2}+a x-a\right)+\left(x^{2}+x-1\right) \\
+			= & a\left(x^{2}+x-1\right)+\left(x^{2}+x-1\right)    \\
+			= & (a+1)\left(x^{2}+x-1\right) .
+		\end{aligned}
+	\end{align*}
+\end{solution}
+
+
+
+\section{多项式的因式分解}
