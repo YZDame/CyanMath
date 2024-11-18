@@ -22,7 +22,9 @@
 
 \pgfplotsset{compat=1.18}
 %\geometry{a4paper, left=4.5cm, right=4.5cm, top=4cm, bottom=4cm}
-\geometry{a4paper, left=4cm, right=4cm, top=3cm, bottom=3cm}
+%\geometry{a4paper, left=4cm, right=4cm, top=3cm, bottom=3cm}
+\geometry{a4paper, left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
+
 %\setlength{\abovedisplayskip}{0.5em}
 %\setlength{\belowdisplayskip}{0.5em}
 
