@@ -505,7 +505,7 @@ $1-x^{2}$ 还可以继续分解为 $(1+x)(1-x)$. 于是
 \end{enumerate}
 
 
-\section{分组分解与十字相乘}
+\section{分组分解}
 % 例 1
 \begin{example}[分组分解三部曲]
 	分解因式： $a x-b y-b x+a y .$
@@ -519,10 +519,10 @@ $1-x^{2}$ 还可以继续分解为 $(1+x)(1-x)$. 于是
 	\end{align*}
 	分组的方法并不是唯一的，对于上面的整式 $a x-b y-b x+a y$ ，也可以采用下面的做法：
 	\begin{align*}
-		 & a x-b y-b x+a y      \\
-		 & =(a x+a y)-(b x+b y) \\
-		 & =a(x+y)-b(x+y)       \\
-		 & =(x+y)(a-b)
+		  & a x-b y-b x+a y     \\
+		= & (a x+a y)-(b x+b y) \\
+		= & a(x+y)-b(x+y)       \\
+		= & (x+y)(a-b)
 	\end{align*}
 	两种做法的效果是一样的，殊途同归！可以说，一种是按照 $x$ 与 $y$ 来分组（含 $x$ 的项在一组，含 $y$ 的项在另一组）；另一种是按 $a$ 与 $b$ 来分组。
 \end{solution}
@@ -561,6 +561,64 @@ $1-x^{2}$ 还可以继续分解为 $(1+x)(1-x)$. 于是
 	\end{align*}
 \end{solution}
 
+% 例 5
+\begin{example}
+	分解因式: $-1-2 x-x^{2}+y^{2}$.
+\end{example}
+\begin{solution}
+	\begin{align*}
+		  & -1-2 x-x^{2}+y^{2}             \\
+		= & y^{2}-\left(x^{2}+2 x+1\right) \\
+		= & y^{2}-(x+1)^{2}                \\
+		= & (y+x+1)(y-x-1)
+	\end{align*}
+\end{solution}
 
+% 例 6
+\begin{example}
+	分解因式： $a x^{3}+x+a+1$.
+\end{example}
+\begin{solution}
+	\begin{align*}
+		  & a x^{3}+x+a+1                      \\
+		= & \left(a x^{3}+a\right)+(x+1)       \\
+		= & a(x+1)\left(x^{2}-x+1\right)+(x+1) \\
+		= & (x+1)\left(a x^{2}-a x+a+1\right)
+	\end{align*}
+\end{solution}
 
+% 例 10
+\begin{example}
+	分解因式： $a b\left(c^{2}-d^{2}\right)-\left(a^{2}-d^{2}\right) c d.$
+\end{example}
+\begin{solution}
+	此式无法直接进行分解，必须先用乘法分配律将原式变为四项，再进行分组.
+	\begin{align*}
+		  & a b\left(c^{2}-d^{2}\right)-\left(a^{2}-b^{2}\right) c d          \\
+		= & a b c^{2}-a b d^{2}-a^{2} c d+b^{2} c d                           \\
+		= & \left(a b c^{2}-a^{2} c d\right)+\left(b^{2} c d-a b d^{2}\right) \\
+		= & a c(b c-a d)+b d(b c-a d)                                         \\
+		= & (a c+b d)(b c-a d) .
+	\end{align*}
+	从这个例子可以看出，错误的分组还不如不分组。聪明的人并不是不犯错误的人，而是善于改正错误的人。
+\end{solution}
+如果"一提、二代"都不能奏效，就应当采用分组分解。分组分解应依照前面所说的三步进行。这三步是密切联系的，不仅要看到第二步，而且要看到第三步。在第二步与第三步都是提取公因式时，各组的项数相等 (平均分配). 否则, 应当瞄准公式来进行分组. 应当注意, 分组需要尝试,失败了，从零开始。只要反复实践，就能掌握分组的技巧，运用自如。
+
+\subsection*{习题 3}
+将以下各式分解因式（对应书本第14$\sim$24题）：
+\begin{enumerate}
+	\item $ x^{3}+b x^{2}+a x+a b$.
+	\item $ a c x^{3}+b c x^{2}+a d x+b d$.
+	\item $ a^{4}+a^{3} b-a b^{3}-b^{4}$.
+	\item $ a^{4}-a^{3} b-a b^{3}+b^{4}$.
+	\item $ a^{2} b^{2}-a^{2}-b^{2}+1$.
+	\item $ x^{2} y^{2}-x^{2} z^{2}-y^{2} z^{2}+z^{4}$.
+	\item $ x^{2} y^{2} z^{2}-x^{2} z-y^{2} z+1$.
+	\item $ x^{4}+x^{3} y+x z^{3}+y z^{3}$.
+	\item $(a+b)^{2}+(a+c)^{2}-(c+d)^{2}-(b+d)^{2}$.
+	\item $ a x\left(y^{3}+b^{3}\right)+b y\left(b x^{2}+a^{2} y\right)$.
+	\item $(a+b)^{3}+(b+c)^{3}+(c+a)^{3}+a^{3}+b^{3}+c^{3}$.
+\end{enumerate}
+
+\section{十字相乘}
 \section{多项式的因式分解}
