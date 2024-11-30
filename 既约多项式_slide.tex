@@ -1,0 +1,141 @@
+\documentclass[aspectratio=169]{ctexbeamer}
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+%\usecolortheme{beaver}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsfonts} 
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usefonttheme[onlymath]{serif} % 衬线数学字体
+
+%\setbeamertemplate{theorem}[ams style]
+\setbeamertemplate{theorems}[numbered]
+
+\theoremstyle{definition}
+\newtheorem{question}{问题}[section]
+\newtheorem{exercise}{练习}[section]
+\newtheorem{formula}{公式}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{property}{性质}[section]
+	
+\title[既约多项式]{既约多项式}
+\subtitle{}
+\author[珠海一中创美营]{珠海一中创美营(数学)}
+\date[\today]{\today}
+% \AtBeginSection[]
+% {
+% 	\begin{frame}
+% 		\frametitle{目录}
+% 		\tableofcontents[currentsection]
+% 	\end{frame}
+% }
+\begin{document}
+\frame{\titlepage}
+%\begin{frame}
+%	\frametitle{目录}
+%	\tableofcontents
+%\end{frame}
+
+\section{既约多项式}
+
+\subsection{艾氏判别法}
+\begin{frame}
+	\begin{theorem}[艾森斯坦判别法]
+		设 $f(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ 是整系数多项式.
+
+		如果存在一个质数 $p$ 满足以下条件:
+		\begin{enumerate}
+			\item $p$ 不整除 $a_{n}$;
+			\item $p$ 整除其余的系数 $\left(a_{0}, a_{1}, \cdots, a_{n-1}\right)$;
+			\item $p^{2}$ 不整除 $a_{0}$ .
+		\end{enumerate}
+		那么, $f(x)$ 在有理数集内不可约.
+	\end{theorem}
+\end{frame}
+
+\setcounter{theorem}{0}
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		证明：对于任意的自然数 $n, x^{n}-2$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		证明： $x^{4}+x^{3}+x^{2}+x+1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		$x^{6}+x^{3}+1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+\subsection{奇与偶}
+\begin{frame}{奇与偶}
+	如果把所有的奇数用 1 表示, 偶数用 0 表示, 那么就得到一种奇怪的算术：
+	\begin{align*}
+		0+0=0,0+1=1+0=1,1+1=0
+	\end{align*}
+	它们表示两个偶数的和是偶数；一个偶数与一个奇数的和是奇数；两个奇数的和是偶数. (在数论中, 这是以 2 为模的算术)
+
+	采用这种算术, 可以使问题大为简化, 不但整数只有两个( 0 与 1 ), 而且多项式的个数也大大减少. 一次多项式只有两个, 即
+	\begin{align*}
+		x, x+1
+	\end{align*}
+
+	实际上, 如 $3 x+4$ 可以归为第一种,  $3 x+5$ 可以归为第 2 种, 而 $2 x+4=0$ 不是一次多项式. 二次多项式只有 4 个, 即
+	\begin{align*}
+		x^{2}, x^{2}+x, x^{2}+1, x^{2}+x+1,
+	\end{align*}
+	其中,  $x^{2}=x \cdot x, x^{2}+x=x(x+1), x^{2}+1=(x+1)^{2}$ , 都不是既约多项式, 只有 $x^{2}+x+1$ 是既约多项式.
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		证明：当 $(b+c) d$ 为奇数时, 整系数的三次多项式 $x^{3}+b x^{2}+c x+$ $d$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		证明： $x^{5}+x^{2}-1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}
+		证明 $x^{6}+x^{3}-1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 7
+\begin{frame}[t]
+\begin{example}
+	证明 $x^{4}+3 x^{3}+3 x^{2}-5$ 在有理数集内不可约.
+\end{example}
+\end{frame}
+
+\section*{未完待续}
+\begin{frame}
+	\Huge
+	$$
+		\mathcal{TO}	\quad
+		\mathcal{BE}  	\quad
+		\mathcal{CONTINUED}
+		\ldots
+	$$
+\end{frame}
+\end{document}
