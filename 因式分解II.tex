@@ -1,0 +1,409 @@
+\documentclass[aspectratio=169]{ctexbeamer}
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+%\usecolortheme{beaver}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsfonts} 
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usefonttheme[onlymath]{serif} % 衬线数学字体
+
+%\setbeamertemplate{theorem}[ams style]
+\setbeamertemplate{theorems}[numbered]
+
+\theoremstyle{definition}
+\newtheorem{question}{问题}[section]
+\newtheorem{exercise}{练习}[section]
+\newtheorem{formula}{公式}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{property}{性质}[section]
+	
+\title[因式分解II]{因式分解II}
+\subtitle{}
+\author[珠海一中创美营]{珠海一中创美营(数学)}
+\date[\today]{\today}
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+	\frametitle{目录}
+	\tableofcontents
+\end{frame}
+
+\section{分组分解}
+% 例 1
+\begin{frame}[t]
+	\begin{example}[分组分解三部曲]
+		分解因式： $a x-b y-b x+a y .$
+	\end{example}
+\end{frame}
+
+\begin{frame}{分组分解三部曲}
+	一般地, 分组分解大致分为三步：
+	\begin{enumerate}
+		\item 将原式的项适当分组；
+		\item 对每一组进行处理(“提”或“代”)；
+		\item 将经过处理后的每一组当作一项, 再采用“提”或“代”进行分解.
+	\end{enumerate}
+	一位高明的棋手, 在下棋时, 决不会只看一步. 同样, 在进行分组时, 不仅要看到第二步, 而且要看到第三步.
+
+	一个整式的项有许多种分组的方法, 初学者往往需要经过尝试才能找到适当的分组方法, 但是只要努力实践, 多加练习, 就会成为有经验的“行家”.
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}[殊途同归]
+		分解因式： $x^{2}+a x^{2}+x+a x-1-a$.
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}[瞄准公式]
+		分解因式: $-1-2 x-x^{2}+y^{2}$.
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}[瞄准公式]
+		分解因式： $a x^{3}+x+a+1$.
+	\end{example}
+\end{frame}
+
+% 例 10
+\begin{frame}[t]
+	\begin{example}[从零开始]
+		分解因式： $a b\left(c^{2}-d^{2}\right)-\left(a^{2}-b^{2}\right) c d.$
+	\end{example}
+\end{frame}
+
+\section{十字相乘}
+\subsection{二次三项式}
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $x^{2}-7 x+6.$
+	\end{example}
+\end{frame}
+
+% 例 7
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $x^{2}+7 x-8$.
+	\end{example}
+\end{frame}
+
+% 例 9
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $x+12-x^{2}$.
+	\end{example}
+\end{frame}
+
+% 例 10
+\begin{frame}[t]
+	\begin{example}[二次项系数不为 1]
+		分解因式: $6 x^{2}-7 x+2$.
+	\end{example}
+\end{frame}
+
+\subsection{二次齐次式}
+\begin{frame}{二次齐次式}
+	形如 $a x^{2}+b x y+c y^{2}$ 的多项式, 每一项都是 $x$ 与 $y$ 的二次式( $x y$ 中 $x$ 与 $y$ 的次数都是 1 , 所以 $x y$ 的次数是 $1+1=2$ ), 称为 $x$ 与 $y$ 的二次齐次式. 它的分解与 $x$ 的二次三项式一样, 采用十字相乘.
+\end{frame}
+
+% 例 13
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $6 x^{2}-7 x y+2 y^{2}$ .
+	\end{example}
+\end{frame}
+
+\subsection{系数和为零}
+\begin{frame}{系数和为零}
+	如果二次三项式 $a x^{2}+b x+c$ 的系数和
+	\begin{align*}
+		a+b+c=0,
+	\end{align*}
+	那么
+	\begin{align*}
+		a x^{2}+b x+c=(x-1)(a x-c) .
+	\end{align*}
+	记住这个结论, 下面的例题就能迎刃而解了.
+\end{frame}
+
+% 例 15
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $3 x^{2}+5 x-8$.
+	\end{example}
+\end{frame}
+
+% 例 16
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $12 x^{2}-19 x y+7 y^{2}$.
+	\end{example}
+\end{frame}
+
+\subsection{综合运用}
+% 例 1
+\begin{frame}[t]
+	\begin{example}[换元]
+		分解因式： $x^{6}-28 x^{3}+27.$
+	\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $\left(x^{2}+4 x+8\right)^{2}+3 x\left(x^{2}+4 x+8\right)+2 x^{2}$.
+	\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		证明：四个连续整数的乘积加 1 是整数的平方.
+	\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $4(x+5)(x+6)(x+10)(x+12)-3 x^{2}.$
+	\end{example}
+\end{frame}
+
+\section{多项式的因式分解}
+\subsection{余数定理}
+\begin{frame}{多项式的一次因式}
+	设 $a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ 为 $x$ 的 $n$ 次多项式, 本节介绍求它的一次因式的方法.
+
+	我们用 $f(x)$ 表示多项式 $a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ , 用 $f(a)$ 表示这个多项式在 $x=a$ 时的值. 例如, 在 $f(x)=x^{3}+6 x^{2}+11 x+6$ 时, 可得
+	\begin{align*}
+		 & f(1)=1+6+11+6=24   \\
+		 & f(-1)=-1+6-11+6=0  \\
+		 & f(+2)=8+24+22+6=60
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	如果我们用一次多项式 $x-c$ 作除式去除多项式 $f(x)$ , 那么余式是一个数. 设这时商式为多项式 $g(x)$ , 余式(余数)为 $r$ , 则
+	\begin{align}\label{eq:多项式除法}
+		f(x)=(x-c) Q(x)+r,
+	\end{align}
+	即被除式等于除式乘以商式再加余式.
+
+	在\ref{eq:多项式除法}式中令 $x=c$ , 便得到
+	\begin{align*}
+		f(c)=0+r=r,
+	\end{align*}
+\end{frame}
+
+\begin{frame}{余数定理}
+	因此, 我们有
+	\begin{center}
+		$x-c$ 除 $f(x)$ 时, 所得的余数为 $f(c)$ .
+	\end{center}
+	这个结论称为\textbf{余数定理}.
+	\begin{block}{}
+		如果 $f(c)=0$, 那么 $x-c$ 是 $f(x)$ 的因式. 反过来, 如果 $x-c$ 是 $f(x)$ 的因式, 那么 $f(c)=0$ .
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $f(x)=x^{3}+6 x^{2}+11 x+6$.
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		设 $f(x)=2 x^{3}-5 x^{2}+5 x-3$, 计算 $f(1), f(-1), f\left(\frac{3}{2}\right)$, 并把 $f(x)$ 分解.
+	\end{example}
+\end{frame}
+
+\subsection{有理根的求法}
+\begin{frame}
+	如果 $f(c)=0$ , 那么就说 $c$ 是多项式 $f(x)$ 的根. 因此, 在 $c$ 是 $f(x)$ 的根时,  $x-c$ 是 $f(x)$ 的因式. 问题是怎样求出 $f(x)$ 的根?
+
+	我们假定 $f(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ 是整系数多项式, 也就是说 $a_{n}, a_{n-1}, \cdots, a_{1}, a_{0}$ 都是整数. 又设有理数 $c=\frac{p}{q}$ 是 $f(x)$ 的根, 这里 $p$, $q$ 是两个互质的整数.
+
+	由于 $f(c)=0$ , 即
+	\begin{align*}
+		a_{n}\left(\frac{p}{q}\right)^{n}+a_{n-1}\left(\frac{p}{q}\right)^{n-1}+\cdots+a_{1}\left(\frac{p}{q}\right)+a_{0}=0
+	\end{align*}
+	两边同乘 $q^{n}$ 得
+	\begin{align}\label{eq:有理根}
+		a_{n} p^{n}+a_{n-1} p^{n-1} q+\cdots+a_{1} p q^{n-1}+a_{0} q^{n}=0
+	\end{align}
+\end{frame}
+
+\begin{frame}
+	\ref{eq:有理根}式右边被 $p$ 整除( 0 被任何一个不等于 0 的数整除), 所以它的左边也被 $p$ 整除. 显然, 左边的前 $n$ 项都被 $p$ 整除, 所以最后一项 $a_{0} q^{n}$ 也被 $p$ 整除, 但 $p$ 与 $q$ 互质, 所以 $p$ 整除 $a_{0}$ , 即 $p$ 是 $a_{0}$ 的因数(约数). 同样地,  $q$ 应当整除 $a_{n} p^{n}$ , 从而 $q$ 是 $a_{n}$ 的因数(约数). 于是, 可得
+	\begin{block}{}
+		有理根 $c=\frac{p}{q}$ 的分子 $p$ 是常数项 $a_{0}$ 的因数, 分母 $q$ 是首项系数 $a_{n}$ 的因数.
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $f(x)=2 x^{3}-x^{2}-5 x-2$ . 
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $f(x)=3 x^{3}+x^{2}+x-2$ . 
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $f(x)=6 x^{4}+5 x^{3}+3 x^{2}-3 x-2$.
+	\end{example}
+\end{frame}
+
+\subsection{首1多项式}
+\begin{frame}[t]{首1多项式}
+	对于首项系数为 1 的整系数多项式 $f(x)$ , 问题更加简单. 这时 $q=1$ , 有理根都是整数根. 
+	\begin{example}
+		分解因式： $x^{6}+2 x^{5}+3 x^{4}+4 x^{3}+3 x^{2}+2 x+1$ . 
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $x^{3}-9 x^{2}+26 x-24$.
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $x^{3}-9 x^{2} y+26 x y^{2}-24 y^{3}$ . 
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式： $-24 y^{3}+26 y^{2}-9 y+1$ . 
+	\end{example}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{example}
+		分解因式: $x^{3}-\frac{5}{3} x^{2}-\frac{11}{3} x-1$.
+	\end{example}
+\end{frame}
+
+\section{既约多项式}
+
+\subsection{艾氏判别法}
+\begin{frame}
+	\begin{theorem}[艾森斯坦判别法]
+		设 $f(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ 是整系数多项式.
+
+		如果存在一个质数 $p$ 满足以下条件:
+		\begin{enumerate}
+			\item $p$ 不整除 $a_{n}$;
+			\item $p$ 整除其余的系数 $\left(a_{0}, a_{1}, \cdots, a_{n-1}\right)$;
+			\item $p^{2}$ 不整除 $a_{0}$ .
+		\end{enumerate}
+		那么, $f(x)$ 在有理数集内不可约.
+	\end{theorem}
+\end{frame}
+
+\setcounter{theorem}{0}
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		证明：对于任意的自然数 $n, x^{n}-2$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		证明： $x^{4}+x^{3}+x^{2}+x+1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		$x^{6}+x^{3}+1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+\subsection{奇与偶}
+\begin{frame}{奇与偶}
+	如果把所有的奇数用 1 表示, 偶数用 0 表示, 那么就得到一种奇怪的算术：
+	\begin{align*}
+		0+0=0,0+1=1+0=1,1+1=0
+	\end{align*}
+	它们表示两个偶数的和是偶数；一个偶数与一个奇数的和是奇数；两个奇数的和是偶数. (在数论中, 这是以 2 为模的算术)
+
+	采用这种算术, 可以使问题大为简化, 不但整数只有两个( 0 与 1 ), 而且多项式的个数也大大减少. 一次多项式只有两个, 即
+	\begin{align*}
+		x, x+1
+	\end{align*}
+
+	实际上, 如 $3 x+4$ 可以归为第一种,  $3 x+5$ 可以归为第 2 种, 而 $2 x+4=0$ 不是一次多项式. 二次多项式只有 4 个, 即
+	\begin{align*}
+		x^{2}, x^{2}+x, x^{2}+1, x^{2}+x+1,
+	\end{align*}
+	其中,  $x^{2}=x \cdot x, x^{2}+x=x(x+1), x^{2}+1=(x+1)^{2}$ , 都不是既约多项式, 只有 $x^{2}+x+1$ 是既约多项式.
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		证明：当 $(b+c) d$ 为奇数时, 整系数的三次多项式 $x^{3}+b x^{2}+c x+$ $d$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		证明： $x^{5}+x^{2}-1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+	\begin{example}
+		证明 $x^{6}+x^{3}-1$ 在有理数集内不可约.
+	\end{example}
+\end{frame}
+
+% 例 7
+\begin{frame}[t]
+\begin{example}
+	证明 $x^{4}+3 x^{3}+3 x^{2}-5$ 在有理数集内不可约.
+\end{example}
+\end{frame}
+
+\section*{未完待续}
+\begin{frame}
+	\Huge
+	$$
+		\mathcal{TO}	\quad
+		\mathcal{BE}  	\quad
+		\mathcal{CONTINUED}
+		\ldots
+	$$
+\end{frame}
+\end{document}

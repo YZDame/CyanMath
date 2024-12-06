@@ -1,7 +1,9 @@
 \documentclass[aspectratio=169]{ctexbeamer}
 %\usetheme{Madrid}
 \usetheme{Boadilla}
+%\usetheme{CambridgeUS}
 %\usecolortheme{beaver}
+%\usecolortheme{wolverine}
 \usepackage{amsmath} 
 \usepackage{amssymb} 
 \usepackage{amsfonts} 
@@ -22,18 +24,18 @@
 	
 \title[整除, 同余和不定方程]{初等数论}
 \subtitle{整除, 同余和不定方程}
-\author[创美营]{LeyuDame}
+\author[珠海一中创美营]{珠海一中创美营（数学）}
 \date[\today]{\today}
-%\AtBeginSection[]
-%{
-%	\begin{frame}
-%		\frametitle{目录}
-%		\tableofcontents[currentsection]
-%	\end{frame}
-%}
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
 \begin{document}
 \frame{\titlepage}
-%\frame{\frametitle{目录}\tableofcontents}
+\frame{\frametitle{目录}\tableofcontents}
 \section{整除}
 \subsection{整除的概念与基本性质}
 \begin{frame}{整除的概念与基本性质}
@@ -46,9 +48,11 @@
 	\begin{property}
 		如果 $a \mid b$, 那么 $a \mid(-b)$ ，反过来也成立; 进一步,如果 $a \mid b$, 那么 $(-a) \mid b$ ，反过来也成立.
 	\end{property}
+	\pause
 	\begin{property}
 		如果 $a|b, b| c$, 那么 $a \mid c$ . (传递性)
 	\end{property}
+	\pause
 	\begin{property}
 		若 $a|b, a| c$, 则对任意整数 $x ,  y$, 都有 $a \mid b x+c y$ . (即 $a$ 能整除 $b ,  c$ 的任意一个“线性组合”)
 	\end{property}
@@ -87,9 +91,11 @@
 	\begin{property}
 		设 $n$ 为大于 1 的正整数, $p$ 是 $n$ 的大于 1 的因数中最小的正整数, 则 $p$ 为素数.
 	\end{property}
+	\pause
 	\begin{property}
 		如果对任意 $1$ 到 $\sqrt{n}$ 之间的素数 $p$, 都有 $p \nmid n$, 那么 $n$ 为素数. 这里 $n(>1)$ 为正整数.
 	\end{property}
+	\pause
 	\begin{proof}
 		事实上, 若 $n$ 为合数, 则可写 $n=p q, 2 \leqslant p \leqslant q$. 因此 $p^{2} \leqslant n$, 即 $p \leqslant \sqrt{n}$ .
 
@@ -101,6 +107,7 @@
 	\begin{property}
 		素数有无穷多个.
 	\end{property}
+	\pause
 	\begin{proof}
 		若只有有限个素数, 设它们是 $p_{1}<p_{2}<\cdots<p_{n}$. 考虑数
 		\begin{align*}
