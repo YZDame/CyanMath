@@ -5,18 +5,18 @@
 	\centering
 	\begin{tabular}{cc}
 		\hline
-		符号                      & 说明                                          \\  \hline
-		$a \mid b$                & $a$ 整除 $b$                                  \\
-		$a \nmid b$               & $a$ 不整除 $b$                                \\
-		$(a, b)$                  & $a$ 与 $b$ 的最大公因数                       \\
-		$[a, b]$                  & $a$ 与 $b$ 的最小公倍数                       \\
+		符号                        & 说明                                           \\  \hline
+		$a \mid b$                & $a$ 整除 $b$                                   \\
+		$a \nmid b$               & $a$ 不整除 $b$                                  \\
+		$(a, b)$                  & $a$ 与 $b$ 的最大公因数                             \\
+		$[a, b]$                  & $a$ 与 $b$ 的最小公倍数                             \\
 		$p^{\alpha} \| a$         & $p^{\alpha} \mid a$ 但 $p^{\alpha+1} \nmid a$ \\
-		$a \equiv b(\bmod m)$     & $a$ 与 $b$ 对模 $m$ 同余                      \\
-		$a \not\equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 不同余                    \\
-		$a^{-1}(\bmod m)$         & $a$ 对模 $m$ 的数论倒数                       \\
-		$[x]$                     & 不超过 $x$ 的最大整数                         \\
-		$\max \{a, b\}$           & 实数 $a 、 b$ 中较大的数                      \\
-		$\min \{a, b\}$           & 实数 $a 、 b$ 中较小的数                      \\ \hline
+		$a \equiv b(\bmod m)$     & $a$ 与 $b$ 对模 $m$ 同余                          \\
+		$a \not\equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 不同余                         \\
+		$a^{-1}(\bmod m)$         & $a$ 对模 $m$ 的数论倒数                             \\
+		$[x]$                     & 不超过 $x$ 的最大整数                                \\
+		$\max \{a, b\}$           & 实数 $a 、 b$ 中较大的数                             \\
+		$\min \{a, b\}$           & 实数 $a 、 b$ 中较小的数                             \\ \hline
 	\end{tabular}
 	\caption{符号说明}
 \end{table}
@@ -72,7 +72,7 @@
 	证明: 无论在数 12008 的两个 0 之间添加多少个 3 , 所得的数都是 19 的倍数.
 \end{example}
 \begin{proof}
-	记 $a_{0}=12008, a_{n}=120 \underbrace{3 \cdots 308}_{n \uparrow 3}, n=1,2, \cdots$.
+	记 $a_{0}=12008, a_{n}=120 \underbrace{3 \cdots 308}_{n \text { 个 } 3}, n=1,2, \cdots$.
 
 	首先, 因为
 	\begin{align*}
@@ -1061,7 +1061,7 @@
 	n=a+b, \text { 且 } \frac{x}{a}+\frac{y}{b}=1 \text {. }
 \end{align*}\\
 16. 注意到 $10001=73 \times 137$ 为合数,而从第二项起, 我们有\begin{align}
-	a_{n} & =\underbrace{100010001 \cdots 0001}_{n \text { 个0o01 }}                \\
+	a_{n} & =\underbrace{100010001 \cdots 0001}_{n \text { 个0o01 }}                 \\
 	      & =10^{4 n}+10^{4(n-1)}+\cdots+10^{4}+1                                   \\
 	      & =\frac{10^{4(n+1)}-1}{10^{4}-1}                                         \\
 	      & =\frac{\left(10^{2(n+1)}-1\right)\left(10^{2(n+1)}+1\right)}{10^{4}-1},
@@ -1687,6 +1687,7 @@
 \end{comment}
 
 \newpage
+
 \section{同余}
 同余是由大数学家高斯引入的一个概念. 我们可以将它理解为"余同", 即余数相同. 正如奇数与偶数是依能否被 2 整除而得到的关于整数的分类一样, 考虑除以 $m(\geqslant 2)$ 所得余数的不同, 可以将整数分为 $m$ 类. 两个属于同一类中的数相对于"参照物" $m$ 而言, 具有"余数相同"这个性质. 这种为对比两个整数的性质, 引入一个参照物的思想是同余理论的一个基本出发点.
 
@@ -1842,8 +1843,8 @@
 	前面 19 个数之和为 1990 , 故符合要求的 19 个正整数中必有一个 $\geqslant 208$ , 此时
 	\begin{align}
 		\text { 这 } 19 \text { 个数之和 } \geqslant & 208+(19+28+\cdots+91)+   \\
-		                                             & (109+118+127+\cdots+181) \\
-		=                                            & 2198>1999
+		                                        & (109+118+127+\cdots+181) \\
+		=                                       & 2198>1999
 	\end{align}
 	矛盾.
 
@@ -1871,604 +1872,674 @@
 	若整数 $a_{1}, a_{2}, \cdots, a_{m}$ 对模 $m$ 两两不同余, 则 $a_{1}, a_{2}, \cdots, a_{n}$ 构成模 $m$ 的一个完系.
 \end{property}
 
-性质2 任意连续 $m$ 个整数构成模 $m$ 的一个完系, 其中必有一个数为 $m$的倍数.
+\begin{property}
+	任意连续 $m$ 个整数构成模 $m$ 的一个完系, 其中必有一个数为 $m$的倍数.
+\end{property}
 
 引入完系的概念, 蕴含了"整体处理"的思想, 在用同余方法处理数论问题时, 我们常常需要选择不同的完系来达到目的, 做出恰当地分析.
 
-例1 证明: 在十进制表示下, 任意 39 个连续正整数中, 必有一个数的数码和是 11 的倍数.
+% 例 1
+\begin{example}
+	证明: 在十进制表示下, 任意 39 个连续正整数中, 必有一个数的数码和是 11 的倍数.
+\end{example}
+\begin{proof}
+	由于连续 10 个正整数中必有一个为 10 的倍数, 故连续 39 个正整数中必有 3 个数为 10 的倍数, 这 3 个数中必有一个数的十位数字不大于 8 , 且该数后有至少 19 个数在所取的 39 个连续的正整数中. 设这个数为 $a$, 并设它的数码和为 $S(a)$ , 现在考虑数
+	\begin{align*}
+		a, a+1, \cdots, a+9, a+19
+	\end{align*}
+	这 11 个数都是所取的 39 个数中的数, 并由 $a$ 的选择知, 它们的数码和分别为 $S(a), S(a)+1, \cdots, S(a)+10$ , 构成 11 个连续的正整数, 其中必有一个数为 11 的倍数. 命题获证.
+\end{proof}
+\begin{note}
+	是否命题对连续 38 个连续正整数也对呢？答案是否定的, 原因是可能找不到由数码和构成的模 11 的完系. 一个反例是: 999981, 999982, ․, 1000018 , 这 38 个数中没有一个数的数码和是 11 的倍数.
+\end{note}
 
-证明 由于连续 10 个正整数中必有一个为 10 的倍数, 故连续 39 个正整数中必有 3 个数为 10 的倍数, 这 3 个数中必有一个数的十位数字不大于 8 , 且该数后有至少 19 个数在所取的 39 个连续的正整数中. 设这个数为 $a$, 并设它的数码和为 $S(a)$ , 现在考虑数
-\begin{align*}
-	a, a+1, \cdots, a+9, a+19
-\end{align*}
+% 例 2
+\begin{example}
+	设 $n$ 为正奇数. 证明: 数
+	\begin{align*}
+		2-1,2^{2}-1, \cdots, 2^{n-1}-1
+	\end{align*}
+	中必有一个数是 $n$ 的倍数.
+\end{example}
+\begin{proof}
+	当 $n=1$ 时,命题显然成立.
 
-这 11 个数都是所取的 39 个数中的数, 并由 $a$ 的选择知, 它们的数码和分别为 $S(a), S(a)+1, \cdots, S(a)+10$ , 构成 11 个连续的正整数, 其中必有一个数为 11 的倍数. 命题获证.
+	考虑 $n>1$ 的情形, 此时, 在数
+	\begin{align*}
+		1,2, \cdots, 2^{n-1}
+	\end{align*}
+	中没有一个数为 $n$ 的倍数,故它们除以 $n$ 所得的余数只能是 $1,2, \cdots, n-1$.所以, 这 $n$ 个数中必有两个数对模 $n$ 同余, 即存在 $0 \leqslant i<j \leqslant n-1$, 使得 $2^{i} \equiv 2^{j}(\bmod n)$ . 又 $n$ 为奇数, 故 $\left(2^{i}, n\right)=1$, 所以, $2^{j-i} \equiv 1(\bmod n)$, 即 $n \mid 2^{2^{-i}}-1$ . 命题获证.
+\end{proof}
+\begin{note}
+	在处理数论中的一些存在性问题时, 经常需要将同余方法与抽屉原则相结合.
+\end{note}
 
-说明 是否命题对连续 38 个连续正整数也对呢？答案是否定的, 原因是可能找不到由数码和构成的模 11 的完系. 一个反例是: 999981, 999982, ․, 1000018 , 这 38 个数中没有一个数的数码和是 11 的倍数.
+% 例 3
+\begin{example}
+	设 $m ,  n$ 为正整数, $m$ 为奇数, 且 $\left(m, 2^{n}-1\right)=1$. 证明: 数 $1^{n}+$ $2^{n}+\cdots+m^{n}$ 是 $m$ 的倍数.
+\end{example}
+\begin{proof}
+	由于 $m$ 为奇数, 而 $1,2, \cdots, m$ 是模 $m$ 的一个完系,故 $2 \times 1,2 \times$ $2, \cdots, 2 \times m$ 也是模 $m$ 的一个完系, 所以,
+	\begin{align*}
+		1^{n}+2^{n}+\boldsymbol{\cdots}+m^{n} \equiv(2 \times 1)^{n}+(2 \times 2)^{n}+\boldsymbol{\cdots}+(2 \times m)^{n}(\bmod m) .
+	\end{align*}
+	即 $m \mid\left(2^{n}-1\right)\left(1^{n}+2^{n}+\cdots+m^{n}\right)$ , 结合 $\left(m, 2^{n}-1\right)=1$ 可知命题成立.
+\end{proof}
+\begin{note}
+	这里凸现了"整体处理"的妙处. 一个有趣的技巧是: 当 $n$ 为奇数时, 利用因式分解可知对 $1 \leqslant k \leqslant m-1$, 有 $k^{n}+(m-k)^{n}$ 是 $m$ 的倍数, 因此,可对和数 $1^{n}+\cdots+m^{n}$ 进行配对处理后证出结论. 但这个方法对 $n$ 是偶数的情形就失效了.
+\end{note}
 
-例 2 设 $n$ 为正奇数. 证明: 数
-\begin{align*}
-	2-1,2^{2}-1, \cdots, 2^{n-1}-1
-\end{align*}
+% 例 4
+\begin{example}
+	(1) 证明: 存在无穷多组整数 $(x, a, b, c)$ , 使得
+	\begin{align*}
+		x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}
+	\end{align*}\\
+	(2) 问: 是否存在整数组 $(x, a, b, c, d)$ , 使得
+	\begin{align*}
+		x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}=(x+3)^{2}+d^{2} ?
+	\end{align*}
+\end{example}
+\begin{solution}
+	(1) 对大于 1 的正整数 $k$ , 令 $x=4 k^{3}-1, a=2 k^{2}+2 k, b=2 k^{2}+$ $1, c=2 k^{2}-2 k$ , 可知整数组 $(x, a, b, c)$ 符合要求.
 
-中必有一个数是 $n$ 的倍数. \\
-证明 当 $n=1$ 时,命题显然成立.
+	这里 $(x, a, b, c)$ 的构造思路如下:
 
-考虑 $n>1$ 的情形, 此时, 在数
-\begin{align*}
-	1,2, \cdots, 2^{n-1}
-\end{align*}
+	由题目的要求, 知 $a^{2}-b^{2}=2 x+1 ,  b^{2}-c^{2}=2 x+3$ , 于是, 设 $b=c+$ $n, a=b+m=c+n+m$ , 应有
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       2 c n+n^{2}=2 x+3 \\
+			       2 c m+2 m n+m^{2}=2 x+1
+		       \end{array}\right.
+	\end{align*}
+	这要求 $m ,  n$ 都为奇数, 两式相减后, 得 $c=\frac{1+m m}{n-m}-\frac{n+m}{2}$, 为使其为整数,
 
-中没有一个数为 $n$ 的倍数,故它们除以 $n$ 所得的余数只能是 $1,2, \cdots, n-1$.所以, 这 $n$ 个数中必有两个数对模 $n$ 同余, 即存在 $0 \leqslant i<j \leqslant n-1$, 使得 $2^{i} \equiv 2^{j}(\bmod n)$ . 又 $n$ 为奇数, 故 $\left(2^{i}, n\right)=1$, 所以, $2^{j-i} \equiv 1(\bmod n)$, 即 $n \mid 2^{2^{-i}}-1$ . 命题获证.
+	取 $n=m+2$ , 得 $c=\frac{1+m(m+2)}{2}-\frac{2 m+2}{2}=\frac{m^{2}-1}{2}$ , 令 $m=2 k+1$ , 就得到了我们的构造.
+	(2)不存在这样的整数组.
 
-说明 在处理数论中的一些存在性问题时, 经常需要将同余方法与抽屉原则相结合.
+	事实上, 对任意整数 $y$ , 我们有
+	\begin{align*}
+		y^{2} \equiv\left\{\begin{array}{l}
+			                   0(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;               \\
+			                   1(\bmod 8), \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
+			                   4(\bmod 8), \text { 若 } y \equiv 2(\bmod 4) .
+		                   \end{array}\right.
+	\end{align*}
+	所以, 对整数 $y ,  z$ 有
+	\begin{align*}
+		y^{2}+z^{2} \equiv\left\{\begin{array}{l}
+			                         0,1 \text { 或 } 4(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                 \\
+			                         1,2 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
+			                         0,4 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 2(\bmod 4) .
+		                         \end{array}\right.
+	\end{align*}
 
-例3 设 $m ,  n$ 为正整数, $m$ 为奇数, 且 $\left(m, 2^{n}-1\right)=1$. 证明: 数 $1^{n}+$ $2^{n}+\cdots+m^{n}$ 是 $m$ 的倍数.
+	如果存在符合要求的整数组 $(x, a, b, c, d)$ , 记 $T=x^{2}+a^{2}$ , 由于 $x$ ,  $x+1, x+2, x+3$ 构成模 4 的一个完系, 不妨设 $x \equiv 0(\bmod 4)$ , 那么 $x+1 \equiv$ $1(\bmod 4), x+2 \equiv 2(\bmod 4)$ , 所以, 应有
+	\begin{align*}
+		T(\bmod 8) \in\{0,1,4\} \cap\{1,2,5\} \cap\{0,4,5\}=\varnothing
+	\end{align*}
+	这是一个矛盾.
+\end{solution}
 
-证明 由于 $m$ 为奇数, 而 $1,2, \cdots, m$ 是模 $m$ 的一个完系,故 $2 \times 1,2 \times$ $2, \cdots, 2 \times m$ 也是模 $m$ 的一个完系, 所以,
-\begin{align*}
-	1^{n}+2^{n}+\boldsymbol{\cdots}+m^{n} \equiv(2 \times 1)^{n}+(2 \times 2)^{n}+\boldsymbol{\cdots}+(2 \times m)^{n}(\bmod m) .
-\end{align*}
+% 例 5
+\begin{example}
+	设 $n$ 为正整数. 证明: 存在一个各数码都是奇数的正整数, 它是 $5^{n}$的倍数.
+\end{example}
+\begin{proof}
+	我们利用递推方法构造符合条件的 $n$ 位正整数.
 
-即 $m \mid\left(2^{n}-1\right)\left(1^{n}+2^{n}+\cdots+m^{n}\right)$ , 结合 $\left(m, 2^{n}-1\right)=1$ 可知命题成立.\\
-说明 这里凸现了"整体处理"的妙处. 一个有趣的技巧是: 当 $n$ 为奇数时, 利用因式分解可知对 $1 \leqslant k \leqslant m-1$, 有 $k^{n}+(m-k)^{n}$ 是 $m$ 的倍数, 因此,可对和数 $1^{n}+\cdots+m^{n}$ 进行配对处理后证出结论. 但这个方法对 $n$ 是偶数的情形就失效了.
+	当 $n=1$ 时, 取 $a_{1}=5$ , 即可.
 
-例 4 (1) 证明: 存在无穷多组整数 $(x, a, b, c)$ , 使得
-\begin{align*}
-	x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}
-\end{align*}\\
-(2) 问: 是否存在整数组 $(x, a, b, c, d)$ , 使得
-\begin{align*}
-	x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}=(x+3)^{2}+d^{2} ?
-\end{align*}
+	设 $n=m$ 时, 存在一个各数码都是奇数的 $m$ 位正整数 $a_{m}$ , 使得 $5^{m} \mid a_{m}$ .
 
-解 (1) 对大于 1 的正整数 $k$ , 令 $x=4 k^{3}-1, a=2 k^{2}+2 k, b=2 k^{2}+$ $1, c=2 k^{2}-2 k$ , 可知整数组 $(x, a, b, c)$ 符合要求.
-
-这里 $(x, a, b, c)$ 的构造思路如下:\\
-由题目的要求, 知 $a^{2}-b^{2}=2 x+1 ,  b^{2}-c^{2}=2 x+3$ , 于是, 设 $b=c+$ $n, a=b+m=c+n+m$ , 应有
-\begin{align*}
-	\left\{\begin{array}{l}
-		       2 c n+n^{2}=2 x+3 \\
-		       2 c m+2 m n+m^{2}=2 x+1
-	       \end{array}\right.
-\end{align*}
-
-这要求 $m ,  n$ 都为奇数, 两式相减后, 得 $c=\frac{1+m m}{n-m}-\frac{n+m}{2}$, 为使其为整数,
-
-取 $n=m+2$ , 得 $c=\frac{1+m(m+2)}{2}-\frac{2 m+2}{2}=\frac{m^{2}-1}{2}$ , 令 $m=2 k+1$ , 就得到了我们的构造. \\
-(2)不存在这样的整数组.\\
-事实上, 对任意整数 $y$ , 我们有
-\begin{align*}
-	y^{2} \equiv\left\{\begin{array}{l}
-		                   0(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                \\
-		                   1(\bmod 8), \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
-		                   4(\bmod 8), \text { 若 } y \equiv 2(\bmod 4) .
-	                   \end{array}\right.
-\end{align*}
-
-所以, 对整数 $y ,  z$ 有
-\begin{align*}
-	y^{2}+z^{2} \equiv\left\{\begin{array}{l}
-		                         0,1 \text { 或 } 4(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                  \\
-		                         1,2 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
-		                         0,4 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 2(\bmod 4) .
-	                         \end{array}\right.
-\end{align*}
-
-如果存在符合要求的整数组 $(x, a, b, c, d)$ , 记 $T=x^{2}+a^{2}$ , 由于 $x$ ,  $x+1, x+2, x+3$ 构成模 4 的一个完系, 不妨设 $x \equiv 0(\bmod 4)$ , 那么 $x+1 \equiv$ $1(\bmod 4), x+2 \equiv 2(\bmod 4)$ , 所以, 应有
-\begin{align*}
-	T(\bmod 8) \in\{0,1,4\} \cap\{1,2,5\} \cap\{0,4,5\}=\varnothing
-\end{align*}
-
-这是一个矛盾. \\
-例5 设 $n$ 为正整数. 证明: 存在一个各数码都是奇数的正整数, 它是 $5^{n}$的倍数.
-
-证明 我们利用递推方法构造符合条件的 $n$ 位正整数. \\
-当 $n=1$ 时, 取 $a_{1}=5$ , 即可. \\
-设 $n=m$ 时, 存在一个各数码都是奇数的 $m$ 位正整数 $a_{m}$ , 使得 $5^{m} \mid a_{m}$ . \\
-设 $a_{m}=5^{m} \times q$ , 其中 $q \equiv r(\bmod 5), r=0,1,2,3$ 或 4 . 现在考虑数
-\begin{align*}
-	10^{m}, 3 \times 10^{m}, 5 \times 10^{m}, 7 \times 10^{m}, 9 \times 10^{m}
-\end{align*}
-
-它们除以 $5^{m}$ 后, 所得的商数分别为
-\begin{align*}
-	2^{m}, 3 \times 2^{m}, 5 \times 2^{m}, 7 \times 2^{m}, 9 \times 2^{m}
-\end{align*}
-
-其中任意两个数之差不是 5 的倍数, 它们构成模 5 的一个完系. 故其中必有一个数 $\equiv 5-r(\bmod 5)$ , 设 $a \times 2^{m} \equiv 5-r(\bmod 5)$ , 这里 $a$ 是 $1 ,  3 ,  5 ,  7 ,  9$ 中的某个数. 令 $a_{m+1}=a \times 10^{m}+a_{m}$ , 则
-\begin{align*}
-	5^{m} \mid a_{m+1}
-\end{align*}
-
-且
-\begin{align*}
-	\frac{a_{m+1}}{5^{m}} \equiv a \times 2^{m}+r \equiv 5-r+r \equiv 0(\bmod 5)
-\end{align*}
-
-故
-\begin{align*}
-	5^{m+1} \mid a_{m+1}
-\end{align*}
-
-因此, 存在一个 $m+1$ 位正整数 $a_{m+1}$, 其各数码都是奇数, 且 $5^{m+1} \mid a_{m+1}$.命题获证.
-
-说明 这里我们采用了加强命题的方式, 证明了不仅存在满足条件的数, 并且该数还是一个 $n$ 位数. 在递推构造中, 这个加强带来了很大的方便.
-
-例 6 一次圆桌会议共有 2012 个人参加, 中场休息后, 他们依不同的次序重新围着圆桌坐下. 证明: 至少有两个人, 他们之间的人数在休息前与休息后是相等的.
-
-证明 记 $n=1006$, 我们对每个座位标号, 将座位的号码依顺时针方向依次记为
-\begin{align*}
-	1,2,3, \cdots, 2 n
-\end{align*}
-
-因而, 每一个人可对应一个数对 $(i, j)$, 其中 $i, j$ 分别为他在休息前后的座位号. 显然, 所有的"横坐标" $i$ 与"纵坐标" $j$ 都取遍 (1), 亦即恰好构成模 $2 n$ 的完全剩余系.
-
-如果每两个人 $\left(i_{1}, j_{1}\right),\left(i_{2}, j_{2}\right)$ 在休息前后, 坐在他们之间的人数都不相同, 则应有
-\begin{align*}
-	j_{2}-j_{1} \neq i_{2}-i_{1} .
-\end{align*}
-
-注意, 上式中当 $j_{2}<j_{1}$ (或 $i_{2}<i_{1}$ ) 时,  $j_{2}$ 应换成 $2 n+j_{2}$ (或 $i_{2}$ 应换 $2 n+$ $i_{2}$ ). 当然更好的写法是
-\begin{align*}
-	j_{2}-j_{1} \not \equiv i_{2}-i_{1}(\bmod 2 n)
-\end{align*}
-
-也就是
-\begin{align*}
-	j_{2}-i_{2} \not \equiv j_{1}-i_{1}(\bmod 2 n)
-\end{align*}
-
-上式的含义是任意两个人的纵横坐标之差都对模 $2 n$ 不同余, 从而
-\begin{align*}
-	j_{1}-i_{1}, j_{2}-i_{2}, \cdots, j_{2 n}-i_{2 n}
-\end{align*}
-
-也是模 $2 n$ 的一个完全剩余系. \\
-考虑到模 $2 n$ 的每一个完全剩余系的各数之和应与
-\begin{align*}
-	1+2+3+\cdots+2 n=\frac{2 n(2 n+1)}{2}=n(2 n+1)
-\end{align*}
-
-对模 $2 n$ 同余, 但 $n(2 n+1) \neq 0(\bmod 2 n)$ , 故(2)中各数之和不能被 $2 n$ 整除, 从而不能等于 0. 这与
-\begin{align*}
-	\sum_{k=1}^{2 n}\left(j_{k}-i_{k}\right)=\sum_{k=1}^{2 n} j_{k}-\sum_{k=1}^{2 n} i_{k}=\sum_{k=1}^{2 n} j-\sum_{k=1}^{2 n} i=0
-\end{align*}
-
-矛盾. 这表明至少有两个人, 他们之间的人数在休息前后是相同的.\\
-说明 本质上是因为模 $2 n$ 的两个完系对应各数之差不能构成模 $2 n$ 的一个完系, 才会有本题的结论.
+	设 $a_{m}=5^{m} \times q$ , 其中 $q \equiv r(\bmod 5), r=0,1,2,3$ 或 4 . 现在考虑数
+	\begin{align*}
+		10^{m}, 3 \times 10^{m}, 5 \times 10^{m}, 7 \times 10^{m}, 9 \times 10^{m}
+	\end{align*}
+	它们除以 $5^{m}$ 后, 所得的商数分别为
+	\begin{align*}
+		2^{m}, 3 \times 2^{m}, 5 \times 2^{m}, 7 \times 2^{m}, 9 \times 2^{m}
+	\end{align*}
+	其中任意两个数之差不是 5 的倍数, 它们构成模 5 的一个完系. 故其中必有一个数 $\equiv 5-r(\bmod 5)$ , 设 $a \times 2^{m} \equiv 5-r(\bmod 5)$ , 这里 $a$ 是 $1 ,  3 ,  5 ,  7 ,  9$ 中的某个数. 令 $a_{m+1}=a \times 10^{m}+a_{m}$ , 则
+	\begin{align*}
+		5^{m} \mid a_{m+1}
+	\end{align*}
+	且
+	\begin{align*}
+		\frac{a_{m+1}}{5^{m}} \equiv a \times 2^{m}+r \equiv 5-r+r \equiv 0(\bmod 5)
+	\end{align*}
+	故
+	\begin{align*}
+		5^{m+1} \mid a_{m+1}
+	\end{align*}
+	因此, 存在一个 $m+1$ 位正整数 $a_{m+1}$, 其各数码都是奇数, 且 $5^{m+1} \mid a_{m+1}$.命题获证.
+\end{proof}
+\begin{note}
+	这里我们采用了加强命题的方式, 证明了不仅存在满足条件的数, 并且该数还是一个 $n$ 位数. 在递推构造中, 这个加强带来了很大的方便.
+\end{note}
 
 \subsection{费马小定理及其应用}
 费马(Fermat)小定理是初等数论中的一个重要定理, 数学竞赛中经常需要用到.
-
-Fermat 小定理 设 $p$ 为素数, $a$ 为整数,则 $a^{p} \equiv a(\bmod p)$ . 特别地,若 $p \nmid a$ , 则 $a^{p-1} \equiv 1(\bmod p)$ .
-
+\begin{theorem}[Fermat 小定理]
+	设 $p$ 为素数, $a$ 为整数,则 $a^{p} \equiv a(\bmod p)$ . 特别地,若 $p \nmid a$ , 则 $a^{p-1} \equiv 1(\bmod p)$ .
+\end{theorem}
 请注意该定理中 $p$ 为素数这个条件, 下面的证明中这个条件是非常重要的.
+\begin{proof}
+	当 $p \mid a$ 时, 结论显然成立.
 
-证明 当 $p \mid a$ 时, 结论显然成立. \\
-当 $p \nmid a$ 时, 设 $x_{1}, x_{2}, \cdots, x_{p-1}$ 是 $1,2, \cdots, p-1$ 的一个排列, 我们先证:  $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中任意两个数对模 $p$ 不同余.
+	当 $p \nmid a$ 时, 设 $x_{1}, x_{2}, \cdots, x_{p-1}$ 是 $1,2, \cdots, p-1$ 的一个排列, 我们先证:  $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中任意两个数对模 $p$ 不同余.
 
-事实上, 若存在 $1 \leqslant i<j \leqslant p-1$ , 使得 $a x_{i} \equiv a x_{j}(\bmod p)$ , 则 $p \mid a\left(x_{i}-x_{j}\right)$ , 而 $p \nmid a$ , 故 $p \mid x_{i}-x_{j}$ (注意, 这里用到 $p$ 为素数), 但 $x_{i}$ 与 $x_{j}$对模 $p$ 不同余, 矛盾.
+	事实上, 若存在 $1 \leqslant i<j \leqslant p-1$ , 使得 $a x_{i} \equiv a x_{j}(\bmod p)$ , 则 $p \mid a\left(x_{i}-x_{j}\right)$ , 而 $p \nmid a$ , 故 $p \mid x_{i}-x_{j}$ (注意, 这里用到 $p$ 为素数), 但 $x_{i}$ 与 $x_{j}$对模 $p$ 不同余, 矛盾.
 
-又 $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中显然没有一个数为 $p$ 的倍数, 因此,  $a x_{1}$ ,  $a x_{2}, \cdots, a x_{p-1}$ 除以 $p$ 所得的余数是 $1,2, \cdots, p-1$ 的一个排列, 利用同余的性质, 知
-\begin{align*}
-	\left(a x_{1}\right)\left(a x_{2}\right) \cdots\left(a x_{p-1}\right) \equiv x_{1} x_{2} \cdots x_{p-1}(\bmod p)
-\end{align*}
+	又 $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中显然没有一个数为 $p$ 的倍数, 因此,  $a x_{1}$ ,  $a x_{2}, \cdots, a x_{p-1}$ 除以 $p$ 所得的余数是 $1,2, \cdots, p-1$ 的一个排列, 利用同余的性质, 知
+	\begin{align*}
+		\left(a x_{1}\right)\left(a x_{2}\right) \cdots\left(a x_{p-1}\right) \equiv x_{1} x_{2} \cdots x_{p-1}(\bmod p)
+	\end{align*}
 
-再由 $x_{1} x_{2} \cdots x_{p-1}=(p-1)$ , , 它不是 $p$ 的倍数(注意, 这里再次用到 $p$ 为素数), 所以,  $a^{p-1} \equiv 1(\bmod p)$ .
+	再由 $x_{1} x_{2} \cdots x_{p-1}=(p-1)$ , , 它不是 $p$ 的倍数(注意, 这里再次用到 $p$ 为素数), 所以,  $a^{p-1} \equiv 1(\bmod p)$ .
+\end{proof}
+\begin{note}
+	这个证明体现了整体处理的思想, 它将模 $p$ 的余数全体对等考虑, 分别将模 $p$ 的两个剩余系(都不包括零)作乘积后得到一个同余式, 然后证出要证的式子.
+\end{note}
 
-说明 这个证明体现了整体处理的思想, 它将模 $p$ 的余数全体对等考虑, 分别将模 $p$ 的两个剩余系(都不包括零)作乘积后得到一个同余式, 然后证出要证的式子.
+% 例 1
+\begin{example}
+	设 $n$ 为正整数. 证明: $7 \mid 3^{n}+n^{3}$ 的充要条件是 $7 \mid 3^{n} n^{3}+1$ .
+\end{example}
+\begin{proof}
+	若 $7 \mid 3^{n}+n^{3}$, 则 $7\nmid n$, 于是, 由 Fermat 小定理, 知 $n^{6} \equiv 1(\bmod 7)$ ,
+	从而, 由
+	$7 \mid 3^{n}+n^{3}$,
+	知
+	$7 \mid\left(3^{n}+n^{3}\right) n^{3}$,
+	故
+	$7 \mid 3^{n} n^{3}+1$.
 
-例1 设 $n$ 为正整数. 证明: $7 \mid 3^{n}+n^{3}$ 的充要条件是 $7 \mid 3^{n} n^{3}+1$ . \\
-证明 若\\
-$7 \mid 3^{n}+n^{3}$,
+	反过来, 若 $7 \mid 3^{n} n^{3}+1$ ,
+	则 $7 \nmid n$,
+	并且 $7 \mid (3^{n} n^{3}+1)\cdot n$ ,
+	即 $7 \mid 3^{n} \cdot n^6 + n^3$ ,
+	利用 Fermat 小定理, 得 $ n^6 \equiv 1(\bmod 7)$ ,
+	从而 $7 \mid 3^{n}+n^{3}$ .
+\end{proof}
+\begin{note}
+	涉及指数的同余式经常需要用到 Fermat 小定理, 因为由 Fermat小定理得出的结论中, 同余式的一边是1, 这带来很大的方便.
+\end{note}
 
-于是, 由 Fermat 小定理, 知
-\begin{align*}
-	n^{6} \equiv 1(\bmod 7)
-\end{align*}
+% 例 2
+\begin{example}
+	设 $x$ 为整数,  $p$ 是 $x^{2}+1$ 的奇素因数, 证明:  $p \equiv 1(\bmod 4)$ .
+\end{example}
+\begin{proof}
+	由于 $p$ 为奇素数, 若 $p \neq 1(\bmod 4)$ , 则 $p \equiv 3(\bmod 4)$ , 可设 $p=$ $4 k+3$ , 此时, 由 $x^{2} \equiv-1(\bmod p)$ , 得
+	\begin{align*}
+		x^{p-1}=x^{4 k+2}=\left(x^{2}\right)^{2 k+1} \equiv(-1)^{2 k+1} \equiv-1(\bmod p)
+	\end{align*}
+	而由 Fermat 小定理, 应有
+	\begin{align*}
+		x^{p-1} \equiv 1(\bmod p)
+	\end{align*}
+	结合上式将导出 $p \mid$ 2. 矛盾.
 
-从而,由\\
-$7 \mid 3^{n}+n^{3}$,\\
-知\\
-$7 \mid\left(3^{n}+n^{3}\right) n^{3}$,\\
-故
-\begin{align*}
-	7 \mid 3^{n} n^{3}+1
-\end{align*}
+	所以,  $p \equiv 1(\bmod 4)$ .
+\end{proof}
+\begin{note}
+	利用此题的结论, 我们可以证明: 存在无穷多个模 4 余 1 的正整数为素数.
 
-反过来, 若\\
-则\\
-并且\\
-即\\
-利用 Fermat 小定理知\\
-故\\
-命题获证.\\
-说明 涉及指数的同余式经常需要用到 Fermat 小定理, 因为由 Fermat小定理得出的结论中, 同余式的一边是1, 这带来很大的方便.
+	事实上, 若只有有限个素数模 4 余 1 , 设它们是 $p_{1}, p_{2}, \cdots, p_{n}$ . 考虑数 $\left(2 p_{1} p_{2} \cdots p_{n}\right)^{2}+1$ 的素因数即可导出矛盾.
+\end{note}
 
-例2 设 $x$ 为整数,  $p$ 是 $x^{2}+1$ 的奇素因数, 证明:  $p \equiv 1(\bmod 4)$ . \\
-证明 由于 $p$ 为奇素数, 若 $p \neq 1(\bmod 4)$ , 则 $p \equiv 3(\bmod 4)$ , 可设 $p=$ $4 k+3$ , 此时, 由 $x^{2} \equiv-1(\bmod p)$ , 得
-\begin{align*}
-	x^{p-1}=x^{4 k+2}=\left(x^{2}\right)^{2 k+1} \equiv(-1)^{2 k+1} \equiv-1(\bmod p)
-\end{align*}
+% 例 3
+\begin{example}
+	设 $x$ 为整数,  $p$ 是数 $x^{6}+x^{5}+\cdots+1$ 的素因数. 证明:  $p=7$ 或 $p \equiv$ $1(\bmod 7)$.
+\end{example}
+\begin{proof}
+	当 $x=1$ 时,  $p=7$ ; 当 $x \neq 1$ 时,  $p$ 是 $\frac{x^{7}-1}{x-1}$ 的素因子, 因此,  $x^{7} \equiv$ $1(\bmod p)$ , 这表明 $p \nmid x$ , 于是, 由 Fermat 小定理, 可知 $x^{p-1} \equiv 1(\bmod p)$ , 进而 $x^{(7, p-1)} \equiv 1(\bmod p)$ .
 
-而由 Fermat 小定理, 应有
-\begin{align*}
-	x^{p-1} \equiv 1(\bmod p)
-\end{align*}
+	如果 $7 \nmid p-1$ , 即 $p \neq 1(\bmod 7)$ , 那么 $(7, p-1)=1$ , 得 $x \equiv 1(\bmod p)$ , 于是,
+	\begin{align*}
+		0 \equiv x^{6}+x^{5}+\cdots+1 \equiv 1^{6}+1^{5}+\cdots+1=7(\bmod p)
+	\end{align*}
+	得 $p=7$.
 
-结合上式将导出 $p \mid$ 2. 矛盾.\\
-所以,  $p \equiv 1(\bmod 4)$ . \\
-说明 利用此题的结论, 我们可以证明: 存在无穷多个模 4 余 1 的正整数为素数.
+	所以, 命题成立.
+\end{proof}
+\begin{note}
+	本题的解答中用到下面的结论: 若 $(a, m)=1$ , 且 $a^{u} \equiv 1(\bmod m)$ ,  $a^{v} \equiv 1(\bmod m)$ , 则 $a^{(u, v)} \equiv 1(\bmod m)$ .
 
-事实上, 若只有有限个素数模 4 余 1 , 设它们是 $p_{1}, p_{2}, \cdots, p_{n}$ . 考虑数 $\left(2 p_{1} p_{2} \cdots p_{n}\right)^{2}+1$ 的素因数即可导出矛盾.
+	它可以由下面的方法来得到.
 
-例3 设 $x$ 为整数,  $p$ 是数 $x^{6}+x^{5}+\cdots+1$ 的素因数. 证明:  $p=7$ 或 $p \equiv$ $1(\bmod 7)$.
+	由贝祖定理, 知存在整数 $x ,  y$ , 使得 $u x+v y=(u, v)$ , 于是,
+	\begin{align*}
+		a^{(u, v)}=a^{u x+v y}=\left(a^{u}\right)^{x} \cdot\left(a^{v}\right)^{y} \equiv 1^{x} \cdot 1^{y}=1(\bmod m)
+	\end{align*}
+	这里在 $x ,  y$ 为负整数时, 用数论倒数去理解.
 
-证明 当 $x=1$ 时,  $p=7$ ; 当 $x \neq 1$ 时,  $p$ 是 $\frac{x^{7}-1}{x-1}$ 的素因子, 因此,  $x^{7} \equiv$ $1(\bmod p)$ , 这表明 $p \nmid x$ , 于是, 由 Fermat 小定理, 可知 $x^{p-1} \equiv 1(\bmod p)$ , 进而 $x^{(7, p-1)} \equiv 1(\bmod p)$ .
+	另一方面, 本题的结论可推广为: 设 $q$ 为奇素数,  $x$ 为整数, 则数 $x^{q-1}+\cdots+$ 1 的素因数 $p$ 满足:  $p=q$ 或者 $p \equiv 1(\bmod q)$ .
+\end{note}
 
-如果 $7 \nmid p-1$ , 即 $p \neq 1(\bmod 7)$ , 那么 $(7, p-1)=1$ , 得 $x \equiv 1(\bmod p)$ , 于是,
-\begin{align*}
-	0 \equiv x^{6}+x^{5}+\cdots+1 \equiv 1^{6}+1^{5}+\cdots+1=7(\bmod p)
-\end{align*}
+% 例 4
+\begin{example}
+	设 $p$ 为素数. 证明: 存在无穷多个正整数 $n$ , 使得 $p \mid 2^{n}-n$ .
+\end{example}
+\begin{proof}
+	如果 $p=2$ , 那么取 $n$ 为偶数, 就有 $p \mid 2^{n}-n$ , 命题成立.
 
-得 $p=7$.\\
-所以, 命题成立.\\
-说明 本题的解答中用到下面的结论: 若 $(a, m)=1$ , 且 $a^{u} \equiv 1(\bmod m)$ ,  $a^{v} \equiv 1(\bmod m)$ , 则 $a^{(u, v)} \equiv 1(\bmod m)$ .
+	设 $p>2$ , 则由 Fermat 小定理知
+	\begin{align*}
+		2^{p-1} \equiv 1(\bmod p)
+	\end{align*}
+	因此, 对任意正整数 $k$ , 都有
+	\begin{align*}
+		2^{k(p-1)} \equiv 1(\bmod p)
+	\end{align*}
+	所以, 只需证明存在无穷多个正整数 $k$ , 使得
+	\begin{align*}
+		k(p-1) \equiv 1(\bmod p)\left(\text { 这样, 令 } n=k(p-1) \text {, 就有 } p \mid 2^{n}-n\right) \text {. }
+	\end{align*}
+	而这只需 $k \equiv-1(\bmod p) , $ 这样的 $k$ 当然有无穷多个.
 
-它可以由下面的方法来得到.\\
-由贝祖定理, 知存在整数 $x ,  y$ , 使得 $u x+v y=(u, v)$ , 于是,
-\begin{align*}
-	a^{(u, v)}=a^{u x+v y}=\left(a^{u}\right)^{x} \cdot\left(a^{v}\right)^{y} \equiv 1^{x} \cdot 1^{y}=1(\bmod m)
-\end{align*}
+	所以,命题成立.
+\end{proof}
+\begin{note}
+	用 Fermat 小定理处理数论中的一些存在性问题有时非常方便, 简洁.
+\end{note}
 
-这里在 $x ,  y$ 为负整数时, 用数论倒数去理解. \\
-另一方面, 本题的结论可推广为: 设 $q$ 为奇素数,  $x$ 为整数, 则数 $x^{q-1}+\cdots+$ 1 的素因数 $p$ 满足:  $p=q$ 或者 $p \equiv 1(\bmod q)$ .
+% 例 5
+\begin{example}
+	由 Fermat 小定理知, 对任意奇素数 $p$ , 都有 $2^{p-1} \equiv 1(\bmod p)$ . 问: 是否存在合数 $n$ , 使得 $2^{n-1} \equiv 1(\bmod n)$ 成立？
+\end{example}
+\begin{solution}
+	这样的合数 $n$ 存在, 而且有无穷多个. 其中最小的满足条件的合数 $n=341=11 \times 31$ (它是从两个不同奇素数作乘积去试算出来的).
 
-例 4 设 $p$ 为素数. 证明: 存在无穷多个正整数 $n$ , 使得 $p \mid 2^{n}-n$ . \\
-证明 如果 $p=2$ , 那么取 $n$ 为偶数, 就有 $p \mid 2^{n}-n$ , 命题成立. \\
-设 $p>2$ , 则由 Fermat 小定理知
-\begin{align*}
-	2^{p-1} \equiv 1(\bmod p)
-\end{align*}
+	事实上,由于
+	\begin{align*}
+		 & 2^{10}-1=1023=341 \times 3,               \\
+		 & 2^{10} \equiv 1(\bmod 341)                \\
+		 & 2^{340} \equiv 1^{34} \equiv 1(\bmod 341)
+	\end{align*}
+	故 $2^{10} \equiv 1(\bmod 341)$ ,
+	所以  $2^{n-1} \equiv 1^34 \equiv 1(\bmod 341)$ ,
+	故 341 符合要求.
 
-因此, 对任意正整数 $k$ , 都有
-\begin{align*}
-	2^{k(p-1)} \equiv 1(\bmod p)
-\end{align*}
+	进一步, 设 $a$ 是一个符合要求的奇合数, 则 $2^{a}-1$ 也是一个奇合数 (这一点利用因式分解可知). 再设 $2^{a-1}-1=a \times q, q$ 为正奇数, 则
+	\begin{align*}
+		2^{2^{a}-1-1}-1 & =2^{2\left(2^{a-1}-1\right)}-1     \\
+		                & =2^{2 a q}-1                       \\
+		                & =\left(2^{a}\right)^{2 q}-1        \\
+		                & \equiv 1^{2 q}-1                   \\
+		                & \equiv 0\left(\bmod 2^{a}-1\right)
+	\end{align*}
+	因此 $2^{a}-1$ 也是一个符合要求的数. 依此递推(结合 341 符合要求), 可知有无穷多个满足条件的合数.
+\end{solution}
+\begin{note}
+	满足题中的合数 $n$ 称为 “伪素数”, 如果对任意 $(a, n)=1$ 都有 $a^{n-1} \equiv 1(\bmod n)$ 成立, 那么合数 $n$ 称为“绝对伪素数”. 请读者寻找“绝对伪素数”.
+\end{note}
 
-所以, 只需证明存在无穷多个正整数 $k$ , 使得
-\begin{align*}
-	k(p-1) \equiv 1(\bmod p)\left(\text { 这样, 令 } n=k(p-1) \text {, 就有 } p \mid 2^{n}-n\right) \text {. }
-\end{align*}
-
-而这只需 $k \equiv-1(\bmod p) , $ 这样的 $k$ 当然有无穷多个.\\
-所以,命题成立.\\
-说明 用 Fermat 小定理处理数论中的一些存在性问题有时非常方便, 简洁.
-
-例 5 由 Fermat 小定理知, 对任意奇素数 $p$ , 都有 $2^{p-1} \equiv 1(\bmod p)$ . 问: 是否存在合数 $n$ , 使得 $2^{n-1} \equiv 1(\bmod n)$ 成立？
-
-解 这样的合数 $n$ 存在, 而且有无穷多个. 其中最小的满足条件的合数 $n=341=11 \times 31$ (它是从两个不同奇素数作乘积去试算出来的).
-
-事实上,由于\begin{align}
-	 & 2^{10}-1=1023=341 \times 3,               \\
-	 & 2^{10} \equiv 1(\bmod 341)                \\
-	 & 2^{340} \equiv 1^{34} \equiv 1(\bmod 341)
-\end{align}
-
-故\\
-所以\\
-故 341 符合要求.\\
-进一步, 设 $a$ 是一个符合要求的奇合数, 则 $2^{a}-1$ 也是一个奇合数 (这一点利用因式分解可知). 再设 $2^{a-1}-1=a \times q, q$ 为正奇数, 则\begin{align}
-	2^{2^{a}-1-1}-1 & =2^{2\left(2^{a-1}-1\right)}-1     \\
-	                & =2^{2 a q}-1                       \\
-	                & =\left(2^{a}\right)^{2 q}-1        \\
-	                & \equiv 1^{2 q}-1                   \\
-	                & \equiv 0\left(\bmod 2^{a}-1\right)
-\end{align}
-
-因此 $2^{a}-1$ 也是一个符合要求的数. 依此递推(结合 341 符合要求), 可知有无穷多个满足条件的合数.
-
-说明 满足题中的合数 $n$ 称为 "伪素数", 如果对任意 $(a, n)=1$ 都有 $a^{n-1} \equiv 1(\bmod n)$ 成立, 那么合数 $n$ 称为"绝对伪素数". 请读者寻找"绝对伪素数".
-
-例 6 求所有的素数 $p$, 使得 $\frac{2^{p-1}-1}{p}$ 是一个完全平方数. \\
-解 设 $p$ 是一个满足条件的素数, 则显然 $p$ 是一个奇素数. 由 Fermat 小定理知
-
-而
-\begin{align*}
-	p \mid 2^{p-1}-1
-\end{align*}
-
-故
-\begin{align*}
-	\begin{gathered}
-		2^{\rho-1}-1=\left(2^{\frac{p-1}{2}}-1\right)\left(2^{\frac{p-1}{2}}+1\right), \\
+% 例 6
+\begin{example}
+	求所有的素数 $p$, 使得 $\frac{2^{p-1}-1}{p}$ 是一个完全平方数.
+\end{example}
+\begin{solution}
+	设 $p$ 是一个满足条件的素数, 则显然 $p$ 是一个奇素数. 由 Fermat 小定理知
+	\begin{align*}
+		p \mid 2^{p-1}-1
+	\end{align*}
+	而
+	\begin{align*}
+		2^{p-1}-1=\left(2^{\frac{p-1}{2}}-1\right)\left(2^{\frac{p-1}{2}}+1\right)
+	\end{align*}
+	故
+	\begin{align*}
 		p \left\lvert\, 2^{\frac{p-1}{2}}-1\right. \text { 或 } p \left\lvert\, 2^{\frac{p-1}{2}}+1 .\right.
-	\end{gathered}
-\end{align*}
+	\end{align*}
+	由于 $\left(2^{\frac{p-1}{2}}-1,2^{\frac{t-1}{2}}+1\right)=\left(2^{\frac{p-1}{2}}-1,2\right)=1$,所以,  $p \left\lvert\, 2^{\frac{p-1}{2}}-1\right.$ 与 $p \left\lvert\, 2^{2^{\frac{p-1}{2}}}+1\right.$ 中恰有一个成立.
 
-由于 $\left(2^{\frac{p-1}{2}}-1,2^{\frac{t-1}{2}}+1\right)=\left(2^{\frac{p-1}{2}}-1,2\right)=1$,所以,  $p \left\lvert\, 2^{\frac{p-1}{2}}-1\right.$ 与 $p \left\lvert\, 2^{2^{\frac{p-1}{2}}}+1\right.$ 中恰有一个成立.
+	若 $p \left\lvert\, 2^{\frac{p-1}{2}}-1\right.$ , 则由条件及 $\left(2^{\frac{p-1}{2}}-1,2^{\frac{p-1}{2}}+1\right)=1$ 可知存在正整数 $x$ , 使得
+	\begin{align*}
+		2^{\frac{n_{1}^{2}}{2}}+1=x^{2} \text {, }
+	\end{align*}
+	此时
+	\begin{align*}
+		(x-1)(x+1)=2^{\frac{p-1}{2}},
+	\end{align*}
+	这表明 $x-1$ 与 $x+1$ 都是 2 的幂次, 而 $x$ 为奇数, 故 $x-1$ 与 $x+1$ 是两个相邻的偶数, 所以, 只能是
+	\begin{align*}
+		x-1=2, x+1=4
+	\end{align*}
+	故
+	\begin{align*}
+		 & x=3 \\
+		 & p=7
+	\end{align*}
+	此时 $p=7$.
 
-若 $p \left\lvert\, 2^{\frac{p-1}{2}}-1\right.$ , 则由条件及 $\left(2^{\frac{p-1}{2}}-1,2^{\frac{p-1}{2}}+1\right)=1$ 可知存在正整数 $x$ , 使得
-\begin{align*}
-	2^{\frac{n_{1}^{2}}{2}}+1=x^{2} \text {, }
-\end{align*}
+	若 $p \left\lvert\, 2^{\frac{b-1}{2}}+1\right.$ , 则同上知存在正整数 $x$ , 使得
+	\begin{align*}
+		2^{\frac{p-1}{2}}-1=x^{2}
+	\end{align*}
 
-此时
-\begin{align*}
-	(x-1)(x+1)=2^{\frac{p-1}{2}},
-\end{align*}
+	当 $p>3$ 时,导致
+	\begin{align*}
+		x^{2}=2^{\frac{p-1}{2}}-1 \equiv-1(\bmod 4)
+	\end{align*}
 
-这表明 $x-1$ 与 $x+1$ 都是 2 的幂次, 而 $x$ 为奇数, 故 $x-1$ 与 $x+1$ 是两个相邻的偶数, 所以, 只能是
-\begin{align*}
-	x-1=2, x+1=4
-\end{align*}
+	矛盾, 故 $p=3$.
 
-故\begin{align}
-	 & x=3 \\
-	 & p=7
-\end{align}
+	另一方面, 当 $p=3$ 和 7 时,  $\frac{2^{p-1}-1}{p}$ 分别为 1 和 9 , 都是完全平方数.
 
-此时\\
-若 $p \left\lvert\, 2^{\frac{b-1}{2}}+1\right.$ , 则同上知存在正整数 $x$ , 使得
-\begin{align*}
-	2^{\frac{p-1}{2}}-1=x^{2}
-\end{align*}
-
-当 $p>3$ 时,导致
-\begin{align*}
-	x^{2}=2^{\frac{p-1}{2}}-1 \equiv-1(\bmod 4)
-\end{align*}
-
-矛盾, 故 $p=3$.\\
-另一方面, 当 $p=3$ 和 7 时,  $\frac{2^{p-1}-1}{p}$ 分别为 1 和 9 , 都是完全平方数.\\
-综上可知 $p=3$ 或 7.
+	综上可知 $p=3$ 或 7.
+\end{solution}
 
 \subsection{奇数与偶数}
 奇数与偶数是对整数的最简单的分类, 初等数论经常需要对式子两边进行奇偶性分析, 导出矛盾或得出某个变量的特性, 奇偶分析法是一种重要的解题方法.
+\begin{property}
+	奇数 $\neq$ 偶数. \\
+	这个简单的事实对导出矛盾是十分重要的.
+\end{property}
 
-性质1 奇数 $\neq$ 偶数. \\
-这个简单的事实对导出矛盾是十分重要的. \\
-性质2 奇数的因数都是奇数, 即偶数不能整除奇数. \\
-注意, 反过来, 偶数是有奇因数的. \\
-性质3 奇数个奇数之和为奇数, 偶数个奇数之和为偶数. 任何整数加上一个偶数, 其奇偶性不变, 加上一个奇数, 其奇偶性改变; 任何整数乘以一个奇数, 其奇偶性不变, 乘以一个偶数都变为偶数.
+\begin{property}
+	奇数的因数都是奇数, 即偶数不能整除奇数. \\
+	注意, 反过来, 偶数是有奇因数的.
+\end{property}
+
+\begin{property}
+	奇数个奇数之和为奇数, 偶数个奇数之和为偶数. 任何整数加上一个偶数, 其奇偶性不变, 加上一个奇数, 其奇偶性改变; 任何整数乘以一个奇数, 其奇偶性不变, 乘以一个偶数都变为偶数.
+\end{property}
 
 这一节和下一节都是专题讨论, 一个是重要的方法, 另一个是内容丰富的特殊数. 它们在初中阶段是研究和学习的重点之一.
 
-例 1 已知 $p$ 为素数, 求所有的整数对 $(x, y)$ , 使得 $|x+y|+(x-y)^{2}=p$ . \\
-解 注意到,  $x+y$ 与 $x-y$ 要么都是奇数, 要么都是偶数, 故 $|x+y|+$ $(x-y)^{2}$ 为偶数, 从而 $p=2$ . 这表明 $|x+y|+(x-y)^{2}=2$ .
+% 例 1
+\begin{example}
+	已知 $p$ 为素数, 求所有的整数对 $(x, y)$ , 使得 $|x+y|+(x-y)^{2}=p$ .
+\end{example}
+\begin{solution}
+	注意到,  $x+y$ 与 $x-y$ 要么都是奇数, 要么都是偶数, 故 $|x+y|+$ $(x-y)^{2}$ 为偶数, 从而 $p=2$ . 这表明 $|x+y|+(x-y)^{2}=2$ .
+	由于 $|x+y|$ 与 $(x-y)^{2}$ 具有相同的奇偶性, 又 $(x-y)^{2}$ 是一个完全平方数,故 $\left(|x+y|,(x-y)^{2}\right)=(2,0),(1,1)$ . 分别求解, 可知
+	$(x, y)=(1,1),(-1,-1),(0,1),(0,-1),(1,0),(-1,0)$.
+\end{solution}
+\begin{note}
+	从奇偶性出发, 先确定式子中的素数应具有的一些特性, 然后再处理就容易了.
+\end{note}
 
-由于 $|x+y|$ 与 $(x-y)^{2}$ 具有相同的奇偶性, 又 $(x-y)^{2}$ 是一个完全平方数,故 $\left(|x+y|,(x-y)^{2}\right)=(2,0),(1,1)$ . 分别求解, 可知\\
-$(x, y)=(1,1),(-1,-1),(0,1),(0,-1),(1,0),(-1,0)$.\\
-说明 从奇偶性出发, 先确定式子中的素数应具有的一些特性, 然后再处理就容易了.
+% 例 2
+\begin{example}
+	将 $1,2, \cdots, 49$ 填入一个 $7 \times 7$ 的表格(每格一个数), 分别计算每行, 每列中的各数之和, 得到 14 个和数. 用 $A$ 表示这 14 个和数中的奇数之和,  $B$ 表示这 14 个和数中的偶数之和. 问: 是否存在一种填表方式, 使得 $A=B$ ？
+\end{example}
+\begin{solution}
+	若有一种填表方式, 使得 $A=B$ , 则
+	\begin{align}\label{eq:奇数与偶数-例2-1}
+		A=B=\frac{1}{2}(A+B)=\frac{1}{2} \times 2 \times(1+2+\cdots+49)=25 \times 49
+	\end{align}
+	这要求 $B$ 为奇数, 但是 $B$ 是若干个偶数之和, 不可能为奇数, 矛盾.
 
-例 2 将 $1,2, \cdots, 49$ 填入一个 $7 \times 7$ 的表格(每格一个数), 分别计算每行, 每列中的各数之和, 得到 14 个和数. 用 $A$ 表示这 14 个和数中的奇数之和,  $B$ 表示这 14 个和数中的偶数之和. 问: 是否存在一种填表方式, 使得 $A=B$ ？
+	所以, 不存在使 $A=B$ 成立的填表方式.
+\end{solution}
+\begin{note}
+	这里 $A+B$ 是表格中所有行和之和(它等于表格中所有数之和)与所有列和之和(也等于表格中所有数之和)的和, 因此\autoref{eq:奇数与偶数-例2-1}成立. 这里蕴含了整体处理的思想.
+\end{note}
 
-解 若有一种填表方式, 使得 $A=B$ , 则
-\begin{align*}
-	A=B=\frac{1}{2}(A+B)=\frac{1}{2} \times 2 \times(1+2+\cdots+49)=25 \times 49
-\end{align*}
+% 例 3
+\begin{example}
+	在十进制表示下, 将某个 17 位数加上它的反序数. 证明: 所得的和数中必有一个数码为偶数.
 
-这要求 $B$ 为奇数, 但是 $B$ 是若干个偶数之和, 不可能为奇数, 矛盾. \\
-所以, 不存在使 $A=B$ 成立的填表方式. \\
-说明 这里 $A+B$ 是表格中所有行和之和(它等于表格中所有数之和)与所有列和之和(也等于表格中所有数之和)的和, 因此(1)成立. 这里蕴含了整体处理的思想.
+	又问: 将 17 改为一般的正整数 $n$ , 命题成立吗？对怎样的 $n$ 成立？
+\end{example}
+\begin{proof}
+	若存在一个 17 位数 $\overline{a_{1} a_{2} \cdots a_{17}}$ , 使得 $M=\overline{a_{1} \cdots a_{17}}+\overline{a_{17} a_{16} \cdots a_{1}}$ 的各数码都是奇数, 则考察个位数, 可知 $a_{1}+a_{17}$ 为奇数. 现在再考察最前面一位的求和, 若 $a_{2}+a_{16}$ 产生进位, 则由 $a_{1}+a_{17}$ 为奇数, 可知 $M$ 中有一位为偶数, 矛盾. 故 $a_{2}+a_{16}$ 不产生进位. 依此可知 $\overline{a_{3} a_{4} \cdots a_{15}}+\overline{a_{15} a_{14} \cdots a_{3}}$ 的各数码都是奇数. 同样的推导可知 $\overline{a_{5} \cdots a_{13}}+\overline{a_{13} \cdots a_{5}}$ 的各数码都是奇数,  $\cdots$ , 最后 $a_{9}+a_{9}$ 为奇数, 这是一个矛盾. 所以,  $M$ 中必有一个数码为偶数.
 
-例3 在十进制表示下, 将某个 17 位数加上它的反序数. 证明: 所得的和数中必有一个数码为偶数.
+	对一般的正整数 $n$ , 同上讨论, 可知 $n \equiv 1(\bmod 4)$ 时, 命题依然成立. 当 $n$为偶数时, 设 $n=2 m$ , 则数 $\underbrace{4 \cdots}_{m \text { 个 }} \underbrace{5 \cdots 5}_{m \text { 个 }}$ 与其反序数之和的各数码都是奇数; 当 $n \equiv 3(\bmod 4)$ 时, 设 $n=4 k+3$ , 则数 $\underbrace{6464 \cdots 645}_{k+1 \text { 个 } 64} \underbrace{45 \cdots 45}_{k \text { 个 } 45}$ 与其反序数之和的各数码都是奇数.
 
-又问: 将 17 改为一般的正整数 $n$ , 命题成立吗？对怎样的 $n$ 成立？\\
-证明 若存在一个 17 位数 $\overline{a_{1} a_{2} \cdots a_{17}}$ , 使得 $M=\overline{a_{1} \cdots a_{17}}+\overline{a_{17} a_{16} \cdots a_{1}}$ 的各数码都是奇数, 则考察个位数, 可知 $a_{1}+a_{17}$ 为奇数. 现在再考察最前面一位的求和, 若 $a_{2}+a_{16}$ 产生进位, 则由 $a_{1}+a_{17}$ 为奇数, 可知 $M$ 中有一位为偶数, 矛盾. 故 $a_{2}+a_{16}$ 不产生进位. 依此可知 $\overline{a_{3} a_{4} \cdots a_{15}}+\overline{a_{15} a_{14} \cdots a_{3}}$ 的各数码都是奇数. 同样的推导可知 $\overline{a_{5} \cdots a_{13}}+\overline{a_{13} \cdots a_{5}}$ 的各数码都是奇数,  $\cdots$ , 最后 $a_{9}+a_{9}$ 为奇数, 这是一个矛盾. 所以,  $M$ 中必有一个数码为偶数.
+	所以, 当且仅当 $n \equiv 1(\bmod 4)$ 时, 命题成立.
+\end{proof}
 
-对一般的正整数 $n$ , 同上讨论, 可知 $n \equiv 1(\bmod 4)$ 时, 命题依然成立. 当 $n$为偶数时, 设 $n=2 m$ , 则数 $\underbrace{4 \cdots}_{m \uparrow} \underbrace{5 \cdots 5}_{m \text { 个 }}$ 与其反序数之和的各数码都是奇数; 当 $n \equiv 3(\bmod 4)$ 时, 设 $n=4 k+3$ , 则数 $\underbrace{6464 \cdots 645}_{k+1 \uparrow 64} \underbrace{45 \cdots 45}_{k \uparrow 45}$ 与其反序数之和的各数码都是奇数.
+% 例 4
+\begin{example}
+	(1)已知存在 $n$ 个整数, 它们的和等于零, 而它们的积等于 $n$ . 证明:  $4 \mid n$ ; \\
+	(2) 设正整数 $n$ 是 4 的倍数. 证明: 存在 $n$ 个整数, 其和为零, 而积为 $n$.
+\end{example}
+\begin{solution}
+	(1) 设整数 $a_{1}, a_{2}, \cdots, a_{n}$ 满足:
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       a_{1}+a_{2}+\cdots+a_{n}=0 \\
+			       a_{1} a_{2} \cdots a_{n}=n
+		       \end{array}\right.
+	\end{align*}
 
-所以, 当且仅当 $n \equiv 1(\bmod 4)$ 时, 命题成立. \\
-例 4 (1)已知存在 $n$ 个整数, 它们的和等于零, 而它们的积等于 $n$ . 证明:  $4 \mid n$ ; \\
-(2) 设正整数 $n$ 是 4 的倍数. 证明: 存在 $n$ 个整数, 其和为零, 而积为 $n$.
+	若 $n$ 为奇数, 则由(2)知 $a_{1}, a_{2}, \cdots, a_{n}$ 为奇数,故 $a_{1}+a_{2}+\cdots+a_{n}$ 是奇数个 ( $n$ 个) 奇数之和, 这与(1)矛盾. 所以, $n$ 为偶数.
 
-解 (1) 设整数 $a_{1}, a_{2}, \cdots, a_{n}$ 满足:
-\begin{align*}
-	\left\{\begin{array}{l}
-		       a_{1}+a_{2}+\cdots+a_{n}=0 \\
-		       a_{1} a_{2} \cdots a_{n}=n
-	       \end{array}\right.
-\end{align*}
+	现在若 $n$ 不是 4 的倍数, 则由(2)知 $a_{1}, a_{2}, \cdots, a_{n}$ 中恰有一个数为偶数,此时 $a_{1}+a_{2}+\cdots+a_{n}$ 是一个偶数加上奇数个 ( $n-1$ 个) 奇数, 其和为奇数, 同样与(1)矛盾. 所以, $4 \mid n$.\\
+	(2) 只需给出一个例子, 按 $n \equiv 0(\bmod 8)$ 与 $n \equiv 4(\bmod 8)$ 分别处理.
 
-若 $n$ 为奇数, 则由(2)知 $a_{1}, a_{2}, \cdots, a_{n}$ 为奇数,故 $a_{1}+a_{2}+\cdots+a_{n}$ 是奇数个 ( $n$ 个) 奇数之和, 这与(1)矛盾. 所以, $n$ 为偶数.
+	当 $n \equiv 0(\bmod 8)$ 时, 设 $n=8 k$, 此时存在 $n$ 个整数
+	\begin{align*}
+		4 k, 2, \underbrace{1, \cdots, 1}_{2 k-2 \text { 个 }}, \underbrace{-1,-1, \cdots,-1}_{6 k \text { 个 }}
+	\end{align*}
 
-现在若 $n$ 不是 4 的倍数, 则由(2)知 $a_{1}, a_{2}, \cdots, a_{n}$ 中恰有一个数为偶数,此时 $a_{1}+a_{2}+\cdots+a_{n}$ 是一个偶数加上奇数个 ( $n-1$ 个) 奇数, 其和为奇数, 同样与(1)矛盾. 所以, $4 \mid n$.\\
-(2) 只需给出一个例子, 按 $n \equiv 0(\bmod 8)$ 与 $n \equiv 4(\bmod 8)$ 分别处理.
+	满足和为零, 积为 $n$.\\
+	当 $n \equiv 4(\bmod 8)$ 时, 设 $n=8 k+4$, 则存在 $n$ 个整数
+	\begin{align*}
+		4 k+2,-2, \underbrace{1, \cdots, 1}_{2 k+1 \text { 个 }}, \underbrace{-1, \cdots,-1}_{6 k+1 \text { 个 }}
+	\end{align*}
+	满足和为零, 积为 $n$.
 
-当 $n \equiv 0(\bmod 8)$ 时, 设 $n=8 k$, 此时存在 $n$ 个整数
-\begin{align*}
-	4 k, 2, \underbrace{1, \cdots, 1}_{2 k-2 \uparrow}, \underbrace{-1,-1, \cdots,-1}_{6 k \uparrow}
-\end{align*}
+	所以, 命题成立.
+\end{solution}
 
-满足和为零, 积为 $n$.\\
-当 $n \equiv 4(\bmod 8)$ 时, 设 $n=8 k+4$, 则存在 $n$ 个整数
-\begin{align*}
-	4 k+2,-2, \underbrace{1, \cdots, 1}_{2 k+1 \uparrow}, \underbrace{-1, \cdots,-1}_{6 k+1 \uparrow}
-\end{align*}
+% 例 5
+\begin{example}
+	已知 4 枚硬币中可能混有假币, 其中真币每枚重 10 克, 假币每枚重 9 克. 现有一台托盘秤, 它可以称出托盘中物体的总重量. 问: 至少需要称几次, 才能保证可以鉴别出每一枚硬币的真假?
+\end{example}
+\begin{solution}
+	至少称 3 次可以做到.\\
+	事实上, 设 4 枚硬币分别是 $a ,  b ,  c ,  d$ .  分 3 次称出 $a+b+c, a+b+d$, $a+c+d$ 的重量. 这 3 个重量之和等于 $3 a+2(b+c+d)$, 因此, 如果这 3 个重量之和为奇数, 那么 $a$ 为假币, 否则 $a$ 为真币. 当 $a$ 确定后, 解关于 $b ,  c ,  d$ 的三元一次方程组可确定 $b ,  c, d$ 的真假. 所以, 3 次是足够的.
 
-满足和为零, 积为 $n$.\\
-所以, 命题成立.\\
-例5 已知 4 枚硬币中可能混有假币, 其中真币每枚重 10 克, 假币每枚重 9 克. 现有一台托盘秤, 它可以称出托盘中物体的总重量. 问: 至少需要称几次, 才能保证可以鉴别出每一枚硬币的真假?
+	下证: 只称两次不能保证测出每枚硬币的真假. \\
+	注意到, 如果有两枚硬币, 例如 $a, b$, 它们在每次称量中要么同时出现, 要么同时不出现, 那么在 $a ,  b$ 是一真一假时, 改变 $a ,  b$ 的真假对称量结果没有影响,故不能确定 $a, b$ 的真假.
 
-解 至少称 3 次可以做到.\\
-事实上, 设 4 枚硬币分别是 $a ,  b ,  c ,  d$ .  分 3 次称出 $a+b+c, a+b+d$, $a+c+d$ 的重量. 这 3 个重量之和等于 $3 a+2(b+c+d)$, 因此, 如果这 3 个重量之和为奇数, 那么 $a$ 为假币, 否则 $a$ 为真币. 当 $a$ 确定后, 解关于 $b ,  c ,  d$ 的三元一次方程组可确定 $b ,  c, d$ 的真假. 所以, 3 次是足够的.
+	现在如果有一次称量中至多只出现两枚硬币, 例如 $a ,  b$, 那么另一次称量中 $c ,  d$ 只能恰有一个在托盘中出现 (否则对换 $c, d$ 的奇偶性不影响结果), 此时, 有一枚硬币在两次称量中都不出现, 它的真假改变不影响称量结果, 从而不能断定它的真假. 故每次称量托盘中都至少有 3 枚硬币, 这时必有两枚硬币同时在两次称量中出现, 亦导致矛盾.
 
-下证: 只称两次不能保证测出每枚硬币的真假. \\
-注意到, 如果有两枚硬币, 例如 $a, b$, 它们在每次称量中要么同时出现, 要么同时不出现, 那么在 $a ,  b$ 是一真一假时, 改变 $a ,  b$ 的真假对称量结果没有影响,故不能确定 $a, b$ 的真假.
+	综上可知, 至少需要称 3 次.
+\end{solution}
 
-现在如果有一次称量中至多只出现两枚硬币, 例如 $a ,  b$, 那么另一次称量中 $c ,  d$ 只能恰有一个在托盘中出现 (否则对换 $c, d$ 的奇偶性不影响结果), 此
 
-时, 有一枚硬币在两次称量中都不出现, 它的真假改变不影响称量结果, 从而不能断定它的真假. 故每次称量托盘中都至少有 3 枚硬币, 这时必有两枚硬币同时在两次称量中出现, 亦导致矛盾.
+% 例 6
+\begin{example}
+	一个边长为 3 的正方体被分割为 27 个单位正方体, 将 $1,2, \cdots$ ,  27 随机地放入单位正方体, 每个单位正方体中一个数. 计算每一行(横, 竖, 列)上 3 个数之和, 得到 27 个和数. 问: 这 27 个和数中至多有多少个奇数？
+\end{example}
+\begin{solution}
+	计算这 27 个和数的和 $S$ , 由于每个数恰在 3 行中出现, 故
+	\begin{align*}
+		S=3 \times(1+2+\cdots+27)=3 \times 27 \times 14
+	\end{align*}
+	即 $S$ 为偶数, 所以, 这 27 个和数中奇数的个数为偶数.
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|l|l|l|}
+			\hline
+			$a_1$ & $a_2$ & $a_3$ \\ \hline
+			$a_4$ & $a_5$ & $a_6$ \\ \hline
+			$a_7$ & $a_8$ & $a_9$ \\ \hline
+		\end{tabular}
+	\end{table}
+	若这 27 个和数中有 26 个奇数, 不妨设那个偶数为第一横行上的 3 个数之和, 即 $a_{1}+a_{2}+a_{3}$ 为偶数, 而其余的 5 个行和都是奇数. 这时, 分别按横行和坚行求上表中的各数之和, 得
+	\begin{align}
+		  & \left(a_{1}+a_{2}+a_{3}\right)+\left(a_{4}+a_{5}+a_{6}\right)+\left(a_{7}+a_{8}+a_{9}\right) \\
+		= & \left(a_{1}+a_{4}+a_{7}\right)+\left(a_{2}+a_{5}+a_{8}\right)+\left(a_{3}+a_{6}+a_{9}\right)
+	\end{align}
+	但此式左边为两奇一偶, 右边为 3 个奇数之和, 导出左边为偶数, 而右边为奇数, 矛盾.
 
-综上可知, 至少需要称 3 次. \\
-例 6 一个边长为 3 的正方体被分割为 27 个单位正方体, 将 $1,2, \cdots$ ,  27 随机地放入单位正方体, 每个单位正方体中一个数. 计算每一行(横, 竖, 列)上 3 个数之和, 得到 27 个和数. 问: 这 27 个和数中至多有多少个奇数？
-
-解 计算这 27 个和数的和 $S$ , 由于每个数恰在 3 行中出现, 故
-\begin{align*}
-	S=3 \times(1+2+\cdots+27)=3 \times 27 \times 14
-\end{align*}
-
-即 $S$ 为偶数, 所以, 这 27 个和数中奇数的个数为偶数. \\
-若这 27 个和数中有 26 个奇数, 不妨设那个偶数为图 1 中的第一横行上的 3 个数之和, 即 $a_{1}+a_{2}+a_{3}$ 为偶数, 而图 1 中其余的 5 个行和都是奇数. 这时, 分别按横行和坚行求图 1 中的各数之和, 得\\
-\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-046(1)}
-
-图 1\begin{align}
-	  & \left(a_{1}+a_{2}+a_{3}\right)+\left(a_{4}+a_{5}+a_{6}\right)+\left(a_{7}+a_{8}+a_{9}\right) \\
-	= & \left(a_{1}+a_{4}+a_{7}\right)+\left(a_{2}+a_{5}+a_{8}\right)+\left(a_{3}+a_{6}+a_{9}\right)
-\end{align}
-
-但此式左边为两奇一偶, 右边为 3 个奇数之和, 导出左边为偶数, 而右边为奇数, 矛盾.
-
-所以, 这 27 个和数中至多有 24 个数为奇数. \\
-下面的例子(如图2所示)表明存在一种填数方式, 使得 27 个和数中可以有 24 个为奇数. 图2各表中的 0 表示偶数,  1 表示奇数, 从左到右依次为最上层, 中层和最下层的单位正方体.
-
-\begin{center}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		0 & 1 & 0 \\
-		\hline
-		1 & 1 & 1 \\
-		\hline
-		0 & 1 & 0 \\
-		\hline
-	\end{tabular}
-\end{center}
-
-\begin{center}
-	\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-046}
-\end{center}
-
-图 2\\
-所以, 这 27 个和数中最多有 24 个为奇数.
+	所以, 这 27 个和数中至多有 24 个数为奇数.
+	下面的例子表明存在一种填数方式, 使得 27 个和数中可以有 24 个为奇数. 各表中的 0 表示偶数,  1 表示奇数, 从左到右依次为最上层, 中层和最下层的单位正方体.
+	\begin{multicols}{3}
+		\begin{center}
+			\begin{tabular}{|l|l|l|}
+				\hline
+				0 & 1 & 0 \\ \hline
+				1 & 1 & 1 \\ \hline
+				0 & 1 & 0 \\ \hline
+			\end{tabular}
+		\end{center}
+		\vspace{-0.5cm}
+		\begin{center}
+			\begin{tabular}{|l|l|l|}
+				\hline
+				1 & 1 & 1 \\ \hline
+				1 & 0 & 0 \\ \hline
+				1 & 0 & 0 \\ \hline
+			\end{tabular}
+		\end{center}
+		\vspace{-0.5cm}
+		\begin{center}
+			\begin{tabular}{|l|l|l|}
+				\hline
+				0 & 1 & 1 \\ \hline
+				1 & 0 & 0 \\ \hline
+				0 & 0 & 1 \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{multicols}
+	所以, 这 27 个和数中最多有 24 个为奇数.
+\end{solution}
 
 \subsection{完全平方数}
-数学竞赛中的许多问题涉及到完全平方数, 需要用到完全平方数的一些特性.
+\begin{property}\label{prop:完全平方数-1}
+	完全平方数 $\equiv 0$ 或 $1(\bmod 4)$ , 奇数的平方 $\equiv 1(\bmod 8)$ .
+\end{property}
+\begin{property}
+	相邻两个完全平方数之间没有一个正整数是完全平方数. (这个性质经常用来证明某一类数不是完全平方数)
+\end{property}
+\begin{property}
+	若两个互素的正整数之积是完全平方数, 则这两个数都是完全平方数.
+\end{property}
+注意, "两个完全平方数之积是完全平方数"这个结论是显然的.
 
-性质1 完全平方数 $\equiv 0$ 或 $1(\bmod 4)$ , 奇数的平方 $\equiv 1(\bmod 8)$ . \\
-性质2 相邻两个完全平方数之间没有一个正整数是完全平方数. (这个性质经常用来证明某一类数不是完全平方数)
-
-性质3 若两个互素的正整数之积是完全平方数, 则这两个数都是完全平方数.
-
-注意, "两个完全平方数之积是完全平方数"这个结论是显然的.\\
 这里的性质2与性质3对一般的 $n$ 次方数都成立, 而性质1只列出了完全平方数模 4 和模 8 的性质, 模其余的数亦有一些相应的性质. 例如: 完全平方数 $\equiv 0$ 或 $1(\bmod 3)$ , 完全平方数的末尾数字只能是 $0,1,4,5,6,9$ 等等.
+% 例 1
+\begin{example}
+	设素数从小到大依次排列为 $p_{1}, p_{2}, \cdots$ . 证明: 对任意大于 1 的正整数 $n$ , 数 $p_{1} p_{2} \cdots p_{n}-1$ 和 $p_{1} p_{2} \cdots p_{n}+1$ 都不是完全平方数.
+\end{example}
+\begin{proof}
+	注意到, $n \geqslant 2$ 时, $3 \mid p_{1} p_{2} \cdots p_{n}$, 故
+	\begin{align*}
+		p_{1} p_{2} \cdots p_{n}-1 \equiv 2(\bmod 3)
+	\end{align*}
+	所以, $p_{1} p_{2} \cdots p_{n}-1$ 不是完全平方数.\\
+	又 $n \geqslant 2$ 时, $p_{2} \cdots p_{n}$ 为奇数, 设 $p_{2} \cdots p_{n}=2 k+1$, 就有
+	\begin{align*}
+		p_{1} p_{2} \cdots p_{n}+1=2(2 k+1)+1=4 k+3 \equiv 3(\bmod 4)
+	\end{align*}
+	所以, $p_{1} p_{2} \cdots p_{n}+1$ 也不是完全平方数.
+\end{proof}
+\begin{note}
+	在处理与完全平方数有关的问题时, 经常要用到同余的方法, 其中取恰当的"参照物"(即模哪个数)是非常关键的.
+\end{note}
 
-例1 设素数从小到大依次排列为 $p_{1}, p_{2}, \cdots$ . 证明: 对任意大于 1 的正整数 $n$ , 数 $p_{1} p_{2} \cdots p_{n}-1$ 和 $p_{1} p_{2} \cdots p_{n}+1$ 都不是完全平方数.
+% 例 2
+\begin{example}
+	已知正整数 $a ,  b$ 满足关系式
+	\begin{align*}
+		2 a^{2}+a=3 b^{2}+b
+	\end{align*}
+	证明: $a-b$ 和 $2 a+2 b+1$ 都是完全平方数.
+\end{example}
+\begin{proof}
+	由条件, 知
+	\begin{align*}
+		b^{2}=2 a^{2}+a-\left(2 b^{2}+b\right)=(a-b)(2 a+2 b+1)
+	\end{align*}
+	上式左边大于零, 右边中 $2 a+2 b+1$ 大于零, 故 $a-b$ 大于零. \\
+	由(1)知, 要证 $a-b$ 与 $2 a+2 b+1$ 都是完全平方数, 只需证明
+	\begin{align*}
+		(a-b, 2 a+2 b+1)=1
+	\end{align*}
+	设 $(a-b, 2 a+2 b+1)=d$ , 则由(1)知 $d^{2} \mid b^{2}$ , 故 $d \mid b$ . 进而结合 $d \mid a-b$ , 知 $d \mid a$ , 故 $d \mid 2(a+b)$.又 $d \mid 2 a+2 b+1$ , 所以,  $d \mid 1$ , 进而 $d=1$.
+	命题获证.
+\end{proof}
+\begin{note}
+	这里我们并没有求出(1)中 $a ,  b$ 的值(这是比较困难的), 但是我们对(1)作恰当变形, 使一边为完全平方数, 另一边是两个式子之积后, 问题解决起来就容易了.
+\end{note}
 
-证明 注意到, $n \geqslant 2$ 时, $3 \mid p_{1} p_{2} \cdots p_{n}$, 故
-\begin{align*}
-	p_{1} p_{2} \cdots p_{n}-1 \equiv 2(\bmod 3)
-\end{align*}
+% 例 3
+\begin{example}
+	设正整数 $x ,  y ,  z$ 满足 $(x, y, z)=1$ , 并且 $\frac{1}{x}+\frac{1}{y}=\frac{1}{z}$. 证明:  $x+y ,  x-z ,  y-z$ 都是完全平方数.
+\end{example}
+\begin{proof}
+	设 $(x, y)=m$ , 并设 $x=m n, y=m l$ , 这里 $m ,  l ,  n$ 都是正整数, 且 $(l, n)=1$. 从而, 由条件可知
+	\begin{align*}
+		(l+n) z=m l n
+	\end{align*}
 
-所以, $p_{1} p_{2} \cdots p_{n}-1$ 不是完全平方数.\\
-又 $n \geqslant 2$ 时, $p_{2} \cdots p_{n}$ 为奇数, 设 $p_{2} \cdots p_{n}=2 k+1$, 就有
-\begin{align*}
-	p_{1} p_{2} \cdots p_{n}+1=2(2 k+1)+1=4 k+3 \equiv 3(\bmod 4)
-\end{align*}
+	利用 $(x, y, z)=1$ , 知 $(m, z)=1$ , 于是, 由(1)知 $z \mid \ln$ . 而 $(l, n)=1$ , 故 $(l, l+n)=1,(n, l+n)=1$ , 因此, 由(1)知 $l|z, n| z$ , 再由 $(l, n)=1$ , 知 $l n \mid z$ . 所以,  $z=l n$ , 进而 $m=l+n$ . 这样, 我们有
+	\begin{align*}
+		\begin{gathered}
+			x+y=m(l+n)=(l+n)^{2} \\
+			x-z=m n-l n=n(m-l)=n^{2} \\
+			y-z=m l-l n=l(m-n)=l^{2}
+		\end{gathered}
+	\end{align*}
 
-所以, $p_{1} p_{2} \cdots p_{n}+1$ 也不是完全平方数.\\
-说明 在处理与完全平方数有关的问题时, 经常要用到同余的方法, 其中取恰当的"参照物"(即模哪个数)是非常关键的.
+	命题获证.
+\end{proof}
+\begin{note}
+	另一种处理方式基于下面的变形:
+	\begin{align}
+		\frac{x+y}{x y}=\frac{1}{z} & \Rightarrow \frac{x+y}{x}=\frac{y}{z}   \\
+		                            & \Rightarrow \frac{x+y}{x}=\frac{x}{x-z} \\
+		                            & \Rightarrow(x+y)(x-z)=x^{2}
+	\end{align}
+	然后对最后一式利用上例的方法可证 $x+y$ 与 $x-z$ 都是完全平方数, 这种处理或许更能体现问题的本质.
+\end{note}
 
-例 2 已知正整数 $a ,  b$ 满足关系式
-\begin{align*}
-	2 a^{2}+a=3 b^{2}+b
-\end{align*}
-
-证明: $a-b$ 和 $2 a+2 b+1$ 都是完全平方数.\\
-证明 由条件, 知
-\begin{align*}
-	b^{2}=2 a^{2}+a-\left(2 b^{2}+b\right)=(a-b)(2 a+2 b+1)
-\end{align*}
-
-上式左边大于零, 右边中 $2 a+2 b+1$ 大于零, 故 $a-b$ 大于零. \\
-由(1)知, 要证 $a-b$ 与 $2 a+2 b+1$ 都是完全平方数, 只需证明
-\begin{align*}
-	(a-b, 2 a+2 b+1)=1
-\end{align*}
-
-设 $(a-b, 2 a+2 b+1)=d$ , 则由(1)知 $d^{2} \mid b^{2}$ , 故 $d \mid b$ . 进而结合 $d \mid a-b$ , 知 $d \mid a$ , 故 $d \mid 2(a+b)$.又 $d \mid 2 a+2 b+1$ , 所以,  $d \mid 1$ , 进而 $d=1$.
-
-命题获证.
-
-说明 这里我们并没有求出(1)中 $a ,  b$ 的值(这是比较困难的), 但是我们对(1)作恰当变形, 使一边为完全平方数, 另一边是两个式子之积后, 问题解决起来就容易了.
-
-例3 设正整数 $x ,  y ,  z$ 满足 $(x, y, z)=1$ , 并且 $\frac{1}{x}+\frac{1}{y}=\frac{1}{z}$. 证明:  $x+y ,  x-z ,  y-z$ 都是完全平方数.
-
-证明 设 $(x, y)=m$ , 并设 $x=m n, y=m l$ , 这里 $m ,  l ,  n$ 都是正整数, 且 $(l, n)=1$. 从而, 由条件可知
-\begin{align*}
-	(l+n) z=m l n
-\end{align*}
-
-利用 $(x, y, z)=1$ , 知 $(m, z)=1$ , 于是, 由(1)知 $z \mid \ln$ . 而 $(l, n)=1$ , 故 $(l, l+n)=1,(n, l+n)=1$ , 因此, 由(1)知 $l|z, n| z$ , 再由 $(l, n)=1$ , 知 $l n \mid z$ . 所以,  $z=l n$ , 进而 $m=l+n$ . 这样, 我们有
-\begin{align*}
-	\begin{gathered}
-		x+y=m(l+n)=(l+n)^{2} \\
-		x-z=m n-l n=n(m-l)=n^{2} \\
-		y-z=m l-l n=l(m-n)=l^{2}
-	\end{gathered}
-\end{align*}
-
-命题获证.\\
-说明 另一种处理方式基于下面的变形: \begin{align}
-	\frac{x+y}{x y}=\frac{1}{z} & \Rightarrow \frac{x+y}{x}=\frac{y}{z}   \\
-	                            & \Rightarrow \frac{x+y}{x}=\frac{x}{x-z} \\
-	                            & \Rightarrow(x+y)(x-z)=x^{2}
-\end{align}
-
-然后对最后一式利用上例的方法可证 $x+y$ 与 $x-z$ 都是完全平方数, 这种处理或许更能体现问题的本质.
-
-例 4 求所有的素数 $p$ , 使得 $p^{3}-4 p+9$ 是一个完全平方数. \\
-解 设 $p^{3}-4 p+9=x^{2}, x$ 为非负整数, 则 $p \mid x^{2}-9$ , 即 $p \mid(x-3)(x+$ 3), 结合 $p$ 为素数, 可设 $x=k p \pm 3, k$ 为非负整数. 于是,
+% 例 4
+\begin{example}
+	求所有的素数 $p$ , 使得 $p^{3}-4 p+9$ 是一个完全平方数.
+\end{example}
+\begin{solution}
+	设 $p^{3}-4 p+9=x^{2}, x$ 为非负整数, 则 $p \mid x^{2}-9$ , 即 $p \mid(x-3)(x+3)$, 结合 $p$ 为素数, 可设 $x=k p \pm 3, k$ 为非负整数. 于是,
 	\begin{align*}
 		p^{3}-4 p=x^{2}-9=k^{2} p^{2} \pm 6 k p
 	\end{align*}
-
-	得 $p^{2}-4=k^{2} p \pm 6 k$ , 这表明:  $p \mid 6 k \pm 4$ . \\
+	得 $p^{2}-4=k^{2} p \pm 6 k$ , 这表明:  $p \mid 6 k \pm 4$ .
 	当 $p>2$ 时, $p$ 为奇素数, 可知 $p \mid 3 k \pm 2$, 故总有 $p \leqslant 3 k+2$, 这表明: $\frac{1}{3}\left(p^{2}-2 p-9\right) \leqslant p k-3 \leqslant x$.
 
-	若 $x \leqslant \frac{p^{2}}{4}$ , 则 $\frac{1}{3}\left(p^{2}-2 p-9\right) \leqslant \frac{p^{2}}{4}$ , 得 $p \leqslant 8+\frac{36}{p}$ , 可知 $p \leqslant 11$ ; \\
+	若 $x \leqslant \frac{p^{2}}{4}$ , 则 $\frac{1}{3}\left(p^{2}-2 p-9\right) \leqslant \frac{p^{2}}{4}$ , 得 $p \leqslant 8+\frac{36}{p}$ , 可知 $p \leqslant 11$ ;
 	若 $x>\frac{p^{2}}{4}$, 则 $p^{3}-4 p+9=x^{2}>\frac{p^{4}}{16}$, 得 $p<16-\frac{16(4 p-9)}{p^{3}}$, 可知 $p \leqslant 13$.
 
 	综上可知, $p \leqslant 13$ , 直接枚举, 得 $(p, x)=(2,3),(7,18),(11,36)$.求得 $p=2,7$ 或 11 .
-
-	说明 此例所处理的等式两边不是齐次的, 想方设法得到素数 $p$ 的一个范围后去枚举是常用的方法, 这时一些数论知识的运用结合不等式估计往往是有效的.
-
-	例5 已知 $n$ 为正整数, 且 $2 n+1$ 与 $3 n+1$ 都是完全平方数. 证明:  $40 \mid n$ . 证明 设 $2 n+1=x^{2}, 3 n+1=y^{2}$ , 其中 $x ,  y$ 都是正整数. \\
-	由性质1, 知 $x^{2} \equiv 1(\bmod 8)$ (因为 $x^{2}$ 为奇数, 故 $x$ 为奇数), 从而
+\end{solution}
+% 例 5
+\begin{example}
+	已知 $n$ 为正整数, 且 $2 n+1$ 与 $3 n+1$ 都是完全平方数. 证明:  $40 \mid n$ .
+\end{example}
+\begin{proof}
+	设 $2 n+1=x^{2}, 3 n+1=y^{2}$ , 其中 $x ,  y$ 都是正整数.
+	由\autoref{prop:完全平方数-1}, 知 $x^{2} \equiv 1(\bmod 8)$ (因为 $x^{2}$ 为奇数, 故 $x$ 为奇数), 从而
 	\begin{align*}
 		n \equiv 0(\bmod 4)
 	\end{align*}
-
 	进而 $3 n+1$ 为奇数, 故
-
-	即
 	\begin{align*}
 		y^{2} \equiv 1(\bmod 8)
 	\end{align*}
 	\begin{align*}
 		3 n+1 \equiv 1(\bmod 8)
 	\end{align*}
-
 	于是
 	\begin{align*}
 		n \equiv 0(\bmod 8)
 	\end{align*}
-
 	另一方面, 对任意整数 $a$ , 有
 	\begin{align*}
-		\begin{gathered}
-			a \equiv 0, \pm 1, \pm 2(\bmod 5) \\
-			a^{2} \equiv 0,1 \text { 或 } 4(\bmod 5) .
-		\end{gathered}
+		a \equiv 0, \pm 1, \pm 2(\bmod 5)
 	\end{align*}
-
-	故\\
+	故
+	\begin{align*}
+		a^{2} \equiv 0,1 \text { 或 } 4(\bmod 5) .
+	\end{align*}
 	由条件知 $x^{2}+y^{2}=5 n+2 \equiv 2(\bmod 5)$ , \\
 	结合前面推出的结论, 可知
-
-	故\\
-	从而
 	\begin{align*}
 		\begin{gathered}
 			x^{2} \equiv y^{2} \equiv 1(\bmod 5) \\
@@ -2476,168 +2547,1201 @@ $(x, y)=(1,1),(-1,-1),(0,1),(0,-1),(1,0),(-1,0)$.\\
 			n \equiv 0(\bmod 5)
 		\end{gathered}
 	\end{align*}
+	利用 $(5,8)=1$ , 可知 $40 \mid n$.
+\end{proof}
+\begin{note}
+	最小的使得 $2 n+1$ 与 $3 n+1$ 都是完全平方数的正整数 $n=40$, 请读者找到下一个符合要求的正整数 $n$.
+\end{note}
 
-	利用 $(5,8)=1$ , 可知 $40 \mid n$.\\
-	说明 最小的使得 $2 n+1$ 与 $3 n+1$ 都是完全平方数的正整数 $n=40$, 请读者找到下一个符合要求的正整数 $n$.
-
-	例 6 若 $a ,  b$ 是使得 $a b+1$ 为完全平方数的正整数, 则记 $a \sim b$. 证明: 若 $a \sim b$ , 则存在正整数 $c$ , 使得 $a \sim c, b \sim c$ .
-
-	证明 由 $a \sim b$ , 可设 $a b+1=x^{2}$ , 这里 $x$ 为正整数, 下一个与 $a ,  b ,  x$ 有关的完全平方数是 $(a+x)^{2}$ 或 $(b+x)^{2}$ , 于是, 我们取 $c=2 x+a+b$ , 则\begin{align}
+% 例 6
+\begin{example}
+	若 $a ,  b$ 是使得 $a b+1$ 为完全平方数的正整数, 则记 $a \sim b$. 证明: 若 $a \sim b$ , 则存在正整数 $c$ , 使得 $a \sim c, b \sim c$ .
+\end{example}
+\begin{proof}
+	由 $a \sim b$ , 可设 $a b+1=x^{2}$ , 这里 $x$ 为正整数, 下一个与 $a ,  b ,  x$ 有关的完全平方数是 $(a+x)^{2}$ 或 $(b+x)^{2}$ , 于是, 我们取 $c=2 x+a+b$ , 则
+	\begin{align}
 		a c+1 & =a(2 x+a+b)+1                \\
 		      & =2 a x+a^{2}+a b+1           \\
 		      & =2 a x+a^{2}+x^{2}=(x+a)^{2} \\
 		b c+1 & =(x+b)^{2}
 	\end{align}
-
-	命题获证.\\
-	说明 此题对代数式变形的能力要求较高. 在寻找完全平方数时, 往往需要构造完全平方式, 因为当一个整式中的字母都取整数时, 这个整式的平方显然是完全平方数. 当然, 反过来并不需要这样的条件.
+	命题获证.
+\end{proof}
+\begin{note}
+	此题对代数式变形的能力要求较高. 在寻找完全平方数时, 往往需要构造完全平方式, 因为当一个整式中的字母都取整数时, 这个整式的平方显然是完全平方数. 当然, 反过来并不需要这样的条件.
 
 	题中的 $c$ 还可以这样来找: 设 $a c+1=y^{2}$ , 则 $a(c-b)=y^{2}-x^{2}=(y-$ $x)(y+x)$ , 取 $y-x=a$ (此时 $c-b=y+x)$ 可符合此式, 依此知应取 $c=b+$ $y+x=2 x+a+b$ .
+\end{note}
 
-	例 7 求所有的正整数数对 $(a, b)$, 使得
+% 例 7
+\begin{example}
+	求所有的正整数数对 $(a, b)$, 使得
 	\begin{align*}
 		a^{3}+6 a b+1, b^{3}+6 a b+1
 	\end{align*}
-
-	都是完全立方数.\\
-	解 不妨设 $a \leqslant b$ , 则
+	都是完全立方数.
+\end{example}
+\begin{solution}
+	不妨设 $a \leqslant b$ , 则
 	\begin{align*}
 		b^{3}<b^{3}+6 a b+1 \leqslant b^{3}+6 b^{2}+1<(b+2)^{3}
 	\end{align*}
-
 	由 $b^{3}+6 a b+1$ 是一个完全立方数, 可知
 	\begin{align*}
 		b^{3}+6 a b+1=(b+1)^{3}
 	\end{align*}
-
-	即有\begin{align}
+	即有
+	\begin{align}
 		6 a b & =3 b^{2}+3 b \\
 		b     & =2 a-1
 	\end{align}
-
 	从而
 	\begin{align*}
 		a^{3}+6 a b+1=a^{3}+12 a^{2}-6 a+1
 	\end{align*}
+	注意到 $\quad(a+1)^{3} \leqslant a^{3}+12 a^{2}-6 a+1<(a+4)^{3} , $
 
-	注意到 $\quad(a+1)^{3} \leqslant a^{3}+12 a^{2}-6 a+1<(a+4)^{3} , $\\
 	因此, 由 $a^{3}+12 a^{2}-6 a+1$ 是完全立方数, 可知只能是
 	\begin{align*}
 		a^{3}+12 a^{2}-6 a+1=(a+1)^{3},(a+2)^{3},(a+3)^{3} .
 	\end{align*}
+	分别求解, 可得只能是 $a=1$.
+	所以, 满足条件的数对 $(a, b)=(1,1)$ .
+\end{solution}
+\begin{note}
+	先确定某个 $n$ 次方数夹在哪两个 $n$ 次方数之间, 然后确定该 $n$ 次方数的取值. 这是用不等式估计处理问题的常见方法.
+\end{note}
 
-	分别求解, 可得只能是 $a=1$.\\
-	所以, 满足条件的数对 $(a, b)=(1,1)$ . \\
-	说明 先确定某个 $n$ 次方数夹在哪两个 $n$ 次方数之间, 然后确定该 $n$ 次方数的取值. 这是用不等式估计处理问题的常见方法.
-
-	例 8 求最小的正整数 $n$, 使得存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 满足
+% 例 8
+\begin{example}
+	求最小的正整数 $n$, 使得存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 满足
 	\begin{align*}
 		x_{1}^{4}+x_{2}^{4}+\cdots+x_{n}^{4}=1599
 	\end{align*}
-
-	解 由性质1, 对任意整数 $a , $ 可知
+\end{example}
+\begin{solution}
+	由性质1, 对任意整数 $a , $ 可知
 	\begin{align*}
 		a^{2} \equiv 0(\bmod 4) \text { 或 } a^{2} \equiv 1(\bmod 8),
 	\end{align*}
-
 	由此可得
 	\begin{align*}
 		a^{4} \equiv 0 \text { 或 } 1(\bmod 16) .
 	\end{align*}
-
 	利用这个结论, 可知, 若 $n<15$ , 设
 	\begin{align*}
 		x_{1}^{4}+x_{2}^{4}+\cdots+x_{n}^{4} \equiv m(\bmod 16)
 	\end{align*}
-
 	则
 	\begin{align*}
 		m \leqslant n<15
 	\end{align*}
-
 	而
 	\begin{align*}
 		1599 \equiv 15(\bmod 16)
 	\end{align*}
-
 	矛盾, 所以
 	\begin{align*}
 		n \geqslant 15
 	\end{align*}
-
 	另外, 当 $n=15$ 时, 要求
 	\begin{align*}
 		x_{1}^{4} \equiv x_{2}^{4} \equiv \cdots \equiv x_{n}^{4} \equiv 1(\bmod 16)
 	\end{align*}
-
-	即 $x_{1}, x_{2}, \cdots, x_{n}$ 都为奇数, 这为我们找到合适的数指明了方向. 事实上, 在 $x_{1}, x_{2}, \cdots, x_{15}$ 中, 1 个数取为 5,12 个取为 3 , 另外两个取为 1 , 就有\begin{align}
-		  & x_{1}^{4}+x_{2}^{4}+\cdots+x_{15}^{4} \\
-		= & 5^{4}+12 \times 3^{4}+2               \\
-		= & 625+972+2                             \\
-		= & 1599 .
-	\end{align}
-
-	所以, $n$ 的最小值为 15 .
-
-	\subsection*{习题 2}
-	1 设 $p ,  q$ 都是素数, 且 $7 p+q, p q+11$ 也都为素数, 求 $\left(p^{2}+q^{p}\right)\left(q^{2}+p^{q}\right)$的值. \\
-	2 设 $p_{1}<p_{2}<p_{3}<p_{4}<p_{5}$ 是 5 个素数, 且 $p_{1}, p_{2}, p_{3}, p_{4}, p_{5}$ 成等差数列. 求 $p_{5}$ 的最小值.\\
-	3 对每个正整数 $n$ , 用 $S(n)$ 表示 $n$ 在十进制表示下各数码之和. 证明: 对任意正整数 $m$ , 存在正整数 $n$ , 使得 $S(n)=m S(3 n)$ . \\
-	4 求最大的正整数 $k$ , 使得存在正整数 $n$ , 满足 $2^{k} \mid 3^{n}+1$ .
-
-	5 设 $n$ 为正整数. 证明: 存在十进制表示中只出现数码 0 和 1 的正整数 $m$ , 使得 $n \mid m$ . \\
-	6 设 $n$ 是一个正奇数. 证明: 存在一个十进制表示中每个数码都是奇数的正整数 $m$ , 使得 $n \mid m$ . \\
-	7 证明: 对每个正整数 $n$ , 数 $19 \times 8^{n}+17$ 都是合数. \\
-	8 Fibonaccia 数列 $\left\{F_{n}\right\}$ 定义如下: $F_{1}=F_{2}=1, F_{n+2}=F_{n+1}+F_{n}, n=1$ ,  $2, \cdots$\\
-	(1)证明: 该数列任意连续 10 项之和是 11 的倍数; \\
-	(2)求最小的正整数 $k$ , 使得该数列中任意连续 $k$ 项之和是 12 的倍数. \\
-	9 设整数 $a ,  b$ 满足:  $21 \mid a^{2}+b^{2}$ . 证明:  $441 \mid a^{2}+b^{2}$ . \\
-	10 正整数 $a ,  b ,  c$ 满足:  $c^{2}=a^{2}+b^{2}+a b$ . 证明:  $c$ 有一个大于 5 的素因子. \\
-	11 将整数 $1,2, \cdots, 9$ 填入一个 $3 \times 3$ 的表格, 每格一个数, 使得每行, 每列及每条对角线上各数之和都是 9 的倍数. \\
-	(1)证明: 该表格中正当中那个方格内的数是 3 的倍数; \\
-	(2)给出一个正当中方格内所填数为 6 的满足条件的放置方法.\\
-	12 下面的算式给出了一种判别一个数是否为 19 的倍数的方法: 每次去掉该数的最后一位数字, 将其两倍与剩下的数相加, 依此类推, 直到数变为 20以内的数为止, 若最后一个数为 19 , 则最初的那个数为 19 的倍数, 否则原数不是 19 的倍数. \\
-	\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-052}\\
-	\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-052(1)}
-
-	例如上面判定了 67944 为 19 的倍数, 而 44976 不是 19 的倍数. \\
-	(1)试证明: 上面的判别方法是正确的; \\
-	(2)请给出判别一个数是否为 29 的倍数的类似方法.\\
-	13 能否将 $2010 \times 2010$ 的方格表的每个方格染成黑色或白色, 使得关于表格的中心对称的方格颜色不同, 且每行, 每列中黑格数与白格数都各占一半?
-
-	14 标号为 $1,2, \cdots, 100$ 的火柴盒中有一些火柴, 如果每次提问允许问其中任意 15 盒中所有火柴数之和的奇偶性. 那么要确定1号盒中火柴数的奇偶性, 至少需要提问几次？\\
-	15 求所有的正整数 $n$ , 使得可以在一个 $n \times n$ 的方格表的每个方格内写上 +1或 -1 , 满足: 每个标号为 +1 的方格的相邻格中恰有一个标号是 -1 , 而每个标号为 -1 的方格的相邻格中恰有一个标号是 +1 . \\
-	16 设 $a_{1}, a_{2}, \cdots, a_{100}$ 是 $1,2, \cdots, 100$ 的一个排列, 令 $b_{i}=a_{1}+a_{2}+\cdots+a_{i}$ ,  $i=1,2, \cdots, 100$ , 记 $r_{i}$ 为 $b_{i}$ 除以 100 所得的余数. 证明: $r_{1}, r_{2}, \cdots, r_{100}$中至少有 11 个不同的数. \\
-	17 求所有满足下述条件的正整数 $a$ 的个数: 存在非负整数 $x_{0}, x_{1}, x_{2}, \cdots$, $x_{2001}$ , 使得 $a^{x_{0}}=a^{x_{1}}+a^{x_{2}}+\cdots+a^{x_{2001}}$ . \\
-	18 设 $m ,  n$ 为正整数,  $m>1$ . 证明:  $m\left(2^{m}-1\right) \mid n$ 的充要条件是 $\left(2^{m}-1\right)^{2} \mid$ $2^{n}-1$.\\
-	19 设正整数 $a ,  b$ 互素, $p$ 为奇素数. 证明: $\left(a+b, \frac{a^{p}+b^{p}}{a+b}\right)=1$ 或 $p$.\\
-	20 求最小的正整数 $a$ , 使得对任意整数 $x$ , 都有 $65 \mid\left(5 x^{13}+13 x^{5}+9 a x\right)$ . \\
-	21 是否存在整数 $a ,  b ,  c$ , 使得方程
+	即 $x_{1}, x_{2}, \cdots, x_{n}$ 都为奇数, 这为我们找到合适的数指明了方向. 事实上, 在 $x_{1}, x_{2}, \cdots, x_{15}$ 中, 1 个数取为 5,12 个取为 3 , 另外两个取为 1 , 就有
 	\begin{align*}
-		a x^{2}+b x+c=0 \text { 和 }(a+1) x^{2}+(b+1) x+(c+1)=0
+		  & x_{1}^{4}+x_{2}^{4}+ \cdots +x_{15}^{4} \\
+		= & 5^{4}+12 \times 3^{4}+2                 \\
+		= & 625+972+2                               \\
+		= & 1599 .
 	\end{align*}
+	所以, $n$ 的最小值为 15 .
+\end{solution}
 
-	都有两个整数根?\\
-	22 求所有的正整数组 $(x, y, z, w)$ , 使得 $x!+y!+z!=w!$ . \\
-	23 求满足下述条件的整数数组 $(a, b)$ 的组数:  $0 \leqslant a, b \leqslant 36$ , 且 $a^{2}+b^{2}=$ $0(\bmod 37)$ . \\
-	24 设 $m ,  n$ 为正整数, 且 $m n \mid m^{2}+n^{2}+m$ . 证明:  $m$ 是一个完全平方数. \\
-	25 证明: 若正整数 $n$ 可以表示为三个正整数的平方和的形式, 则 $n^{2}$ 也可以表示为三个正整数的平方和的形式. \\
-	26 求所有的正整数 $n$ , 使得 $n$ 的三次方根等于 $n$ 去掉最后三位数字后得到的正整数.\\
-	27 证明: 存在无穷多个整数 $n$ , 使得数 $n ,  n+1 ,  n+2$ 都可以表示为两个整数 (不必不同)的平方和. 例如:  $0=0^{2}+0^{2}, 1=0^{2}+1^{2}, 2=1^{2}+1^{2}$ , 故 $n=0$ 即为一个满足条件的整数. \\
-	28 求最小的正整数 $n$ , 使得在十进制表示下 $n^{3}$ 的末三位数字是 888 . \\
-	29 设正整数 $n>1$ , 证明: 数 $2^{n}-1$ 既不是完全平方数, 也不是完全立方数. \\
-	30 设 $a ,  b ,  c$ 为正整数, 且 $\sqrt{a}+\sqrt{b}+\sqrt{c}$ 为整数. 证明:  $a ,  b ,  c$ 都是完全平方数.
+\begin{comment}
+\subsection*{习题 2}
+1 设 $p ,  q$ 都是素数, 且 $7 p+q, p q+11$ 也都为素数, 求 $\left(p^{2}+q^{p}\right)\left(q^{2}+p^{q}\right)$的值. \\
+2 设 $p_{1}<p_{2}<p_{3}<p_{4}<p_{5}$ 是 5 个素数, 且 $p_{1}, p_{2}, p_{3}, p_{4}, p_{5}$ 成等差数列. 求 $p_{5}$ 的最小值.\\
+3 对每个正整数 $n$ , 用 $S(n)$ 表示 $n$ 在十进制表示下各数码之和. 证明: 对任意正整数 $m$ , 存在正整数 $n$ , 使得 $S(n)=m S(3 n)$ . \\
+4 求最大的正整数 $k$ , 使得存在正整数 $n$ , 满足 $2^{k} \mid 3^{n}+1$ .
 
-	31 已知正整数 $c$ 是一个奇合数. 证明: 存在正整数 $a$ , 使得 $a \leqslant \frac{c}{3}-1$ , 且 $(2 a-1)^{2}+8 c$ 是一个完全平方数.\\
-	32 设整数 $a ,  b$ 满足: 对任意正整数 $n$ , 数 $2^{n} \cdot a+b$ 都是完全平方数. 证明:  $a=0$.\\
-	33 求不能表示为 42 的正倍数与一个合数之和的最大正整数. \\
-	34 求一个正整数 $n$ , 使得数 $n, n+1, \cdots, n+20$ 中每个数都与 30030 不互素. \\
-	35 是否存在连续 13 个正整数, 其中每个数都是 $2 ,  3 ,  5 ,  7 ,  11$ 中的某个数的倍数？连续 14 个呢？\\
-	36 设 $p$ 为素数,  $a ,  n$ 都是正整数, 且 $2^{p}+3^{p}=a^{n}$ . 证明:  $n=1$ . \\
-	37 圆周上排列着 2000 个点, 在某个点上标上数 1 , 按顺时针方向数两个点, 在其上标数 2 , 再数 3 个点标数 3 , 依此继续, 标出数 $1,2, \cdots, 2000$. 这样, 有些点上没有标数, 有些点上所标的数不止一个. 问: 被标上 2000 的那个点上所标的数中最小的是多少?\\
-	38 圆周上有 800 个点, 依顺时针方向标号为 $1,2, \cdots, 800$ , 它们将圆周分为 800 个间隙. 现在选定某个点, 将其染上红色, 然后进行下述操作: 如果第 $k$ 号点染成了红色, 那么依顺时针方向转过 $k$ 个间隙, 将所到达的点染成红色. 问: 依此规则, 圆周上最多有多少个点被染成了红色？证明你的结论. \\
-	39 设 $m$ 为正整数, 且 $m \equiv 2(\bmod 4)$ . 证明: 至多存在一对正整数 $(a, b)$ , 使得 $m=a b$ , 且 $0<a-b<\sqrt{5+4 \sqrt{4 m+1}}$ . \\
-	40 设 $n$ 是一个大于 10 的正整数, 且 $n$ 的每个数码都为 $1 ,  3 ,  7$ 或 9 . 证明: $n$有一个大于 10 的素因子. \\
-	41 求所有的素数对 $(p, q)$ , 使得 $p q \mid p^{p}+q^{q}+1$ . \\
-	42 设 $f(n)=1+n+n^{2}+\cdots+n^{2010}$ . 证明: 对任意整数 $m$ , 若 $2 \leqslant m \leqslant 2010$ , 则不存在正整数 $n$, 使得 $m \mid f(n)$.\\
-	43 是否存在整数 $x ,  y$ , 使得 $x^{2012}-2010=4 y^{2011}+4 y^{2010}+2011 y$ ？
+5 设 $n$ 为正整数. 证明: 存在十进制表示中只出现数码 0 和 1 的正整数 $m$ , 使得 $n \mid m$ . \\
+6 设 $n$ 是一个正奇数. 证明: 存在一个十进制表示中每个数码都是奇数的正整数 $m$ , 使得 $n \mid m$ . \\
+7 证明: 对每个正整数 $n$ , 数 $19 \times 8^{n}+17$ 都是合数. \\
+8 Fibonaccia 数列 $\left\{F_{n}\right\}$ 定义如下: $F_{1}=F_{2}=1, F_{n+2}=F_{n+1}+F_{n}, n=1$ ,  $2, \cdots$\\
+(1)证明: 该数列任意连续 10 项之和是 11 的倍数; \\
+(2)求最小的正整数 $k$ , 使得该数列中任意连续 $k$ 项之和是 12 的倍数. \\
+9 设整数 $a ,  b$ 满足:  $21 \mid a^{2}+b^{2}$ . 证明:  $441 \mid a^{2}+b^{2}$ . \\
+10 正整数 $a ,  b ,  c$ 满足:  $c^{2}=a^{2}+b^{2}+a b$ . 证明:  $c$ 有一个大于 5 的素因子. \\
+11 将整数 $1,2, \cdots, 9$ 填入一个 $3 \times 3$ 的表格, 每格一个数, 使得每行, 每列及每条对角线上各数之和都是 9 的倍数. \\
+(1)证明: 该表格中正当中那个方格内的数是 3 的倍数; \\
+(2)给出一个正当中方格内所填数为 6 的满足条件的放置方法.\\
+12 下面的算式给出了一种判别一个数是否为 19 的倍数的方法: 每次去掉该数的最后一位数字, 将其两倍与剩下的数相加, 依此类推, 直到数变为 20以内的数为止, 若最后一个数为 19 , 则最初的那个数为 19 的倍数, 否则原数不是 19 的倍数. \\
+\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-052}\\
+\includegraphics[width=0.35\textwidth]{2024_10_09_7e48ff928cc374c97394g-052(1)}
+
+例如上面判定了 67944 为 19 的倍数, 而 44976 不是 19 的倍数. \\
+(1)试证明: 上面的判别方法是正确的; \\
+(2)请给出判别一个数是否为 29 的倍数的类似方法.\\
+13 能否将 $2010 \times 2010$ 的方格表的每个方格染成黑色或白色, 使得关于表格的中心对称的方格颜色不同, 且每行, 每列中黑格数与白格数都各占一半?
+
+14 标号为 $1,2, \cdots, 100$ 的火柴盒中有一些火柴, 如果每次提问允许问其中任意 15 盒中所有火柴数之和的奇偶性. 那么要确定1号盒中火柴数的奇偶性, 至少需要提问几次？\\
+15 求所有的正整数 $n$ , 使得可以在一个 $n \times n$ 的方格表的每个方格内写上 +1或 -1 , 满足: 每个标号为 +1 的方格的相邻格中恰有一个标号是 -1 , 而每个标号为 -1 的方格的相邻格中恰有一个标号是 +1 . \\
+16 设 $a_{1}, a_{2}, \cdots, a_{100}$ 是 $1,2, \cdots, 100$ 的一个排列, 令 $b_{i}=a_{1}+a_{2}+\cdots+a_{i}$ ,  $i=1,2, \cdots, 100$ , 记 $r_{i}$ 为 $b_{i}$ 除以 100 所得的余数. 证明: $r_{1}, r_{2}, \cdots, r_{100}$中至少有 11 个不同的数. \\
+17 求所有满足下述条件的正整数 $a$ 的个数: 存在非负整数 $x_{0}, x_{1}, x_{2}, \cdots$, $x_{2001}$ , 使得 $a^{x_{0}}=a^{x_{1}}+a^{x_{2}}+\cdots+a^{x_{2001}}$ . \\
+18 设 $m ,  n$ 为正整数,  $m>1$ . 证明:  $m\left(2^{m}-1\right) \mid n$ 的充要条件是 $\left(2^{m}-1\right)^{2} \mid$ $2^{n}-1$.\\
+19 设正整数 $a ,  b$ 互素, $p$ 为奇素数. 证明: $\left(a+b, \frac{a^{p}+b^{p}}{a+b}\right)=1$ 或 $p$.\\
+20 求最小的正整数 $a$ , 使得对任意整数 $x$ , 都有 $65 \mid\left(5 x^{13}+13 x^{5}+9 a x\right)$ . \\
+21 是否存在整数 $a ,  b ,  c$ , 使得方程
+\begin{align*}
+	a x^{2}+b x+c=0 \text { 和 }(a+1) x^{2}+(b+1) x+(c+1)=0
+\end{align*}
+
+都有两个整数根?\\
+22 求所有的正整数组 $(x, y, z, w)$ , 使得 $x!+y!+z!=w!$ . \\
+23 求满足下述条件的整数数组 $(a, b)$ 的组数:  $0 \leqslant a, b \leqslant 36$ , 且 $a^{2}+b^{2}=$ $0(\bmod 37)$ . \\
+24 设 $m ,  n$ 为正整数, 且 $m n \mid m^{2}+n^{2}+m$ . 证明:  $m$ 是一个完全平方数. \\
+25 证明: 若正整数 $n$ 可以表示为三个正整数的平方和的形式, 则 $n^{2}$ 也可以表示为三个正整数的平方和的形式. \\
+26 求所有的正整数 $n$ , 使得 $n$ 的三次方根等于 $n$ 去掉最后三位数字后得到的正整数.\\
+27 证明: 存在无穷多个整数 $n$ , 使得数 $n ,  n+1 ,  n+2$ 都可以表示为两个整数 (不必不同)的平方和. 例如:  $0=0^{2}+0^{2}, 1=0^{2}+1^{2}, 2=1^{2}+1^{2}$ , 故 $n=0$ 即为一个满足条件的整数. \\
+28 求最小的正整数 $n$ , 使得在十进制表示下 $n^{3}$ 的末三位数字是 888 . \\
+29 设正整数 $n>1$ , 证明: 数 $2^{n}-1$ 既不是完全平方数, 也不是完全立方数. \\
+30 设 $a ,  b ,  c$ 为正整数, 且 $\sqrt{a}+\sqrt{b}+\sqrt{c}$ 为整数. 证明:  $a ,  b ,  c$ 都是完全平方数.
+
+31 已知正整数 $c$ 是一个奇合数. 证明: 存在正整数 $a$ , 使得 $a \leqslant \frac{c}{3}-1$ , 且 $(2 a-1)^{2}+8 c$ 是一个完全平方数.\\
+32 设整数 $a ,  b$ 满足: 对任意正整数 $n$ , 数 $2^{n} \cdot a+b$ 都是完全平方数. 证明:  $a=0$.\\
+33 求不能表示为 42 的正倍数与一个合数之和的最大正整数. \\
+34 求一个正整数 $n$ , 使得数 $n, n+1, \cdots, n+20$ 中每个数都与 30030 不互素. \\
+35 是否存在连续 13 个正整数, 其中每个数都是 $2 ,  3 ,  5 ,  7 ,  11$ 中的某个数的倍数？连续 14 个呢？\\
+36 设 $p$ 为素数,  $a ,  n$ 都是正整数, 且 $2^{p}+3^{p}=a^{n}$ . 证明:  $n=1$ . \\
+37 圆周上排列着 2000 个点, 在某个点上标上数 1 , 按顺时针方向数两个点, 在其上标数 2 , 再数 3 个点标数 3 , 依此继续, 标出数 $1,2, \cdots, 2000$. 这样, 有些点上没有标数, 有些点上所标的数不止一个. 问: 被标上 2000 的那个点上所标的数中最小的是多少?\\
+38 圆周上有 800 个点, 依顺时针方向标号为 $1,2, \cdots, 800$ , 它们将圆周分为 800 个间隙. 现在选定某个点, 将其染上红色, 然后进行下述操作: 如果第 $k$ 号点染成了红色, 那么依顺时针方向转过 $k$ 个间隙, 将所到达的点染成红色. 问: 依此规则, 圆周上最多有多少个点被染成了红色？证明你的结论. \\
+39 设 $m$ 为正整数, 且 $m \equiv 2(\bmod 4)$ . 证明: 至多存在一对正整数 $(a, b)$ , 使得 $m=a b$ , 且 $0<a-b<\sqrt{5+4 \sqrt{4 m+1}}$ . \\
+40 设 $n$ 是一个大于 10 的正整数, 且 $n$ 的每个数码都为 $1 ,  3 ,  7$ 或 9 . 证明: $n$有一个大于 10 的素因子. \\
+41 求所有的素数对 $(p, q)$ , 使得 $p q \mid p^{p}+q^{q}+1$ . \\
+42 设 $f(n)=1+n+n^{2}+\cdots+n^{2010}$ . 证明: 对任意整数 $m$ , 若 $2 \leqslant m \leqslant 2010$ , 则不存在正整数 $n$, 使得 $m \mid f(n)$.\\
+43 是否存在整数 $x ,  y$ , 使得 $x^{2012}-2010=4 y^{2011}+4 y^{2010}+2011 y$ ？
+\end{comment}
+
+\section{不定方程}
+未知数个数多于方程个数的方程(或方程组)称为不定方程(或不定方程组), 初等数论中仅讨论未知数取值为整数的情形. 这一单元主要讨论不定方程的求解问题中涉及的一些基本方法.
+
+不定方程溯源极古, 早在 1700 多年前, 古希腊数学家丢番图(Diophantus)就对不定方程做过许多研究, 不定方程甚至被称为丢番图方程. 许多不定方程问题的解决十分困难, 是对人类智力的一种挑战, 例如历时 358 年方获解决的费马大定理就曾吸引无数优秀数学家为之付出毕生的精力. 面对挑战, 人类表现出了极大的决心, 毅力和杰出的智慧.
+
+\subsection{一次不定方程(组)}
+依未知数的次数可对不定方程分类, 其中最简单的是一次不定方程.
+
+设 $k \geqslant 2$ 为整数, 我们称方程
+\begin{align*}
+	a_{1} x_{1}+a_{2} x_{2}+\cdots+a_{k} x_{k}=c
+\end{align*}
+为一次不定方程, 其中 $a_{1} ,  a_{2} ,  \cdots ,  a_{k} ,  c$ 均为整数, 且 $a_{1} ,  a_{2} ,  \cdots ,  a_{k}$ 都不为零.
+
+并非每一个一次不定方程都会有整数解, 一个很显然的必要条件是:  $\left(a_{1}, a_{2}, \cdots, a_{k}\right) \mid c$ . 事实上, 这个条件也是充分的. 我们重点讨论两个变量的不定方程
+\begin{align}\label{eq:一次不定方程-1}
+	a x+b y=c
+\end{align}
+其中 $a ,  b ,  c$ 为整数, 且 $a ,  b$ 都不为零.
+
+\begin{theorem}\label{thm:一次不定方程-1}
+	不定方程\ref{eq:一次不定方程-1}有整数解的充要条件是 $(a, b) \mid c$ .
+\end{theorem}
+\begin{proof}
+	必要性是显然的, 而充分性可由贝祖定理得到.
+
+	事实上, 由贝祖定理, 知存在整数 $x_{0} ,  y_{0}$ , 使得 $a x_{0}+b y_{0}=(a, b)$ . 设 $c=(a, b) c_{1}$ , 则 $\left(c_{1} x_{0}, c_{1} y_{0}\right)$ 是\autoref{eq:一次不定方程-1}的解, 充分性获证.
+\end{proof}
+
+\begin{theorem}\label{thm:一次不定方程-2}
+	设不定方程\ref{eq:一次不定方程-1}有整数解 $\left(x_{0}, y_{0}\right)$ , 则\ref{eq:一次不定方程-1}的所有整数解为
+	\begin{align}\label{eq:一次不定方程-3}
+		\left\{\begin{array}{l}
+			       x=x_{0}+\frac{b}{(a, b)} t, \\
+			       y=y_{0}-\frac{a}{(a, b)} t .
+		       \end{array}(t \text { 为整数 })\right.
+	\end{align}
+\end{theorem}
+\begin{proof}
+	设 $(x, y)$ 是\ref{eq:一次不定方程-1}的一组整数解, 结合 $\left(x_{0}, y_{0}\right)$ 为\ref{eq:一次不定方程-1}的解, 可知
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       a x+b y=c \\
+			       a x_{0}+b y_{0}=c
+		       \end{array}\right.
+	\end{align*}
+	于是
+	\begin{align*}
+		a\left(x-x_{0}\right)+b\left(y-y_{0}\right)=0
+	\end{align*}
+	即
+	\begin{align*}
+		a\left(x-x_{0}\right)=b\left(y_{0}-y\right)
+	\end{align*}
+	故
+	\begin{align*}
+		b \mid a\left(x-x_{0}\right)
+	\end{align*}
+	因此
+	\begin{align*}
+		\left.\frac{b}{(a, b)} \right\rvert\, x-x_{0}
+	\end{align*}
+	可设
+	\begin{align*}
+		x-x_{0}=\frac{b}{(a, b)} t
+	\end{align*}
+	则
+	\begin{align*}
+		y-y_{0}=-\frac{a}{(a, b)} t
+	\end{align*}
+	其中 $t$ 为整数, 这表明方程\ref{eq:一次不定方程-1}的解具有形式\ref{eq:一次不定方程-3}.
+
+	反过来, 由\ref{eq:一次不定方程-3}决定的整数组( $x, y$ )是方程\ref{eq:一次不定方程-1}的解可以直接代入\ref{eq:一次不定方程-1}验证得到.
+
+	所以, 成立.
+\end{proof}
+\begin{note}
+	由\ref{eq:一次不定方程-3}决定的整数组 $(x, y)$ 称为\ref{eq:一次不定方程-1}的通解, 而 $\left(x_{0}, y_{0}\right)$ 为\ref{eq:一次不定方程-1}的特解.定理 2 也表明为求\ref{eq:一次不定方程-1}的通解只需先求出\ref{eq:一次不定方程-1}的一个特解, 而特解可由辗转相除的方法逆算得到, 因此\ref{eq:一次不定方程-1}的所有解有通法求出.
+
+	其余的一次不定方程或方程组都可以转化为求解二元一次不定方程.
+\end{note}
+
+% 例 1
+\begin{example}
+	求不定方程
+	\begin{align}\label{eq:一次不定方程-例1-1}
+		7 x+19 y=2012
+	\end{align}
+	的正整数解的组数.
+\end{example}
+\begin{solution}
+	先求出\ref{eq:一次不定方程-例1-1}的一个特解.
+	\begin{align*}
+		x=\frac{1}{7}(2012-19 y)=287-3 y+\frac{1}{7}(3+2 y)
+	\end{align*}
+	故 $\frac{1}{7}(3+2 y)$ 为整数, 取 $y_{0}=2$, 则 $x_{0}=282$.\\
+	利用\ref{thm:一次不定方程-2}的结论, 方程\ref{eq:一次不定方程-例1-1}的通解为
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       x=282-19 t, \\
+			       y=2+7 t .
+		       \end{array}\right.
+	\end{align*}
+	结合 $x>0, y>0$ 及 $t$ 为整数, 可解得 $0 \leqslant t \leqslant 14$.
+
+	所以, 方程\ref{eq:一次不定方程-例1-1}共有 15 组正整数解.
+\end{solution}
+
+
+例2 设正整数 $a ,  b$ 互素. 证明: 不定方程
+\begin{align*}
+	a x+b y=a b-a-b
+\end{align*}
+
+没有非负整数解.\\
+证明 若存在非负整数对 $\left(x_{0}, y_{0}\right)$ 满足 (1), 则
+\begin{align*}
+	a\left(x_{0}+1\right)+b\left(y_{0}+1\right)=a b
+\end{align*}
+
+那么, 应有
+\begin{align*}
+	a \mid b\left(y_{0}+1\right)
+\end{align*}
+
+又
+\begin{align*}
+	(a, b)=1
+\end{align*}
+
+故
+\begin{align*}
+	a \mid y_{0}+1
+\end{align*}
+
+而 $a$ 与 $y_{0}+1$ 都是正整数, 故 $a \leqslant y_{0}+1$.\\
+同理可证: $b \mid x_{0}+1$, 进而 $b \leqslant x_{0}+1$. 但这时, (2)的左边 $\geqslant a b+b a=$ $2 a b>$ (2) 的右边, 矛盾.
+
+所以, (1)没有非负整数解.\\
+例3 设正整数 $a ,  b$ 互素, 而正整数 $c$ 大于 $a b-a-b$. 证明: 不定方程
+\begin{align*}
+	a x+b y=c
+\end{align*}
+
+有非负整数解.\\
+证明 设(1)的通解为
+\begin{align*}
+	\left\{\begin{array}{l}
+		       x=x_{0}+b t, \\
+		       y=y_{0}-a t
+	       \end{array}(t \text { 为整数 })\right.
+\end{align*}
+
+其中 $\left(x_{0}, y_{0}\right)$ 为(1)的特解.\\
+这样, 通过调节 $t$ 的值 (对 $x_{0}$ 作加上 $b$ 或减去 $b$ 的操作) 可找到(1)的一个解 $\left(x_{1}, y_{1}\right)$ , 使得 $0 \leqslant x_{1} \leqslant b-1$ , 则
+\begin{align*}
+	b y_{1}=c-a x_{1}>a b-a-b-a x_{1} \geqslant a b-a-b-a(b-1)=-b
+\end{align*}
+
+故
+\begin{align*}
+	y_{1}>-1,
+\end{align*}
+
+即
+\begin{align*}
+	y_{1} \geqslant 0
+\end{align*}
+
+这表明 $\left(x_{1}, y_{1}\right)$ 是(1)的非负整数解, 命题获证. \\
+说明 上面的两个例子得到的结论给出了使得(1)有非负整数解的条件, 说明了只要 $c$ 充分大(例如 $c \geqslant c_{0}$ 时), (1)就有非负整数解, 并求出了 $c_{0}$ 的最小值(这个最小值为 $a b-a-b+1$ ). 这是一个有趣而富有挑战性的问题, 当变量个数不小于 3 时, $c_{0}$ 的最小值还没有找到.
+
+例 4 求不定方程
+\begin{align*}
+	x+2 y+3 z=2012
+\end{align*}
+
+的正整数解的组数.\\
+解 设 $(x, y, z)$ 为(1)的正整数解, 则 $3 z \leqslant 2009$ , 即 $1 \leqslant z \leqslant 669$ , 分别可得
+\begin{align*}
+	x+2 y=2009,2006, \cdots, 5
+\end{align*}
+
+对应地, $y$ 的取值范围分别是\begin{align}
+	 & 1 \leqslant y \leqslant 1004,1 \leqslant y \leqslant 1002,1 \leqslant y \leqslant 1001 \\
+	 & 1 \leqslant y \leqslant 999, \cdots, 1 \leqslant y \leqslant 2
+\end{align}
+
+由于当 $y ,  z$ 确定后,  $x$ 的值唯一确定, 所以(1)的正整数解共有\begin{align}
+	  & (1004+1002)+(1001+999)+\cdots+(5+3)+2 \\
+	= & 2006+2000+\cdots+8+2                  \\
+	= & \frac{1}{2}(2006+2) \times 335=336340
+\end{align}
+
+综上可知, 共有 336340 组正整数解. \\
+例 5 求所有的正整数数组 $\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ , 使得
+\begin{align*}
+	\left\{\begin{array}{l}
+		       a_{1} \leqslant a_{2} \leqslant \cdots \leqslant a_{n} \\
+		       a_{1}+a_{2}+\cdots+a_{n}=26                            \\
+		       a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}=62                \\
+		       a_{1}^{3}+a_{2}^{3}+\cdots+a_{n}^{3}=164
+	       \end{array}\right.
+\end{align*}
+
+解 由 $a_{i}$ 都是正整数, 而 $6^{3}=216>164$ , 知每个 $a_{i}$ 都不大于 5 . 我们设 $a_{1}, a_{2}, \cdots, a_{n}$ 中 $1,2,3,4,5$ 的个数分别为 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ , 则
+\begin{align*}
+	\left\{\begin{array}{l}
+		       x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=n            \\
+		       x_{1}+2 x_{2}+3 x_{3}+4 x_{4}+5 x_{5}=26   \\
+		       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}+25 x_{5}=62 \\
+		       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}+125 x_{5}=164
+	       \end{array}\right.
+\end{align*}
+
+其中 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ 都是非负整数.\\
+先确定 $x_{1}, x_{2}, \cdots, x_{5}$ 的值, 这等价于求一个不定方程组的非负整数解. \\
+由(4)知 $x_{5} \leqslant 1$, 若 $x_{5}=1$, 则(3), (4)变为
+\begin{align*}
+	\left\{\begin{array}{l}
+		       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}=37 \\
+		       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}=39
+	       \end{array}\right.
+\end{align*}
+
+由 (6) - (5) 得
+\begin{align*}
+	4 x_{2}+18 x_{3}+48 x_{4}=2
+\end{align*}
+
+这在 $x_{2} ,  x_{3} ,  x_{4}$ 为非负整数时不能成立, 所以
+\begin{align*}
+	x_{5}=0
+\end{align*}
+
+又由 (3) - (2) 得 $2 x_{2}+6 x_{3}+12 x_{4}=36$ ,
+
+即
+\begin{align*}
+	x_{2}+3 x_{3}+6 x_{4}=18
+\end{align*}
+
+由 (4) 一 (2) 得
+\begin{align*}
+	x_{2}+4 x_{3}+10 x_{4}=23
+\end{align*}
+
+再由 (8) - (7) 得 $\quad x_{3}+4 x_{4}=5$,\\
+故
+\begin{align*}
+	\left(x_{3}, x_{4}\right)=(5,0),(1,1)
+\end{align*}
+
+进而可得
+\begin{align*}
+	\left(x_{1}, x_{2}, x_{3}, x_{4}\right)=(5,3,5,0),(1,9,1,1)
+\end{align*}
+
+利用上述结论, 可知\begin{align}
+	  & \left(a_{1}, a_{2}, \cdots, a_{n}\right) \\
+	= & (1,1,1,1,1,2,2,2,3,3,3,3,3)              \\
+	  & (1,2,2,2,2,2,2,2,2,2,3,4)
+\end{align}
+
+说明 上述两例中都用到了不等式估计的方法, 并没有从不定方程(组)的通解出发来处理, 解题过程中把握了问题的特点, 因此较快地得到了解答.
+
+例6 将所有分母不大于 99 的最简分数从小到大排列, 求与 $\frac{17}{76}$ 相邻的两个数.
+
+解 设 $\frac{q}{p}$ 与 $\frac{n}{m}$ 是与 $\frac{17}{76}$ 相邻的两个数, 且
+\begin{align*}
+	\frac{q}{p}<\frac{17}{76}<\frac{n}{m}
+\end{align*}
+
+其中 $p ,  q ,  m ,  n$ 为正整数, 则
+
+于是\begin{align}
+	 & 17 p-76 q>0           \\
+	 & 17 p-76 q \geqslant 1
+\end{align}
+
+先考虑 $17 p-76 q=1$ 中满足 $p \leqslant 99$ 且使 $p$ 最大的正整数解. 为此需先求它的一个特解, 利用
+\begin{align*}
+	p=\frac{1}{17}(76 q+1)=4 q+\frac{1}{17}(8 q+1)
+\end{align*}
+
+可得一个特解 $(p, q)=(9,2)$, 于是此不定方程的通解为
+\begin{align*}
+	(p, q)=(9+76 t, 2+17 t)
+\end{align*}\\
+$t$ 为整数. 这时在条件 $p \leqslant 99$ 下, $p$ 最大为 85 , 此时 $q=19$ . \\
+另一方面, 由
+\begin{align*}
+	\frac{17}{76}-\frac{q}{p}=\frac{17 p-76 q}{76 p}
+\end{align*}
+
+可知, 若 $17 p-76 q \geqslant 2$, 则
+\begin{align*}
+	\frac{17}{76}-\frac{q}{p} \geqslant \frac{2}{76 p}=\frac{1}{38 p} \geqslant \frac{1}{38 \times 99}>\frac{1}{76 \times 85}=\frac{17}{76}-\frac{19}{85}
+\end{align*}
+
+所以, 在所给条件下, 比 $\frac{17}{76}$ 小且最接近它的数为 $\frac{19}{85}$ . \\
+类似讨论, 可知 $\frac{n}{m}=\frac{15}{67}$ . \\
+综上, 这些分数的排列中与 $\frac{17}{76}$ 相邻的两个数是 $\frac{19}{85}$ 和 $\frac{15}{67}$.\\
+说明 题中利用正整数不小于 1 这个显然的事实, 转为求一次不定方程的正整数解是关键.
+
+\subsection{不定方程的常用解法}
+对于高次不定方程, 求出其通解然后再讨论有时是不现实的, 因为我们甚至还没有找到判别一个高次不定方程是否有解的统一方法, 当然要求出通解就更难了. 或许正是因为没有统一的方法来处理高次不定方程, 对具体的
+
+问题往往有许多方法来处理, 并且每一种方法都表现出一定的创造性, 所以, 高次不定方程的问题频繁地在数学竞赛中出现.
+
+当然, 结合整除与同余的一些理论, 求解高次不定方程也有一些常见的处理思路和解决办法.
+
+\subsubsection{因式分解法}
+将方程的一边变为常数, 而含字母的一边可以进行因式分解, 这样对常数进行素因数分解后, 对比方程两边, 考察各因式的每种取值情况就可将不定方程变为若干个方程组去求解. 这就是因式分解法处理不定方程的基本思路.
+
+例 1 求方程
+\begin{align*}
+	x y-10(x+y)=1
+\end{align*}
+
+的整数解.\\
+解 利用十字相乘, 可将(1)变形为
+\begin{align*}
+	(x-10)(y-10)=101
+\end{align*}
+
+而 101 为素数, 故\begin{align}
+	  & (x-10, y-10)                        \\
+	= & (1,101),(101,1),(-1,-101),(-101,-1)
+\end{align}
+
+分别求解, 得方程的整数解为
+\begin{align*}
+	(x, y)=(11,111),(111,11),(9,-91),(-91,9)
+\end{align*}
+
+例 2 是否存在整数 $x ,  y ,  z$, 使得
+\begin{align*}
+	x^{4}+y^{4}+z^{4}=2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}+24 ?
+\end{align*}
+
+解 若存在整数 $x ,  y ,  z$ 满足条件, 则\begin{align}
+	-24 & =2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}-\left(x^{4}+y^{4}+z^{4}\right)          \\
+	    & =-\left(x^{2}+y^{2}\right)^{2}+2\left(x^{2}+y^{2}\right) z^{2}-z^{4}+4 x^{2} y^{2} \\
+	    & =-\left(x^{2}+y^{2}-z^{2}\right)^{2}+4 x^{2} y^{2}                                 \\
+	    & =\left(2 x y+x^{2}+y^{2}-z^{2}\right)\left(2 x y-x^{2}-y^{2}+z^{2}\right)          \\
+	    & =\left((x+y)^{2}-z^{2}\right)\left(z^{2}-(x-y)^{2}\right)                          \\
+	    & =(x+y+z)(x+y-z)(z+x-y)(y+z-x)
+\end{align}
+
+这要求 -24 能表示为 4 个整数 $x+y+z, x+y-z, z+x-y, y+z-x$ 的乘积的形式, 而这 4 个数中任意两个数之差都为偶数, 故这 4 个数具有相同的
+
+奇偶性, 由 -24 为偶数, 知它们都是偶数, 但这要求 $2^{4} \mid 24$, 矛盾.\\
+所以,不存在符合要求的整数.\\
+说明 熟悉海伦公式的读者可以一眼看穿问题的本质. 事实上, $S_{\triangle A B C}=$ $\frac{1}{4} \sqrt{(a+b+c)(a+b-c)(b+c-a)(c+a-b)}$, 其中 $a ,  b ,  c$ 为 $\triangle A B C$ 的三边长, 这就是海伦公式. 根号里面的式子展开后就是 $2 a^{2} b^{2}+2 b^{2} c^{2}+2 c^{2} a^{2}-$ $a^{4}-b^{4}-c^{4}$ .
+
+例 3 求所有的正整数对 $(m, n)$, 使得
+\begin{align*}
+	n^{5}+n^{4}=7^{m}-1
+\end{align*}
+
+解 将(1)移项后作因式分解, 得\begin{align}
+	7^{m} & =n^{5}+n^{4}+1=n^{5}+n^{4}+n^{3}-\left(n^{3}-1\right)    \\
+	      & =n^{3}\left(n^{2}+n+1\right)-(n-1)\left(n^{2}+n+1\right) \\
+	      & =\left(n^{3}-n+1\right)\left(n^{2}+n+1\right)
+\end{align}
+
+由(1)知 $n>1$ , 而 $n=2$ 时, 可得 $m=2$ . \\
+下面考虑 $n>2$ 的情形, 我们先看(2)式右边两个式子的最大公因数.\begin{align}
+	  & \left(n^{3}-n+1, n^{2}+n+1\right)=\left(n^{3}-n+1-\left(n^{2}+n+1\right)(n-1), n^{2}+n+1\right) \\
+	= & \left(-n+2, n^{2}+n+1\right)=\left(-n+2, n^{2}+n+1+(-n+2)(n+3)\right)                           \\
+	= & (-n+2,7)
+\end{align}
+
+故 $\left(n^{3}-n+1, n^{2}+n+1\right) \mid 7$.\\
+结合(2)式知 $n^{3}-n+1$ 与 $n^{2}+n+1$ 都是 7 的幂次, 而它们在 $n \geqslant 3$ 时, 都大于 7 , 这导致 $7^{2} \mid\left(n^{3}-n+1, n^{2}+n+1\right)$ , 与前所得矛盾.
+
+综上可知, 只有 $(m, n)=(2,2)$ 符合要求.\\
+说明 对(1)式变形后, 所得(2)式两边符合因式分解方法解不定方程的套路, 但 $7^{m}$ 并不是一个常数, 这里需要有另外的方法来处理才能继续下去. 活学活用方能攻城拔寨.
+
+\subsubsection{配方法}
+配方是代数变形中的常见方法, 在处理不定方程的问题时还可综合利用完全平方数的特性, 因此配方法在求解不定方程时大有用武之地.
+
+例 4 求不定方程 $3 x^{2}-4 x y+3 y^{2}=35$ 的全部整数解. \\
+解 对方程两边都乘以 3 , 配方后即得
+\begin{align*}
+	(3 x-2 y)^{2}+5 y^{2}=105
+\end{align*}
+
+由(1)式得\\
+所以
+\begin{align*}
+	5 y^{2} \leqslant 105
+\end{align*}
+\begin{align*}
+	|y| \leqslant 4
+\end{align*}
+
+当 $|y|=4$ 时, $|3 x-2 y|=5$ , 此时原方程的解为
+\begin{align*}
+	(x, y)=(1,4),(-1,-4)
+\end{align*}
+
+当 $|y|=1$ 时, $|3 x-2 y|=10$ , 此时原方程的解为
+\begin{align*}
+	(x, y)=(4,1),(-4,-1)
+\end{align*}
+
+当 $|y|=0,2,3$ 时, $(3 x-2 y)^{2}$ 分别为 $105,85,60$. 此时, 所得的方程组显然无整数解.
+
+上面的讨论表明, 原方程有 4 组解:
+\begin{align*}
+	(x, y)=(4,1),(1,4),(-4,-1),(-1,-4)
+\end{align*}
+
+例 5 求方程 $x^{2}+x=y^{4}+y^{3}+y^{2}+y$ 的整数解. \\
+解 同上例, 对方程两边同乘以 4 , 并对左边进行配方, 得
+\begin{align*}
+	(2 x+1)^{2}=4\left(y^{4}+y^{3}+y^{2}+y\right)+1
+\end{align*}
+
+下面对(1)式右端进行估计. 由于\begin{align}
+	  & 4\left(y^{4}+y^{3}+y^{2}+y\right)+1       \\
+	= & \left(2 y^{2}+y+1\right)^{2}-y^{2}+2 y    \\
+	= & \left(2 y^{2}+y\right)^{2}+3 y^{2}+4 y+1,
+\end{align}
+
+从而, 当 $y>2$ 或 $y<-1$ 时, 有
+\begin{align*}
+	\left(2 y^{2}+y\right)^{2}<(2 x+1)^{2}<\left(2 y^{2}+y+1\right)^{2}
+\end{align*}
+
+由于 $2 y^{2}+y$ 与 $2 y^{2}+y+1$ 是两个连续的整数, 它们的平方之间不会含有完全平方数, 故上式不成立.
+
+因此只需考虑当 $-1 \leqslant y \leqslant 2$ 时方程的解, 这是平凡的, 容易得到原方程的全部整数解是
+\begin{align*}
+	(x, y)=(0,-1),(-1,-1),(0,0),(-1,0),(-6,2),(5,2)
+\end{align*}
+
+例 6 求所有的正整数 $n \geqslant 2$, 使得不定方程组
+\begin{align*}
+	\left\{\begin{array}{c}
+		       x_{1}^{2}+x_{2}^{2}+50=16 x_{1}+12 x_{2}     \\
+		       x_{2}^{2}+x_{3}^{2}+50=16 x_{2}+12 x_{3}     \\
+		       \cdots                                       \\
+		       x_{n-1}^{2}+x_{n}^{2}+50=16 x_{n-1}+12 x_{n} \\
+		       x_{n}^{2}+x_{1}^{2}+50=16 x_{n}+12 x_{1}
+	       \end{array}\right.
+\end{align*}
+
+有整数解.\\
+解 移项后配方, 方程组变形为
+\begin{align*}
+	\left\{\begin{array}{c}
+		       \left(x_{1}-8\right)^{2}+\left(x_{2}-6\right)^{2}=50   \\
+		       \left(x_{2}-8\right)^{2}+\left(x_{3}-6\right)^{2}=50   \\
+		       \cdots                                                 \\
+		       \left(x_{n-1}-8\right)^{2}+\left(x_{n}-6\right)^{2}=50 \\
+		       \left(x_{n}-8\right)^{2}+\left(x_{1}-6\right)^{2}=50
+	       \end{array}\right.
+\end{align*}
+
+由于 50 表示为两个正整数的平方和只有两种: $50=1^{2}+7^{2}=5^{2}+5^{2}$, 所以,由(1)知 $\left|x_{2}-6\right|=1 ,  5$ 或 7,而由(2)知 $\left|x_{2}-8\right|=1 ,  5$ 或 7, 从而 $x_{2}=1$ ,  7 或 13 .
+
+进一步,可知对每个 $1 \leqslant i \leqslant n$ , 都有 $x_{i}=1,7$ 或 13 , 依 $x_{1}=1 ,  7 ,  13$ , 分三种情况讨论.
+
+若 $x_{1}=1$,则由(1)知 $x_{2}=7$, 再由 (2)知 $x_{3}=13$, 依次往下递推, 可知当 $k \equiv 1(\bmod 3)$ 时,  $x_{k}=1$ ; 当 $k \equiv 2(\bmod 3)$ 时,  $x_{k}=7$ ; 当 $k \equiv 0(\bmod 3)$ 时,  $x_{k}=13$. 所以, 由第 (2) 式, 知当且仅当 $n+1 \equiv 1(\bmod 3)$ 时, 原方程组有整数解, 即当且仅当 $3 \mid n$ 时, $n$ 符合要求.
+
+对另外两种情况 $x_{1}=7$ 和 $x_{1}=13$ 同样讨论, 得到的条件是一样的.\\
+综上可知, 满足条件的 $n$ 是所有 3 的倍数. \\
+说明 进一步讨论可知, 当 $3 \mid n$ 时, 方程组恰有 3 组整数解.
+
+\subsubsection{不等式估计}
+利用不等式的知识, 先确定不定方程中的某个字母的范围, 然后逐个枚举得到所有解, 这个方法称为不等式估计, 它也是我们处理不定方程的常见方法. 当然, 如果能够恰当地利用字母的对称性等, 那么作不等式估计时会简洁很多.
+
+例 7 求不定方程 $x^{3}-y^{3}=x y+61$ 的正整数解.\\
+解 设 $(x, y)$ 为方程的正整数解, 则 $x>y$. 设 $x=y+d$, 则 $d$ 为正整数, 且\begin{align}
+	(y+d) y+61 & =(y+d)^{3}-y^{3}           \\
+	           & =3 d y^{2}+3 y d^{2}+d^{3}
+\end{align}
+
+即有
+\begin{align*}
+	(3 d-1) y^{2}+d(3 d-1) y+d^{3}=61
+\end{align*}
+
+故
+\begin{align*}
+	d^{3}<61
+\end{align*}
+
+于是
+\begin{align*}
+	d \leqslant 3
+\end{align*}
+
+分别令 $d=1 ,  2 ,  3$ 代入, 得\begin{align}
+	 & 2 y^{2}+2 y+1=61   \\
+	 & 5 y^{2}+10 y+8=61  \\
+	 & 8 y^{2}+24 y+27=61
+\end{align}
+
+只有第一个方程有整数解, 并由 $y$ 为正整数知 $y=5$, 进而 $x=6$.\\
+所以, 原方程只有一组正整数解 $(x, y)=(6,5)$.\\
+例 8 求所有的正整数 $a ,  b$, 使得
+\begin{align*}
+	4^{a}+4 a^{2}+4=b^{2}
+\end{align*}
+
+解 若 $(a ,  b)$ 是满足(1) 的正整数数对, 则 $b^{2}$ 为偶数, 且 $b^{2}>4^{a}$, 从而 $b$ 为偶数, 且 $b>2^{a}$, 故 $b \geqslant 2^{a}+2$. 于是
+\begin{align*}
+	4^{a}+4 a^{2}+4=b^{2} \geqslant\left(2^{a}+2\right)^{2}=4^{a}+4 \cdot 2^{a}+4
+\end{align*}
+
+知 $a^{2} \geqslant 2^{a}$, 可得 $a \leqslant 4$ (对 $a$ 归纳可证: 当 $a \geqslant 5$ 时, 有 $a^{2}<2^{a}$ ).\\
+分别就 $a=1,2,3,4$ 代入 (1) 式, 可得方程的所有正整数解为 $(a, b)=$ $(2,6)$ 或 $(4,18)$.
+
+例 9 求所有的正整数数组 $(a, b, c, x, y, z)$, 使得
+\begin{align*}
+	\left\{\begin{array}{l}
+		       a+b+c=x y z \\
+		       x+y+z=a b c
+	       \end{array}\right.
+\end{align*}
+
+这里 $a \geqslant b \geqslant c, x \geqslant y \geqslant z$.\\
+解 由对称性, 我们只需考虑 $x \geqslant a$ 的情形. 这时
+\begin{align*}
+	x y z=a+b+c \leqslant 3 a \leqslant 3 x
+\end{align*}
+
+故
+\begin{align*}
+	y z \leqslant 3
+\end{align*}
+
+于是
+\begin{align*}
+	(y, z)=(1,1),(2,1),(3,1)
+\end{align*}
+
+当 $(y, z)=(1,1)$ 时, $a+b+c=x$ 且 $x+2=a b c$, 于是
+\begin{align*}
+	a b c=a+b+c+2 .
+\end{align*}
+
+若 $c \geqslant 2$, 则
+\begin{align*}
+	a+b+c+2 \leqslant 3 a+2 \leqslant 4 a \leqslant a b c,
+\end{align*}
+
+等号当且仅当 $a=b=c=2$ 时成立.\\
+若 $c=1$, 则
+\begin{align*}
+	a b=a+b+3
+\end{align*}
+
+即
+\begin{align*}
+	(a-1)(b-1)=4
+\end{align*}
+
+得
+\begin{align*}
+	(a, b)=(5,2),(3,3)
+\end{align*}
+
+当 $(y, z)=(2,1)$ 时, $2 a b c=2 x+6=a+b+c+6$ , 与上述类似讨论可知 $c=1$ , 进而
+
+得
+\begin{align*}
+	\begin{gathered}
+		(2 a-1)(2 b-1)=15 \\
+		(a, b)=(3,2)
+	\end{gathered}
+\end{align*}
+
+当 $(y, z)=(3,1)$ 时, $3 a b c=3 x+12=a+b+c+12$, 类似可知,此时无解.
+
+综上所述, 可知\begin{align}
+	  & (a, b, c, x, y, z)                        \\
+	= & (2,2,2,6,1,1),(5,2,1,8,1,1),(3,3,1,7,1,1) \\
+	  & (3,2,1,3,2,1),(6,1,1,2,2,2),(8,1,1,5,2,1) \\
+	  & (7,1,1,3,3,1)
+\end{align}
+
+说明 此题中如果没有条件 $a \geqslant b \geqslant c$ 和 $x \geqslant y \geqslant z$ , 也需要利用对称性作出这样的假设后再处理, 解题中利用对称性假设 $x \geqslant a$ 是巧妙的, 这样问题就转化为只有 3 种情况而便于处理了.
+
+\subsubsection{同余方法}
+若不定方程 $F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=0$ 有整数解, 则对任意的 $m \in \mathbf{N}^{*}$ , 其整数解 $\left(x_{1}, x_{2}, \cdots, x_{n}\right)$ 均满足
+\begin{align*}
+	F\left(x_{1}, x_{2}, \cdots, x_{n}\right) \equiv 0(\bmod m)
+\end{align*}
+
+运用这一条件, 同余可以作为不定方程是否有整数解的一块试金石. \\
+例 10 证明: 不定方程
+\begin{align*}
+	x^{2}+y^{2}-8 z^{3}=6
+\end{align*}
+
+没有整数解.\\
+证明 若 $(x, y, z)$ 是方程(1)的整数解, 对(1)的两边模2, 可知 $x ,  y$ 同奇偶; 再对(1)两边模 4 可知 $x ,  y$ 都为奇数, 于是 $x^{2} \equiv y^{2} \equiv 1(\bmod 8)$ , 这要求
+\begin{align*}
+	6=x^{2}+y^{2}-8 z^{3} \equiv 2(\bmod 8)
+\end{align*}
+
+矛盾. 故方程(1)没有整数解.\\
+说明 利用同余方法解不定方程问题时, 选择恰当的数作为模是十分重
+
+要的, 它不仅涉及问题解决的繁简程度, 重要的是能否卡住字母的范围或导出矛盾.
+
+例 11 求所有的非负整数 $x ,  y ,  z$, 使得
+\begin{align*}
+	2^{x}+3^{y}=z^{2}
+\end{align*}
+
+解 (1) 当 $y=0$ 时, 有
+
+于是可设
+\begin{align*}
+	2^{x}=z^{2}-1=(z-1)(z+1)
+\end{align*}
+
+因此
+\begin{align*}
+	z-1=2^{\alpha}, z+1=2^{\beta}, 0 \leqslant \alpha \leqslant \beta,
+\end{align*}
+\begin{align*}
+	2^{\beta}-2^{\alpha}=2
+\end{align*}
+
+此时, 若 $\alpha \geqslant 2$, 则 $4 \mid 2^{\beta}-2^{\alpha}$, 与 $4 \nmid 2$ 矛盾, 故 $\alpha \leqslant 1$. 而 $\alpha=0$ 导致 $2^{\beta}=$ 3 , 矛盾,故
+
+所以\begin{align}
+	 & \alpha=1, \beta=2 \\
+	 & z=3, x=3
+\end{align}
+
+得
+\begin{align*}
+	(x, y, z)=(3,0,3)
+\end{align*}\\
+(2) 当 $y>0$ 时, 由于 $3 \nmid 2^{x}+3^{y}$, 故 $3 \nmid z$, 所以
+\begin{align*}
+	z^{2} \equiv 1(\bmod 3)
+\end{align*}
+
+对(1)两边模 3 , 知
+\begin{align*}
+	(-1)^{x} \equiv 1(\bmod 3)
+\end{align*}
+
+故 $x$ 为偶数, 现在设 $x=2 m$, 则
+\begin{align*}
+	\left(z-2^{m}\right)\left(z+2^{m}\right)=3^{y}
+\end{align*}
+
+所以可设
+\begin{align*}
+	z-2^{m}=3^{\alpha}, z+2^{m}=3^{\beta}, 0 \leqslant \alpha \leqslant \beta, \alpha+\beta=y
+\end{align*}
+
+于是
+\begin{align*}
+	3^{\beta}-3^{\alpha}=2^{m+1},
+\end{align*}
+
+若 $\alpha \geqslant 1$, 则 $3 \mid 3^{\beta}-3^{\alpha}$, 但 $3 \nmid 2^{m+1}$, 矛盾, 故 $\alpha=0$, 因此
+\begin{align*}
+	3^{\beta}-1=2^{m+1}
+\end{align*}
+
+当 $m=0$ 时, $\beta=1$, 得
+\begin{align*}
+	(x, y, z)=(0,1,2)
+\end{align*}
+
+当 $m>0$ 时, $2^{m+1} \equiv 0(\bmod 4)$ , 故
+\begin{align*}
+	3^{\beta} \equiv 1(\bmod 4)
+\end{align*}
+
+这要求 $\beta$ 为偶数, 设 $\beta=2 n$ , 则
+\begin{align*}
+	2^{m+1}=3^{2 n}-1=\left(3^{n}-1\right)\left(3^{n}+1\right)
+\end{align*}
+
+同 $y=0$ 时的讨论, 可知 $\quad 3^{n}-1=2$ , \\
+即 $n=1$ , 进而 $m=2$ , 得
+\begin{align*}
+	(x, y, z)=(4,2,5)
+\end{align*}
+
+所以 $(x, y, z)=(3,0,3),(0,1,2),(4,2,5)$.\\
+例 12 设 $m ,  n$ 为正整数,且 $n>1$. 求 $\left|2^{m}-5^{n}\right|$ 的最小值.\\
+解 由于 $\left|2^{m}-5^{n}\right|$ 为奇数, 而 $m=7, n=3$ 时,  $\left|2^{m}-5^{n}\right|=3$ , 故若能证明 $n>1$ 时,  $\left|2^{m}-5^{n}\right| \neq 1$ , 则所求的最小值为 3 .
+
+若存在正整数 $m ,  n$, 使得 $n>1$, 且 $\left|2^{m}-5^{n}\right|=1$, 则
+\begin{align*}
+	2^{m}-5^{n}=1 \text { 或 } 2^{m}-5^{n}=-1
+\end{align*}
+
+如果 $2^{m}-5^{n}=1$, 那么 $m \geqslant 3$ , 两边模 8 , 要求
+\begin{align*}
+	5^{n} \equiv 7(\bmod 8)
+\end{align*}
+
+但对任意正整数 $n, 5^{n} \equiv 1$ 或 $5(\bmod 8)$ , 矛盾, 故 $2^{m}-5^{n}=1$ 不成立. \\
+如果 $2^{m}-5^{n}=-1$, 那么由 $n>1$, 知 $m \geqslant 3$ . 两边模 8 , 得
+\begin{align*}
+	5^{n} \equiv 1(\bmod 8)
+\end{align*}
+
+可知 $n$ 为偶数. 设 $n=2 x, x$ 为正整数,则
+\begin{align*}
+	2^{m}=\left(5^{x}-1\right)\left(5^{x}+1\right)
+\end{align*}
+
+由于 $5^{x}-1$ 与 $5^{x}+1$ 是两个相邻偶数, 这要求
+\begin{align*}
+	5^{x}-1=2,5^{x}+1=4
+\end{align*}
+
+不可能.\\
+所以,  $\left|2^{m}-5^{n}\right|$ 的最小值为 3 . \\
+说明 上面的两个例子都用到了一个结论: 两个差为 2 的正整数之积为 2的幂次, 则这两个数只能为 2 和 4 . 该结论在例 11 的前半段解答中已予以证明.
+
+\subsubsection{构造法}
+有些不定方程的问题只需证明该方程有解或有无穷多个解, 这时经常采用构造法来处理.
+
+例13 证明: 方程 $x^{2}+y^{5}=z^{3}$ 有无穷多组满足 $x y z \neq 0$ 的整数解. \\
+证明 取 $x=2^{15 k+10}, y=2^{6 k+4}, z=2^{10 k+7}, k$ 为非负整数, 则这样的 $x$ ,  $y ,  z$ 满足 $x^{2}+y^{5}=z^{3}$ , 所以方程有无穷多组满足 $x y z \neq 0$ 的整数解.
+
+另证 先求方程的一组特解, 易知 $x=10 ,  y=3 ,  z=7$ 是方程 $x^{2}+$ $y^{5}=z^{3}$ 的一组解. 因而 $x=10 a^{15 k}, y=3 a^{6 k}, z=7 a^{10 k}(a, k$ 为非负整数) 是方程的解.
+
+例14 证明: 对任意整数 $n$ , 方程
+\begin{align*}
+	x^{2}+y^{2}-z^{2}=n
+\end{align*}
+
+有无穷多组整数解( $x, y, z)$ . \\
+证明 现有命题"当 $m$ 为奇数或 4 的倍数时, 方程 $a^{2}-b^{2}=m$ 有整数解 $(a, b)$ ", 它对解决本题是有用的. 这个命题基于下面 2 个恒等式:
+\begin{align*}
+	\begin{gathered}
+		(k+1)^{2}-k^{2}=2 k+1 \\
+		(k+1)^{2}-(k-1)^{2}=4 k
+	\end{gathered}
+\end{align*}
+
+对于方程 (1), 只需取 $x$ , 使 $x$ 与 $n$ 的奇偶性相反(这样的 $x$ 有无穷多个), 从而利用上述命题, 方程
+\begin{align*}
+	y^{2}-z^{2}=n-x^{2}
+\end{align*}
+
+有整数解, 可知方程(1)有无穷多组整数解. \\
+例15 是否存在两两不同的正整数 $m ,  n ,  p ,  q$, 使得 $m+n=p+q$ 和 $\sqrt{m}+\sqrt[3]{n}=\sqrt{p}+\sqrt[3]{q}>2012$ 都成立?
+
+解 存在满足条件的正整数. \\
+由方程的结构, 我们寻找形如
+\begin{align*}
+	m=a^{2}, n=b^{3}, p=c^{2}, q=d^{3}
+\end{align*}
+
+的正整数. 这里 $a ,  b ,  c ,  d$ 为正整数. \\
+此时, 条件转化为
+\begin{align*}
+	a+b=c+d>2012, a^{2}+b^{3}=c^{2}+d^{3}
+\end{align*}
+
+即
+\begin{align*}
+	a-c=d-b,(a-c)(a+c)=(d-b)\left(d^{2}+b d+b^{2}\right)
+\end{align*}
+
+令 $d-b=1$ , 即 $b=d-1$ , 且使 $b>2012$ , 则 $b ,  d$ 的奇偶性不同, 现令
+\begin{align*}
+	a=\frac{b^{2}+b d+d^{2}+1}{2}, c=\frac{b^{2}+b d+d^{2}-1}{2}
+\end{align*}
+
+那么 $a ,  c$ 为正整数, 且由 $a ,  b ,  c ,  d$ 确定的 $m ,  n ,  p ,  q$ 满足条件.
+
+例16 证明: 存在无穷多组正整数组( $x, y, z$ ), 使得 $x, y, z$ 两两不同, 并且
+\begin{align*}
+	x^{x}=y^{3}+z^{3}
+\end{align*}
+
+证明 一个想法是: 将 $x$ 取为 $3 k+1$ 形式的数, 这时\begin{align}
+	x^{x} & =(3 k+1)^{3 k+1}                \\
+	      & =(3 k+1)(3 k+1)^{3 k}           \\
+	      & =3 k(3 k+1)^{3 k}+(3 k+1)^{3 k}
+\end{align}
+
+因此,如果使 $3 k$ 为一个完全立方数, 那么符合要求的正整数 $x ,  y ,  z$ 就找到了.
+
+为此, 令 $k=3^{3 m+2}$, 这里 $m$ 为正整数, 那么令
+\begin{align*}
+	x=3 k+1, y=3^{m+1}(3 k+1)^{k}, z=(3 k+1)^{k}
+\end{align*}
+
+则 $x ,  y ,  z$ 两两不同, 且满足 $x^{x}=y^{3}+z^{3}$ . 命题获证. \\
+说明 如果不要求 $x ,  y ,  z$ 两两不同, 我们还可以这样来构造: 取 $y=$ $z=2^{m} ,  x=2^{\alpha}$ , 则当 $\alpha \cdot 2^{\alpha}=3 m+1$ 时, 就有 $x^{x}=y^{3}+z^{3}$ . 容易看出满足 $\alpha \cdot 2^{\alpha}=3 m+1$ 的正整数对 $(\alpha, m)$ 有无穷多对.
+
+\subsection{勾股方程}
+在我国古代算书《周髀算经》(公元前 1 世纪)中就有"勾广三, 股修四, 经隅五"的记载, 这是关于勾股数的早期记录.
+
+所谓勾股数是指满足下述方程
+\begin{align*}
+	x^{2}+y^{2}=z^{2}
+\end{align*}
+
+的正整数数组.\\
+方程(1)称为勾股方程(英文著作中, 该方程称为毕达哥拉斯(Pythagoras)方程, 勾股定理亦称为毕达哥拉斯定理), 讨论(1)的正整数解是二次不定方程中的一个重要课题, 求解过程本身就有一定的挑战性.
+
+注意到, 对(1)的解 $(x, y, z)$ , 如果 $(x, y)=d$ , 那么 $d^{2} \mid z^{2}$ , 即有 $d \mid z$ , 因此可以在(1)的两边约去 $d$ 后再讨论. 这说明我们只需在条件 $(x, y)=1$下, 求(1)的所有正整数解. 易知当 $(x, y)=1$ 时,  $x ,  y ,  z$ 两两互素, 我们称(1)的使得 $x ,  y ,  z$ 两两互素的正整数解 $(x, y, z)$ 为本原勾股数组.
+
+下面来求(1)的所有本原勾股数组. \\
+设 $(x, y, z)$ 是 (1) 的一个本原解 (即 $(x, y, z)$ 是本原勾股数组), 则由\\
+$(x, y)=1$ , 知 $x ,  y$ 不同为偶数. 若 $x ,  y$ 都是奇数, 则 $z^{2}=x^{2}+y^{2} \equiv 1+$ $1=2(\bmod 4)$ , 这与完全平方数 $\equiv 0$ 或 $1(\bmod 4)$ 矛盾. 所以 $x ,  y$ 不同为奇数, 即 $x ,  y$ 是一奇一偶.
+
+不妨设 $y$ 为偶数,则 $x ,  z$ 都是奇数,由(1)得
+
+故
+\begin{align*}
+	\begin{gathered}
+		y^{2}=z^{2}-x^{2} \\
+		\left(\frac{y}{2}\right)^{2}=\frac{z-x}{2} \cdot \frac{z+x}{2}
+	\end{gathered}
+\end{align*}
+
+由于\begin{align}
+	\left(\frac{z-x}{2}, \frac{z+x}{2}\right) & =\left(\frac{z-x}{2}, \frac{z+x}{2}+\frac{z-x}{2}\right) \\
+	                                          & =\left(\frac{z-x}{2}, z\right)=(z-x, z)                  \\
+	                                          & =(x, z)=1
+\end{align}
+
+可知 $\frac{z-x}{2}$ 与 $\frac{z+x}{2}$ 都是完全平方数, 所以, 可设
+\begin{align*}
+	\begin{gathered}
+		\left(\frac{z-x}{2}, \frac{z+x}{2}\right)=\left(m^{2}, n^{2}\right) \\
+		y=2 m n
+	\end{gathered}
+\end{align*}
+
+依此得\\
+进一步, 由 $\left(\frac{z-x}{2}, \frac{z+x}{2}\right)=1$ , 可知 $(m, n)=1$ , 而由 $x ,  z$ 都是奇数, 知 $m, n$ 一奇一偶.
+
+综上可知, (1)的所有本原解为
+\begin{align*}
+	\left\{\begin{array} { l }
+		       { x = n ^ { 2 } - m ^ { 2 } , } \\
+		       { y = 2 m n , }                 \\
+		       { z = m ^ { 2 } + n ^ { 2 } , }
+	       \end{array} \text { 或 } \quad \left\{\begin{array}{l}
+		                                            x=2 m n,       \\
+		                                            y=n^{2}-m^{2}, \\
+		                                            z=m^{2}+n^{2},
+	                                            \end{array}\right.\right.
+\end{align*}
+
+其中 $m ,  n$ 为正整数, $m<n$, 且 $(m, n)=1, m ,  n$ 一奇一偶.\\
+注意 由(2)得到的正整数组 $(x, y, z)$ 代入验证, 可知是(1)的解. 将(2)中的 $x ,  y ,  z$ 都乘以整数 $d$ 就可得(1)的全部整数解.
+
+例1 设 $(x, y, z)$ 是勾股方程(1)的整数解. 证明: $x ,  y ,  z$ 中必有一个数是 3 的倍数, 必有一个数是 4 的倍数, 必有一个数是 5 的倍数.
+
+证明 利用完全平方数 $\equiv 0,1(\bmod 3)$ 知, 若 $x ,  y$ 都不是 3 的倍数, 则
+\begin{align*}
+	x^{2}+y^{2} \equiv 2(\bmod 3)
+\end{align*}
+
+这导致
+\begin{align*}
+	z^{2} \equiv 2(\bmod 3)
+\end{align*}
+
+矛盾. 故 $x ,  y$ 中有一个数是 3 的倍数.
+
+若 $x ,  y ,  z$ 都不是 5 的倍数,则
+\begin{align*}
+	x^{2}+y^{2} \equiv 0,2 \text { 或 } 3(\bmod 5),
+\end{align*}
+
+而
+\begin{align*}
+	z^{2} \equiv 1 \text { 或 } 4(\bmod 5) ,
+\end{align*}
+
+矛盾. 故 $x ,  y ,  z$ 中有一个为 5 的倍数. \\
+若 $x ,  y ,  z$ 都是偶数, 则在(1)的两边同除以 4 , 直至 $x ,  y$ 中有一个为奇数, 设 $x$ 为奇数, 则 $y$ 必为偶数(否则 $z^{2}=x^{2}+y^{2} \equiv 1+1 \equiv 2(\bmod 4)$ , 矛盾), 此时 $z$ 为奇数. 对(1)的两边模 8 , 可知 $y^{2} \equiv 0(\bmod 8)$ , 故 $4 \mid y$ .
+
+综上可知, 命题成立. \\
+说明 这里并不是说 $x ,  y ,  z$ 分别是 3,  $4 ,  5$ 的倍数(例如勾股数组 $(5,12,13)$ 中, 是 3 的倍数与 4 的倍数的那个数是同一个数). 另外, 如果从 (2)出发, 证明此题的结论会简便一些.
+
+例2 设 $(x, y, z)$ 是一组勾股数 $\left(x^{2}+y^{2}=z^{2}\right)$ . 证明: $z^{2}+x y$ 与 $z^{2}-$ $x y$ 都可以表示为两个正整数的平方和.
+
+证明 注意到\begin{align}
+	z^{2} \pm x y & =\frac{2 z^{2} \pm 2 x y}{2}   \\
+	              & =\frac{z^{2}+(x \pm y)^{2}}{2}
+\end{align}
+
+而
+\begin{align*}
+	2 a^{2}+2 b^{2}=(a+b)^{2}+(a-b)^{2}
+\end{align*}
+
+因此\begin{align}
+	z^{2} \pm x y & =\frac{(z+x \pm y)^{2}+(-z+x \pm y)^{2}}{4}                                \\
+	              & =\left(\frac{x \pm y+z}{2}\right)^{2}+\left(\frac{x \pm y-z}{2}\right)^{2}
+\end{align}
+
+由 $x^{2}+y^{2}=z^{2}$ , 可知 $x \pm y$ 与 $z$ 同奇偶, 故 $\frac{x \pm y \pm z}{2}$ 都是整数. 进一步, 由 $x<z, y<z , $ 及 $z^{2}=x^{2}+y^{2}<(x+y)^{2}$ , 得 $z<x+y$ , 可知 $\frac{x \pm y \pm z}{2}$都是非零整数.
+
+所以,  $z^{2} \pm x y$ 都可以表示为两个正整数的平方和. \\
+说明 此题是讨论勾股数的性质, 关键在于代数式变形中的配方, 其中还用到一些恒等变形, 需要有一些前瞻性.
+
+例 3 设 $n$ 为大于 2 的正整数. 证明: 存在一个边长都是整数的直角三角形, 它的一条直角边长恰为 $n$ .
+
+证明 只需证明不定方程 $x^{2}+n^{2}=z^{2}$ 有正整数解. \\
+利用 $(z-x)(z+x)=n^{2}$ , 结合 $z-x$ 与 $z+x$ 具有相同的奇偶性, 故当\\
+$n$ 为奇数时, 由 $(z-x, z+x)=\left(1, n^{2}\right)$ , 可得一组正整数解
+\begin{align*}
+	(x, z)=\left(\frac{n^{2}-1}{2}, \frac{n^{2}+1}{2}\right)
+\end{align*}
+
+而当 $n$ 为偶数时, 由条件,知 $n \geqslant 4$. 利用
+\begin{align*}
+	(z-x, z+x)=\left(2, \frac{n^{2}}{2}\right)
+\end{align*}
+
+可得一组正整数解
+\begin{align*}
+	(x, z)=\left(\frac{n^{2}-4}{4}, \frac{n^{2}+4}{4}\right)
+\end{align*}
+
+综上, 可知命题成立. \\
+例4 设 $n$ 为大于 12 的正整数. 证明: 存在一个边长都是整数的直角三角形, 使得其面积介于 $n$ 与 $2 n$ 之间.
+
+证明 这是一个存在性问题, 尝试从特殊的勾股数组出发来构造例子. \\
+考虑边长为 $(3 k, 4 k, 5 k)$ 的直角三角形, 这里 $k$ 为正整数, 若找得到正整数 $k$ , 使得 $n<\frac{1}{2} \times(3 k) \times(4 k)<2 n$ , 则对这样的 $n$ , 我们就找到了合适的直角三角形.
+
+注意到, 当 $n \geqslant 35$ 时,有\begin{align}
+	\left(\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}\right)^{2} & =\left(\frac{1}{2}-\frac{\sqrt{2}}{3}\right) n=\frac{n}{6(3+2 \sqrt{2})}=\frac{n}{18+\sqrt{288}} \\
+	                                                       & \geqslant \frac{35}{18+\sqrt{288}}>\frac{35}{18+17}=1
+\end{align}
+
+故
+\begin{align*}
+	\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}>1
+\end{align*}
+
+从而在 $\sqrt{\frac{n}{6}}$ 与 $\sqrt{\frac{n}{3}}$ 之间存在正整数 $k$, 对这个 $k$ 有 $\frac{n}{6}<k^{2}<\frac{n}{3}$, 即 $n<$ $\frac{1}{2} \times(3 k) \times(4 k)<2 n$. 所以, 当 $n \geqslant 35$ 时,命题成立.
+
+对 $13 \leqslant n \leqslant 34$ , 我们给出具体的满足条件的例子. \\
+当 $13 \leqslant n \leqslant 23$ 时,  $(6,8,10)$ 符合要求; 当 $24 \leqslant n \leqslant 29$ 时,  $(5,12,13)$符合要求; 当 $30 \leqslant n \leqslant 34$ 时, ( $9,12,15)$ 符合要求.
+
+综上可知, 当 $n>12$ 时, 都存在满足条件的直角三角形.\\
+说明 这里先对较大的 $n$ 用统一形式的例子处理(注意: 35是通过解不
+
+等式 $\sqrt{\frac{n}{3}}>\sqrt{\frac{n}{6}}+1$ 得到的), 然后转为有限种情况枚举得解的思路是合理且自然的, 它在处理存在性问题时经常用到.
+
+例5 设 $n$ 是一个正整数. 证明: 存在 $n$ 个彼此不全等的勾股三角形(边长都为整数的直角三角形), 它们的周长都相等.
+
+证明 如果我们能找到 $n$ 个彼此不相似的勾股三角形, 那么对每个三角形乘上一个恰当的正整数, 就可以得到周长相同而彼此不全等的勾股三角形. 这是解决此题的一个出发点.
+
+为此, 先证明任意两组不同的本原勾股数组确定的直角三角形是不相似的.
+
+事实上, 设 $(a, b, c)$ 与 $(x, y, z)$ 是两组本原勾股数组, 这里 $a<b<c$, $x<y<z$ . 如果它们确定的直角三角形相似, 那么
+\begin{align*}
+	\frac{x}{a}=\frac{y}{b}=\frac{z}{c}
+\end{align*}
+
+记这个比值为 $k$ , 则 $k$ 为有理数. 设 $k=\frac{q}{p}, p ,  q$ 为正整数, 且 $(p, q)=1$ , 则
+\begin{align*}
+	x=\frac{a q}{p}, y=\frac{b q}{p}
+\end{align*}
+
+由 $x ,  y$ 为正整数, 知
+
+而\begin{align}
+	 & p|a, p| b \\
+	 & (a, b)=1
+\end{align}
+
+故 $p=1$ , 此时 $(x, y)=(a q, b q)=(a, b) q=q$ . 进而 $q=1$ , 这导致 $x=a, y=b$ , 进而 $z=c$ . 矛盾.
+
+利用上述结论, 我们取 $n$ 组本原勾股数组
+\begin{align*}
+	\left(x_{k}, y_{k}, z_{k}\right), k=1,2, \cdots, n
+\end{align*}
+
+这里 $x_{k}<y_{k}<z_{k}$ , 且 $\left(x_{k}, y_{k}\right)=1$ , 则这 $n$ 个数组确定的 $n$ 个三角形彼此不相似, 分别记
+\begin{align*}
+	S_{k}=x_{k}+y_{k}+z_{k}
+\end{align*}
+
+并设 $S_{1}, S_{2}, \cdots, S_{n}$ 的最小公倍数为 $S$. 现在令
+\begin{align*}
+	a_{k}=\frac{S}{S_{k}} \cdot x_{k}, b_{k}=\frac{S}{S_{k}} \cdot y_{k}, c_{k}=\frac{S}{S_{k}} \cdot z_{k}
+\end{align*}
+
+则 $\left(a_{k}, b_{k}, c_{k}\right)(k=1,2, \cdots, n)$ 确定的 $n$ 个直角三角形彼此不全等, 并且它们的周长都等于 $S$.
+
+所以, 命题成立. \\
+说明 许多与勾股数组有关的问题不一定要用到勾股方程解的形式, 但会用到勾股方程有无穷多组(本原的)正整数解.  Fermat 曾经对此方程作推广研究, 发现 $n \geqslant 3$ 时, 方程 $x^{n}+y^{n}=z^{n}$ 没有正整数解. 这就是著名的"费马大定理", 历时 358 年方才得到证明.
+
+例 6 是否存在正整数 $x ,  y$ , 使得 $x^{2}+y^{2}=2011^{2}$ 成立？\\
+解 如果有这样的正整数, 那么 $x ,  y$ 都小于 2011, 由 2011 为素数(这个结论可通过所有不超过 $\sqrt{2011}$ 的素数都不能整除 2011 直接计算得到), 所以 $x ,  y$ 都与 2011 互素, 这表明 $(x, y, 2011)$ 是(1)的本原解, 从而由(2)知存在正整数 $m ,  n$ 使得
+\begin{align*}
+	m^{2}+n^{2}=2011
+\end{align*}
+
+但是
+\begin{align*}
+	m^{2}+n^{2} \equiv 0 ,  1 \text { 或 } 2(\bmod 4),
+\end{align*}
+
+而
+\begin{align*}
+	2011 \equiv 3(\bmod 4)
+\end{align*}
+
+矛盾. 所以,不存在正整数 $x ,  y$ 满足条件.\\
+说明 利用本题的结论, 可知圆 $x^{2}+y^{2}=2011^{2}$ 上只有 4 个整点(即( $x$ ,  $y)=(0, \pm 2011)$ 和 $( \pm 2011,0))$ .

@@ -1,17 +1,18 @@
-INFO:  latexindent.exe version 3.16, 2022-03-13, a script to indent .tex files
-       latexindent.exe lives here: D:/texlive/2022/bin/win32/
-       Mon Dec  2 16:07:05 2024
-       Filename: c:\Users\Pauline\OneDrive - mail.bnu.edu.cn\×ÀÃæ\CyanMath\data\6_Õû³ý¡¢Í¬ÓàÓë²»¶¨·½³Ì\Õû³ý¡¢Í¬ÓàÓë²»¶¨·½³Ì.tex
+INFO:  latexindent.exe version 3.23.6, 2024-01-17, a script to indent .tex files
+       latexindent.exe lives here: D:/texlive/2024/bin/windows/
+       Fri Dec 13 15:32:11 2024
+       Filename: c:\Users\LeyuDame\OneDrive\�ĵ�\CyanMath\data\6_���ͬ���벻������\���ͬ���벻������.tex
 INFO:  Processing switches:
-INFO:  Directory for backup files and indent.log: c:\Users\Pauline\OneDrive - mail.bnu.edu.cn\×ÀÃæ\CyanMath\data\6_Õû³ý¡¢Í¬ÓàÓë²»¶¨·½³Ì
+INFO:  Directory for backup files and indent.log:
+       c:\Users\LeyuDame\OneDrive\�ĵ�\CyanMath\data\6_���ͬ���벻������
 INFO:  YAML settings read: defaultSettings.yaml
-       Reading defaultSettings.yaml from D:/texlive/2022/bin/win32/defaultSettings.yaml
-       Reading defaultSettings.yaml (2nd attempt) from D:/texlive/2022/bin/win32/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
-       and then, if necessary, D:/texlive/2022/bin/win32/LatexIndent/defaultSettings.yaml
-INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
-       Home directory is C:\Users\Pauline (didn't find either indentconfig.yaml or .indentconfig.yaml)
-       To specify user settings you would put indentconfig.yaml here: C:\Users\Pauline/indentconfig.yaml
-       Alternatively, you can use the hidden file .indentconfig.yaml as: C:\Users\Pauline/.indentconfig.yaml
+       Reading defaultSettings.yaml from D:/texlive/2024/bin/windows/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from D:/texlive/2024/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, D:/texlive/2024/bin/windows/LatexIndent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\LeyuDame
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects

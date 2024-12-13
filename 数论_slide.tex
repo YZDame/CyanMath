@@ -37,7 +37,7 @@
 \frame{\titlepage}
 \frame{\frametitle{目录}\tableofcontents}
 \section{整除}
-\subsection{整除的概念与基本性质}
+\subsection{整除的概念与基本性质}\setcounter{theorem}{0}
 \begin{frame}{整除的概念与基本性质}
 	对任给的两个整数 $a ,  b(a \neq 0)$, 如果存在整数 $q$, 使得 $b=a q$,那么称 $b$ 能被 $a$ 整除(或称 $a$ 能整除 $b$ ), 记作 $a \mid b$. 否则, 称 $b$ 不能被 $a$ 整除, 记作 $a \nmid b$ .
 
@@ -86,7 +86,7 @@
 	\end{example}
 \end{frame}
 
-\subsection{素数与合数}
+\subsection{素数与合数}\setcounter{theorem}{0}
 \begin{frame}{素数与合数}
 	\begin{property}
 		设 $n$ 为大于 1 的正整数, $p$ 是 $n$ 的大于 1 的因数中最小的正整数, 则 $p$ 为素数.
@@ -168,7 +168,8 @@
 		设 $a ,  b ,  c ,  d ,  e ,  f$ 都是正整数,  $S=a+b+c+d+e+f$ 是 $a b c+$ $d e f$ 和 $a b+b c+c a-d e-e f-e d$ 的因数. 证明: $S$ 为合数.
 	\end{example}
 \end{frame}
-\subsection{最大公因数与最小公倍数}
+
+\subsection{最大公因数与最小公倍数}\setcounter{theorem}{0}
 \begin{frame}{最大公因数与最小公倍数}
 	\begin{block}{带余数除法}
 		设 $a ,  b$ 是两个整数, $a \neq 0$, 则存在唯一的一对整数 $q$ 和 $r$,满足
@@ -292,8 +293,7 @@
 	\end{example}
 \end{frame}
 
-\subsection{算术基本定理}
-\setcounter{theorem}{0}
+\subsection{算术基本定理}\setcounter{theorem}{0}
 \begin{frame}{算术基本定理}
 	\begin{theorem}[算术基本定理]
 		设 $n$ 是大于 1 的正整数, 则 $n$ 可以分解成若干个素数的乘积的形式, 并且在不考虑这些素数相乘时的前后次序时, 这种分解是唯一的. 即对任意大于 1 的正整数 $n$,都存在唯一的一种素因数分解形式:
@@ -380,6 +380,369 @@
 		(2)举例说明:  $n>2$ 时, 上式右边的幂次不能减小.
 	\end{example}
 \end{frame}
+
 \section{同余}
-\subsection{同余的概念与基本性质}
+\subsection{同余的概念与基本性质}\setcounter{theorem}{0}
+\begin{frame}{同余的概念与基本性质}
+	同余是由大数学家高斯引入的一个概念. 我们可以将它理解为"余同", 即余数相同. 正如奇数与偶数是依能否被 2 整除而得到的关于整数的分类一样, 考虑除以 $m(\geqslant 2)$ 所得余数的不同, 可以将整数分为 $m$ 类. 两个属于同一类中的数相对于"参照物" $m$ 而言, 具有"余数相同"这个性质. 这种为对比两个整数的性质, 引入一个参照物的思想是同余理论的一个基本出发点.
+\end{frame}
+
+\begin{frame}[t]
+	\begin{definition}
+		如果 $a ,  b$ 除以 $m(\geqslant 1)$ 所得的余数相同, 那么称 $a ,  b$ 对模 $m$ 同余, 记作 $a \equiv b(\bmod m)$ . 否则, 称 $a ,  b$ 对模 $m$ 不同余, 记作 $a \neq b(\bmod m)$ .
+	\end{definition}
+	\begin{property}
+		$a \equiv b(\bmod m)$ 的充要条件是 $m \mid a-b$ .
+	\end{property}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{property}
+		若 $a \equiv b(\bmod m), c \equiv d(\bmod m)$ , 则 $a+c \equiv b+d(\bmod m)$ ,  $a-c \equiv b-d(\bmod m), a c \equiv b d(\bmod m)$.
+	\end{property}
+	\pause
+	\begin{proof}
+		这些结论与等式的一些相关结论极其相似, 它们都容易证明. 我们只给出第 3 个式子的证明.
+
+		只需证明:  $m \mid a c-b d$ .
+
+		因为
+		\begin{align}
+			a c-b d & =a c-b c+b c-b d \\
+			        & =(a-b) c+b(c-d)
+		\end{align}
+		由条件 $m|a-b, m| c-d$ , 知 $m \mid a c-b d$ .
+	\end{proof}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{property}
+		若 $a \equiv b(\bmod m), n$ 为正整数, 则 $a^{n} \equiv b^{n}(\bmod m)$ .
+	\end{property}
+	\begin{property}
+		若 $a \equiv b\left(\bmod m_{1}\right), a \equiv b\left(\bmod m_{2}\right)$ , 则 $a \equiv b\left(\bmod \left[m_{1}, m_{2}\right]\right)$ .
+	\end{property}
+	\begin{property}
+		若 $a b \equiv a c(\bmod m)$ , 则 $b \equiv c\left(\bmod \frac{m}{(a, m)}\right)$ .
+	\end{property}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{property}
+		如果 $(a, m)=1$ , 那么存在整数 $b$ , 使得 $a b \equiv 1(\bmod m)$ . 这个 $b$称 $a$ 对模 $m$ 的数论倒数, 记为 $a^{-1}(\bmod m)$ , 在不会引起误解时常常简记为 $a^{-1}$ .
+	\end{property}
+	\begin{proof}
+		利用贝祖定理, 可知存在整数 $x ,  y$ 使得
+		\begin{align*}
+			a x+m y=1
+		\end{align*}
+		于是,  $m \mid a x-1$ , 即 $a x \equiv 1(\bmod m)$ , 故存在符合条件的 $b$ .
+	\end{proof}
+\end{frame}
+
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		求所有的素数 $p ,  q ,  r(p \leqslant q \leqslant r)$ , 使得
+		\begin{align*}
+			p q+r, p q+r^{2}, q r+p, q r+p^{2}, r p+q, r p+q^{2}
+		\end{align*}
+		都是素数.
+	\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+	\begin{example}
+		设 $n$ 为大于 1 的正整数, 且 $1!, 2!, \cdots, n$ ！中任意两个数除以 $n$所得的余数不同. 证明: $n$ 是一个素数.
+	\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+	\begin{example}
+		设整数 $x ,  y ,  z$ 满足
+		\begin{align}\label{eq:同余的概念与基本性质-例3}
+			(x-y)(y-z)(z-x)=x+y+z .
+		\end{align}
+		证明: $x+y+z$ 是 27 的倍数.
+	\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+	\begin{example}
+		是否存在 19 个不同的正整数, 使得在十进制表示下, 它们的数码和相同, 并且这 19 个数之和为 1999 ?
+	\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+	\begin{example}
+		设 $m ,  n ,  k$ 为正整数,  $n \geqslant m+2, k$ 为大于 1 的奇数, 并且 $p=k \times$ $2^{n}+1$ 为素数,  $p \mid 2^{2^{m}}+1$ . 证明:  $k^{2^{n-1}} \equiv 1(\bmod p)$ .
+	\end{example}
+\end{frame}
+
+\subsection{剩余系及其应用}\setcounter{theorem}{0}
+\begin{frame}{剩余系及其应用}
+对任意正整数 $m$ 而言, 一个整数除以 $m$ 所得的余数只能是 $0,1,2, \cdots$ ,  $m-1$ 中的某一个, 依此可将整数分为 $m$ 个类(例如 $m=2$ 时, 就是奇数或偶数), 从每一类中各取一个数所组成的集合就称为模 $m$ 的一个完全剩余系, 简称为模 $m$ 的完系. 依此定义, 可以容易地得到下面的两个性质.
+\end{frame}
+
+\begin{frame}
+\begin{property}
+	若整数 $a_{1}, a_{2}, \cdots, a_{m}$ 对模 $m$ 两两不同余, 则 $a_{1}, a_{2}, \cdots, a_{n}$ 构成模 $m$ 的一个完系.
+\end{property}
+
+\begin{property}
+	任意连续 $m$ 个整数构成模 $m$ 的一个完系, 其中必有一个数为 $m$的倍数.
+\end{property}
+引入完系的概念, 蕴含了"整体处理"的思想, 在用同余方法处理数论问题时, 我们常常需要选择不同的完系来达到目的, 做出恰当地分析.
+\end{frame}
+
+% 例 1
+\begin{frame}[t]
+\begin{example}
+	证明: 在十进制表示下, 任意 39 个连续正整数中, 必有一个数的数码和是 11 的倍数.
+\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+\begin{example}
+	设 $n$ 为正奇数. 证明: 数
+	\begin{align*}
+		2-1,2^{2}-1, \cdots, 2^{n-1}-1
+	\end{align*}
+	中必有一个数是 $n$ 的倍数.
+\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+\begin{example}
+	设 $m ,  n$ 为正整数, $m$ 为奇数, 且 $\left(m, 2^{n}-1\right)=1$. 证明: 数 $1^{n}+$ $2^{n}+\cdots+m^{n}$ 是 $m$ 的倍数.
+\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+\begin{example}
+	(1) 证明: 存在无穷多组整数 $(x, a, b, c)$ , 使得
+	\begin{align*}
+		x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}
+	\end{align*}\\
+	(2) 问: 是否存在整数组 $(x, a, b, c, d)$ , 使得
+	\begin{align*}
+		x^{2}+a^{2}=(x+1)^{2}+b^{2}=(x+2)^{2}+c^{2}=(x+3)^{2}+d^{2} ?
+	\end{align*}
+\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+\begin{example}
+	设 $n$ 为正整数. 证明: 存在一个各数码都是奇数的正整数, 它是 $5^{n}$的倍数.
+\end{example}
+\end{frame}
+
+\subsection{费马小定理及其应用}\setcounter{theorem}{0}
+\begin{frame}
+\begin{theorem}[Fermat 小定理]
+	设 $p$ 为素数, $a$ 为整数,则 $a^{p} \equiv a(\bmod p)$ . 特别地,若 $p \nmid a$ , 则 $a^{p-1} \equiv 1(\bmod p)$ .
+\end{theorem}
+\pause
+\begin{proof}
+	当 $p \mid a$ 时, 结论显然成立.
+
+	当 $p \nmid a$ 时, 设 $x_{1}, x_{2}, \cdots, x_{p-1}$ 是 $1,2, \cdots, p-1$ 的一个排列, 我们先证:  $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中任意两个数对模 $p$ 不同余.
+
+	事实上, 若存在 $1 \leqslant i<j \leqslant p-1$ , 使得 $a x_{i} \equiv a x_{j}(\bmod p)$ , 则 $p \mid a\left(x_{i}-x_{j}\right)$ , 而 $p \nmid a$ , 故 $p \mid x_{i}-x_{j}$ (注意, 这里用到 $p$ 为素数), 但 $x_{i}$ 与 $x_{j}$对模 $p$ 不同余, 矛盾.
+
+	又 $a x_{1}, a x_{2}, \cdots, a x_{p-1}$ 中显然没有一个数为 $p$ 的倍数, 因此,  $a x_{1}$ ,  $a x_{2}, \cdots, a x_{p-1}$ 除以 $p$ 所得的余数是 $1,2, \cdots, p-1$ 的一个排列, 利用同余的性质, 知
+	\begin{align*}
+		\left(a x_{1}\right)\left(a x_{2}\right) \cdots\left(a x_{p-1}\right) \equiv x_{1} x_{2} \cdots x_{p-1}(\bmod p)
+	\end{align*}
+	再由 $x_{1} x_{2} \cdots x_{p-1}=(p-1)$ , , 它不是 $p$ 的倍数(注意, 这里再次用到 $p$ 为素数), 所以,  $a^{p-1} \equiv 1(\bmod p)$ .
+\end{proof}
+\end{frame}
+
+% 例 1
+\begin{frame}[t]
+\begin{example}
+	设 $n$ 为正整数. 证明: $7 \mid 3^{n}+n^{3}$ 的充要条件是 $7 \mid 3^{n} n^{3}+1$ .
+\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+\begin{example}
+	设 $x$ 为整数,  $p$ 是 $x^{2}+1$ 的奇素因数, 证明:  $p \equiv 1(\bmod 4)$ .
+\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+\begin{example}
+	设 $x$ 为整数,  $p$ 是数 $x^{6}+x^{5}+\cdots+1$ 的素因数. 证明:  $p=7$ 或 $p \equiv$ $1(\bmod 7)$.
+\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+\begin{example}
+	设 $p$ 为素数. 证明: 存在无穷多个正整数 $n$ , 使得 $p \mid 2^{n}-n$ .
+\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+\begin{example}
+	由 Fermat 小定理知, 对任意奇素数 $p$ , 都有 $2^{p-1} \equiv 1(\bmod p)$ . 问: 是否存在合数 $n$ , 使得 $2^{n-1} \equiv 1(\bmod n)$ 成立？
+\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+\begin{example}
+	求所有的素数 $p$, 使得 $\frac{2^{p-1}-1}{p}$ 是一个完全平方数.
+\end{example}
+\end{frame}
+
+\subsection{完全平方数}\setcounter{theorem}{0}
+\begin{frame}
+\begin{property}\label{prop:完全平方数-1}
+	完全平方数 $\equiv 0$ 或 $1(\bmod 4)$ , 奇数的平方 $\equiv 1(\bmod 8)$ .
+\end{property}
+\begin{property}
+	相邻两个完全平方数之间没有一个正整数是完全平方数. (这个性质经常用来证明某一类数不是完全平方数)
+\end{property}
+\begin{property}
+	若两个互素的正整数之积是完全平方数, 则这两个数都是完全平方数.
+\end{property}
+\end{frame}
+
+
+% 例 1
+\begin{frame}[t]
+\begin{example}
+	设素数从小到大依次排列为 $p_{1}, p_{2}, \cdots$ . 证明: 对任意大于 1 的正整数 $n$ , 数 $p_{1} p_{2} \cdots p_{n}-1$ 和 $p_{1} p_{2} \cdots p_{n}+1$ 都不是完全平方数.
+\end{example}
+\end{frame}
+
+% 例 2
+\begin{frame}[t]
+\begin{example}
+	已知正整数 $a ,  b$ 满足关系式
+	\begin{align*}
+		2 a^{2}+a=3 b^{2}+b
+	\end{align*}
+	证明: $a-b$ 和 $2 a+2 b+1$ 都是完全平方数.
+\end{example}
+\end{frame}
+
+% 例 3
+\begin{frame}[t]
+\begin{example}
+	设正整数 $x ,  y ,  z$ 满足 $(x, y, z)=1$ , 并且 $\frac{1}{x}+\frac{1}{y}=\frac{1}{z}$. 证明:  $x+y ,  x-z ,  y-z$ 都是完全平方数.
+\end{example}
+\end{frame}
+
+% 例 4
+\begin{frame}[t]
+\begin{example}
+	求所有的素数 $p$ , 使得 $p^{3}-4 p+9$ 是一个完全平方数.
+\end{example}
+\end{frame}
+
+% 例 5
+\begin{frame}[t]
+\begin{example}
+	已知 $n$ 为正整数, 且 $2 n+1$ 与 $3 n+1$ 都是完全平方数. 证明:  $40 \mid n$ .
+\end{example}
+\end{frame}
+
+% 例 6
+\begin{frame}[t]
+\begin{example}
+	若 $a ,  b$ 是使得 $a b+1$ 为完全平方数的正整数, 则记 $a \sim b$. 证明: 若 $a \sim b$ , 则存在正整数 $c$ , 使得 $a \sim c, b \sim c$ .
+\end{example}
+\end{frame}
+
+% 例 7
+\begin{frame}[t]
+\begin{example}
+	求所有的正整数数对 $(a, b)$, 使得
+	\begin{align*}
+		a^{3}+6 a b+1, b^{3}+6 a b+1
+	\end{align*}
+	都是完全立方数.
+\end{example}
+\end{frame}
+
+% 例 8
+\begin{frame}[t]
+\begin{example}
+	求最小的正整数 $n$, 使得存在整数 $x_{1}, x_{2}, \cdots, x_{n}$ , 满足
+	\begin{align*}
+		x_{1}^{4}+x_{2}^{4}+\cdots+x_{n}^{4}=1599
+	\end{align*}
+\end{example}
+\end{frame}
+
+
+\section{不定方程}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
