@@ -5,18 +5,18 @@
 	\centering
 	\begin{tabular}{cc}
 		\hline
-		符号                        & 说明                                           \\  \hline
-		$a \mid b$                & $a$ 整除 $b$                                   \\
-		$a \nmid b$               & $a$ 不整除 $b$                                  \\
-		$(a, b)$                  & $a$ 与 $b$ 的最大公因数                             \\
-		$[a, b]$                  & $a$ 与 $b$ 的最小公倍数                             \\
+		符号                      & 说明                                          \\  \hline
+		$a \mid b$                & $a$ 整除 $b$                                  \\
+		$a \nmid b$               & $a$ 不整除 $b$                                \\
+		$(a, b)$                  & $a$ 与 $b$ 的最大公因数                       \\
+		$[a, b]$                  & $a$ 与 $b$ 的最小公倍数                       \\
 		$p^{\alpha} \| a$         & $p^{\alpha} \mid a$ 但 $p^{\alpha+1} \nmid a$ \\
-		$a \equiv b(\bmod m)$     & $a$ 与 $b$ 对模 $m$ 同余                          \\
-		$a \not\equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 不同余                         \\
-		$a^{-1}(\bmod m)$         & $a$ 对模 $m$ 的数论倒数                             \\
-		$[x]$                     & 不超过 $x$ 的最大整数                                \\
-		$\max \{a, b\}$           & 实数 $a 、 b$ 中较大的数                             \\
-		$\min \{a, b\}$           & 实数 $a 、 b$ 中较小的数                             \\ \hline
+		$a \equiv b(\bmod m)$     & $a$ 与 $b$ 对模 $m$ 同余                      \\
+		$a \not\equiv b(\bmod m)$ & $a$ 与 $b$ 对模 $m$ 不同余                    \\
+		$a^{-1}(\bmod m)$         & $a$ 对模 $m$ 的数论倒数                       \\
+		$[x]$                     & 不超过 $x$ 的最大整数                         \\
+		$\max \{a, b\}$           & 实数 $a 、 b$ 中较大的数                      \\
+		$\min \{a, b\}$           & 实数 $a 、 b$ 中较小的数                      \\ \hline
 	\end{tabular}
 	\caption{符号说明}
 \end{table}
@@ -1061,7 +1061,7 @@
 	n=a+b, \text { 且 } \frac{x}{a}+\frac{y}{b}=1 \text {. }
 \end{align*}\\
 16. 注意到 $10001=73 \times 137$ 为合数,而从第二项起, 我们有\begin{align}
-	a_{n} & =\underbrace{100010001 \cdots 0001}_{n \text { 个0o01 }}                 \\
+	a_{n} & =\underbrace{100010001 \cdots 0001}_{n \text { 个0o01 }}                \\
 	      & =10^{4 n}+10^{4(n-1)}+\cdots+10^{4}+1                                   \\
 	      & =\frac{10^{4(n+1)}-1}{10^{4}-1}                                         \\
 	      & =\frac{\left(10^{2(n+1)}-1\right)\left(10^{2(n+1)}+1\right)}{10^{4}-1},
@@ -1843,8 +1843,8 @@
 	前面 19 个数之和为 1990 , 故符合要求的 19 个正整数中必有一个 $\geqslant 208$ , 此时
 	\begin{align}
 		\text { 这 } 19 \text { 个数之和 } \geqslant & 208+(19+28+\cdots+91)+   \\
-		                                        & (109+118+127+\cdots+181) \\
-		=                                       & 2198>1999
+		                                             & (109+118+127+\cdots+181) \\
+		=                                            & 2198>1999
 	\end{align}
 	矛盾.
 
@@ -1960,7 +1960,7 @@
 	事实上, 对任意整数 $y$ , 我们有
 	\begin{align*}
 		y^{2} \equiv\left\{\begin{array}{l}
-			                   0(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;               \\
+			                   0(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                \\
 			                   1(\bmod 8), \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
 			                   4(\bmod 8), \text { 若 } y \equiv 2(\bmod 4) .
 		                   \end{array}\right.
@@ -1968,7 +1968,7 @@
 	所以, 对整数 $y ,  z$ 有
 	\begin{align*}
 		y^{2}+z^{2} \equiv\left\{\begin{array}{l}
-			                         0,1 \text { 或 } 4(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                 \\
+			                         0,1 \text { 或 } 4(\bmod 8), \text { 若 } y \equiv 0(\bmod 4) ;                  \\
 			                         1,2 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 1 \text { 或 } 3(\bmod 4) ; \\
 			                         0,4 \text { 或 } 5(\bmod 8) ,  \text { 若 } y \equiv 2(\bmod 4) .
 		                         \end{array}\right.
@@ -2753,7 +2753,7 @@
 \end{proof}
 
 \begin{theorem}\label{thm:一次不定方程-2}
-	设不定方程\ref{eq:一次不定方程-1}有整数解 $\left(x_{0}, y_{0}\right)$ , 则\ref{eq:一次不定方程-1}的所有整数解为
+	设不定方程\ref{eq:一次不定方程-1}有整数解 $\left(x_{0}, y_{0}\right)$ , 则\autoref{eq:一次不定方程-1}的所有整数解为
 	\begin{align}\label{eq:一次不定方程-3}
 		\left\{\begin{array}{l}
 			       x=x_{0}+\frac{b}{(a, b)} t, \\
@@ -2762,7 +2762,7 @@
 	\end{align}
 \end{theorem}
 \begin{proof}
-	设 $(x, y)$ 是\ref{eq:一次不定方程-1}的一组整数解, 结合 $\left(x_{0}, y_{0}\right)$ 为\ref{eq:一次不定方程-1}的解, 可知
+	设 $(x, y)$ 是\autoref{eq:一次不定方程-1}的一组整数解, 结合 $\left(x_{0}, y_{0}\right)$ 为\autoref{eq:一次不定方程-1}的解, 可知
 	\begin{align*}
 		\left\{\begin{array}{l}
 			       a x+b y=c \\
@@ -2793,14 +2793,14 @@
 	\begin{align*}
 		y-y_{0}=-\frac{a}{(a, b)} t
 	\end{align*}
-	其中 $t$ 为整数, 这表明方程\ref{eq:一次不定方程-1}的解具有形式\ref{eq:一次不定方程-3}.
+	其中 $t$ 为整数, 这表明方程\autoref{eq:一次不定方程-1}的解具有形式\autoref{eq:一次不定方程-3}.
 
-	反过来, 由\ref{eq:一次不定方程-3}决定的整数组( $x, y$ )是方程\ref{eq:一次不定方程-1}的解可以直接代入\ref{eq:一次不定方程-1}验证得到.
+	反过来, 由\autoref{eq:一次不定方程-3}决定的整数组( $x, y$ )是方程\autoref{eq:一次不定方程-1}的解可以直接代入\autoref{eq:一次不定方程-1}验证得到.
 
 	所以, 成立.
 \end{proof}
 \begin{note}
-	由\ref{eq:一次不定方程-3}决定的整数组 $(x, y)$ 称为\ref{eq:一次不定方程-1}的通解, 而 $\left(x_{0}, y_{0}\right)$ 为\ref{eq:一次不定方程-1}的特解.定理 2 也表明为求\ref{eq:一次不定方程-1}的通解只需先求出\ref{eq:一次不定方程-1}的一个特解, 而特解可由辗转相除的方法逆算得到, 因此\ref{eq:一次不定方程-1}的所有解有通法求出.
+	由\autoref{eq:一次不定方程-3}决定的整数组 $(x, y)$ 称为\autoref{eq:一次不定方程-1}的通解, 而 $\left(x_{0}, y_{0}\right)$ 为\autoref{eq:一次不定方程-1}的特解.定理 2 也表明为求\autoref{eq:一次不定方程-1}的通解只需先求出\autoref{eq:一次不定方程-1}的一个特解, 而特解可由辗转相除的方法逆算得到, 因此\autoref{eq:一次不定方程-1}的所有解有通法求出.
 
 	其余的一次不定方程或方程组都可以转化为求解二元一次不定方程.
 \end{note}
@@ -2814,12 +2814,12 @@
 	的正整数解的组数.
 \end{example}
 \begin{solution}
-	先求出\ref{eq:一次不定方程-例1-1}的一个特解.
+	先求出\autoref{eq:一次不定方程-例1-1}的一个特解.
 	\begin{align*}
 		x=\frac{1}{7}(2012-19 y)=287-3 y+\frac{1}{7}(3+2 y)
 	\end{align*}
 	故 $\frac{1}{7}(3+2 y)$ 为整数, 取 $y_{0}=2$, 则 $x_{0}=282$.\\
-	利用\ref{thm:一次不定方程-2}的结论, 方程\ref{eq:一次不定方程-例1-1}的通解为
+	利用\autoref{thm:一次不定方程-2}的结论, 方程\autoref{eq:一次不定方程-例1-1}的通解为
 	\begin{align*}
 		\left\{\begin{array}{l}
 			       x=282-19 t, \\
@@ -2828,72 +2828,76 @@
 	\end{align*}
 	结合 $x>0, y>0$ 及 $t$ 为整数, 可解得 $0 \leqslant t \leqslant 14$.
 
-	所以, 方程\ref{eq:一次不定方程-例1-1}共有 15 组正整数解.
+	所以, 方程\autoref{eq:一次不定方程-例1-1}共有 15 组正整数解.
 \end{solution}
 
+% 例 2 
+\begin{example}
+	设正整数 $a ,  b$ 互素. 证明: 不定方程
+	\begin{align}\label{eq:一次不定方程-例2-1}
+		a x+b y=a b-a-b
+	\end{align}
+	没有非负整数解.
+\end{example}
+\begin{proof}
+	若存在非负整数对 $\left(x_{0}, y_{0}\right)$ 满足\autoref{eq:一次不定方程-例2-1}, 则
+	\begin{align}\label{eq:一次不定方程-例2-2}
+		a\left(x_{0}+1\right)+b\left(y_{0}+1\right)=a b
+	\end{align}
+	那么, 应有
+	\begin{align*}
+		a \mid b\left(y_{0}+1\right)
+	\end{align*}
+	又
+	\begin{align*}
+		(a, b)=1
+	\end{align*}
+	故
+	\begin{align*}
+		a \mid y_{0}+1
+	\end{align*}
+	而 $a$ 与 $y_{0}+1$ 都是正整数, 故 $a \leqslant y_{0}+1$.
 
-例2 设正整数 $a ,  b$ 互素. 证明: 不定方程
-\begin{align*}
-	a x+b y=a b-a-b
-\end{align*}
+	同理可证: $b \mid x_{0}+1$, 进而 $b \leqslant x_{0}+1$. 但这时, \autoref{eq:一次不定方程-例2-2}的左边 $\geqslant a b+b a=$ $2 a b>$ \autoref{eq:一次不定方程-例2-2}的右边, 矛盾.
 
-没有非负整数解.\\
-证明 若存在非负整数对 $\left(x_{0}, y_{0}\right)$ 满足 (1), 则
-\begin{align*}
-	a\left(x_{0}+1\right)+b\left(y_{0}+1\right)=a b
-\end{align*}
+	所以, \autoref{eq:一次不定方程-例2-1}没有非负整数解.
+\end{proof}
 
-那么, 应有
-\begin{align*}
-	a \mid b\left(y_{0}+1\right)
-\end{align*}
+% 例 3
+\begin{example}
+	设正整数 $a ,  b$ 互素, 而正整数 $c$ 大于 $a b-a-b$. 证明: 不定方程
+	\begin{align}\label{eq:一次不定方程-例3-1}
+		a x+b y=c
+	\end{align}
+	有非负整数解.
+\end{example}
+\begin{proof}
+	设\autoref{eq:一次不定方程-例3-1}的通解为
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       x=x_{0}+b t, \\
+			       y=y_{0}-a t
+		       \end{array}(t \text { 为整数 })\right.
+	\end{align*}
+	其中 $\left(x_{0}, y_{0}\right)$ 为\autoref{eq:一次不定方程-例3-1}的特解.
 
-又
-\begin{align*}
-	(a, b)=1
-\end{align*}
-
-故
-\begin{align*}
-	a \mid y_{0}+1
-\end{align*}
-
-而 $a$ 与 $y_{0}+1$ 都是正整数, 故 $a \leqslant y_{0}+1$.\\
-同理可证: $b \mid x_{0}+1$, 进而 $b \leqslant x_{0}+1$. 但这时, (2)的左边 $\geqslant a b+b a=$ $2 a b>$ (2) 的右边, 矛盾.
-
-所以, (1)没有非负整数解.\\
-例3 设正整数 $a ,  b$ 互素, 而正整数 $c$ 大于 $a b-a-b$. 证明: 不定方程
-\begin{align*}
-	a x+b y=c
-\end{align*}
-
-有非负整数解.\\
-证明 设(1)的通解为
-\begin{align*}
-	\left\{\begin{array}{l}
-		       x=x_{0}+b t, \\
-		       y=y_{0}-a t
-	       \end{array}(t \text { 为整数 })\right.
-\end{align*}
-
-其中 $\left(x_{0}, y_{0}\right)$ 为(1)的特解.\\
-这样, 通过调节 $t$ 的值 (对 $x_{0}$ 作加上 $b$ 或减去 $b$ 的操作) 可找到(1)的一个解 $\left(x_{1}, y_{1}\right)$ , 使得 $0 \leqslant x_{1} \leqslant b-1$ , 则
-\begin{align*}
-	b y_{1}=c-a x_{1}>a b-a-b-a x_{1} \geqslant a b-a-b-a(b-1)=-b
-\end{align*}
-
-故
-\begin{align*}
-	y_{1}>-1,
-\end{align*}
-
-即
-\begin{align*}
-	y_{1} \geqslant 0
-\end{align*}
-
-这表明 $\left(x_{1}, y_{1}\right)$ 是(1)的非负整数解, 命题获证. \\
-说明 上面的两个例子得到的结论给出了使得(1)有非负整数解的条件, 说明了只要 $c$ 充分大(例如 $c \geqslant c_{0}$ 时), (1)就有非负整数解, 并求出了 $c_{0}$ 的最小值(这个最小值为 $a b-a-b+1$ ). 这是一个有趣而富有挑战性的问题, 当变量个数不小于 3 时, $c_{0}$ 的最小值还没有找到.
+	这样, 通过调节 $t$ 的值 (对 $x_{0}$ 作加上 $b$ 或减去 $b$ 的操作) 可找到(1)的一个解 $\left(x_{1}, y_{1}\right)$ , 使得 $0 \leqslant x_{1} \leqslant b-1$ , 则
+	\begin{align*}
+		b y_{1}=c-a x_{1}>a b-a-b-a x_{1} \geqslant a b-a-b-a(b-1)=-b
+	\end{align*}
+	故
+	\begin{align*}
+		y_{1}>-1,
+	\end{align*}
+	即
+	\begin{align*}
+		y_{1} \geqslant 0
+	\end{align*}
+	这表明 $\left(x_{1}, y_{1}\right)$ 是\autoref{eq:一次不定方程-例3-1}的非负整数解, 命题获证.
+\end{proof}
+\begin{note}
+	上面的两个例子得到的结论给出了使得\autoref{eq:一次不定方程-例3-1}有非负整数解的条件, 说明了只要 $c$ 充分大(例如 $c \geqslant c_{0}$ 时), \autoref{eq:一次不定方程-例3-1}就有非负整数解, 并求出了 $c_{0}$ 的最小值(这个最小值为 $a b-a-b+1$ ). 这是一个有趣而富有挑战性的问题, 当变量个数不小于 3 时, $c_{0}$ 的最小值还没有找到.
+\end{note}
 
 例 4 求不定方程
 \begin{align*}
@@ -3576,10 +3580,10 @@ $(x, y)=1$ , 知 $x ,  y$ 不同为偶数. 若 $x ,  y$ 都是奇数, 则 $z^{2}
 		       { y = 2 m n , }                 \\
 		       { z = m ^ { 2 } + n ^ { 2 } , }
 	       \end{array} \text { 或 } \quad \left\{\begin{array}{l}
-		                                            x=2 m n,       \\
-		                                            y=n^{2}-m^{2}, \\
-		                                            z=m^{2}+n^{2},
-	                                            \end{array}\right.\right.
+		                                             x=2 m n,       \\
+		                                             y=n^{2}-m^{2}, \\
+		                                             z=m^{2}+n^{2},
+	                                             \end{array}\right.\right.
 \end{align*}
 
 其中 $m ,  n$ 为正整数, $m<n$, 且 $(m, n)=1, m ,  n$ 一奇一偶.\\
