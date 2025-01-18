@@ -2899,138 +2899,144 @@
 	上面的两个例子得到的结论给出了使得\autoref{eq:一次不定方程-例3-1}有非负整数解的条件, 说明了只要 $c$ 充分大(例如 $c \geqslant c_{0}$ 时), \autoref{eq:一次不定方程-例3-1}就有非负整数解, 并求出了 $c_{0}$ 的最小值(这个最小值为 $a b-a-b+1$ ). 这是一个有趣而富有挑战性的问题, 当变量个数不小于 3 时, $c_{0}$ 的最小值还没有找到.
 \end{note}
 
-例 4 求不定方程
-\begin{align*}
-	x+2 y+3 z=2012
-\end{align*}
+% 例 4
+\begin{example}
+	求不定方程
+	\begin{align*}
+		x+2 y+3 z=2012
+	\end{align*}
+	的正整数解的组数.
+\end{example}
+\begin{solution}
+	设 $(x, y, z)$ 为(1)的正整数解, 则 $3 z \leqslant 2009$ , 即 $1 \leqslant z \leqslant 669$ , 分别可得
+	\begin{align*}
+		x+2 y=2009,2006, \cdots, 5
+	\end{align*}
+	对应地, $y$ 的取值范围分别是
+	\begin{align}
+		 & 1 \leqslant y \leqslant 1004,1 \leqslant y \leqslant 1002,1 \leqslant y \leqslant 1001 \\
+		 & 1 \leqslant y \leqslant 999, \cdots, 1 \leqslant y \leqslant 2
+	\end{align}
+	由于当 $y ,  z$ 确定后,  $x$ 的值唯一确定, 所以(1)的正整数解共有
+	\begin{align}
+		  & (1004+1002)+(1001+999)+\cdots+(5+3)+2 \\
+		= & 2006+2000+\cdots+8+2                  \\
+		= & \frac{1}{2}(2006+2) \times 335=336340
+	\end{align}
+	综上可知, 共有 336340 组正整数解.
+\end{solution}
 
-的正整数解的组数.\\
-解 设 $(x, y, z)$ 为(1)的正整数解, 则 $3 z \leqslant 2009$ , 即 $1 \leqslant z \leqslant 669$ , 分别可得
-\begin{align*}
-	x+2 y=2009,2006, \cdots, 5
-\end{align*}
+% 例 5
+\begin{example}
+	求所有的正整数数组 $\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ , 使得
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       a_{1} \leqslant a_{2} \leqslant \cdots \leqslant a_{n} \\
+			       a_{1}+a_{2}+\cdots+a_{n}=26                            \\
+			       a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}=62                \\
+			       a_{1}^{3}+a_{2}^{3}+\cdots+a_{n}^{3}=164
+		       \end{array}\right.
+	\end{align*}
+\end{example}
+\begin{solution}
+	由 $a_{i}$ 都是正整数, 而 $6^{3}=216>164$ , 知每个 $a_{i}$ 都不大于 5 . 我们设 $a_{1}, a_{2}, \cdots, a_{n}$ 中 $1,2,3,4,5$ 的个数分别为 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ , 则
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=n            \\
+			       x_{1}+2 x_{2}+3 x_{3}+4 x_{4}+5 x_{5}=26   \\
+			       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}+25 x_{5}=62 \\
+			       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}+125 x_{5}=164
+		       \end{array}\right.
+	\end{align*}
+	其中 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ 都是非负整数.
 
-对应地, $y$ 的取值范围分别是\begin{align}
-	 & 1 \leqslant y \leqslant 1004,1 \leqslant y \leqslant 1002,1 \leqslant y \leqslant 1001 \\
-	 & 1 \leqslant y \leqslant 999, \cdots, 1 \leqslant y \leqslant 2
-\end{align}
+	先确定 $x_{1}, x_{2}, \cdots, x_{5}$ 的值, 这等价于求一个不定方程组的非负整数解. \\
+	由(4)知 $x_{5} \leqslant 1$, 若 $x_{5}=1$, 则(3), (4)变为
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}=37 \\
+			       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}=39
+		       \end{array}\right.
+	\end{align*}
+	由 (6) - (5) 得
+	\begin{align*}
+		4 x_{2}+18 x_{3}+48 x_{4}=2
+	\end{align*}
+	这在 $x_{2} ,  x_{3} ,  x_{4}$ 为非负整数时不能成立, 所以
+	\begin{align*}
+		x_{5}=0
+	\end{align*}
+	又由 (3) - (2) 得 $2 x_{2}+6 x_{3}+12 x_{4}=36$ ,
 
-由于当 $y ,  z$ 确定后,  $x$ 的值唯一确定, 所以(1)的正整数解共有\begin{align}
-	  & (1004+1002)+(1001+999)+\cdots+(5+3)+2 \\
-	= & 2006+2000+\cdots+8+2                  \\
-	= & \frac{1}{2}(2006+2) \times 335=336340
-\end{align}
+	即
+	\begin{align*}
+		x_{2}+3 x_{3}+6 x_{4}=18
+	\end{align*}
 
-综上可知, 共有 336340 组正整数解. \\
-例 5 求所有的正整数数组 $\left(a_{1}, a_{2}, \cdots, a_{n}\right)$ , 使得
-\begin{align*}
-	\left\{\begin{array}{l}
-		       a_{1} \leqslant a_{2} \leqslant \cdots \leqslant a_{n} \\
-		       a_{1}+a_{2}+\cdots+a_{n}=26                            \\
-		       a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}=62                \\
-		       a_{1}^{3}+a_{2}^{3}+\cdots+a_{n}^{3}=164
-	       \end{array}\right.
-\end{align*}
+	由 (4) 一 (2) 得
+	\begin{align*}
+		x_{2}+4 x_{3}+10 x_{4}=23
+	\end{align*}
+	再由 (8) - (7) 得 $\quad x_{3}+4 x_{4}=5$,\\
+	故
+	\begin{align*}
+		\left(x_{3}, x_{4}\right)=(5,0),(1,1)
+	\end{align*}
+	进而可得
+	\begin{align*}
+		\left(x_{1}, x_{2}, x_{3}, x_{4}\right)=(5,3,5,0),(1,9,1,1)
+	\end{align*}
+	利用上述结论, 可知\begin{align}
+		  & \left(a_{1}, a_{2}, \cdots, a_{n}\right) \\
+		= & (1,1,1,1,1,2,2,2,3,3,3,3,3)              \\
+		  & (1,2,2,2,2,2,2,2,2,2,3,4)
+	\end{align}
+\end{solution}
+\begin{note}
+	上述两例中都用到了不等式估计的方法, 并没有从不定方程(组)的通解出发来处理, 解题过程中把握了问题的特点, 因此较快地得到了解答.
+\end{note}
 
-解 由 $a_{i}$ 都是正整数, 而 $6^{3}=216>164$ , 知每个 $a_{i}$ 都不大于 5 . 我们设 $a_{1}, a_{2}, \cdots, a_{n}$ 中 $1,2,3,4,5$ 的个数分别为 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ , 则
-\begin{align*}
-	\left\{\begin{array}{l}
-		       x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=n            \\
-		       x_{1}+2 x_{2}+3 x_{3}+4 x_{4}+5 x_{5}=26   \\
-		       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}+25 x_{5}=62 \\
-		       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}+125 x_{5}=164
-	       \end{array}\right.
-\end{align*}
+% 例 6
+\begin{example}
+	将所有分母不大于 99 的最简分数从小到大排列, 求与 $\frac{17}{76}$ 相邻的两个数.
+\end{example}
+\begin{solution}
+	设 $\frac{q}{p}$ 与 $\frac{n}{m}$ 是与 $\frac{17}{76}$ 相邻的两个数, 且
+	\begin{align*}
+		\frac{q}{p}<\frac{17}{76}<\frac{n}{m}
+	\end{align*}
+	其中 $p ,  q ,  m ,  n$ 为正整数, 则
 
-其中 $x_{1}, x_{2}, x_{3}, x_{4}, x_{5}$ 都是非负整数.\\
-先确定 $x_{1}, x_{2}, \cdots, x_{5}$ 的值, 这等价于求一个不定方程组的非负整数解. \\
-由(4)知 $x_{5} \leqslant 1$, 若 $x_{5}=1$, 则(3), (4)变为
-\begin{align*}
-	\left\{\begin{array}{l}
-		       x_{1}+4 x_{2}+9 x_{3}+16 x_{4}=37 \\
-		       x_{1}+8 x_{2}+27 x_{3}+64 x_{4}=39
-	       \end{array}\right.
-\end{align*}
+	于是\begin{align}
+		 & 17 p-76 q>0           \\
+		 & 17 p-76 q \geqslant 1
+	\end{align}
+	先考虑 $17 p-76 q=1$ 中满足 $p \leqslant 99$ 且使 $p$ 最大的正整数解. 为此需先求它的一个特解, 利用
+	\begin{align*}
+		p=\frac{1}{17}(76 q+1)=4 q+\frac{1}{17}(8 q+1)
+	\end{align*}
+	可得一个特解 $(p, q)=(9,2)$, 于是此不定方程的通解为
+	\begin{align*}
+		(p, q)=(9+76 t, 2+17 t)
+	\end{align*}
+	$t$ 为整数. 这时在条件 $p \leqslant 99$ 下, $p$ 最大为 85 , 此时 $q=19$ . \\
+	另一方面, 由
+	\begin{align*}
+		\frac{17}{76}-\frac{q}{p}=\frac{17 p-76 q}{76 p}
+	\end{align*}
+	可知, 若 $17 p-76 q \geqslant 2$, 则
+	\begin{align*}
+		\frac{17}{76}-\frac{q}{p} \geqslant \frac{2}{76 p}=\frac{1}{38 p} \geqslant \frac{1}{38 \times 99}>\frac{1}{76 \times 85}=\frac{17}{76}-\frac{19}{85}
+	\end{align*}
+	所以, 在所给条件下, 比 $\frac{17}{76}$ 小且最接近它的数为 $\frac{19}{85}$ .
 
-由 (6) - (5) 得
-\begin{align*}
-	4 x_{2}+18 x_{3}+48 x_{4}=2
-\end{align*}
+	类似讨论, 可知 $\frac{n}{m}=\frac{15}{67}$ .
 
-这在 $x_{2} ,  x_{3} ,  x_{4}$ 为非负整数时不能成立, 所以
-\begin{align*}
-	x_{5}=0
-\end{align*}
-
-又由 (3) - (2) 得 $2 x_{2}+6 x_{3}+12 x_{4}=36$ ,
-
-即
-\begin{align*}
-	x_{2}+3 x_{3}+6 x_{4}=18
-\end{align*}
-
-由 (4) 一 (2) 得
-\begin{align*}
-	x_{2}+4 x_{3}+10 x_{4}=23
-\end{align*}
-
-再由 (8) - (7) 得 $\quad x_{3}+4 x_{4}=5$,\\
-故
-\begin{align*}
-	\left(x_{3}, x_{4}\right)=(5,0),(1,1)
-\end{align*}
-
-进而可得
-\begin{align*}
-	\left(x_{1}, x_{2}, x_{3}, x_{4}\right)=(5,3,5,0),(1,9,1,1)
-\end{align*}
-
-利用上述结论, 可知\begin{align}
-	  & \left(a_{1}, a_{2}, \cdots, a_{n}\right) \\
-	= & (1,1,1,1,1,2,2,2,3,3,3,3,3)              \\
-	  & (1,2,2,2,2,2,2,2,2,2,3,4)
-\end{align}
-
-说明 上述两例中都用到了不等式估计的方法, 并没有从不定方程(组)的通解出发来处理, 解题过程中把握了问题的特点, 因此较快地得到了解答.
-
-例6 将所有分母不大于 99 的最简分数从小到大排列, 求与 $\frac{17}{76}$ 相邻的两个数.
-
-解 设 $\frac{q}{p}$ 与 $\frac{n}{m}$ 是与 $\frac{17}{76}$ 相邻的两个数, 且
-\begin{align*}
-	\frac{q}{p}<\frac{17}{76}<\frac{n}{m}
-\end{align*}
-
-其中 $p ,  q ,  m ,  n$ 为正整数, 则
-
-于是\begin{align}
-	 & 17 p-76 q>0           \\
-	 & 17 p-76 q \geqslant 1
-\end{align}
-
-先考虑 $17 p-76 q=1$ 中满足 $p \leqslant 99$ 且使 $p$ 最大的正整数解. 为此需先求它的一个特解, 利用
-\begin{align*}
-	p=\frac{1}{17}(76 q+1)=4 q+\frac{1}{17}(8 q+1)
-\end{align*}
-
-可得一个特解 $(p, q)=(9,2)$, 于是此不定方程的通解为
-\begin{align*}
-	(p, q)=(9+76 t, 2+17 t)
-\end{align*}\\
-$t$ 为整数. 这时在条件 $p \leqslant 99$ 下, $p$ 最大为 85 , 此时 $q=19$ . \\
-另一方面, 由
-\begin{align*}
-	\frac{17}{76}-\frac{q}{p}=\frac{17 p-76 q}{76 p}
-\end{align*}
-
-可知, 若 $17 p-76 q \geqslant 2$, 则
-\begin{align*}
-	\frac{17}{76}-\frac{q}{p} \geqslant \frac{2}{76 p}=\frac{1}{38 p} \geqslant \frac{1}{38 \times 99}>\frac{1}{76 \times 85}=\frac{17}{76}-\frac{19}{85}
-\end{align*}
-
-所以, 在所给条件下, 比 $\frac{17}{76}$ 小且最接近它的数为 $\frac{19}{85}$ . \\
-类似讨论, 可知 $\frac{n}{m}=\frac{15}{67}$ . \\
-综上, 这些分数的排列中与 $\frac{17}{76}$ 相邻的两个数是 $\frac{19}{85}$ 和 $\frac{15}{67}$.\\
-说明 题中利用正整数不小于 1 这个显然的事实, 转为求一次不定方程的正整数解是关键.
+	综上, 这些分数的排列中与 $\frac{17}{76}$ 相邻的两个数是 $\frac{19}{85}$ 和 $\frac{15}{67}$.
+\end{solution}
+\begin{note}
+	题中利用正整数不小于 1 这个显然的事实, 转为求一次不定方程的正整数解是关键.
+\end{note}
 
 \subsection{不定方程的常用解法}
 对于高次不定方程, 求出其通解然后再讨论有时是不现实的, 因为我们甚至还没有找到判别一个高次不定方程是否有解的统一方法, 当然要求出通解就更难了. 或许正是因为没有统一的方法来处理高次不定方程, 对具体的
@@ -3042,492 +3048,538 @@ $t$ 为整数. 这时在条件 $p \leqslant 99$ 下, $p$ 最大为 85 , 此时 $
 \subsubsection{因式分解法}
 将方程的一边变为常数, 而含字母的一边可以进行因式分解, 这样对常数进行素因数分解后, 对比方程两边, 考察各因式的每种取值情况就可将不定方程变为若干个方程组去求解. 这就是因式分解法处理不定方程的基本思路.
 
-例 1 求方程
-\begin{align*}
-	x y-10(x+y)=1
-\end{align*}
+% 例 1
+\begin{example}
+	求方程
+	\begin{align*}
+		x y-10(x+y)=1
+	\end{align*}
+	的整数解.
+\end{example}
+\begin{solution}
+	利用十字相乘, 可将(1)变形为
+	\begin{align*}
+		(x-10)(y-10)=101
+	\end{align*}
+	而 101 为素数, 故\begin{align}
+		  & (x-10, y-10)                        \\
+		= & (1,101),(101,1),(-1,-101),(-101,-1)
+	\end{align}
+	分别求解, 得方程的整数解为
+	\begin{align*}
+		(x, y)=(11,111),(111,11),(9,-91),(-91,9)
+	\end{align*}
+\end{solution}
 
-的整数解.\\
-解 利用十字相乘, 可将(1)变形为
-\begin{align*}
-	(x-10)(y-10)=101
-\end{align*}
+% 例 2
+\begin{example}
+	是否存在整数 $x ,  y ,  z$, 使得
+	\begin{align*}
+		x^{4}+y^{4}+z^{4}=2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}+24 ?
+	\end{align*}
+\end{example}
+\begin{solution}
+	若存在整数 $x ,  y ,  z$ 满足条件, 则
+	\begin{align}
+		-24 & =2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}-\left(x^{4}+y^{4}+z^{4}\right)          \\
+		    & =-\left(x^{2}+y^{2}\right)^{2}+2\left(x^{2}+y^{2}\right) z^{2}-z^{4}+4 x^{2} y^{2} \\
+		    & =-\left(x^{2}+y^{2}-z^{2}\right)^{2}+4 x^{2} y^{2}                                 \\
+		    & =\left(2 x y+x^{2}+y^{2}-z^{2}\right)\left(2 x y-x^{2}-y^{2}+z^{2}\right)          \\
+		    & =\left((x+y)^{2}-z^{2}\right)\left(z^{2}-(x-y)^{2}\right)                          \\
+		    & =(x+y+z)(x+y-z)(z+x-y)(y+z-x)
+	\end{align}
+	这要求 -24 能表示为 4 个整数 $x+y+z, x+y-z, z+x-y, y+z-x$ 的乘积的形式, 而这 4 个数中任意两个数之差都为偶数, 故这 4 个数具有相同的奇偶性, 由 -24 为偶数, 知它们都是偶数, 但这要求 $2^{4} \mid 24$, 矛盾.\\
+	所以,不存在符合要求的整数.
+\end{solution}
+\begin{note}
+	熟悉海伦公式的读者可以一眼看穿问题的本质. 事实上, $S_{\triangle A B C}=$ $\frac{1}{4} \sqrt{(a+b+c)(a+b-c)(b+c-a)(c+a-b)}$, 其中 $a ,  b ,  c$ 为 $\triangle A B C$ 的三边长, 这就是海伦公式. 根号里面的式子展开后就是 $2 a^{2} b^{2}+2 b^{2} c^{2}+2 c^{2} a^{2}-$ $a^{4}-b^{4}-c^{4}$ .
+\end{note}
 
-而 101 为素数, 故\begin{align}
-	  & (x-10, y-10)                        \\
-	= & (1,101),(101,1),(-1,-101),(-101,-1)
-\end{align}
+% 例 3
+\begin{example}
+	求所有的正整数对 $(m, n)$, 使得
+	\begin{align*}
+		n^{5}+n^{4}=7^{m}-1
+	\end{align*}
+\end{example}
+\begin{solution}
+	将(1)移项后作因式分解, 得\begin{align}
+		7^{m} & =n^{5}+n^{4}+1=n^{5}+n^{4}+n^{3}-\left(n^{3}-1\right)    \\
+		      & =n^{3}\left(n^{2}+n+1\right)-(n-1)\left(n^{2}+n+1\right) \\
+		      & =\left(n^{3}-n+1\right)\left(n^{2}+n+1\right)
+	\end{align}
+	由(1)知 $n>1$ , 而 $n=2$ 时, 可得 $m=2$ .
 
-分别求解, 得方程的整数解为
-\begin{align*}
-	(x, y)=(11,111),(111,11),(9,-91),(-91,9)
-\end{align*}
+	下面考虑 $n>2$ 的情形, 我们先看(2)式右边两个式子的最大公因数.
+	\begin{align}
+		  & \left(n^{3}-n+1, n^{2}+n+1\right)=\left(n^{3}-n+1-\left(n^{2}+n+1\right)(n-1), n^{2}+n+1\right) \\
+		= & \left(-n+2, n^{2}+n+1\right)=\left(-n+2, n^{2}+n+1+(-n+2)(n+3)\right)                           \\
+		= & (-n+2,7)
+	\end{align}
+	故 $\left(n^{3}-n+1, n^{2}+n+1\right) \mid 7$.
 
-例 2 是否存在整数 $x ,  y ,  z$, 使得
-\begin{align*}
-	x^{4}+y^{4}+z^{4}=2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}+24 ?
-\end{align*}
+	结合(2)式知 $n^{3}-n+1$ 与 $n^{2}+n+1$ 都是 7 的幂次, 而它们在 $n \geqslant 3$ 时, 都大于 7 , 这导致 $7^{2} \mid\left(n^{3}-n+1, n^{2}+n+1\right)$ , 与前所得矛盾.
 
-解 若存在整数 $x ,  y ,  z$ 满足条件, 则\begin{align}
-	-24 & =2 x^{2} y^{2}+2 y^{2} z^{2}+2 z^{2} x^{2}-\left(x^{4}+y^{4}+z^{4}\right)          \\
-	    & =-\left(x^{2}+y^{2}\right)^{2}+2\left(x^{2}+y^{2}\right) z^{2}-z^{4}+4 x^{2} y^{2} \\
-	    & =-\left(x^{2}+y^{2}-z^{2}\right)^{2}+4 x^{2} y^{2}                                 \\
-	    & =\left(2 x y+x^{2}+y^{2}-z^{2}\right)\left(2 x y-x^{2}-y^{2}+z^{2}\right)          \\
-	    & =\left((x+y)^{2}-z^{2}\right)\left(z^{2}-(x-y)^{2}\right)                          \\
-	    & =(x+y+z)(x+y-z)(z+x-y)(y+z-x)
-\end{align}
-
-这要求 -24 能表示为 4 个整数 $x+y+z, x+y-z, z+x-y, y+z-x$ 的乘积的形式, 而这 4 个数中任意两个数之差都为偶数, 故这 4 个数具有相同的
-
-奇偶性, 由 -24 为偶数, 知它们都是偶数, 但这要求 $2^{4} \mid 24$, 矛盾.\\
-所以,不存在符合要求的整数.\\
-说明 熟悉海伦公式的读者可以一眼看穿问题的本质. 事实上, $S_{\triangle A B C}=$ $\frac{1}{4} \sqrt{(a+b+c)(a+b-c)(b+c-a)(c+a-b)}$, 其中 $a ,  b ,  c$ 为 $\triangle A B C$ 的三边长, 这就是海伦公式. 根号里面的式子展开后就是 $2 a^{2} b^{2}+2 b^{2} c^{2}+2 c^{2} a^{2}-$ $a^{4}-b^{4}-c^{4}$ .
-
-例 3 求所有的正整数对 $(m, n)$, 使得
-\begin{align*}
-	n^{5}+n^{4}=7^{m}-1
-\end{align*}
-
-解 将(1)移项后作因式分解, 得\begin{align}
-	7^{m} & =n^{5}+n^{4}+1=n^{5}+n^{4}+n^{3}-\left(n^{3}-1\right)    \\
-	      & =n^{3}\left(n^{2}+n+1\right)-(n-1)\left(n^{2}+n+1\right) \\
-	      & =\left(n^{3}-n+1\right)\left(n^{2}+n+1\right)
-\end{align}
-
-由(1)知 $n>1$ , 而 $n=2$ 时, 可得 $m=2$ . \\
-下面考虑 $n>2$ 的情形, 我们先看(2)式右边两个式子的最大公因数.\begin{align}
-	  & \left(n^{3}-n+1, n^{2}+n+1\right)=\left(n^{3}-n+1-\left(n^{2}+n+1\right)(n-1), n^{2}+n+1\right) \\
-	= & \left(-n+2, n^{2}+n+1\right)=\left(-n+2, n^{2}+n+1+(-n+2)(n+3)\right)                           \\
-	= & (-n+2,7)
-\end{align}
-
-故 $\left(n^{3}-n+1, n^{2}+n+1\right) \mid 7$.\\
-结合(2)式知 $n^{3}-n+1$ 与 $n^{2}+n+1$ 都是 7 的幂次, 而它们在 $n \geqslant 3$ 时, 都大于 7 , 这导致 $7^{2} \mid\left(n^{3}-n+1, n^{2}+n+1\right)$ , 与前所得矛盾.
-
-综上可知, 只有 $(m, n)=(2,2)$ 符合要求.\\
-说明 对(1)式变形后, 所得(2)式两边符合因式分解方法解不定方程的套路, 但 $7^{m}$ 并不是一个常数, 这里需要有另外的方法来处理才能继续下去. 活学活用方能攻城拔寨.
+	综上可知, 只有 $(m, n)=(2,2)$ 符合要求.
+\end{solution}
+\begin{note}
+	对(1)式变形后, 所得(2)式两边符合因式分解方法解不定方程的套路, 但 $7^{m}$ 并不是一个常数, 这里需要有另外的方法来处理才能继续下去. 活学活用方能攻城拔寨.
+\end{note}
 
 \subsubsection{配方法}
 配方是代数变形中的常见方法, 在处理不定方程的问题时还可综合利用完全平方数的特性, 因此配方法在求解不定方程时大有用武之地.
 
-例 4 求不定方程 $3 x^{2}-4 x y+3 y^{2}=35$ 的全部整数解. \\
-解 对方程两边都乘以 3 , 配方后即得
-\begin{align*}
-	(3 x-2 y)^{2}+5 y^{2}=105
-\end{align*}
+% 例 4
+\begin{example}
+	求不定方程 $3 x^{2}-4 x y+3 y^{2}=35$ 的全部整数解.
+\end{example}
+\begin{solution}
+	对方程两边都乘以 3 , 配方后即得
+	\begin{align*}
+		(3 x-2 y)^{2}+5 y^{2}=105
+	\end{align*}
+	由(1)式得
+	\begin{align*}
+		5 y^{2} \leqslant 105
+	\end{align*}
+	所以
+	\begin{align*}
+		|y| \leqslant 4
+	\end{align*}
+	当 $|y|=4$ 时, $|3 x-2 y|=5$ , 此时原方程的解为
+	\begin{align*}
+		(x, y)=(1,4),(-1,-4)
+	\end{align*}
+	当 $|y|=1$ 时, $|3 x-2 y|=10$ , 此时原方程的解为
+	\begin{align*}
+		(x, y)=(4,1),(-4,-1)
+	\end{align*}
+	当 $|y|=0,2,3$ 时, $(3 x-2 y)^{2}$ 分别为 $105,85,60$. 此时, 所得的方程组显然无整数解.
 
-由(1)式得\\
-所以
-\begin{align*}
-	5 y^{2} \leqslant 105
-\end{align*}
-\begin{align*}
-	|y| \leqslant 4
-\end{align*}
+	上面的讨论表明, 原方程有 4 组解:
+	\begin{align*}
+		(x, y)=(4,1),(1,4),(-4,-1),(-1,-4)
+	\end{align*}
+\end{solution}
 
-当 $|y|=4$ 时, $|3 x-2 y|=5$ , 此时原方程的解为
-\begin{align*}
-	(x, y)=(1,4),(-1,-4)
-\end{align*}
+% 例 5
+\begin{example}
+	求方程 $x^{2}+x=y^{4}+y^{3}+y^{2}+y$ 的整数解.
+\end{example}
+\begin{solution}
+	同上例, 对方程两边同乘以 4 , 并对左边进行配方, 得
+	\begin{align*}
+		(2 x+1)^{2}=4\left(y^{4}+y^{3}+y^{2}+y\right)+1
+	\end{align*}
+	下面对(1)式右端进行估计. 由于
+	\begin{align}
+		  & 4\left(y^{4}+y^{3}+y^{2}+y\right)+1       \\
+		= & \left(2 y^{2}+y+1\right)^{2}-y^{2}+2 y    \\
+		= & \left(2 y^{2}+y\right)^{2}+3 y^{2}+4 y+1,
+	\end{align}
+	从而, 当 $y>2$ 或 $y<-1$ 时, 有
+	\begin{align*}
+		\left(2 y^{2}+y\right)^{2}<(2 x+1)^{2}<\left(2 y^{2}+y+1\right)^{2}
+	\end{align*}
+	由于 $2 y^{2}+y$ 与 $2 y^{2}+y+1$ 是两个连续的整数, 它们的平方之间不会含有完全平方数, 故上式不成立.
 
-当 $|y|=1$ 时, $|3 x-2 y|=10$ , 此时原方程的解为
-\begin{align*}
-	(x, y)=(4,1),(-4,-1)
-\end{align*}
+	因此只需考虑当 $-1 \leqslant y \leqslant 2$ 时方程的解, 这是平凡的, 容易得到原方程的全部整数解是
+	\begin{align*}
+		(x, y)=(0,-1),(-1,-1),(0,0),(-1,0),(-6,2),(5,2)
+	\end{align*}
+\end{solution}
 
-当 $|y|=0,2,3$ 时, $(3 x-2 y)^{2}$ 分别为 $105,85,60$. 此时, 所得的方程组显然无整数解.
+% 例 6
+\begin{example}
+	求所有的正整数 $n \geqslant 2$, 使得不定方程组
+	\begin{align*}
+		\left\{\begin{array}{c}
+			       x_{1}^{2}+x_{2}^{2}+50=16 x_{1}+12 x_{2}     \\
+			       x_{2}^{2}+x_{3}^{2}+50=16 x_{2}+12 x_{3}     \\
+			       \cdots                                       \\
+			       x_{n-1}^{2}+x_{n}^{2}+50=16 x_{n-1}+12 x_{n} \\
+			       x_{n}^{2}+x_{1}^{2}+50=16 x_{n}+12 x_{1}
+		       \end{array}\right.
+	\end{align*}
+	有整数解.
+\end{example}
+\begin{solution}
+	移项后配方, 方程组变形为
+	\begin{align*}
+		\left\{\begin{array}{c}
+			       \left(x_{1}-8\right)^{2}+\left(x_{2}-6\right)^{2}=50   \\
+			       \left(x_{2}-8\right)^{2}+\left(x_{3}-6\right)^{2}=50   \\
+			       \cdots                                                 \\
+			       \left(x_{n-1}-8\right)^{2}+\left(x_{n}-6\right)^{2}=50 \\
+			       \left(x_{n}-8\right)^{2}+\left(x_{1}-6\right)^{2}=50
+		       \end{array}\right.
+	\end{align*}
+	由于 50 表示为两个正整数的平方和只有两种: $50=1^{2}+7^{2}=5^{2}+5^{2}$, 所以,由(1)知 $\left|x_{2}-6\right|=1 ,  5$ 或 7,而由(2)知 $\left|x_{2}-8\right|=1 ,  5$ 或 7, 从而 $x_{2}=1$ ,  7 或 13 .
 
-上面的讨论表明, 原方程有 4 组解:
-\begin{align*}
-	(x, y)=(4,1),(1,4),(-4,-1),(-1,-4)
-\end{align*}
+	进一步,可知对每个 $1 \leqslant i \leqslant n$ , 都有 $x_{i}=1,7$ 或 13 , 依 $x_{1}=1 ,  7 ,  13$ , 分三种情况讨论.
 
-例 5 求方程 $x^{2}+x=y^{4}+y^{3}+y^{2}+y$ 的整数解. \\
-解 同上例, 对方程两边同乘以 4 , 并对左边进行配方, 得
-\begin{align*}
-	(2 x+1)^{2}=4\left(y^{4}+y^{3}+y^{2}+y\right)+1
-\end{align*}
+	若 $x_{1}=1$,则由(1)知 $x_{2}=7$, 再由 (2)知 $x_{3}=13$, 依次往下递推, 可知当 $k \equiv 1(\bmod 3)$ 时,  $x_{k}=1$ ; 当 $k \equiv 2(\bmod 3)$ 时,  $x_{k}=7$ ; 当 $k \equiv 0(\bmod 3)$ 时,  $x_{k}=13$. 所以, 由第 (2) 式, 知当且仅当 $n+1 \equiv 1(\bmod 3)$ 时, 原方程组有整数解, 即当且仅当 $3 \mid n$ 时, $n$ 符合要求.
 
-下面对(1)式右端进行估计. 由于\begin{align}
-	  & 4\left(y^{4}+y^{3}+y^{2}+y\right)+1       \\
-	= & \left(2 y^{2}+y+1\right)^{2}-y^{2}+2 y    \\
-	= & \left(2 y^{2}+y\right)^{2}+3 y^{2}+4 y+1,
-\end{align}
+	对另外两种情况 $x_{1}=7$ 和 $x_{1}=13$ 同样讨论, 得到的条件是一样的.
 
-从而, 当 $y>2$ 或 $y<-1$ 时, 有
-\begin{align*}
-	\left(2 y^{2}+y\right)^{2}<(2 x+1)^{2}<\left(2 y^{2}+y+1\right)^{2}
-\end{align*}
-
-由于 $2 y^{2}+y$ 与 $2 y^{2}+y+1$ 是两个连续的整数, 它们的平方之间不会含有完全平方数, 故上式不成立.
-
-因此只需考虑当 $-1 \leqslant y \leqslant 2$ 时方程的解, 这是平凡的, 容易得到原方程的全部整数解是
-\begin{align*}
-	(x, y)=(0,-1),(-1,-1),(0,0),(-1,0),(-6,2),(5,2)
-\end{align*}
-
-例 6 求所有的正整数 $n \geqslant 2$, 使得不定方程组
-\begin{align*}
-	\left\{\begin{array}{c}
-		       x_{1}^{2}+x_{2}^{2}+50=16 x_{1}+12 x_{2}     \\
-		       x_{2}^{2}+x_{3}^{2}+50=16 x_{2}+12 x_{3}     \\
-		       \cdots                                       \\
-		       x_{n-1}^{2}+x_{n}^{2}+50=16 x_{n-1}+12 x_{n} \\
-		       x_{n}^{2}+x_{1}^{2}+50=16 x_{n}+12 x_{1}
-	       \end{array}\right.
-\end{align*}
-
-有整数解.\\
-解 移项后配方, 方程组变形为
-\begin{align*}
-	\left\{\begin{array}{c}
-		       \left(x_{1}-8\right)^{2}+\left(x_{2}-6\right)^{2}=50   \\
-		       \left(x_{2}-8\right)^{2}+\left(x_{3}-6\right)^{2}=50   \\
-		       \cdots                                                 \\
-		       \left(x_{n-1}-8\right)^{2}+\left(x_{n}-6\right)^{2}=50 \\
-		       \left(x_{n}-8\right)^{2}+\left(x_{1}-6\right)^{2}=50
-	       \end{array}\right.
-\end{align*}
-
-由于 50 表示为两个正整数的平方和只有两种: $50=1^{2}+7^{2}=5^{2}+5^{2}$, 所以,由(1)知 $\left|x_{2}-6\right|=1 ,  5$ 或 7,而由(2)知 $\left|x_{2}-8\right|=1 ,  5$ 或 7, 从而 $x_{2}=1$ ,  7 或 13 .
-
-进一步,可知对每个 $1 \leqslant i \leqslant n$ , 都有 $x_{i}=1,7$ 或 13 , 依 $x_{1}=1 ,  7 ,  13$ , 分三种情况讨论.
-
-若 $x_{1}=1$,则由(1)知 $x_{2}=7$, 再由 (2)知 $x_{3}=13$, 依次往下递推, 可知当 $k \equiv 1(\bmod 3)$ 时,  $x_{k}=1$ ; 当 $k \equiv 2(\bmod 3)$ 时,  $x_{k}=7$ ; 当 $k \equiv 0(\bmod 3)$ 时,  $x_{k}=13$. 所以, 由第 (2) 式, 知当且仅当 $n+1 \equiv 1(\bmod 3)$ 时, 原方程组有整数解, 即当且仅当 $3 \mid n$ 时, $n$ 符合要求.
-
-对另外两种情况 $x_{1}=7$ 和 $x_{1}=13$ 同样讨论, 得到的条件是一样的.\\
-综上可知, 满足条件的 $n$ 是所有 3 的倍数. \\
-说明 进一步讨论可知, 当 $3 \mid n$ 时, 方程组恰有 3 组整数解.
+	综上可知, 满足条件的 $n$ 是所有 3 的倍数.
+\end{solution}
+\begin{note}
+	进一步讨论可知, 当 $3 \mid n$ 时, 方程组恰有 3 组整数解.
+\end{note}
 
 \subsubsection{不等式估计}
 利用不等式的知识, 先确定不定方程中的某个字母的范围, 然后逐个枚举得到所有解, 这个方法称为不等式估计, 它也是我们处理不定方程的常见方法. 当然, 如果能够恰当地利用字母的对称性等, 那么作不等式估计时会简洁很多.
 
-例 7 求不定方程 $x^{3}-y^{3}=x y+61$ 的正整数解.\\
-解 设 $(x, y)$ 为方程的正整数解, 则 $x>y$. 设 $x=y+d$, 则 $d$ 为正整数, 且\begin{align}
-	(y+d) y+61 & =(y+d)^{3}-y^{3}           \\
-	           & =3 d y^{2}+3 y d^{2}+d^{3}
-\end{align}
+% 例 7
+\begin{example}
+	求不定方程 $x^{3}-y^{3}=x y+61$ 的正整数解.
+\end{example}
+\begin{solution}
+	设 $(x, y)$ 为方程的正整数解, 则 $x>y$. 设 $x=y+d$, 则 $d$ 为正整数, 且
+	\begin{align}
+		(y+d) y+61 & =(y+d)^{3}-y^{3}           \\
+		           & =3 d y^{2}+3 y d^{2}+d^{3}
+	\end{align}
+	即有
+	\begin{align*}
+		(3 d-1) y^{2}+d(3 d-1) y+d^{3}=61
+	\end{align*}
+	故
+	\begin{align*}
+		d^{3}<61
+	\end{align*}
+	于是
+	\begin{align*}
+		d \leqslant 3
+	\end{align*}
+	分别令 $d=1 ,  2 ,  3$ 代入, 得
+	\begin{align}
+		 & 2 y^{2}+2 y+1=61   \\
+		 & 5 y^{2}+10 y+8=61  \\
+		 & 8 y^{2}+24 y+27=61
+	\end{align}
+	只有第一个方程有整数解, 并由 $y$ 为正整数知 $y=5$, 进而 $x=6$.\\
+	所以, 原方程只有一组正整数解 $(x, y)=(6,5)$.
+\end{solution}
 
-即有
-\begin{align*}
-	(3 d-1) y^{2}+d(3 d-1) y+d^{3}=61
-\end{align*}
+% 例 8
+\begin{example}
+	求所有的正整数 $a ,  b$, 使得
+	\begin{align*}
+		4^{a}+4 a^{2}+4=b^{2}
+	\end{align*}
+\end{example}
+\begin{solution}
+	若 $(a ,  b)$ 是满足(1) 的正整数数对, 则 $b^{2}$ 为偶数, 且 $b^{2}>4^{a}$, 从而 $b$ 为偶数, 且 $b>2^{a}$, 故 $b \geqslant 2^{a}+2$. 于是
+	\begin{align*}
+		4^{a}+4 a^{2}+4=b^{2} \geqslant\left(2^{a}+2\right)^{2}=4^{a}+4 \cdot 2^{a}+4
+	\end{align*}
+	知 $a^{2} \geqslant 2^{a}$, 可得 $a \leqslant 4$ (对 $a$ 归纳可证: 当 $a \geqslant 5$ 时, 有 $a^{2}<2^{a}$ ).\\
+	分别就 $a=1,2,3,4$ 代入 (1) 式, 可得方程的所有正整数解为 $(a, b)=$ $(2,6)$ 或 $(4,18)$.
+\end{solution}
 
-故
-\begin{align*}
-	d^{3}<61
-\end{align*}
+% 例 9
+\begin{example}
+	求所有的正整数数组 $(a, b, c, x, y, z)$, 使得
+	\begin{align*}
+		\left\{\begin{array}{l}
+			       a+b+c=x y z \\
+			       x+y+z=a b c
+		       \end{array}\right.
+	\end{align*}
+	这里 $a \geqslant b \geqslant c, x \geqslant y \geqslant z$.
+\end{example}
+\begin{solution}
+	由对称性, 我们只需考虑 $x \geqslant a$ 的情形. 这时
+	\begin{align*}
+		x y z=a+b+c \leqslant 3 a \leqslant 3 x
+	\end{align*}
+	故
+	\begin{align*}
+		y z \leqslant 3
+	\end{align*}
+	于是
+	\begin{align*}
+		(y, z)=(1,1),(2,1),(3,1)
+	\end{align*}
+	当 $(y, z)=(1,1)$ 时, $a+b+c=x$ 且 $x+2=a b c$, 于是
+	\begin{align*}
+		a b c=a+b+c+2 .
+	\end{align*}
+	若 $c \geqslant 2$, 则
+	\begin{align*}
+		a+b+c+2 \leqslant 3 a+2 \leqslant 4 a \leqslant a b c,
+	\end{align*}
+	等号当且仅当 $a=b=c=2$ 时成立.
 
-于是
-\begin{align*}
-	d \leqslant 3
-\end{align*}
+	若 $c=1$, 则
+	\begin{align*}
+		a b=a+b+3
+	\end{align*}
+	即
+	\begin{align*}
+		(a-1)(b-1)=4
+	\end{align*}
+	得
+	\begin{align*}
+		(a, b)=(5,2),(3,3)
+	\end{align*}
+	当 $(y, z)=(2,1)$ 时, $2 a b c=2 x+6=a+b+c+6$ , 与上述类似讨论可知 $c=1$ , 进而得
+	\begin{align*}
+		\begin{gathered}
+			(2 a-1)(2 b-1)=15 \\
+			(a, b)=(3,2)
+		\end{gathered}
+	\end{align*}
+	当 $(y, z)=(3,1)$ 时, $3 a b c=3 x+12=a+b+c+12$, 类似可知,此时无解.
 
-分别令 $d=1 ,  2 ,  3$ 代入, 得\begin{align}
-	 & 2 y^{2}+2 y+1=61   \\
-	 & 5 y^{2}+10 y+8=61  \\
-	 & 8 y^{2}+24 y+27=61
-\end{align}
-
-只有第一个方程有整数解, 并由 $y$ 为正整数知 $y=5$, 进而 $x=6$.\\
-所以, 原方程只有一组正整数解 $(x, y)=(6,5)$.\\
-例 8 求所有的正整数 $a ,  b$, 使得
-\begin{align*}
-	4^{a}+4 a^{2}+4=b^{2}
-\end{align*}
-
-解 若 $(a ,  b)$ 是满足(1) 的正整数数对, 则 $b^{2}$ 为偶数, 且 $b^{2}>4^{a}$, 从而 $b$ 为偶数, 且 $b>2^{a}$, 故 $b \geqslant 2^{a}+2$. 于是
-\begin{align*}
-	4^{a}+4 a^{2}+4=b^{2} \geqslant\left(2^{a}+2\right)^{2}=4^{a}+4 \cdot 2^{a}+4
-\end{align*}
-
-知 $a^{2} \geqslant 2^{a}$, 可得 $a \leqslant 4$ (对 $a$ 归纳可证: 当 $a \geqslant 5$ 时, 有 $a^{2}<2^{a}$ ).\\
-分别就 $a=1,2,3,4$ 代入 (1) 式, 可得方程的所有正整数解为 $(a, b)=$ $(2,6)$ 或 $(4,18)$.
-
-例 9 求所有的正整数数组 $(a, b, c, x, y, z)$, 使得
-\begin{align*}
-	\left\{\begin{array}{l}
-		       a+b+c=x y z \\
-		       x+y+z=a b c
-	       \end{array}\right.
-\end{align*}
-
-这里 $a \geqslant b \geqslant c, x \geqslant y \geqslant z$.\\
-解 由对称性, 我们只需考虑 $x \geqslant a$ 的情形. 这时
-\begin{align*}
-	x y z=a+b+c \leqslant 3 a \leqslant 3 x
-\end{align*}
-
-故
-\begin{align*}
-	y z \leqslant 3
-\end{align*}
-
-于是
-\begin{align*}
-	(y, z)=(1,1),(2,1),(3,1)
-\end{align*}
-
-当 $(y, z)=(1,1)$ 时, $a+b+c=x$ 且 $x+2=a b c$, 于是
-\begin{align*}
-	a b c=a+b+c+2 .
-\end{align*}
-
-若 $c \geqslant 2$, 则
-\begin{align*}
-	a+b+c+2 \leqslant 3 a+2 \leqslant 4 a \leqslant a b c,
-\end{align*}
-
-等号当且仅当 $a=b=c=2$ 时成立.\\
-若 $c=1$, 则
-\begin{align*}
-	a b=a+b+3
-\end{align*}
-
-即
-\begin{align*}
-	(a-1)(b-1)=4
-\end{align*}
-
-得
-\begin{align*}
-	(a, b)=(5,2),(3,3)
-\end{align*}
-
-当 $(y, z)=(2,1)$ 时, $2 a b c=2 x+6=a+b+c+6$ , 与上述类似讨论可知 $c=1$ , 进而
-
-得
-\begin{align*}
-	\begin{gathered}
-		(2 a-1)(2 b-1)=15 \\
-		(a, b)=(3,2)
-	\end{gathered}
-\end{align*}
-
-当 $(y, z)=(3,1)$ 时, $3 a b c=3 x+12=a+b+c+12$, 类似可知,此时无解.
-
-综上所述, 可知\begin{align}
-	  & (a, b, c, x, y, z)                        \\
-	= & (2,2,2,6,1,1),(5,2,1,8,1,1),(3,3,1,7,1,1) \\
-	  & (3,2,1,3,2,1),(6,1,1,2,2,2),(8,1,1,5,2,1) \\
-	  & (7,1,1,3,3,1)
-\end{align}
-
-说明 此题中如果没有条件 $a \geqslant b \geqslant c$ 和 $x \geqslant y \geqslant z$ , 也需要利用对称性作出这样的假设后再处理, 解题中利用对称性假设 $x \geqslant a$ 是巧妙的, 这样问题就转化为只有 3 种情况而便于处理了.
+	综上所述, 可知\begin{align}
+		  & (a, b, c, x, y, z)                        \\
+		= & (2,2,2,6,1,1),(5,2,1,8,1,1),(3,3,1,7,1,1) \\
+		  & (3,2,1,3,2,1),(6,1,1,2,2,2),(8,1,1,5,2,1) \\
+		  & (7,1,1,3,3,1)
+	\end{align}
+\end{solution}
+\begin{note}
+	此题中如果没有条件 $a \geqslant b \geqslant c$ 和 $x \geqslant y \geqslant z$ , 也需要利用对称性作出这样的假设后再处理, 解题中利用对称性假设 $x \geqslant a$ 是巧妙的, 这样问题就转化为只有 3 种情况而便于处理了.
+\end{note}
 
 \subsubsection{同余方法}
 若不定方程 $F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=0$ 有整数解, 则对任意的 $m \in \mathbf{N}^{*}$ , 其整数解 $\left(x_{1}, x_{2}, \cdots, x_{n}\right)$ 均满足
 \begin{align*}
 	F\left(x_{1}, x_{2}, \cdots, x_{n}\right) \equiv 0(\bmod m)
 \end{align*}
+运用这一条件, 同余可以作为不定方程是否有整数解的一块试金石.
 
-运用这一条件, 同余可以作为不定方程是否有整数解的一块试金石. \\
-例 10 证明: 不定方程
-\begin{align*}
-	x^{2}+y^{2}-8 z^{3}=6
-\end{align*}
+% 例 10
+\begin{example}
+	证明: 不定方程
+	\begin{align*}
+		x^{2}+y^{2}-8 z^{3}=6
+	\end{align*}
+	没有整数解.
+\end{example}
+\begin{proof}
+	若 $(x, y, z)$ 是方程(1)的整数解, 对(1)的两边模2, 可知 $x ,  y$ 同奇偶; 再对(1)两边模 4 可知 $x ,  y$ 都为奇数, 于是 $x^{2} \equiv y^{2} \equiv 1(\bmod 8)$ , 这要求
+	\begin{align*}
+		6=x^{2}+y^{2}-8 z^{3} \equiv 2(\bmod 8)
+	\end{align*}
+	矛盾. 故方程(1)没有整数解.
+\end{proof}
+\begin{note}
+	利用同余方法解不定方程问题时, 选择恰当的数作为模是十分重要的, 它不仅涉及问题解决的繁简程度, 重要的是能否卡住字母的范围或导出矛盾.
+\end{note}
 
-没有整数解.\\
-证明 若 $(x, y, z)$ 是方程(1)的整数解, 对(1)的两边模2, 可知 $x ,  y$ 同奇偶; 再对(1)两边模 4 可知 $x ,  y$ 都为奇数, 于是 $x^{2} \equiv y^{2} \equiv 1(\bmod 8)$ , 这要求
-\begin{align*}
-	6=x^{2}+y^{2}-8 z^{3} \equiv 2(\bmod 8)
-\end{align*}
+% 例 11
+\begin{example}
+	求所有的非负整数 $x ,  y ,  z$, 使得
+	\begin{align*}
+		2^{x}+3^{y}=z^{2}
+	\end{align*}
+\end{example}
+\begin{solution}
+	(1) 当 $y=0$ 时, 有
 
-矛盾. 故方程(1)没有整数解.\\
-说明 利用同余方法解不定方程问题时, 选择恰当的数作为模是十分重
+	于是可设
+	\begin{align*}
+		2^{x}=z^{2}-1=(z-1)(z+1)
+	\end{align*}
+	因此
+	\begin{align*}
+		z-1=2^{\alpha}, z+1=2^{\beta}, 0 \leqslant \alpha \leqslant \beta,
+	\end{align*}
+	\begin{align*}
+		2^{\beta}-2^{\alpha}=2
+	\end{align*}
+	此时, 若 $\alpha \geqslant 2$, 则 $4 \mid 2^{\beta}-2^{\alpha}$, 与 $4 \nmid 2$ 矛盾, 故 $\alpha \leqslant 1$. 而 $\alpha=0$ 导致 $2^{\beta}=$ 3 , 矛盾,故
 
-要的, 它不仅涉及问题解决的繁简程度, 重要的是能否卡住字母的范围或导出矛盾.
+	所以
+	\begin{align}
+		 & \alpha=1, \beta=2 \\
+		 & z=3, x=3
+	\end{align}
+	得
+	\begin{align*}
+		(x, y, z)=(3,0,3)
+	\end{align*}
 
-例 11 求所有的非负整数 $x ,  y ,  z$, 使得
-\begin{align*}
-	2^{x}+3^{y}=z^{2}
-\end{align*}
+	(2) 当 $y>0$ 时, 由于 $3 \nmid 2^{x}+3^{y}$, 故 $3 \nmid z$, 所以
+	\begin{align*}
+		z^{2} \equiv 1(\bmod 3)
+	\end{align*}
 
-解 (1) 当 $y=0$ 时, 有
+	对(1)两边模 3 , 知
+	\begin{align*}
+		(-1)^{x} \equiv 1(\bmod 3)
+	\end{align*}
 
-于是可设
-\begin{align*}
-	2^{x}=z^{2}-1=(z-1)(z+1)
-\end{align*}
+	故 $x$ 为偶数, 现在设 $x=2 m$, 则
+	\begin{align*}
+		\left(z-2^{m}\right)\left(z+2^{m}\right)=3^{y}
+	\end{align*}
+	所以可设
+	\begin{align*}
+		z-2^{m}=3^{\alpha}, z+2^{m}=3^{\beta}, 0 \leqslant \alpha \leqslant \beta, \alpha+\beta=y
+	\end{align*}
+	于是
+	\begin{align*}
+		3^{\beta}-3^{\alpha}=2^{m+1},
+	\end{align*}
+	若 $\alpha \geqslant 1$, 则 $3 \mid 3^{\beta}-3^{\alpha}$, 但 $3 \nmid 2^{m+1}$, 矛盾, 故 $\alpha=0$, 因此
+	\begin{align*}
+		3^{\beta}-1=2^{m+1}
+	\end{align*}
+	当 $m=0$ 时, $\beta=1$, 得
+	\begin{align*}
+		(x, y, z)=(0,1,2)
+	\end{align*}
+	当 $m>0$ 时, $2^{m+1} \equiv 0(\bmod 4)$ , 故
+	\begin{align*}
+		3^{\beta} \equiv 1(\bmod 4)
+	\end{align*}
+	这要求 $\beta$ 为偶数, 设 $\beta=2 n$ , 则
+	\begin{align*}
+		2^{m+1}=3^{2 n}-1=\left(3^{n}-1\right)\left(3^{n}+1\right)
+	\end{align*}
+	同 $y=0$ 时的讨论, 可知 $\quad 3^{n}-1=2$ ,
 
-因此
-\begin{align*}
-	z-1=2^{\alpha}, z+1=2^{\beta}, 0 \leqslant \alpha \leqslant \beta,
-\end{align*}
-\begin{align*}
-	2^{\beta}-2^{\alpha}=2
-\end{align*}
+	即 $n=1$ , 进而 $m=2$ , 得
+	\begin{align*}
+		(x, y, z)=(4,2,5)
+	\end{align*}
+	所以 $(x, y, z)=(3,0,3),(0,1,2),(4,2,5)$.
+\end{solution}
 
-此时, 若 $\alpha \geqslant 2$, 则 $4 \mid 2^{\beta}-2^{\alpha}$, 与 $4 \nmid 2$ 矛盾, 故 $\alpha \leqslant 1$. 而 $\alpha=0$ 导致 $2^{\beta}=$ 3 , 矛盾,故
+% 例 12
+\begin{example}
+	设 $m ,  n$ 为正整数,且 $n>1$. 求 $\left|2^{m}-5^{n}\right|$ 的最小值.
+\end{example}
+\begin{solution}
+	由于 $\left|2^{m}-5^{n}\right|$ 为奇数, 而 $m=7, n=3$ 时,  $\left|2^{m}-5^{n}\right|=3$ , 故若能证明 $n>1$ 时,  $\left|2^{m}-5^{n}\right| \neq 1$ , 则所求的最小值为 3 .
 
-所以\begin{align}
-	 & \alpha=1, \beta=2 \\
-	 & z=3, x=3
-\end{align}
+	若存在正整数 $m ,  n$, 使得 $n>1$, 且 $\left|2^{m}-5^{n}\right|=1$, 则
+	\begin{align*}
+		2^{m}-5^{n}=1 \text { 或 } 2^{m}-5^{n}=-1
+	\end{align*}
 
-得
-\begin{align*}
-	(x, y, z)=(3,0,3)
-\end{align*}\\
-(2) 当 $y>0$ 时, 由于 $3 \nmid 2^{x}+3^{y}$, 故 $3 \nmid z$, 所以
-\begin{align*}
-	z^{2} \equiv 1(\bmod 3)
-\end{align*}
+	如果 $2^{m}-5^{n}=1$, 那么 $m \geqslant 3$ , 两边模 8 , 要求
+	\begin{align*}
+		5^{n} \equiv 7(\bmod 8)
+	\end{align*}
 
-对(1)两边模 3 , 知
-\begin{align*}
-	(-1)^{x} \equiv 1(\bmod 3)
-\end{align*}
+	但对任意正整数 $n, 5^{n} \equiv 1$ 或 $5(\bmod 8)$ , 矛盾, 故 $2^{m}-5^{n}=1$ 不成立. \\
+	如果 $2^{m}-5^{n}=-1$, 那么由 $n>1$, 知 $m \geqslant 3$ . 两边模 8 , 得
+	\begin{align*}
+		5^{n} \equiv 1(\bmod 8)
+	\end{align*}
 
-故 $x$ 为偶数, 现在设 $x=2 m$, 则
-\begin{align*}
-	\left(z-2^{m}\right)\left(z+2^{m}\right)=3^{y}
-\end{align*}
+	可知 $n$ 为偶数. 设 $n=2 x, x$ 为正整数,则
+	\begin{align*}
+		2^{m}=\left(5^{x}-1\right)\left(5^{x}+1\right)
+	\end{align*}
 
-所以可设
-\begin{align*}
-	z-2^{m}=3^{\alpha}, z+2^{m}=3^{\beta}, 0 \leqslant \alpha \leqslant \beta, \alpha+\beta=y
-\end{align*}
+	由于 $5^{x}-1$ 与 $5^{x}+1$ 是两个相邻偶数, 这要求
+	\begin{align*}
+		5^{x}-1=2,5^{x}+1=4
+	\end{align*}
+	不可能.
 
-于是
-\begin{align*}
-	3^{\beta}-3^{\alpha}=2^{m+1},
-\end{align*}
-
-若 $\alpha \geqslant 1$, 则 $3 \mid 3^{\beta}-3^{\alpha}$, 但 $3 \nmid 2^{m+1}$, 矛盾, 故 $\alpha=0$, 因此
-\begin{align*}
-	3^{\beta}-1=2^{m+1}
-\end{align*}
-
-当 $m=0$ 时, $\beta=1$, 得
-\begin{align*}
-	(x, y, z)=(0,1,2)
-\end{align*}
-
-当 $m>0$ 时, $2^{m+1} \equiv 0(\bmod 4)$ , 故
-\begin{align*}
-	3^{\beta} \equiv 1(\bmod 4)
-\end{align*}
-
-这要求 $\beta$ 为偶数, 设 $\beta=2 n$ , 则
-\begin{align*}
-	2^{m+1}=3^{2 n}-1=\left(3^{n}-1\right)\left(3^{n}+1\right)
-\end{align*}
-
-同 $y=0$ 时的讨论, 可知 $\quad 3^{n}-1=2$ , \\
-即 $n=1$ , 进而 $m=2$ , 得
-\begin{align*}
-	(x, y, z)=(4,2,5)
-\end{align*}
-
-所以 $(x, y, z)=(3,0,3),(0,1,2),(4,2,5)$.\\
-例 12 设 $m ,  n$ 为正整数,且 $n>1$. 求 $\left|2^{m}-5^{n}\right|$ 的最小值.\\
-解 由于 $\left|2^{m}-5^{n}\right|$ 为奇数, 而 $m=7, n=3$ 时,  $\left|2^{m}-5^{n}\right|=3$ , 故若能证明 $n>1$ 时,  $\left|2^{m}-5^{n}\right| \neq 1$ , 则所求的最小值为 3 .
-
-若存在正整数 $m ,  n$, 使得 $n>1$, 且 $\left|2^{m}-5^{n}\right|=1$, 则
-\begin{align*}
-	2^{m}-5^{n}=1 \text { 或 } 2^{m}-5^{n}=-1
-\end{align*}
-
-如果 $2^{m}-5^{n}=1$, 那么 $m \geqslant 3$ , 两边模 8 , 要求
-\begin{align*}
-	5^{n} \equiv 7(\bmod 8)
-\end{align*}
-
-但对任意正整数 $n, 5^{n} \equiv 1$ 或 $5(\bmod 8)$ , 矛盾, 故 $2^{m}-5^{n}=1$ 不成立. \\
-如果 $2^{m}-5^{n}=-1$, 那么由 $n>1$, 知 $m \geqslant 3$ . 两边模 8 , 得
-\begin{align*}
-	5^{n} \equiv 1(\bmod 8)
-\end{align*}
-
-可知 $n$ 为偶数. 设 $n=2 x, x$ 为正整数,则
-\begin{align*}
-	2^{m}=\left(5^{x}-1\right)\left(5^{x}+1\right)
-\end{align*}
-
-由于 $5^{x}-1$ 与 $5^{x}+1$ 是两个相邻偶数, 这要求
-\begin{align*}
-	5^{x}-1=2,5^{x}+1=4
-\end{align*}
-
-不可能.\\
-所以,  $\left|2^{m}-5^{n}\right|$ 的最小值为 3 . \\
-说明 上面的两个例子都用到了一个结论: 两个差为 2 的正整数之积为 2的幂次, 则这两个数只能为 2 和 4 . 该结论在例 11 的前半段解答中已予以证明.
+	所以,  $\left|2^{m}-5^{n}\right|$ 的最小值为 3 .
+\end{solution}
+\begin{note}
+	上面的两个例子都用到了一个结论: 两个差为 2 的正整数之积为 2的幂次, 则这两个数只能为 2 和 4 . 该结论在例 11 的前半段解答中已予以证明.
+\end{note}
 
 \subsubsection{构造法}
 有些不定方程的问题只需证明该方程有解或有无穷多个解, 这时经常采用构造法来处理.
 
-例13 证明: 方程 $x^{2}+y^{5}=z^{3}$ 有无穷多组满足 $x y z \neq 0$ 的整数解. \\
-证明 取 $x=2^{15 k+10}, y=2^{6 k+4}, z=2^{10 k+7}, k$ 为非负整数, 则这样的 $x$ ,  $y ,  z$ 满足 $x^{2}+y^{5}=z^{3}$ , 所以方程有无穷多组满足 $x y z \neq 0$ 的整数解.
+% 例 13
+\begin{example}
+	证明: 方程 $x^{2}+y^{5}=z^{3}$ 有无穷多组满足 $x y z \neq 0$ 的整数解.
+\end{example}
+\begin{proof}
+	取 $x=2^{15 k+10}, y=2^{6 k+4}, z=2^{10 k+7}, k$ 为非负整数, 则这样的 $x$ ,  $y ,  z$ 满足 $x^{2}+y^{5}=z^{3}$ , 所以方程有无穷多组满足 $x y z \neq 0$ 的整数解.
 
-另证 先求方程的一组特解, 易知 $x=10 ,  y=3 ,  z=7$ 是方程 $x^{2}+$ $y^{5}=z^{3}$ 的一组解. 因而 $x=10 a^{15 k}, y=3 a^{6 k}, z=7 a^{10 k}(a, k$ 为非负整数) 是方程的解.
+	另证 先求方程的一组特解, 易知 $x=10 ,  y=3 ,  z=7$ 是方程 $x^{2}+$ $y^{5}=z^{3}$ 的一组解. 因而 $x=10 a^{15 k}, y=3 a^{6 k}, z=7 a^{10 k}(a, k$ 为非负整数) 是方程的解.
+\end{proof}
 
-例14 证明: 对任意整数 $n$ , 方程
-\begin{align*}
-	x^{2}+y^{2}-z^{2}=n
-\end{align*}
+% 例 14
+\begin{example}
+	证明: 对任意整数 $n$ , 方程
+	\begin{align*}
+		x^{2}+y^{2}-z^{2}=n
+	\end{align*}
+	有无穷多组整数解( $x, y, z)$ .
+\end{example}
+\begin{proof}
+	现有命题"当 $m$ 为奇数或 4 的倍数时, 方程 $a^{2}-b^{2}=m$ 有整数解 $(a, b)$ ", 它对解决本题是有用的. 这个命题基于下面 2 个恒等式:
+	\begin{align*}
+		\begin{gathered}
+			(k+1)^{2}-k^{2}=2 k+1 \\
+			(k+1)^{2}-(k-1)^{2}=4 k
+		\end{gathered}
+	\end{align*}
+	对于方程 (1), 只需取 $x$ , 使 $x$ 与 $n$ 的奇偶性相反(这样的 $x$ 有无穷多个), 从而利用上述命题, 方程
+	\begin{align*}
+		y^{2}-z^{2}=n-x^{2}
+	\end{align*}
+	有整数解, 可知方程(1)有无穷多组整数解.
+\end{proof}
 
-有无穷多组整数解( $x, y, z)$ . \\
-证明 现有命题"当 $m$ 为奇数或 4 的倍数时, 方程 $a^{2}-b^{2}=m$ 有整数解 $(a, b)$ ", 它对解决本题是有用的. 这个命题基于下面 2 个恒等式:
-\begin{align*}
-	\begin{gathered}
-		(k+1)^{2}-k^{2}=2 k+1 \\
-		(k+1)^{2}-(k-1)^{2}=4 k
-	\end{gathered}
-\end{align*}
+% 例 15
+\begin{example}
+	是否存在两两不同的正整数 $m ,  n ,  p ,  q$, 使得 $m+n=p+q$ 和 $\sqrt{m}+\sqrt[3]{n}=\sqrt{p}+\sqrt[3]{q}>2012$ 都成立?
+\end{example}
+\begin{solution}
+	存在满足条件的正整数.
 
-对于方程 (1), 只需取 $x$ , 使 $x$ 与 $n$ 的奇偶性相反(这样的 $x$ 有无穷多个), 从而利用上述命题, 方程
-\begin{align*}
-	y^{2}-z^{2}=n-x^{2}
-\end{align*}
+	由方程的结构, 我们寻找形如
+	\begin{align*}
+		m=a^{2}, n=b^{3}, p=c^{2}, q=d^{3}
+	\end{align*}
+	的正整数. 这里 $a ,  b ,  c ,  d$ 为正整数.
 
-有整数解, 可知方程(1)有无穷多组整数解. \\
-例15 是否存在两两不同的正整数 $m ,  n ,  p ,  q$, 使得 $m+n=p+q$ 和 $\sqrt{m}+\sqrt[3]{n}=\sqrt{p}+\sqrt[3]{q}>2012$ 都成立?
+	此时, 条件转化为
+	\begin{align*}
+		a+b=c+d>2012, a^{2}+b^{3}=c^{2}+d^{3}
+	\end{align*}
+	即
+	\begin{align*}
+		a-c=d-b,(a-c)(a+c)=(d-b)\left(d^{2}+b d+b^{2}\right)
+	\end{align*}
+	令 $d-b=1$ , 即 $b=d-1$ , 且使 $b>2012$ , 则 $b ,  d$ 的奇偶性不同, 现令
+	\begin{align*}
+		a=\frac{b^{2}+b d+d^{2}+1}{2}, c=\frac{b^{2}+b d+d^{2}-1}{2}
+	\end{align*}
+	那么 $a ,  c$ 为正整数, 且由 $a ,  b ,  c ,  d$ 确定的 $m ,  n ,  p ,  q$ 满足条件.
+\end{solution}
 
-解 存在满足条件的正整数. \\
-由方程的结构, 我们寻找形如
-\begin{align*}
-	m=a^{2}, n=b^{3}, p=c^{2}, q=d^{3}
-\end{align*}
+% 例 16
+\begin{example}
+	证明: 存在无穷多组正整数组( $x, y, z$ ), 使得 $x, y, z$ 两两不同, 并且
+	\begin{align*}
+		x^{x}=y^{3}+z^{3}
+	\end{align*}
+\end{example}
+\begin{proof}
+	一个想法是: 将 $x$ 取为 $3 k+1$ 形式的数, 这时\begin{align}
+		x^{x} & =(3 k+1)^{3 k+1}                \\
+		      & =(3 k+1)(3 k+1)^{3 k}           \\
+		      & =3 k(3 k+1)^{3 k}+(3 k+1)^{3 k}
+	\end{align}
+	因此,如果使 $3 k$ 为一个完全立方数, 那么符合要求的正整数 $x ,  y ,  z$ 就找到了.
 
-的正整数. 这里 $a ,  b ,  c ,  d$ 为正整数. \\
-此时, 条件转化为
-\begin{align*}
-	a+b=c+d>2012, a^{2}+b^{3}=c^{2}+d^{3}
-\end{align*}
+	为此, 令 $k=3^{3 m+2}$, 这里 $m$ 为正整数, 那么令
+	\begin{align*}
+		x=3 k+1, y=3^{m+1}(3 k+1)^{k}, z=(3 k+1)^{k}
+	\end{align*}
 
-即
-\begin{align*}
-	a-c=d-b,(a-c)(a+c)=(d-b)\left(d^{2}+b d+b^{2}\right)
-\end{align*}
-
-令 $d-b=1$ , 即 $b=d-1$ , 且使 $b>2012$ , 则 $b ,  d$ 的奇偶性不同, 现令
-\begin{align*}
-	a=\frac{b^{2}+b d+d^{2}+1}{2}, c=\frac{b^{2}+b d+d^{2}-1}{2}
-\end{align*}
-
-那么 $a ,  c$ 为正整数, 且由 $a ,  b ,  c ,  d$ 确定的 $m ,  n ,  p ,  q$ 满足条件.
-
-例16 证明: 存在无穷多组正整数组( $x, y, z$ ), 使得 $x, y, z$ 两两不同, 并且
-\begin{align*}
-	x^{x}=y^{3}+z^{3}
-\end{align*}
-
-证明 一个想法是: 将 $x$ 取为 $3 k+1$ 形式的数, 这时\begin{align}
-	x^{x} & =(3 k+1)^{3 k+1}                \\
-	      & =(3 k+1)(3 k+1)^{3 k}           \\
-	      & =3 k(3 k+1)^{3 k}+(3 k+1)^{3 k}
-\end{align}
-
-因此,如果使 $3 k$ 为一个完全立方数, 那么符合要求的正整数 $x ,  y ,  z$ 就找到了.
-
-为此, 令 $k=3^{3 m+2}$, 这里 $m$ 为正整数, 那么令
-\begin{align*}
-	x=3 k+1, y=3^{m+1}(3 k+1)^{k}, z=(3 k+1)^{k}
-\end{align*}
-
-则 $x ,  y ,  z$ 两两不同, 且满足 $x^{x}=y^{3}+z^{3}$ . 命题获证. \\
-说明 如果不要求 $x ,  y ,  z$ 两两不同, 我们还可以这样来构造: 取 $y=$ $z=2^{m} ,  x=2^{\alpha}$ , 则当 $\alpha \cdot 2^{\alpha}=3 m+1$ 时, 就有 $x^{x}=y^{3}+z^{3}$ . 容易看出满足 $\alpha \cdot 2^{\alpha}=3 m+1$ 的正整数对 $(\alpha, m)$ 有无穷多对.
+	则 $x ,  y ,  z$ 两两不同, 且满足 $x^{x}=y^{3}+z^{3}$ . 命题获证.
+\end{proof}
+\begin{note}
+	如果不要求 $x ,  y ,  z$ 两两不同, 我们还可以这样来构造: 取 $y=$ $z=2^{m} ,  x=2^{\alpha}$ , 则当 $\alpha \cdot 2^{\alpha}=3 m+1$ 时, 就有 $x^{x}=y^{3}+z^{3}$ . 容易看出满足 $\alpha \cdot 2^{\alpha}=3 m+1$ 的正整数对 $(\alpha, m)$ 有无穷多对.
+\end{note}
 
 \subsection{勾股方程}
 在我国古代算书《周髀算经》(公元前 1 世纪)中就有"勾广三, 股修四, 经隅五"的记载, 这是关于勾股数的早期记录.
@@ -3536,41 +3588,40 @@ $t$ 为整数. 这时在条件 $p \leqslant 99$ 下, $p$ 最大为 85 , 此时 $
 \begin{align*}
 	x^{2}+y^{2}=z^{2}
 \end{align*}
+的正整数数组.
 
-的正整数数组.\\
 方程(1)称为勾股方程(英文著作中, 该方程称为毕达哥拉斯(Pythagoras)方程, 勾股定理亦称为毕达哥拉斯定理), 讨论(1)的正整数解是二次不定方程中的一个重要课题, 求解过程本身就有一定的挑战性.
 
 注意到, 对(1)的解 $(x, y, z)$ , 如果 $(x, y)=d$ , 那么 $d^{2} \mid z^{2}$ , 即有 $d \mid z$ , 因此可以在(1)的两边约去 $d$ 后再讨论. 这说明我们只需在条件 $(x, y)=1$下, 求(1)的所有正整数解. 易知当 $(x, y)=1$ 时,  $x ,  y ,  z$ 两两互素, 我们称(1)的使得 $x ,  y ,  z$ 两两互素的正整数解 $(x, y, z)$ 为本原勾股数组.
 
-下面来求(1)的所有本原勾股数组. \\
-设 $(x, y, z)$ 是 (1) 的一个本原解 (即 $(x, y, z)$ 是本原勾股数组), 则由\\
+下面来求(1)的所有本原勾股数组.
+
+设 $(x, y, z)$ 是 (1) 的一个本原解 (即 $(x, y, z)$ 是本原勾股数组), 则由
+
 $(x, y)=1$ , 知 $x ,  y$ 不同为偶数. 若 $x ,  y$ 都是奇数, 则 $z^{2}=x^{2}+y^{2} \equiv 1+$ $1=2(\bmod 4)$ , 这与完全平方数 $\equiv 0$ 或 $1(\bmod 4)$ 矛盾. 所以 $x ,  y$ 不同为奇数, 即 $x ,  y$ 是一奇一偶.
 
 不妨设 $y$ 为偶数,则 $x ,  z$ 都是奇数,由(1)得
-
+\begin{align*}
+	y^{2}=z^{2}-x^{2}
+\end{align*}
 故
 \begin{align*}
-	\begin{gathered}
-		y^{2}=z^{2}-x^{2} \\
-		\left(\frac{y}{2}\right)^{2}=\frac{z-x}{2} \cdot \frac{z+x}{2}
-	\end{gathered}
+	\left(\frac{y}{2}\right)^{2}=\frac{z-x}{2} \cdot \frac{z+x}{2}
 \end{align*}
-
-由于\begin{align}
+由于
+\begin{align}
 	\left(\frac{z-x}{2}, \frac{z+x}{2}\right) & =\left(\frac{z-x}{2}, \frac{z+x}{2}+\frac{z-x}{2}\right) \\
 	                                          & =\left(\frac{z-x}{2}, z\right)=(z-x, z)                  \\
 	                                          & =(x, z)=1
 \end{align}
-
 可知 $\frac{z-x}{2}$ 与 $\frac{z+x}{2}$ 都是完全平方数, 所以, 可设
 \begin{align*}
-	\begin{gathered}
-		\left(\frac{z-x}{2}, \frac{z+x}{2}\right)=\left(m^{2}, n^{2}\right) \\
-		y=2 m n
-	\end{gathered}
+	\left(\frac{z-x}{2}, \frac{z+x}{2}\right)=\left(m^{2}, n^{2}\right)
 \end{align*}
-
-依此得\\
+依此得
+\begin{align*}
+	y=2 m n
+\end{align*}
 进一步, 由 $\left(\frac{z-x}{2}, \frac{z+x}{2}\right)=1$ , 可知 $(m, n)=1$ , 而由 $x ,  z$ 都是奇数, 知 $m, n$ 一奇一偶.
 
 综上可知, (1)的所有本原解为
@@ -3585,167 +3636,191 @@ $(x, y)=1$ , 知 $x ,  y$ 不同为偶数. 若 $x ,  y$ 都是奇数, 则 $z^{2}
 		                                             z=m^{2}+n^{2},
 	                                             \end{array}\right.\right.
 \end{align*}
+其中 $m ,  n$ 为正整数, $m<n$, 且 $(m, n)=1, m ,  n$ 一奇一偶.
 
-其中 $m ,  n$ 为正整数, $m<n$, 且 $(m, n)=1, m ,  n$ 一奇一偶.\\
 注意 由(2)得到的正整数组 $(x, y, z)$ 代入验证, 可知是(1)的解. 将(2)中的 $x ,  y ,  z$ 都乘以整数 $d$ 就可得(1)的全部整数解.
 
-例1 设 $(x, y, z)$ 是勾股方程(1)的整数解. 证明: $x ,  y ,  z$ 中必有一个数是 3 的倍数, 必有一个数是 4 的倍数, 必有一个数是 5 的倍数.
+% 例 1
+\begin{example}
+	设 $(x, y, z)$ 是勾股方程(1)的整数解. 证明: $x ,  y ,  z$ 中必有一个数是 3 的倍数, 必有一个数是 4 的倍数, 必有一个数是 5 的倍数.
+\end{example}
+\begin{proof}
+	利用完全平方数 $\equiv 0,1(\bmod 3)$ 知, 若 $x ,  y$ 都不是 3 的倍数, 则
+	\begin{align*}
+		x^{2}+y^{2} \equiv 2(\bmod 3)
+	\end{align*}
+	这导致
+	\begin{align*}
+		z^{2} \equiv 2(\bmod 3)
+	\end{align*}
+	矛盾. 故 $x ,  y$ 中有一个数是 3 的倍数.
 
-证明 利用完全平方数 $\equiv 0,1(\bmod 3)$ 知, 若 $x ,  y$ 都不是 3 的倍数, 则
-\begin{align*}
-	x^{2}+y^{2} \equiv 2(\bmod 3)
-\end{align*}
+	若 $x ,  y ,  z$ 都不是 5 的倍数,则
+	\begin{align*}
+		x^{2}+y^{2} \equiv 0,2 \text { 或 } 3(\bmod 5),
+	\end{align*}
+	而
+	\begin{align*}
+		z^{2} \equiv 1 \text { 或 } 4(\bmod 5) ,
+	\end{align*}
+	矛盾. 故 $x ,  y ,  z$ 中有一个为 5 的倍数.
 
-这导致
-\begin{align*}
-	z^{2} \equiv 2(\bmod 3)
-\end{align*}
+	若 $x ,  y ,  z$ 都是偶数, 则在(1)的两边同除以 4 , 直至 $x ,  y$ 中有一个为奇数, 设 $x$ 为奇数, 则 $y$ 必为偶数(否则 $z^{2}=x^{2}+y^{2} \equiv 1+1 \equiv 2(\bmod 4)$ , 矛盾), 此时 $z$ 为奇数. 对(1)的两边模 8 , 可知 $y^{2} \equiv 0(\bmod 8)$ , 故 $4 \mid y$ .
 
-矛盾. 故 $x ,  y$ 中有一个数是 3 的倍数.
+	综上可知, 命题成立.
+\end{proof}
+\begin{note}
+	这里并不是说 $x ,  y ,  z$ 分别是 3,  $4 ,  5$ 的倍数(例如勾股数组 $(5,12,13)$ 中, 是 3 的倍数与 4 的倍数的那个数是同一个数). 另外, 如果从 (2)出发, 证明此题的结论会简便一些.
+\end{note}
 
-若 $x ,  y ,  z$ 都不是 5 的倍数,则
-\begin{align*}
-	x^{2}+y^{2} \equiv 0,2 \text { 或 } 3(\bmod 5),
-\end{align*}
+% 例 2
+\begin{example}
+	设 $(x, y, z)$ 是一组勾股数 $\left(x^{2}+y^{2}=z^{2}\right)$ . 证明: $z^{2}+x y$ 与 $z^{2}-$ $x y$ 都可以表示为两个正整数的平方和.
+\end{example}
+\begin{proof}
+	注意到
+	\begin{align}
+		z^{2} \pm x y & =\frac{2 z^{2} \pm 2 x y}{2}   \\
+		              & =\frac{z^{2}+(x \pm y)^{2}}{2}
+	\end{align}
 
-而
-\begin{align*}
-	z^{2} \equiv 1 \text { 或 } 4(\bmod 5) ,
-\end{align*}
+	而
+	\begin{align*}
+		2 a^{2}+2 b^{2}=(a+b)^{2}+(a-b)^{2}
+	\end{align*}
 
-矛盾. 故 $x ,  y ,  z$ 中有一个为 5 的倍数. \\
-若 $x ,  y ,  z$ 都是偶数, 则在(1)的两边同除以 4 , 直至 $x ,  y$ 中有一个为奇数, 设 $x$ 为奇数, 则 $y$ 必为偶数(否则 $z^{2}=x^{2}+y^{2} \equiv 1+1 \equiv 2(\bmod 4)$ , 矛盾), 此时 $z$ 为奇数. 对(1)的两边模 8 , 可知 $y^{2} \equiv 0(\bmod 8)$ , 故 $4 \mid y$ .
+	因此\begin{align}
+		z^{2} \pm x y & =\frac{(z+x \pm y)^{2}+(-z+x \pm y)^{2}}{4}                                \\
+		              & =\left(\frac{x \pm y+z}{2}\right)^{2}+\left(\frac{x \pm y-z}{2}\right)^{2}
+	\end{align}
 
-综上可知, 命题成立. \\
-说明 这里并不是说 $x ,  y ,  z$ 分别是 3,  $4 ,  5$ 的倍数(例如勾股数组 $(5,12,13)$ 中, 是 3 的倍数与 4 的倍数的那个数是同一个数). 另外, 如果从 (2)出发, 证明此题的结论会简便一些.
+	由 $x^{2}+y^{2}=z^{2}$ , 可知 $x \pm y$ 与 $z$ 同奇偶, 故 $\frac{x \pm y \pm z}{2}$ 都是整数. 进一步, 由 $x<z, y<z , $ 及 $z^{2}=x^{2}+y^{2}<(x+y)^{2}$ , 得 $z<x+y$ , 可知 $\frac{x \pm y \pm z}{2}$都是非零整数.
 
-例2 设 $(x, y, z)$ 是一组勾股数 $\left(x^{2}+y^{2}=z^{2}\right)$ . 证明: $z^{2}+x y$ 与 $z^{2}-$ $x y$ 都可以表示为两个正整数的平方和.
+	所以,  $z^{2} \pm x y$ 都可以表示为两个正整数的平方和.
+\end{proof}
+\begin{note}
+	此题是讨论勾股数的性质, 关键在于代数式变形中的配方, 其中还用到一些恒等变形, 需要有一些前瞻性.
+\end{note}
 
-证明 注意到\begin{align}
-	z^{2} \pm x y & =\frac{2 z^{2} \pm 2 x y}{2}   \\
-	              & =\frac{z^{2}+(x \pm y)^{2}}{2}
-\end{align}
+% 例 3
+\begin{example}
+	设 $n$ 为大于 2 的正整数. 证明: 存在一个边长都是整数的直角三角形, 它的一条直角边长恰为 $n$ .
+\end{example}
+\begin{proof}
+	只需证明不定方程 $x^{2}+n^{2}=z^{2}$ 有正整数解.
+	利用 $(z-x)(z+x)=n^{2}$ , 结合 $z-x$ 与 $z+x$ 具有相同的奇偶性, 故当$n$ 为奇数时, 由 $(z-x, z+x)=\left(1, n^{2}\right)$ , 可得一组正整数解
+	\begin{align*}
+		(x, z)=\left(\frac{n^{2}-1}{2}, \frac{n^{2}+1}{2}\right)
+	\end{align*}
+	而当 $n$ 为偶数时, 由条件,知 $n \geqslant 4$. 利用
+	\begin{align*}
+		(z-x, z+x)=\left(2, \frac{n^{2}}{2}\right)
+	\end{align*}
+	可得一组正整数解
+	\begin{align*}
+		(x, z)=\left(\frac{n^{2}-4}{4}, \frac{n^{2}+4}{4}\right)
+	\end{align*}
+	综上, 可知命题成立.
+\end{proof}
 
-而
-\begin{align*}
-	2 a^{2}+2 b^{2}=(a+b)^{2}+(a-b)^{2}
-\end{align*}
+% 例 4
+\begin{example}
+	设 $n$ 为大于 12 的正整数. 证明: 存在一个边长都是整数的直角三角形, 使得其面积介于 $n$ 与 $2 n$ 之间.
+\end{example}
+\begin{proof}
+	这是一个存在性问题, 尝试从特殊的勾股数组出发来构造例子.
 
-因此\begin{align}
-	z^{2} \pm x y & =\frac{(z+x \pm y)^{2}+(-z+x \pm y)^{2}}{4}                                \\
-	              & =\left(\frac{x \pm y+z}{2}\right)^{2}+\left(\frac{x \pm y-z}{2}\right)^{2}
-\end{align}
+	考虑边长为 $(3 k, 4 k, 5 k)$ 的直角三角形, 这里 $k$ 为正整数, 若找得到正整数 $k$ , 使得 $n<\frac{1}{2} \times(3 k) \times(4 k)<2 n$ , 则对这样的 $n$ , 我们就找到了合适的直角三角形.
 
-由 $x^{2}+y^{2}=z^{2}$ , 可知 $x \pm y$ 与 $z$ 同奇偶, 故 $\frac{x \pm y \pm z}{2}$ 都是整数. 进一步, 由 $x<z, y<z , $ 及 $z^{2}=x^{2}+y^{2}<(x+y)^{2}$ , 得 $z<x+y$ , 可知 $\frac{x \pm y \pm z}{2}$都是非零整数.
+	注意到, 当 $n \geqslant 35$ 时,有
+	\begin{align}
+		\left(\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}\right)^{2} & =\left(\frac{1}{2}-\frac{\sqrt{2}}{3}\right) n=\frac{n}{6(3+2 \sqrt{2})}=\frac{n}{18+\sqrt{288}} \\
+		                                                       & \geqslant \frac{35}{18+\sqrt{288}}>\frac{35}{18+17}=1
+	\end{align}
+	故
+	\begin{align*}
+		\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}>1
+	\end{align*}
+	从而在 $\sqrt{\frac{n}{6}}$ 与 $\sqrt{\frac{n}{3}}$ 之间存在正整数 $k$, 对这个 $k$ 有 $\frac{n}{6}<k^{2}<\frac{n}{3}$, 即 $n<$ $\frac{1}{2} \times(3 k) \times(4 k)<2 n$. 所以, 当 $n \geqslant 35$ 时,命题成立.
 
-所以,  $z^{2} \pm x y$ 都可以表示为两个正整数的平方和. \\
-说明 此题是讨论勾股数的性质, 关键在于代数式变形中的配方, 其中还用到一些恒等变形, 需要有一些前瞻性.
+	对 $13 \leqslant n \leqslant 34$ , 我们给出具体的满足条件的例子.
 
-例 3 设 $n$ 为大于 2 的正整数. 证明: 存在一个边长都是整数的直角三角形, 它的一条直角边长恰为 $n$ .
+	当 $13 \leqslant n \leqslant 23$ 时,  $(6,8,10)$ 符合要求; 当 $24 \leqslant n \leqslant 29$ 时,  $(5,12,13)$符合要求; 当 $30 \leqslant n \leqslant 34$ 时, ( $9,12,15)$ 符合要求.
 
-证明 只需证明不定方程 $x^{2}+n^{2}=z^{2}$ 有正整数解. \\
-利用 $(z-x)(z+x)=n^{2}$ , 结合 $z-x$ 与 $z+x$ 具有相同的奇偶性, 故当\\
-$n$ 为奇数时, 由 $(z-x, z+x)=\left(1, n^{2}\right)$ , 可得一组正整数解
-\begin{align*}
-	(x, z)=\left(\frac{n^{2}-1}{2}, \frac{n^{2}+1}{2}\right)
-\end{align*}
+	综上可知, 当 $n>12$ 时, 都存在满足条件的直角三角形.
+\end{proof}
+\begin{note}
+	这里先对较大的 $n$ 用统一形式的例子处理(注意: 35是通过解不等式 $\sqrt{\frac{n}{3}}>\sqrt{\frac{n}{6}}+1$ 得到的), 然后转为有限种情况枚举得解的思路是合理且自然的, 它在处理存在性问题时经常用到.
+\end{note}
 
-而当 $n$ 为偶数时, 由条件,知 $n \geqslant 4$. 利用
-\begin{align*}
-	(z-x, z+x)=\left(2, \frac{n^{2}}{2}\right)
-\end{align*}
+% 例 5
+\begin{example}
+	设 $n$ 是一个正整数. 证明: 存在 $n$ 个彼此不全等的勾股三角形(边长都为整数的直角三角形), 它们的周长都相等.
+\end{example}
+\begin{proof}
+	如果我们能找到 $n$ 个彼此不相似的勾股三角形, 那么对每个三角形乘上一个恰当的正整数, 就可以得到周长相同而彼此不全等的勾股三角形. 这是解决此题的一个出发点.
 
-可得一组正整数解
-\begin{align*}
-	(x, z)=\left(\frac{n^{2}-4}{4}, \frac{n^{2}+4}{4}\right)
-\end{align*}
+	为此, 先证明任意两组不同的本原勾股数组确定的直角三角形是不相似的.
 
-综上, 可知命题成立. \\
-例4 设 $n$ 为大于 12 的正整数. 证明: 存在一个边长都是整数的直角三角形, 使得其面积介于 $n$ 与 $2 n$ 之间.
+	事实上, 设 $(a, b, c)$ 与 $(x, y, z)$ 是两组本原勾股数组, 这里 $a<b<c$, $x<y<z$ . 如果它们确定的直角三角形相似, 那么
+	\begin{align*}
+		\frac{x}{a}=\frac{y}{b}=\frac{z}{c}
+	\end{align*}
 
-证明 这是一个存在性问题, 尝试从特殊的勾股数组出发来构造例子. \\
-考虑边长为 $(3 k, 4 k, 5 k)$ 的直角三角形, 这里 $k$ 为正整数, 若找得到正整数 $k$ , 使得 $n<\frac{1}{2} \times(3 k) \times(4 k)<2 n$ , 则对这样的 $n$ , 我们就找到了合适的直角三角形.
+	记这个比值为 $k$ , 则 $k$ 为有理数. 设 $k=\frac{q}{p}, p ,  q$ 为正整数, 且 $(p, q)=1$ , 则
+	\begin{align*}
+		x=\frac{a q}{p}, y=\frac{b q}{p}
+	\end{align*}
 
-注意到, 当 $n \geqslant 35$ 时,有\begin{align}
-	\left(\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}\right)^{2} & =\left(\frac{1}{2}-\frac{\sqrt{2}}{3}\right) n=\frac{n}{6(3+2 \sqrt{2})}=\frac{n}{18+\sqrt{288}} \\
-	                                                       & \geqslant \frac{35}{18+\sqrt{288}}>\frac{35}{18+17}=1
-\end{align}
+	由 $x ,  y$ 为正整数, 知
+	而\begin{align}
+		 & p|a, p| b \\
+		 & (a, b)=1
+	\end{align}
+	故 $p=1$ , 此时 $(x, y)=(a q, b q)=(a, b) q=q$ . 进而 $q=1$ , 这导致 $x=a, y=b$ , 进而 $z=c$ . 矛盾.
 
-故
-\begin{align*}
-	\sqrt{\frac{n}{3}}-\sqrt{\frac{n}{6}}>1
-\end{align*}
+	利用上述结论, 我们取 $n$ 组本原勾股数组
+	\begin{align*}
+		\left(x_{k}, y_{k}, z_{k}\right), k=1,2, \cdots, n
+	\end{align*}
 
-从而在 $\sqrt{\frac{n}{6}}$ 与 $\sqrt{\frac{n}{3}}$ 之间存在正整数 $k$, 对这个 $k$ 有 $\frac{n}{6}<k^{2}<\frac{n}{3}$, 即 $n<$ $\frac{1}{2} \times(3 k) \times(4 k)<2 n$. 所以, 当 $n \geqslant 35$ 时,命题成立.
+	这里 $x_{k}<y_{k}<z_{k}$ , 且 $\left(x_{k}, y_{k}\right)=1$ , 则这 $n$ 个数组确定的 $n$ 个三角形彼此不相似, 分别记
+	\begin{align*}
+		S_{k}=x_{k}+y_{k}+z_{k}
+	\end{align*}
 
-对 $13 \leqslant n \leqslant 34$ , 我们给出具体的满足条件的例子. \\
-当 $13 \leqslant n \leqslant 23$ 时,  $(6,8,10)$ 符合要求; 当 $24 \leqslant n \leqslant 29$ 时,  $(5,12,13)$符合要求; 当 $30 \leqslant n \leqslant 34$ 时, ( $9,12,15)$ 符合要求.
+	并设 $S_{1}, S_{2}, \cdots, S_{n}$ 的最小公倍数为 $S$. 现在令
+	\begin{align*}
+		a_{k}=\frac{S}{S_{k}} \cdot x_{k}, b_{k}=\frac{S}{S_{k}} \cdot y_{k}, c_{k}=\frac{S}{S_{k}} \cdot z_{k}
+	\end{align*}
 
-综上可知, 当 $n>12$ 时, 都存在满足条件的直角三角形.\\
-说明 这里先对较大的 $n$ 用统一形式的例子处理(注意: 35是通过解不
+	则 $\left(a_{k}, b_{k}, c_{k}\right)(k=1,2, \cdots, n)$ 确定的 $n$ 个直角三角形彼此不全等, 并且它们的周长都等于 $S$.
 
-等式 $\sqrt{\frac{n}{3}}>\sqrt{\frac{n}{6}}+1$ 得到的), 然后转为有限种情况枚举得解的思路是合理且自然的, 它在处理存在性问题时经常用到.
+	所以, 命题成立.
+\end{proof}
+\begin{note}
+	许多与勾股数组有关的问题不一定要用到勾股方程解的形式, 但会用到勾股方程有无穷多组(本原的)正整数解.  Fermat 曾经对此方程作推广研究, 发现 $n \geqslant 3$ 时, 方程 $x^{n}+y^{n}=z^{n}$ 没有正整数解. 这就是著名的"费马大定理", 历时 358 年方才得到证明.
+\end{note}
 
-例5 设 $n$ 是一个正整数. 证明: 存在 $n$ 个彼此不全等的勾股三角形(边长都为整数的直角三角形), 它们的周长都相等.
-
-证明 如果我们能找到 $n$ 个彼此不相似的勾股三角形, 那么对每个三角形乘上一个恰当的正整数, 就可以得到周长相同而彼此不全等的勾股三角形. 这是解决此题的一个出发点.
-
-为此, 先证明任意两组不同的本原勾股数组确定的直角三角形是不相似的.
-
-事实上, 设 $(a, b, c)$ 与 $(x, y, z)$ 是两组本原勾股数组, 这里 $a<b<c$, $x<y<z$ . 如果它们确定的直角三角形相似, 那么
-\begin{align*}
-	\frac{x}{a}=\frac{y}{b}=\frac{z}{c}
-\end{align*}
-
-记这个比值为 $k$ , 则 $k$ 为有理数. 设 $k=\frac{q}{p}, p ,  q$ 为正整数, 且 $(p, q)=1$ , 则
-\begin{align*}
-	x=\frac{a q}{p}, y=\frac{b q}{p}
-\end{align*}
-
-由 $x ,  y$ 为正整数, 知
-
-而\begin{align}
-	 & p|a, p| b \\
-	 & (a, b)=1
-\end{align}
-
-故 $p=1$ , 此时 $(x, y)=(a q, b q)=(a, b) q=q$ . 进而 $q=1$ , 这导致 $x=a, y=b$ , 进而 $z=c$ . 矛盾.
-
-利用上述结论, 我们取 $n$ 组本原勾股数组
-\begin{align*}
-	\left(x_{k}, y_{k}, z_{k}\right), k=1,2, \cdots, n
-\end{align*}
-
-这里 $x_{k}<y_{k}<z_{k}$ , 且 $\left(x_{k}, y_{k}\right)=1$ , 则这 $n$ 个数组确定的 $n$ 个三角形彼此不相似, 分别记
-\begin{align*}
-	S_{k}=x_{k}+y_{k}+z_{k}
-\end{align*}
-
-并设 $S_{1}, S_{2}, \cdots, S_{n}$ 的最小公倍数为 $S$. 现在令
-\begin{align*}
-	a_{k}=\frac{S}{S_{k}} \cdot x_{k}, b_{k}=\frac{S}{S_{k}} \cdot y_{k}, c_{k}=\frac{S}{S_{k}} \cdot z_{k}
-\end{align*}
-
-则 $\left(a_{k}, b_{k}, c_{k}\right)(k=1,2, \cdots, n)$ 确定的 $n$ 个直角三角形彼此不全等, 并且它们的周长都等于 $S$.
-
-所以, 命题成立. \\
-说明 许多与勾股数组有关的问题不一定要用到勾股方程解的形式, 但会用到勾股方程有无穷多组(本原的)正整数解.  Fermat 曾经对此方程作推广研究, 发现 $n \geqslant 3$ 时, 方程 $x^{n}+y^{n}=z^{n}$ 没有正整数解. 这就是著名的"费马大定理", 历时 358 年方才得到证明.
-
-例 6 是否存在正整数 $x ,  y$ , 使得 $x^{2}+y^{2}=2011^{2}$ 成立？\\
-解 如果有这样的正整数, 那么 $x ,  y$ 都小于 2011, 由 2011 为素数(这个结论可通过所有不超过 $\sqrt{2011}$ 的素数都不能整除 2011 直接计算得到), 所以 $x ,  y$ 都与 2011 互素, 这表明 $(x, y, 2011)$ 是(1)的本原解, 从而由(2)知存在正整数 $m ,  n$ 使得
-\begin{align*}
-	m^{2}+n^{2}=2011
-\end{align*}
-
-但是
-\begin{align*}
-	m^{2}+n^{2} \equiv 0 ,  1 \text { 或 } 2(\bmod 4),
-\end{align*}
-
-而
-\begin{align*}
-	2011 \equiv 3(\bmod 4)
-\end{align*}
-
-矛盾. 所以,不存在正整数 $x ,  y$ 满足条件.\\
-说明 利用本题的结论, 可知圆 $x^{2}+y^{2}=2011^{2}$ 上只有 4 个整点(即( $x$ ,  $y)=(0, \pm 2011)$ 和 $( \pm 2011,0))$ .
+% 例 6
+\begin{example}
+	是否存在正整数 $x ,  y$ , 使得 $x^{2}+y^{2}=2011^{2}$ 成立？
+\end{example}
+\begin{solution}
+	如果有这样的正整数, 那么 $x ,  y$ 都小于 2011, 由 2011 为素数(这个结论可通过所有不超过 $\sqrt{2011}$ 的素数都不能整除 2011 直接计算得到), 所以 $x ,  y$ 都与 2011 互素, 这表明 $(x, y, 2011)$ 是(1)的本原解, 从而由(2)知存在正整数 $m ,  n$ 使得
+	\begin{align*}
+		m^{2}+n^{2}=2011
+	\end{align*}
+	但是
+	\begin{align*}
+		m^{2}+n^{2} \equiv 0 ,  1 \text { 或 } 2(\bmod 4),
+	\end{align*}
+	而
+	\begin{align*}
+		2011 \equiv 3(\bmod 4)
+	\end{align*}
+	矛盾. 所以,不存在正整数 $x ,  y$ 满足条件.
+\end{solution}
+\begin{note}
+	利用本题的结论, 可知圆 $x^{2}+y^{2}=2011^{2}$ 上只有 4 个整点(即( $x$ ,  $y)=(0, \pm 2011)$ 和 $( \pm 2011,0))$ .
+\end{note}
