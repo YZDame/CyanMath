@@ -47,9 +47,314 @@
 \frame{\frametitle{目录}\tableofcontents}
 \section{三角形的基本概念和性质}
 \begin{frame}{三角形的基本概念和性质}
-\begin{theorem}
-    三角形顶角的平分线与底边上的高所夹的角等于两底角差的一半。   
-\end{theorem}
+	\begin{enumerate}
+		\item 边与边之间的关系: 两边之和大于第三边，两边之差小于第三边。
+		\item 角与角之间的关系: 三个内角的和等于 $180^{\circ}$，即在 $\triangle A B C$ 中有 $\angle A+\angle B+\angle C=180^{\circ}$。由此即知三角形的一个外角等于与它不相邻的两个内角之和。
+		\item 边与角之间的关系: 在同一三角形中，边长与对角成正比，即大边对大角，小边对小角。
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{三角形的基本概念和性质}
+	\begin{itemize}
+		\item {\color{blue!50!black}三角形的角平分线：} 三角形一个角的平分线与这个角的对边相交，这个角的顶点和交点之间的线段叫做三角形的角平分线。
+		\item {\color{blue!50!black}三角形的中线：} 在三角形中，连结一个顶点和它的对边中点的线段叫做三角形的中线。
+		\item {\color{blue!50!black}三角形的高：} 从三角形一个顶点向它的对边所在直线画垂线，顶点和垂足间的线段叫做三角形的高线，简称三角形的高。
+		\item {\color{blue!50!black}三角形的中位线：} 连结三角形两边中点的线段叫做三角形的中位线。中位线平行于第三边且等于第三边的一半。
+		\item {\color{blue!50!black}三角形的外角平分线：} 三角形一个内角的邻补角的平分线与这个角的对边的延长线相交，这个角的顶点和交点之间的线段叫做三角形的外角平分线。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{三角形的基本概念和性质}
+	\begin{theorem}
+		三角形顶角的平分线与底边上的高所夹的角等于两底角差的一半。   
+	\end{theorem}
+	
+	
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp24488112638922765] 
+		\draw   (358.17,92) -- (409,193.56) -- (224.67,193.56) -- cycle ;
+		%Straight Lines [id:da9931344856531952] 
+		\draw    (358.17,92) -- (358,194.22) ;
+		%Straight Lines [id:da8638599185890368] 
+		\draw    (358.17,92) -- (327,192.92) ;
+		%Shape: Arc [id:dp5410570934824912] 
+		\draw  [draw opacity=0] (348.9,122.2) .. controls (350.97,123.04) and (353.26,123.5) .. (355.67,123.5) .. controls (356.66,123.5) and (357.63,123.42) .. (358.58,123.27) -- (355.67,107.52) -- cycle ; \draw   (348.9,122.2) .. controls (350.97,123.04) and (353.26,123.5) .. (355.67,123.5) .. controls (356.66,123.5) and (357.63,123.42) .. (358.58,123.27) ;  
+		
+		% Text Node
+		\draw (351.17,73.9) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (216.17,195.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (402.67,194.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (318.67,196.4) node [anchor=north west][inner sep=0.75pt]    {$T$};
+		% Text Node
+		\draw (351.17,196.4) node [anchor=north west][inner sep=0.75pt]    {$H$};
+		% Text Node
+		\draw (345.83,126.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+		
+		
+	\end{tikzpicture}
+	
+	
+\end{frame}
+
+\setcounter{theorem}{0}
+% 例 1
+\begin{frame}[t]
+	\begin{example}
+		设$P$是边长为1的正三角形$ABC$内一点，求证：
+		\begin{align}
+			\frac{3}{2}< PA+PB+PC < 2.
+		\end{align}
+	\end{example}
+	
+	
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp48456512171565747] 
+		\draw   (356.67,82) -- (435.33,212.36) -- (278,212.36) -- cycle ;
+		%Straight Lines [id:da5764022312498003] 
+		\draw    (339.33,166) -- (278,212.36) ;
+		%Straight Lines [id:da12406244425770074] 
+		\draw    (356.67,82) -- (339.33,166) ;
+		%Straight Lines [id:da7051815211987567] 
+		\draw    (339.33,166) -- (435.33,212.36) ;
+		
+		% Text Node
+		\draw (336,169.4) node [anchor=north west][inner sep=0.75pt]    {$P$};
+		% Text Node
+		\draw (349.33,62.07) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (264,207.73) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (436.67,208.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		
+		
+	\end{tikzpicture}
+	
+\end{frame}
+
+% 例 8
+\begin{frame}[t]
+	\begin{example}
+		如图, $A D$ 是 $\triangle A B C$ 的中线, $E$ 是 $A D$ 上的一点, 且 $A E=$ $\frac{1}{3} A D, C E$ 交 $A B$ 于点 $F$. 若 $A F=1.2 \mathrm{~cm}$, 求$AB$ 长. 	
+	\end{example}
+	
+	
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp8705716247243724] 
+		\draw   (374.82,97.67) -- (421.79,212) -- (274.77,212) -- cycle ;
+		%Straight Lines [id:da3620881129003368] 
+		\draw    (374.82,97.67) -- (345,211.67) ;
+		%Straight Lines [id:da45857981996077] 
+		\draw    (421.79,212) -- (349,127) ;
+		
+		% Text Node
+		\draw (369.33,79.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (258.67,206.07) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (424,206.07) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (340,110.73) node [anchor=north west][inner sep=0.75pt]    {$F$};
+		% Text Node
+		\draw (337.33,213.07) node [anchor=north west][inner sep=0.75pt]    {$D$};
+		% Text Node
+		\draw (366,129.07) node [anchor=north west][inner sep=0.75pt]    {$E$};
+		
+		
+	\end{tikzpicture}
+	
+\end{frame}
+
+% 例 9
+\begin{frame}[t]
+	\begin{example}
+		在 $\triangle A B C$ 中, $P 、 Q$ 分别是边 $A B$ 和 $A C$ 上的点, 中线 $A M$ 与 $P Q$交于 $N$ 。若 $A B: A P=5: 2, A C: A Q=4: 3$, 求$A M: A N$. 
+	\end{example}
+	
+	
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp45951190115695617] 
+		\draw   (385.24,95.5) -- (404.52,218.5) -- (239,218.5) -- cycle ;
+		%Straight Lines [id:da2856725481898308] 
+		\draw    (385.24,95.5) -- (324,218.5) ;
+		%Straight Lines [id:da23553510426671842] 
+		\draw    (336,136.67) -- (399.33,184.67) ;
+		
+		% Text Node
+		\draw (380,77.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (224,213.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (404,214.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (314,221.4) node [anchor=north west][inner sep=0.75pt]    {$M$};
+		% Text Node
+		\draw (324,123.73) node [anchor=north west][inner sep=0.75pt]    {$P$};
+		% Text Node
+		\draw (401,174.73) node [anchor=north west][inner sep=0.75pt]    {$Q$};
+		% Text Node
+		\draw (362,141.4) node [anchor=north west][inner sep=0.75pt]    {$N$};
+		
+		
+	\end{tikzpicture}
+	
+\end{frame}
+
+\section{三角形的面积、边角间关系定理}
+\begin{frame}[t]
+	\begin{theorem}[三角形的角平分线性质定理]
+		$\triangle A B C$ 中, 若 $A P$ 是 $\angle A$ 的平分线, 则
+		\begin{align*}
+			\frac{B P}{P C}=\frac{A B}{A C}
+		\end{align*}
+	\end{theorem}
+	% 插入Geogebra链接
+	\href{http://geogebra.org/m/hpysfjx6}{角平分线性质定理.ggb}
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp155496310519041] 
+		\draw   (339.97,132) -- (336.9,207.67) -- (201.32,207.67) -- cycle ;
+		%Straight Lines [id:da6060151359191379] 
+		\draw    (339.97,132) -- (290,208) ;
+		%Straight Lines [id:da6090544304480308] 
+		\draw  [dash pattern={on 4.5pt off 4.5pt}]  (227.32,207.67) -- (465.9,207.67) ;
+		%Straight Lines [id:da9744149572486258] 
+		\draw  [dash pattern={on 4.5pt off 4.5pt}]  (339.97,132) -- (378,110.67) ;
+		%Straight Lines [id:da9315879151470301] 
+		\draw    (339.97,132) -- (465.9,207.67) ;
+		
+		% Text Node
+		\draw (325,117.07) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (189.67,200.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (329.67,209.07) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (375.67,103.73) node [anchor=north west][inner sep=0.75pt]    {$T$};
+		% Text Node
+		\draw (465,203.73) node [anchor=north west][inner sep=0.75pt]    {$Q$};
+		% Text Node
+		\draw (283,208.73) node [anchor=north west][inner sep=0.75pt]    {$P$};
+		
+		
+	\end{tikzpicture}
+	
+\end{frame}
+
+\begin{frame}[t]
+	\begin{theorem}[三角形的外角平分线性质定理]
+		$\triangle A B C$ 中, 若 $A Q$ 是 $\angle A$ 的外角平分线，则
+		\begin{align*}
+			\frac{B Q}{Q C}=\frac{A B}{A C} \tag{2-5}
+		\end{align*}
+	\end{theorem}
+	% 插入Geogebra链接
+	\href{http://geogebra.org/m/hpysfjx6}{角平分线性质定理.ggb}
+	\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+	
+	\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+		%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+		
+		%Shape: Triangle [id:dp155496310519041] 
+		\draw   (339.97,132) -- (336.9,207.67) -- (201.32,207.67) -- cycle ;
+		%Straight Lines [id:da6060151359191379] 
+		\draw    (339.97,132) -- (290,208) ;
+		%Straight Lines [id:da6090544304480308] 
+		\draw  [dash pattern={on 4.5pt off 4.5pt}]  (227.32,207.67) -- (465.9,207.67) ;
+		%Straight Lines [id:da9744149572486258] 
+		\draw  [dash pattern={on 4.5pt off 4.5pt}]  (339.97,132) -- (378,110.67) ;
+		%Straight Lines [id:da9315879151470301] 
+		\draw    (339.97,132) -- (465.9,207.67) ;
+		
+		% Text Node
+		\draw (325,117.07) node [anchor=north west][inner sep=0.75pt]    {$A$};
+		% Text Node
+		\draw (189.67,200.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+		% Text Node
+		\draw (329.67,209.07) node [anchor=north west][inner sep=0.75pt]    {$C$};
+		% Text Node
+		\draw (375.67,103.73) node [anchor=north west][inner sep=0.75pt]    {$T$};
+		% Text Node
+		\draw (465,203.73) node [anchor=north west][inner sep=0.75pt]    {$Q$};
+		% Text Node
+		\draw (283,208.73) node [anchor=north west][inner sep=0.75pt]    {$P$};
+		
+		
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{调和点列与调和线束}
+	
+\end{frame}
+
+% 正弦定理和余弦定理
+\begin{frame}[t]
+	\begin{theorem}[正弦定理]
+		在 $\triangle A B C$ 中, 角 $A 、 B 、 C$ 所对的边长分别为 $a 、 b 、 c$, 则
+		\begin{align*}
+			\frac{a}{\sin \angle A}=\frac{b}{\sin \angle B}=\frac{c}{\sin \angle C}=\frac{a b c}{2 S_{\triangle A B C}} \tag{2-6}
+		\end{align*}
+	\end{theorem}
+\end{frame}
+
+\begin{frame}[t]
+	\begin{theorem}[余弦定理]
+		在 $\triangle A B C$ 中, 角 $A 、 B 、 C$ 所对的边长分别为 $a 、 b 、 c$, 则	
+		\begin{align*}
+			 & c^{2}=a^{2}+b^{2}-2 a b \cdot \cos \angle C,           \\
+			 & b^{2}=c^{2}+a^{2}-2 c a \cdot \cos \angle B  \tag{2-7} \\
+			 & a^{2}=b^{2}+c^{2}-2 b c \cdot \cos \angle A .
+		\end{align*}
+	\end{theorem}
+	% 插入Geogebra链接
+	\href{https://www.geogebra.org/m/vmpcfg29}{等面积法-余弦定理.ggb}
+\end{frame}
+
+% 勾股定理 
+\begin{frame}
+	\begin{corollary}[勾股定理]
+		在 $\triangle A B C$ 中, $\angle C=90^{\circ}$, 则
+		\begin{align*}
+			c^{2}=a^{2}+b^{2}
+		\end{align*}
+	\end{corollary}
+	\begin{alertblock}{广勾股定理}
+		对直角三角形 $\triangle ABC$ 而言, $\angle ADB = 90^{\circ}$, 点 $C$ 为直角边 $BC$ 所在直线上一点, 则有
+		\begin{align*}
+			AB^2 = CA^2 + CB^2 \mp 2CD \cdot CB . 
+		\end{align*}
+	\end{alertblock}
+\end{frame}
+
+% 张角定理
+\begin{frame}[t]
+	\begin{theorem}[张角定理]
+		设 $P$ 为 $\triangle A B C$ 的边 $B C$ 上一点， $\angle B A P=\alpha, \angle C A P=$ $\beta$, 则
+		\begin{align*}
+			\frac{\sin (\alpha+\beta)}{A P}=\frac{\sin \alpha}{A C}+\frac{\sin \beta}{A B} . 
+		\end{align*}
+	\end{theorem}
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -57,38 +362,39 @@
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
-%Shape: Triangle [id:dp24488112638922765] 
-\draw   (358.17,92) -- (409,193.56) -- (224.67,193.56) -- cycle ;
-%Straight Lines [id:da9931344856531952] 
-\draw    (358.17,92) -- (358,194.22) ;
-%Straight Lines [id:da8638599185890368] 
-\draw    (358.17,92) -- (327,192.92) ;
-%Shape: Arc [id:dp5410570934824912] 
-\draw  [draw opacity=0] (348.9,122.2) .. controls (350.97,123.04) and (353.26,123.5) .. (355.67,123.5) .. controls (356.66,123.5) and (357.63,123.42) .. (358.58,123.27) -- (355.67,107.52) -- cycle ; \draw   (348.9,122.2) .. controls (350.97,123.04) and (353.26,123.5) .. (355.67,123.5) .. controls (356.66,123.5) and (357.63,123.42) .. (358.58,123.27) ;  
+%Shape: Triangle [id:dp1235498259297576] 
+\draw   (376,91) -- (432.53,235.5) -- (260.52,235.5) -- cycle ;
+%Straight Lines [id:da7624772267523616] 
+\draw    (376,91) -- (352,235.5) ;
 
 % Text Node
-\draw (351.17,73.9) node [anchor=north west][inner sep=0.75pt]    {$A$};
+\draw (370,70.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
 % Text Node
-\draw (216.17,195.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+\draw (248.52,235.9) node [anchor=north west][inner sep=0.75pt]    {$B$};
 % Text Node
-\draw (402.67,194.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
+\draw (434.53,238.9) node [anchor=north west][inner sep=0.75pt]    {$C$};
 % Text Node
-\draw (318.67,196.4) node [anchor=north west][inner sep=0.75pt]    {$T$};
-% Text Node
-\draw (351.17,196.4) node [anchor=north west][inner sep=0.75pt]    {$H$};
-% Text Node
-\draw (345.83,126.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+\draw (346,240.4) node [anchor=north west][inner sep=0.75pt]    {$P$};
 
 
 \end{tikzpicture}
 
-
 \end{frame}
 
-\begin{frame}{三角形的基本概念和性质}
-\begin{theorem}
-	三角形的三条高交于一点，这个点叫做三角形的\textbf{垂心}。
-\end{theorem}
+% 张角定理的逆定理
+\begin{frame}[t]
+	\begin{theorem}[张角定理的逆定理]
+		设 $B 、 P 、 C$ 依次是平面内从一点 $A$ 所引三条射线 $A B 、 A P 、 A C$ 上的点（ $A P$ 在 $A B 、 A C$ 之间）， $\angle B A P=\alpha, \angle C A P=$ $\beta$, 且 $\alpha+\beta<180^{\circ}$, 若有
+		\begin{align*}
+			\frac{\sin (\alpha+\beta)}{A P}=\frac{\sin \alpha}{A C}+\frac{\sin \beta}{A B},
+		\end{align*}
+		则三点 $B, P, C$ 在一条直线上.
+	\end{theorem}
 \end{frame}
 
+
+\section{全等三角形}
+\section{相似三角形}
+\section{三角形中与比例线段有关的几个定理}
+\section{三角形的四心}
 \end{document}
